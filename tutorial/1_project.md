@@ -1,11 +1,10 @@
-# Project 생성하여 OSC Process 수행
+# Project 생성하기
 ```note
-분석을 위한 Tool 기반으로 세부 실행 방법을 설명합니다.
-1. Analyzer : 프로젝트의 dependency 정보와 metadata를 추출합니다.
-2. Scanner : Source Code를 다운로드 받은 후 Source Code에서 License text를 분석하는 Tool로 분석합니다.
-3. Evaluator : Scanner 결과에 대한 사용자 지정 License 정책 검사를 수행합니다.
-4. Advisor : 보안 취약점을 조회합니다. (단, 사용을 위해서 [Nexus IQ Server](https://help.sonatype.com/iqserver)의 License가 필요합니다.)
-5. Reporter : 분석 결과를 여러가지 형태로 출력합니다.
+Project를 생성하고 OSC(Open Source Compliance) Process를 수행합니다.
+1. Project 생성
+2. Identification 작성
+3. Packaging 수행
+4. OSS Notice 다운로드
 ```
 ## 1. Analyzer 실행하기
 지정된 입력 디렉토리 (-i) 내에서 프로젝트의 dependency을 결정하는 Software Composition Analysis (SCA) 도구입니다.  
