@@ -12,7 +12,7 @@ FOSSLight System을 다운로드 받아 직접 설치하고 실행할 수 있습
 - JAVA 1.8 이상
 - MariaDB 10.0 이상 또는 MySql 5.6 이상
 
-### 설치
+### 다운로드 & 설치
 1. JDK를 설치합니다.: https://openjdk.java.net/install/
 2. DDL : http://nas.think-tree.com/sharing/aInqZiu0Z 
 3. MariaDB 또는 Mysql 설치합니다. 
@@ -22,6 +22,13 @@ mysql -u root -p < fosslight_data.sql
 ```
 만약 Database가 이미 존재하거나 Database 이름을 변경하려면 상단의 create database 문과 USE 'fosslight' 문을 변경합니다.
 단, 사용자 생성과 권한 쿼리는 포함되어 있지 않습니다. 
+
+
+## IDE Configuration
+1. [Spring tool suite][spring]를 다운로드합니다.
+2. Git Source를 연동합니다.
+
+[spring]: https://spring.io/tools
 
 ## 실행
 java가 설치되어 있는 환경에서 명령어를 실행합니다. 
