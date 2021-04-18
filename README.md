@@ -11,4 +11,4 @@ OSS Review Toolkit (ORT)은 Project에 포함된 Open Source Software의 depende
 - 다양한 포맷의 Report를 생성할 수 있습니다.
 
 ## 관련 링크
-- 배포처 : [https://github.com/oss-review-toolkit/ort](https://github.com/oss-review-toolkit/ort)
+- 배포처 : [https://github.com/fosslight/fosslight](https://github.com/fosslight/fosslight)
