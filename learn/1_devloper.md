@@ -28,22 +28,22 @@ java가 설치되어 있는 환경에서 명령어를 실행합니다.
 ```
 java -jar fosslight.war
 ```
-실행 옵션
-포트변경
+### 실행 옵션
+- 포트 변경
 ```
 java --server.port=8180 -jar fosslight.war
 ```
-database 접속정보 변경 ( Default는 127.0.0.1:3306/fosslight )
+- database 접속정보 변경 (Default: 127.0.0.1:3306/fosslight)
 ```
 spring.datasource.url=<IP>:<Port>/<Database>
 spring.datasource.username=<userName>
 spring.datasource.password=<password>
 ```
-log 파일 경로 지정
+- log 파일 경로 지정
 ```
 logging.path=<path>
 ```
-⚠️Database 생성 없이 Demo Site의 Database를 사용할 수도 있습니다.
+- ⚠️Database 생성 없이 Demo Site의 Database 사용
 ```
 java --spring.datasource.url=35.73.164.212:3306/fosslight -jar fosslight.war
 ```
