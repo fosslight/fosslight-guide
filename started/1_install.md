@@ -2,9 +2,9 @@
 sort: 1
 published: true
 ---
-# Source Install
+# Installation (Quick Start)
 ```note
-OSS Review Toolkit Source Code가 [Github Repository](https://github.com/oss-review-toolkit/ort)에서 배포됩니다.
+FOSSLight System을 빠르고 쉽게 설치 및 실행하는 방법을 설명합니다.
 ```
 
 ## 필요 사항
