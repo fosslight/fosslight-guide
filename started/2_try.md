@@ -6,9 +6,8 @@ published: true
 ## OSS List
 ## License List
 ## Project
-## Basic Information
-## Identification
-## Packaging
+### Basic Information
+### Identification
+### Packaging
 ## Self-check
 ## Configuration
-
