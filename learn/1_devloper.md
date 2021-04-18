@@ -43,7 +43,7 @@ log 파일 경로 지정
 ```
 logging.path=<path>
 ```
-⚠️별도의 Database 생성 없이 동작 확인만 하신다면, Demo Site의 Database를 사용하시면 됩니다.
+⚠️Database 생성 없이 Demo Site의 Database를 사용할 수도 있습니다.
 ```
 java --spring.datasource.url=35.73.164.212:3306/fosslight -jar fosslight.war
 ```
