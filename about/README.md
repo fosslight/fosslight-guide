@@ -8,10 +8,10 @@ FOSSLight System은 Open Source Software를 포함하는 Software의 개발 및 
 [공식 리파지토리](https://github.com/fosslight/fosslight)에서 Source Code를 다운로드 받을 수 있고, Build시 Docker 이미지 또는 실행 파일을 생성할 수 있습니다. 
 
 # Why FOSSLight System?
-- Linux / windows / macOS
-- OpenJDK 11 or later
-- Git
-- Gradle
+- Compliance Workflow
+- 확장성
+- Compliance Hub
+- Comprehensive
 
 # What does FOSSLight System do?
 - Project
@@ -22,4 +22,4 @@ FOSSLight System은 Open Source Software를 포함하는 Software의 개발 및 
 - Self-Check
 
 # License
-- AGPL-3.0 
+- AGPL-3.0
