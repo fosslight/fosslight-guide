@@ -1,8 +1,4 @@
----
-sort: 1
-published: true
----
-# 세부 실행 방법
+# Project 생성하여 OSC Process 수행
 ```note
 분석을 위한 Tool 기반으로 세부 실행 방법을 설명합니다.
 1. Analyzer : 프로젝트의 dependency 정보와 metadata를 추출합니다.
