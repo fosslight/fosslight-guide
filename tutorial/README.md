@@ -1,9 +1,9 @@
 ---
-sort: 2
+sort: 3
 published: true
 ---
 
-# How to Use
+# Basic Tutorials
 
 ```note
 ORT는 Transitive dependency의 tree와 package의 meta data를 분석하여 각 Package별 Source Code를 다운로드 받아 License text를 분석합니다.

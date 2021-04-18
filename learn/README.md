@@ -1,8 +1,8 @@
 ---
-sort: 1
+sort: 4
 published: true
 ---
-# How to Run
+# Learn more
 
 ```note
 ORT는 Linux, Windows, macOS에 대하여 지원합니다.  
