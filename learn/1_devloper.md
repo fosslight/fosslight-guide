@@ -2,20 +2,20 @@
 sort: 1
 published: true
 ---
-# Source Install
+# Developer Documentation
 ```note
 OSS Review Toolkit Source Code가 [Github Repository](https://github.com/oss-review-toolkit/ort)에서 배포됩니다.
 ```
 
-## 필요 사항
+## Installation
 - Linux / windows / macOS
 - OpenJDK 11 or later
 - Git
 - Gradle
 
-## 설치  방법
+## IDE Configuration
 
-### 0. Source Code 다운로드
+## How to build & run
 ```
 $ git clone https://github.com/oss-review-toolkit/ort.git
 ```
