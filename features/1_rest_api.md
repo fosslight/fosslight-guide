@@ -1,7 +1,3 @@
----
-sort: 1
-published: true
----
 # REST API
 ```note
 FOSSLight System의 기능을 REST API로 호출할 수 있습니다.
