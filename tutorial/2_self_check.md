@@ -1,5 +1,5 @@
 ---
-sort: 1
+sort: 2
 published: true
 ---
 # 실행 결과
