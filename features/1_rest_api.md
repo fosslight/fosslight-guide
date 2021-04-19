@@ -10,7 +10,8 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 2. System > User Management 탭에서 User별로 Token을 발행할 수 있습니다.
 
 ## REST API 종류 
-1. OSS & License 정보 조회
+
+1\. OSS & License 정보 조회
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
@@ -18,13 +19,14 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |/api/v1/license_search|	JSON|	License Name으로 License 정보를 조회합니다.|
 |/api/v1/oss_search	|JSON|	OSS Name, Version으로 OSS 정보를 조회합니다. |
 
-2. 3rd Party 정보 조회
+
+2\. 3rd Party 정보 조회
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
 |/api/v1/partner_search|	JSON	|보기 권한이 있는 3rd Party에 대하여 하기 정보를 조회합니다. |
 
-3. Project 정보 조회, 생성, OSS Report 등록, Packaging 파일 업로드, BOM Export, Project 비교
+3\. Project 정보 조회, 생성, OSS Report 등록, Packaging 파일 업로드, BOM Export, Project 비교
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
@@ -36,27 +38,27 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |/api/v1/prj_bom_export	|File	|Project의 BOM에서 Export한 결과 파일을 다운로드 받습니다.
 |/api/v1/prj_search	|-|보기 권한이 있는 Project에 대하여 하기 정보를 조회합니다. |
 
-4. Vulnerability 정보 조회
+4\. Vulnerability 정보 조회
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
 |/api/v1/vulnerability_data|	JSON|	OSS Name, Version별 CVE ID, CVSS Score, NVD Link를 조회합니다. |
 |/api/v1/vulnerability_max_data	|JSON	|OSS Name, Version별 max score와 CVE ID를 확인할 링크를 조회합니다.|
 
-5. Self-Check 생성, OSS Report 등록
+5\. Self-Check 생성, OSS Report 등록
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
 |/api/v1/create_selfcheck|	JSON	|Self-Check Project를 생성하고, 생성된 Self-Check ID를 return 받습니다.|
 |/api/v1/oss_report_selfcheck|	-	|Self-Check에 OSS Report를 업로드합니다. 이미 OSS Table이 작성된 경우, Reset한 후 업로드하는 OSS Report를 반영합니다.(반영 Sheet Name : "Self-Check")|
 
-6. Binary DB 정보 조회
+6\. Binary DB 정보 조회
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
 |/api/v1/binary_search	|JSON	|Binary DB에서 하기 정보를 조회합니다.|
 
-7. API 활용시, Code 값 확인
+7\. API 활용시, Code 값 확인
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
