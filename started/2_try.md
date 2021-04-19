@@ -104,8 +104,12 @@ FOSSLight 메뉴별 기능을 설명합니다.
 ### User Guide 
 - License 사용 시 주의 사항을 알 수 있습니다.
 
+
 ## Project
+![ProjectList](images/project_list.png)  
 ### Basic Information
+
 ### Identification
+![Identification](images/identification.png)  
 ### Packaging
 ## Self-check
