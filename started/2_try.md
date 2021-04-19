@@ -94,4 +94,3 @@ FOSSLight 메뉴별 기능을 설명합니다.
 ### Identification
 ### Packaging
 ## Self-check
-## Configuration
