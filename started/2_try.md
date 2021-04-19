@@ -58,6 +58,21 @@ FOSSLight 메뉴별 기능을 설명합니다.
     - NIST에서 제공하는 CVE DB에서 해당 OSS가 검색되면 취약 정도 (CVE Score)에 따라 Vulnerability 아이콘 색깔로 구분되어 표시됩니다.
 
 ## License List
+등록된 License 정보를 확인할 수 있습니다.
+![LicenseList](images/license_list.png)  
+
+- License Name
+    - License Full name으로 SPDX (https://spdx.org/licenses/) 표기 방식을 따르고 있습니다.
+    - License Name column의 값을 클릭하면, License 별 상세정보를 확인할 수 있습니다.
+- Identifier
+    - standardized short identifier로 License를 더욱 쉽게 식별할 수 있으며 SPDX (https://spdx.org/licenses/) 표기 방식을 따르고 있습니다.
+- License Type :
+    - Permissive :
+    - Weak Copyleft :
+    - Copyleft :
+    - Proprietary :
+    - Proprietary Free : 
+
 ## Project
 ### Basic Information
 ### Identification
