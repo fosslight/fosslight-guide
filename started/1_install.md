@@ -4,7 +4,7 @@ published: true
 ---
 # Installation (Quick Start)
 ```note
-FOSSLight System을 빠르고 쉽게 설치 및 실행하는 방법을 설명합니다.
+FOSSLight를 빠르고 쉽게 설치 및 실행하는 방법을 설명합니다.
 ```
 ## 설치
 ### 요구사항
