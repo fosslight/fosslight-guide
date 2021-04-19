@@ -18,7 +18,7 @@ FOSSLight 메뉴별 기능을 설명합니다.
 
 ## OSS List
 등록된 OSS(Open Source Software) 정보를 확인할 수 있습니다.
-
+![OssList](images/oss_list.png)  
 - ID : 
     - OSS를 식별하는 숫자입니다.
     - OSS의 버전이 여러 개 등록된 경우 '+'가 표시되며 최상위 버전이 표시됩니다. '+' 버튼을 클릭하면 하위 버전의 Open Source 정보를 확인할 수 있습니다.
