@@ -2,7 +2,7 @@
 sort: 1
 published: true
 ---
-# Getting Started
+# 2. Getting Started
 
 ```note
 ORT는 Linux, Windows, macOS에 대하여 지원합니다.  
