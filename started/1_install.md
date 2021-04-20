@@ -1,7 +1,3 @@
----
-sort: 1
-published: true
----
 # Installation (Quick Start)
 ```note
 FOSSLight를 빠르고 쉽게 설치 및 실행하는 방법을 설명합니다.
