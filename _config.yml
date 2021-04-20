@@ -1,7 +1,7 @@
 base_url: /fosslight-system-guide
-title: FOSSLight System 
+title: FOSSLight
 lang: ko
-description: FOSSLight System Korean Guide
+description: FOSSLight Korean Guide
 
 remote_theme: fosslight/jekyll-rtd-theme
 
