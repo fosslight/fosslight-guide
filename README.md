@@ -1,8 +1,7 @@
 # FOSSLight란?
-FOSSLight
+FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 필요한 기능을 제공하는 통합 시스템입니다.
 
-## Features
-
+## 특징
 <div class="flex-container">
   <div class="flex-contents">
     <div>
@@ -47,12 +46,10 @@ FOSSLight
   </div>
 </div>
 
-## Why FOSSLight System?
-
-## What does FOSSLight System do?
+## 기능
 
 
 ## License
-- [AGPL-3.0][agpl]
+FOSSLight는 Open Source License인 [AGPL-3.0][agpl]로 배포되고 있습니다.
 
 [agpl]: https://github.com/fosslight/fosslight/blob/main/LICENSE
