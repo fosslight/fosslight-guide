@@ -19,5 +19,8 @@ License 정보 확인 및 등록 방법
 ## [Project](4_project.md)
 Project 등록 및 Process 수행 방법
 
-## [Self-Check](5_self-check.md)
+## [3rd Party](5_third-party.md)
+3rd Party 등록 방법
+
+## [Self-Check](6_self-check.md)
 Self-Check 등록 및 OSS 정보 확인 방법

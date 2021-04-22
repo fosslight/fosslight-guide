@@ -25,8 +25,16 @@ Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 O
 ![Identification](../images/identification.png)
 - Identification 작성 Process : 1. 
 
+#### 3rd Party Tab
+1. 3rd Party 탭 작성 Process
+3rd Party Project Load -> Warning message 검토 -> Save
+
 #### SRC Tab
 1. SRC 탭 작성 Process
+Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
+
+#### BIN Tab
+1. BIN 탭 작성 Process
 Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
 
 #### BOM Tab
