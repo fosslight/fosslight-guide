@@ -14,4 +14,6 @@ published: true
 
 
 ## License
-- AGPL-3.0
+- [AGPL-3.0][agpl]
+
+[agpl]: https://github.com/fosslight/fosslight/blob/main/LICENSE

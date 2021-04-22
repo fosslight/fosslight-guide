@@ -19,9 +19,16 @@ Self-Check Project를 생성하고 검토할 OSS를 입력하면 아래 정보�
 Self-Check는 아래와 같은 절차를 통해 진행할 수 있습니다.
 
 ### 1. Self-Check Project 생성
+1. Self-Check List > Add 를 클릭합니다.
+2. 관련 정보를 입력하고 Save합니다.
+3. Self-Check List에서 새로 생성한 Self-Check Project를 확인할 수 있고, List에서 더블클릭 시 상세 내용을 확인할 수 있습니다.
 
 ### 2. OSS 정보 입력
-
+1. 개별 입력
+- +버튼을 클릭하여 행을 추가한 후 확인하고 싶은 OSS를 입력하고 Save합니다.
+2.OSS 보고서를 이용한 일괄 추가
+- Upload Analysis Result에 OSS 리스트가 기재된 OSS 보고서를 업로드합니다. 
+ 
 ### 3. OSS 및 License 정보 확인
 
 ### 4. Vulnerability 정보 확인
