@@ -49,8 +49,7 @@ java --root.dir=/data/fosslight --server.port=8180 -jar fosslight.war
 ```
 java --spring.datasource.url=35.73.164.212:3306/fosslight -jar fosslight.war
 ```
-## 소스코드에서 직접 실행
-### 개발환경
+## 개발환경
 - Framework : Spring Boot 2.1.x
 - Build Tool : Gradle 6.x
 - Git : https://github.com/fosslight/fosslight
