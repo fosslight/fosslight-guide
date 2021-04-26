@@ -48,77 +48,43 @@ FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 
 
 ## 기능
 
-<div class="flex-container">
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        Project
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/pastel-glyph/50/000000/workflow-cycle--v1.png"/>
-      </div>
-      <div id="feature_content">
-        Project별 OSC Process 수행 및 Status 관리
+<div class="person-container">
+  <div class="persons js-dropdown-items">
+    <div class="person js-dropdown-item">
+      <div class="avatar"><img src="https://img.icons8.com/wired/64/000000/plugin.png" alt="" title="Title 1"></div>
+      <div class="fullname">Project</div>
+      <div class="js-description">
+        <p>Project별 OSC Process 수행 및 Status 관리</p>
       </div>
     </div>
-  </div>
-
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        License / OSS
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/wired/64/000000/hub.png"/>
-      </div>
-      <div id="feature_content">
-        Open Source License / OSS 정보 조회 및 관리
+    <div class="person js-dropdown-item">
+      <div class="avatar"><img src="https://img.icons8.com/wired/64/000000/plugin.png" alt="" title="Title 2"></div>
+      <div class="fullname">License / OSS</div>
+      <div class="js-description">
+        <p>Open Source License / OSS 정보 조회 및 관리</p>
       </div>
     </div>
-  </div>
-
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        Vulnerability
+    <div class="person js-dropdown-item">
+      <div class="avatar"><img src="https://img.icons8.com/wired/64/000000/plugin.png" alt="" title="Title 3"></div>
+      <div class="fullname">Vulnerability</div>
+      <div class="js-description">
+        <p>Open Source 보안 취약점 조회 및 프로젝트별 모니터링 제공</p>
       </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/wired/64/000000/plugin.png"/>
+    </div>   
+    <div class="person js-dropdown-item">
+      <div class="avatar"><img src="https://img.icons8.com/wired/64/000000/plugin.png" alt="" title="Title 3"></div>
+      <div class="fullname">3rd Party</div>
+      <div class="js-description">
+        <p>3rd Party로부터 입수된 Software별 OSS 관리</p>
       </div>
-      <div id="feature_content">
-        Open Source 보안 취약점 조회 및 프로젝트별 모니터링 제공
+    </div> 
+        <div class="person js-dropdown-item">
+      <div class="avatar"><img src="https://img.icons8.com/wired/64/000000/plugin.png" alt="" title="Title 3"></div>
+      <div class="fullname">Self-Check</div>
+      <div class="js-description">
+        <p>검토할 OSS에 대한 License, 보안 취약점 등 사전 확인 기능</p>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="flex-container">
-	<div class="flex-contents">
-    	<div>
-      	<div id="feature_title">
-        3rd Party Project
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/wired/64/000000/hub.png"/>
-      </div>
-      <div id="feature_content">
-        3rd Party로부터 입수된 Software별 OSS 관리
-      </div>
-    </div>
-  </div>
-
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        Self-Check
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/wired/64/000000/plugin.png"/>
-      </div>
-      <div id="feature_content">
-        검토할 OSS에 대한 License, 보안 취약점 등 사전 확인 기능
-      </div>
-    </div>
+    </div> 
   </div>
 </div>
 
