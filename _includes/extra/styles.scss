@@ -163,6 +163,7 @@ body {
 .persons .person .avatar img {
   display: inline-block;
   vertical-align: middle;
+  width: 64px;
 }
 
 .persons .person.active { background-color: rgb(197, 103, 119); }
