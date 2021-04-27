@@ -65,6 +65,7 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |/api/v1/code_search|	JSON	|Project, 3rd Party 조회, Project 생성시 사용할 하기 Parameter의 값 List를 조회합니다. |
 
 ## REST API 테스트 도구
-```
-http://demo.fosslight.org/swagger-ui.html
-```
+
+[http://demo.fosslight.org/swagger-ui.html][swagger] 
+
+[swagger]: http://demo.fosslight.org/swagger-ui.html
