@@ -66,5 +66,5 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 
 ## REST API 테스트 도구
 ```
-http://fosslight.org/swagger-ui.html
+http://demo.fosslight.org/swagger-ui.html
 ```
