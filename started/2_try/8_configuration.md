@@ -26,4 +26,4 @@ FOSSLight는 JNDI를 사용하여 Active Directory 등 LDAP을 사용할 수 있
 - Root Path: 업/다운로드 파일 저장소의 최상위 work space 경로
 
 ## Project Setting
-- Notice Type: 발급 가능한 라이선스 고지문 형식을 설정합니다.
+- Notice Type: 발급 가능한 OSS 고지문 형식을 설정합니다.
