@@ -12,6 +12,7 @@ FOSSLight를 컨텐츠별로 살펴봅니다.
 - [Project](../started/2_try/4_project.md)
 - [3rd Party](../started/2_try/5_third-party.md)
 - [Self-Check](../started/2_try/6_self-check.md)
+- [Vulnerability](../started/2_try/7_vulnerability.md)
 
 ## FOSSLight 사용 Tutorial
 - [Project를 등록하여 OSC Process를 순차적으로 수행](../tutorial/1_project.md)
