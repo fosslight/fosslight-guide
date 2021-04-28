@@ -12,10 +12,17 @@ FOSSLight System을 다운로드 받아 직접 설치하고 실행할 수 있습
 - JAVA 1.8 이상
 - MariaDB 10.0 이상 또는 MySql 5.6 이상
 
+### 개발 환경
+- Framework : Spring Boot 2.1.x
+- Build Tool : Gradle 6.x
+- Git : [https://github.com/fosslight/fosslight][src]
+- IDE에 [lombock][lb]이 설치되어 있어야합니다.
+- Project Character Set은 UTF-8을 사용합니다.
+
 ### 다운로드 & 설치
-1. JAVA를 설치합니다.: https://www.java.com/ko/download/
-2. DDL : https://github.com/fosslight/fosslight/blob/main/install/db/fosslight_create.sql 
-3. MariaDB 또는 Mysql 설치합니다. : https://mariadb.org/download/
+1. JAVA를 설치합니다.: [https://openjdk.java.net][java]
+2. DDL : [https://github.com/fosslight/fosslight/blob/main/install/db/fosslight_create.sql][sql]
+3. MariaDB 또는 Mysql 설치합니다. : [https://mariadb.org/download][maria]
 4. Database 생성 및 초기 Data 등록
 ```
 mysql -u root -p < fosslight_create.sql
@@ -32,19 +39,22 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 
 #### Project Import
 ※ STS (Spring Tool suite) 4.x 기준
-1. lombok 설치: https://projectlombok.org/setup/eclipse
-2. File > Import > Gralde > Existing Gradle Project
+1. lombok 설치: [https://projectlombok.org/setup/eclipse][lb]
+2. File > Import > Gradle > Existing Gradle Project
 3. Git Source Directory를 설정하고 Import 합니다.
-4. Project > Properties > Resource > Text file encoding 에서 UTF-8로 설정합니다.
+4. Project > Properties > Resource > Text file encoding에서 UTF-8로 설정합니다.
 
 [spring]: https://spring.io/tools
-
-
+[lb]: https://projectlombok.org/setup/eclipse
+[src]: https://github.com/fosslight/fosslight
+[sql]: https://github.com/fosslight/fosslight/blob/main/install/db/fosslight_create.sql
+[maria]: https://mariadb.org/download/
+[java]: https://openjdk.java.net
 
 ## 실행
 ### 실행 옵션 변경
 [application.properties][props] 파일에서 실행 옵션 변경
- - server.port=<PORT>: 웹서버 포트 ( 8180으로 설정한 경우 http://localhost:8080 )
+ - server.port=<PORT>: 웹서버 포트 (8180으로 설정한 경우 [http://localhost:8180][local])
  - spring.datasource.url=<IP>:<PORT>/<DATABASE_NAME>: FOSSLight Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
  - spring.datasource.username=<USER_NAME>: Database 접속자명을 설정
  - spring.datasource.password=<USER_PASSWORD>: Database 접속자 패스워드 설정
@@ -73,5 +83,7 @@ $ gradlew build
  - Boot Dashboard > local > FOSSLight 선택, 우클릭 start (Crtl + Alt + Shift + B, R)
 
 3. 동작확인
- - 웹브라우저에서 http://localhost:8180 으로 접속하면 로그인 화면이 표시됩니다.
+ - 웹브라우저에서 [http://localhost:8180][local] 으로 접속하면 로그인 화면이 표시됩니다.
  - 초기 로그인 계정은 admin (패스워드 admin) 입니다.
+
+[local]: http://localhost:8180
