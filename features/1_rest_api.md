@@ -52,13 +52,7 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |/api/v1/create_selfcheck|	JSON	|Self-Check Project를 생성하고, 생성된 Self-Check ID를 return 받습니다.|
 |/api/v1/oss_report_selfcheck|	-	|Self-Check에 OSS Report를 업로드합니다. 이미 OSS Table이 작성된 경우, Reset한 후 업로드하는 OSS Report를 반영합니다.(반영 Sheet Name : "Self-Check")|
 
-6\. Binary DB 정보 조회
-
-| API  | 응답 형식 | 설명 |
-| ------------- | ------------- | ------------- |
-|/api/v1/binary_search	|JSON	|Binary DB에서 하기 정보를 조회합니다.|
-
-7\. API 활용시, Code 값 확인
+6\. API 활용시, Code 값 확인
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
