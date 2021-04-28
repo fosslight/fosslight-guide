@@ -39,7 +39,14 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 2. File > Import > Gralde > Existing Gradle Project
 3. Git Source Directory를 설정하고 Import 합니다.
 4. Project > Properties > Resource > Text file encoding 에서 UTF-8 설정
-5. application.properties 파일에서 실행 옵션 변경 (port, datasource, logging.path, root.dir 등)
+5. application.properties 파일에서 실행 옵션 변경
+ - server.port=<PORT>: 웹서버 포트 ( 8180으로 설정한 경우 http://localhost:8080 )
+ - spring.datasource.url=<IP>:<PORT>/<DATABASE_NAME>: FOSSLight Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
+ - spring.datasource.username=<USER_NAME>: Database 접속자명을 설정
+ - spring.datasource.password=<USER_PASSWORD>: Database 접속자 패스워드 설정
+ - logging.path=<LOG_FILE_PATH>: 로그파일 출력 경로 설정 ( Default "./logs" 는 Application 실행 위치를 의미)
+ - logging.file=<LOG_FILE_NAME>: 로그를 출력할 로그파일명 (logback-spring.xml 파일 참고)
+ - root.dir=<WORK_SPACE>: 파일 업/다운로드 최상위 경로를 의미
 
 ## Build & Run
 1. Project Directory에서 gradle build 또는 run 할 수 있습니다.
@@ -55,6 +62,8 @@ $ gradlew build
  ```
  $ gradlew clean build && java -jar build/libs/FOSSLight-0.0.2.war
  ```
- 2. IDE 에서 직접 실행
-  - Boot Dashboard > local > FOSSLight 선택, 우클릭 start (Crtl + Alt + Shift + B, R)
-  
+2. IDE 에서 직접 실행
+ - Boot Dashboard > local > FOSSLight 선택, 우클릭 start (Crtl + Alt + Shift + B, R)
+3. 동작확인
+ - 웹브라우저에서 http://localhost:8180 으로 접속하면 로그인 화면이 표시됩니다.
+ - 초기 로그인 계정은 admin (패스워드 admin) 입니다.
