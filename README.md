@@ -12,7 +12,7 @@ FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 
         <img src="https://img.icons8.com/pastel-glyph/50/000000/workflow-cycle--v1.png"/>
       </div>
       <div id="feature_content">
-        It can process the open source compliance workflow.
+        Open Source Compliance를 위한 Workflow를 수행합니다.
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 
         <img src="https://img.icons8.com/wired/64/000000/hub.png"/>
       </div>
       <div id="feature_content">
-        You can manage everything about open source compliance such as license, oss, vulnerability and so on.
+        License, Open Source, Vulnerability, Project 그리고 3rd Party와 같은 Open Source Compliance를 위한 모든 것을 관리할 수 있습니다.
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 
         <img src="https://img.icons8.com/wired/64/000000/plugin.png"/>
       </div>
       <div id="feature_content">
-        It can use with the additional features (fosslight scanner, other plugins).
+        FOSSLight Scanner나 Plugin과 같은 추가 기능을 확장할 수 있습니다.
       </div>
     </div>
   </div>
