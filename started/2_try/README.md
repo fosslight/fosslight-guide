@@ -29,7 +29,7 @@ Self-Check 등록 및 OSS 정보 확인
 Open Source의 보안 취약점 존재 여부 및 관련 정보(CVE ID, CVSS Score) 확인
 
 ## [Configuration](8_configuration.md)
-시스템 설정 값 변경
+*(Admin Only)* 시스템 설정 값 변경
 
 ## [System](9_system.md)
-시스템 운영 Log 확인 및 운영 Data 설정 변경
+*(Admin Only)* 시스템 운영 Log 확인 및 운영 Data 설정 변경
