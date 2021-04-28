@@ -16,8 +16,9 @@ FOSSLight System을 다운로드 받아 직접 설치하고 실행할 수 있습
 - Framework : Spring Boot 2.1.x
 - Build Tool : Gradle 6.x
 - Git : [https://github.com/fosslight/fosslight][src]
-- IDE에 [lombock][lb]이 설치되어 있어야합니다.
-- Project Character Set은 UTF-8을 사용합니다.
+- IDE : [Spring Tool Suite][spring]
+    - [lombock][lb] 설치 필요
+- Project Character Set: UTF-8
 
 ### 다운로드 & 설치
 1. JAVA를 설치합니다.: [https://openjdk.java.net][java]
