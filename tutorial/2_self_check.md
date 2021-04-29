@@ -35,4 +35,4 @@ Self-Check를 생성하고 OSS(Open Source Software)정보를 확인합니다.
 ![new](images/2_self_save.png)
 
 ## 4. Export하여 파일로 다운로드
-
+![new](images/2_self_export.png)
