@@ -1,5 +1,5 @@
 ---
-sort: 10
+sort: 4
 published: true
 ---
 # Project
@@ -13,7 +13,7 @@ Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 O
 
 ## Create a Project
 배포하는 Software에 대하여 Project를 생성합니다.
-1. Project List에서 Add 버튼을 클릭합니다.
+1. Project 생성 : Project List에서 Add 버튼을 클릭합니다.
 2. New_Project 탭에서 Project 관련 정보를 입력합니다.
 3. 우측 하단의 Save 버튼을 클릭합니다.
 

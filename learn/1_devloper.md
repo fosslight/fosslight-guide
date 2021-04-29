@@ -4,7 +4,7 @@ published: true
 ---
 # Developer Documentation
 ```note
-FOSSLight System을 다운로드 받아 직접 설치하고 실행할 수 있습니다. 
+FOSSLight를 다운로드 받아 직접 설치하고 실행할 수 있습니다. 
 ```
 
 ## 설치
