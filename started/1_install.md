@@ -28,7 +28,7 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 ## 실행
 java가 설치되어 있는 환경에서 명령어를 실행합니다. 
 ```
-java --root.dir=/data/fosslight --server.port=8180 -jar fosslight.war
+java -jar fosslight.war --root.dir=/data/fosslight --server.port=8180
 ```
 ### 실행 옵션
 - 포트 변경
@@ -51,5 +51,5 @@ java --root.dir=/data/fosslight --server.port=8180 -jar fosslight.war
 ```
 - ⚠️Database 생성 없이 Demo Site의 Database 사용
 ```
-java --spring.datasource.url=35.73.164.212:3306/fosslight -jar fosslight.war
+java -jar fosslight.war --spring.datasource.url=35.73.164.212:3306/fosslight
 ```
