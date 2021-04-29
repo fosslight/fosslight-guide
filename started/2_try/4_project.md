@@ -4,7 +4,8 @@ published: true
 ---
 # Project
 ```note
-
+Open Source Software를 포함하는 Software의 개발 및 배포를 위해 수행해야 하는 Process를 수행합니다.  
+![prj_status](../images/4_project_process.png)
 ```
 
 ## Project List
@@ -36,8 +37,6 @@ Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 O
 | Drop|더 이상 Project의 OSC Process를 진행하지 않는 상태를 의미합니다. Status: Complete가 아닌 경우, Drop 설정을 할 수 있으며, 필요시에는 Open을 클릭하여 직접 Open할 수 있습니다.	|
 
 ## Project의 Process
-Open Source Software를 포함하는 Software의 개발 및 배포를 위해 수행해야 하는 Process 3단계를 순차적으로 처리합니다. 
-![prj_status](../images/4_project_process.png)
 
 ### 1. Create a Project
 배포하는 Software에 대하여 Project를 생성합니다.
@@ -46,9 +45,18 @@ Open Source Software를 포함하는 Software의 개발 및 배포를 위해 수
 3. 우측 하단의 Save 버튼을 클릭합니다.
 
 #### Basic Information탭
-생성한 Project에 대한 기본 정보를 수정할 수 있는 탭입니다. 
-
-
+Project에 대한 기본 정보를 수정하거나 Status를 변경하는 탭입니다. 
+![prj_basic](../images/4_project_bi.png)
+Project List에서 Project Name을 더블 클릭합니다. 
+- Delete : Project를 삭제합니다. 
+- Drop : Project의 Status를 Drop으로 변경합니다. 다시 Process를 진행하기 위해서는 Open 버튼을 클릭해야 합니다. 
+- Copy : Project를 복사하여 새로운 Project를 생성합니다. 
+- Save : 기본 정보를 수정한 후에는 클릭해야 저장됩니다. 
+- Open : Status가 Drop인 경우 표시되며 클릭하면 Status를 Progress로 변경합니다. 
+- Request to Open : Status가 Complete인 Project인 경우 표시되며 Status를 Progress로 변경하여 Process를 재수행할 수 있습니다. 
+- (Admin Only)
+    - Complete : 모든 Process가 완료된 Project에 대하여 Status를 변경합니다. 
+    - Open : Status가 Complete 또는 Drop인 경우 표시되며 Status를 Progress로 변경합니다. 
 
 ### 2. Identification
 배포하는 Project에 대하여 Open Source Software 분석 결과를 작성합니다.
