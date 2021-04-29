@@ -72,19 +72,37 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 *리뷰 완료된 3rd Party를 Load하는 방법*  
 하기 방법 중 선택하여 3rd Party Software 정보를 불러올 수 있습니다. 
-💁 3rd Pary는 여러개 불러올 수 있습니다.
-1. 3rd Party Search : 3rd Party List 메뉴에서 리뷰받은 3rd Party Software를 검색하고 load합니다.
+(💁 3rd Pary는 여러개 불러올 수 있습니다.)
+1. 3rd Party Search : 3rd Party List 메뉴에서 Status: confirm인 3rd Party Software를 검색하고 load합니다.
 2. Project Search : 다른 Project의 3rd Party 탭을 load합니다.
 
 #### 2-2. SRC Tab
 ![prj](../images/4_project_src.png)
-1. SRC 탭 작성 Process
-Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
+*SRC 탭 작성 Process*
+- Source code별 OSS가 포함된 경우: Source code별 OSS 정보를 작성 -> Save
+- Source code별 OSS 분석 대상이 아닌 경우 : Not Applicable 체크 → Save
+
+*Source code별 OSS 정보 작성 방법* 
+- OSS Table에 수기로 작성
+    - OSS Table의 좌측 상단 + 버튼을 클릭하여 OSS 정보를 기입합니다.
+- OSS 정보 일괄 Load 하는 방법
+    1. Upload Analysis Result 란에 OSS List를 작성한 OSS Report를 업로드합니다. 
+        - Load 가능한 OSS Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
+    2. Project Search : 다른 Project의 SRC 탭을 Load합니다.
 
 #### 2-3. BIN Tab
 ![prj](../images/4_project_bin.png)
-1. BIN 탭 작성 Process
-Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
+*BIN 탭 작성 Process*
+- Binary가 포함된 경우 : Binary별 OSS 정보를 작성 -> Save
+- Binary가 포함되지 않는 경우 : Not Applicable 체크 → Save
+
+*Binary별 OSS 정보 작성 방법*  
+- OSS Table에 수기로 작성
+    - OSS Table의 좌측 상단 + 버튼을 클릭하여 OSS 정보를 기입합니다.
+- OSS 정보 일괄 Load 하는 방법
+    1. Upload Analysis Result 란에 OSS List를 작성한 OSS Report를 업로드합니다. 
+        - Load 가능한 OSS Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
+    2. Project Search : 다른 Project의 BIN 탭을 Load합니다.
 
 #### 2-1. BOM Tab
 3rd Party, SRC, BIN 탭에 작성된 OSS 목록을 취합하고 리뷰 요청을 합니다.
@@ -113,6 +131,12 @@ Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
 OSS Notice는 Identification > BOM 탭을 기준으로 자동 생성됩니다. 이 때, 발행하는 OSS Notice의 포맷이나 Contents를 수정할 수 있습니다.
 
 ## ⭐Tips for Project
+### Check OSS Name 버튼 (SRC, BIN Tab)
+OSS Table에 작성된 Download location을 기반으로 FOSSLight에 저장된 OSS Name으로 자동 변경합니다.
+- 팝업에 자동 변환될 OSS 목록이 표시됩니다.
+    - Change OSS Name 버튼 : 체크된 Row에 대하여 OSS Table의 OSS Name이 변경됩니다. 
+    - (Admin Only) Add Nickname 버튼 : 체크된 Row에 대하여 FOSSLight에 저장된 OSS에 Nickname으로 OSS Table에 쓰여진 OSS Name이 추가됩니다.
+
 ### Comment 남기기
 - 탭별 우측 상단의 Comment Edit 버튼을 클릭하면 Comment를 남기고 해당 Comment를 Reviewer, Watcher, Creator에게 메일로 발송할 수 있습니다.
 
