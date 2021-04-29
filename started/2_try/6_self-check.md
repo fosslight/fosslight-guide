@@ -62,6 +62,7 @@ Self-Check는 아래와 같은 절차를 통해 진행할 수 있습니다.
 - Vulnerability 관련 상세 정보는 [Vulnerability][7_vulnerability.md] 에서 확인 가능합니다.
 ```
 1. OSC System UI에서 확인  
+![self_pop](../images/6_self_pop.png)  
 Vulnerability 아이콘을 클릭하면 해당 OSS Name, OSS Version의 취약점 정보가 팝업창으로 제공됩니다.
 
 2. Export 파일로 확인
