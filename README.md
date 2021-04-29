@@ -51,7 +51,7 @@ FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 
 <div class="person-container">
   <div class="persons js-dropdown-items">
     <div class="person js-dropdown-item">
-      <div class="avatar"><img src="about/images/process2.png" alt="" title="Title 1"></div>
+      <div class="avatar"><img src="about/images/process4.png" alt="" title="Title 1"></div>
       <div class="fullname">Project</div>
       <div class="js-description">
         <p>Project별 OSC Process 수행 및 Status 관리</p>
@@ -72,7 +72,7 @@ FOSSLight는 Open Source Compliance Process를 효율적으로 수행하는 데 
       </div>
     </div>   
     <div class="person js-dropdown-item">
-      <div class="avatar"><img src="about/images/3rdparty2.png" alt="" title="Title 3"></div>
+      <div class="avatar"><img src="about/images/3rdparty3.png" alt="" title="Title 3"></div>
       <div class="fullname">3rd Party</div>
       <div class="js-description">
         <p>3rd Party로부터 입수된 Software별 OSS 관리</p>
