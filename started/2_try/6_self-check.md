@@ -59,7 +59,7 @@ Self-Check는 아래와 같은 절차를 통해 진행할 수 있습니다.
 ```note
 - Vulnerability 열에서 확인 : NIST에서 제공하는 CVE DB에서 해당 OSS가 검색되면 Vulnerability 아이콘이 CVSS Score에 따라 색깔로 구분되어 표시됩니다.
 - Export 파일 (.xlsx)로 확인 : 기술된 전체 OSS의 리스트와 취약점 정보가 포함된 엑셀 파일이 다운로드 됩니다.
-- Vulnerability 관련 상세 정보는 [Vulnerability][7_vulnerability.md] 에서 확인 가능합니다.
+- Vulnerability 관련 상세 정보는 [Vulnerability](7_vulnerability.md) 에서 확인 가능합니다.
 ```
 1. OSC System UI에서 확인  
 ![self_pop](../images/6_self_pop.png)  
