@@ -33,7 +33,7 @@ Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 O
 | ------------- | ------------- |
 |Progress|	Creator가 작업하고 있는 상태입니다.	|
 |Request|Identification 또는 Packaging 단계에서 Creator가 Reviewer에게 Review를 요청한 상태입니다. 해당 탭의 우측 상단 reject 버튼을 통하여 Progress 상태로 변경할 수 있습니다.	|
-|Review|Identification 또는 Packaging 단계에서 Reviewer가 Review 중인 상태입니다. 이 때, Creator는 Identification 또는 Packaging의 정보를 수정할 수 없습니다. 수정이 필요한 경우 Comment를 남겨 Reviewer에게 Reject을 요청합니다. |
+|Review|Identification 또는 Packaging 단계에서 Reviewer가 Review 중인 상태입니다. 이 때, Creator는 Identification 또는 Packaging의 정보를 수정할 수 없습니다. 수정이 필요한 경우 [Comment](#comment)를 남겨 Reviewer에게 Reject을 요청합니다. |
 |Complete|Project Review가 완료된 상태를 의미합니다. Creator는 Identification 또는 Packaging의 정보를 수정할 수 없습니다. 수정이 필요한 경우 Project Basic Information탭에서 Request to Open을 클릭합니다.	|
 | Drop|더 이상 Project의 OSC Process를 진행하지 않는 상태를 의미합니다. Status: Complete가 아닌 경우, Drop 설정을 할 수 있으며, 필요시에는 Open을 클릭하여 직접 Open할 수 있습니다.	|
 
@@ -122,12 +122,31 @@ Project List에서 Project Name을 더블 클릭합니다.
     - Creator에게 재확인이 필요한 경우 Reject을 클릭하여 Status를 Progress로 변경합니다.
 
 ### 3. Packaging
-배포하는 Project에 대하여 Open Source Software 분석 결과를 작성합니다.
+```note
+- Packaging 단계에서는 Source Code 공개 의무가 있는 Open Source를 사용한 경우 공개할 Source Code를 취합(OSS Package)하고 이를 OSC System에 등록합니다.
+- OSS 고지문은 Packaging 단계가 Confirm되면 자동으로 생성됩니다. 만약, OSS 고지문 내용을 변경해야 할 경우, Notice tab에서 수정할 수 있습니다.
 - Project List의 Packaging column 내 버튼을 클릭하여 진입합니다.
+```
 
 #### 3-1. Packaging Tab
+![prj](../images/4_project_pkg.png)
+Packaging tab에서는 OSS Package 파일을 Upload하고 이를 Verify합니다. (단, Source Code 공개를 필요로하는 License하의 Open Source를 사용하지 않았다면 이 탭은 비활성화됩니다. )
+1. OSS Package Upload  
+    - Source code를 취합한 Packaging 파일(압축 파일)을 Upload합니다.
+2. "Path of source code in the OSS Package" column을 기입합니다.
+    - 공개해야 할 Open Source 종류가 많아 Path 기입을 일일이 하기 어려운 경우 'Export Path'버튼으로 Packaging OSS List 파일을 다운로드 한 후 Path를 기입하고 'Upload Path'버튼으로 upload 하면 Path 정보가 등록됩니다.
+    - 'Save' 버튼으로 입력한 Path정보를 저장할 수 있습니다.
+    - Path정보는 대소문자를 구분하니 입력 시 주의하시기 바랍니다.
+3. 'Verify'버튼을 클릭하여 확인 과정을 수행합니다.
+    - Verify 후 OSS Package 내에서 찾은 File은 File Count란에 개수가 표시됩니다. 찾지 못한 Open Source가 있다면 "path not found"라고 표시됩니다.
+    - OSS Package 내에서 찾은 README, File List, Banned List를 확인할 수 있습니다.
+        - README : OSS Package 내 포함된 README 파일
+        - File List : OSS Package 내의 파일 목록
+        - Banned List : "Proprietary", "Commercial" 등 공개되지 말아야 할 파일 목록
+
 
 #### 3-2. Notice Tab
+![prj](../images/4_project_notice.png)
 OSS Notice는 Identification > BOM 탭을 기준으로 자동 생성됩니다. 이 때, 발행하는 OSS Notice의 포맷이나 Contents를 수정할 수 있습니다.
 
 ## ⭐Tips for Project
@@ -137,7 +156,7 @@ OSS Table에 작성된 Download location을 기반으로 FOSSLight에 저장된 
     - Change OSS Name 버튼 : 체크된 Row에 대하여 OSS Table의 OSS Name이 변경됩니다. 
     - (Admin Only) Add Nickname 버튼 : 체크된 Row에 대하여 FOSSLight에 저장된 OSS에 Nickname으로 OSS Table에 쓰여진 OSS Name이 추가됩니다.
 
-### Comment 남기기
+### <a name="comment"></a> Comment 남기기
 - 탭별 우측 상단의 Comment Edit 버튼을 클릭하면 Comment를 남기고 해당 Comment를 Reviewer, Watcher, Creator에게 메일로 발송할 수 있습니다.
 
 ### <a name="warning"></a> OSS Table's Warning message 
