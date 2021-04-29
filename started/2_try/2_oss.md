@@ -4,7 +4,7 @@ published: true
 ---
 # OSS List
 ```note
-등록된 OSS(Open Source Software) 정보를 확인하고, OSS를 추가할 수 있습니다.
+등록된 OSS(Open Source Software) 정보를 확인하고, OSS를 추가, 수정, 삭제할 수 있습니다.
 OSS List의 OSS Name Column 내 cell을 클릭하면 상세정보를 확인할 수 있습니다. 
 ```
 ![OssList](../images/oss_list.png)  
