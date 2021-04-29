@@ -55,13 +55,13 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 ## 실행
 ### 실행 옵션 변경
 [application.properties][props] 파일에서 실행 옵션 변경
- - server.port=<PORT>: 웹서버 포트 (8180으로 설정한 경우 [http://localhost:8180][local])
- - spring.datasource.url=<IP>:<PORT>/<DATABASE_NAME>: FOSSLight Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
- - spring.datasource.username=<USER_NAME>: Database 접속자명을 설정
- - spring.datasource.password=<USER_PASSWORD>: Database 접속자 패스워드 설정
- - logging.path=<LOG_FILE_PATH>: 로그파일 출력 경로 설정 ( Default "./logs" 는 Application 실행 위치를 의미)
- - logging.file=<LOG_FILE_NAME>: 로그를 출력할 로그파일명 (logback-spring.xml 파일 참고)
- - root.dir=<WORK_SPACE>: 파일 업/다운로드 최상위 경로를 의미
+ - server.port=8180: 웹서버 포트 (8180으로 설정한 경우 [http://localhost:8180][local])
+ - spring.datasource.url=127.0.0.1:3306/fosslight: FOSSLight Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
+ - spring.datasource.username=fosslight: Database 접속자명을 설정
+ - spring.datasource.password=fosslight: Database 접속자 패스워드 설정
+ - logging.path=./logs : 로그파일 출력 경로 설정 ( Default "./logs" 는 Application 실행 위치를 의미)
+ - logging.file=fosslight : 로그를 출력할 로그파일명 (logback-spring.xml 파일 참고)
+ - root.dir=./data: 파일 업/다운로드 최상위 경로를 의미
 
 [props]: https://github.com/fosslight/fosslight/blob/main/src/main/resources/application.properties
 
