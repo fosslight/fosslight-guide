@@ -4,7 +4,7 @@ published: true
 ---
 # Project
 ```note
-Open Source Software를 포함하는 Software의 개발 및 배포를 위해 수행해야 하는 Process를 수행합니다.  
+Open Source Software를 포함하는 Software의 개발 및 배포를 위해 수행해야 하는 Process를 순차적으로 수행합니다.  
 ![prj_status](../images/4_project_process.png)
 ```
 
@@ -62,26 +62,36 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 ### 2. Identification
 배포하는 Project에 대하여 Open Source Software 분석 결과를 작성합니다.
-![Identification](../images/identification.png)
-- Identification 작성 Process : 1. 
+- Project List의 Identification column 내 버튼을 클릭하여 진입합니다.
 
 #### 2-1. 3rd Party Tab
+![prj](../images/4_project_3rd.png)
 1. 3rd Party 탭 작성 Process
 3rd Party Project Load -> Warning message 검토 -> Save
 
 #### 2-2. SRC Tab
+![prj](../images/4_project_src.png)
 1. SRC 탭 작성 Process
 Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
 
 #### 2-3. BIN Tab
+![prj](../images/4_project_bin.png)
 1. BIN 탭 작성 Process
 Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
 
 #### 2-1. BOM Tab
+![prj](../images/4_project_bom.png)
+
+Warning message별 검토 사항
 
 ### 3. Packaging
-
+배포하는 Project에 대하여 Open Source Software 분석 결과를 작성합니다.
+- Project List의 Packaging column 내 버튼을 클릭하여 진입합니다.
 #### 3-1. Packaging Tab
 
 #### 3-2. Notice Tab
 OSS Notice는 Identification > BOM 탭을 기준으로 자동 생성됩니다. 이 때, 발행하는 OSS Notice의 포맷이나 Contents를 수정할 수 있습니다.
+
+## ⭐Tips for Project
+### Comment 남기기
+- 탭별 우측 상단의 Comment Edit 버튼을 클릭하면 Comment를 남기고 해당 Comment를 Reviewer, Watcher, Creator에게 메일로 발송할 수 있습니다. 
