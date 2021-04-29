@@ -28,6 +28,7 @@ Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 O
 
 ### Project의 Status
 ![prj_status](../images/4_project_status.png)
+
 | Status  | Description |
 | ------------- | ------------- |
 |Progress|	Creator가 작업하고 있는 상태입니다.	|
@@ -35,6 +36,7 @@ Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 O
 |Review|Identification 또는 Packaging 단계에서 Reviewer가 Review 중인 상태입니다. 이 때, Creator는 Identification 또는 Packaging의 정보를 수정할 수 없습니다. 수정이 필요한 경우 Comment를 남겨 Reviewer에게 Reject을 요청합니다. |
 |Complete|Project Review가 완료된 상태를 의미합니다. Creator는 Identification 또는 Packaging의 정보를 수정할 수 없습니다. 수정이 필요한 경우 Project Basic Information탭에서 Request to Open을 클릭합니다.	|
 | Drop|더 이상 Project의 OSC Process를 진행하지 않는 상태를 의미합니다. Status: Complete가 아닌 경우, Drop 설정을 할 수 있으며, 필요시에는 Open을 클릭하여 직접 Open할 수 있습니다.	|
+
 
 ## Project의 Process
 
