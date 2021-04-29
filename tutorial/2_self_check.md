@@ -47,7 +47,5 @@ Self-Check를 생성하고 OSS(Open Source Software)정보를 확인합니다.
     - OSS Name : OSS Table에 작성한 OSS Name
     - Nick Name : OSS Table에 작성한 OSS의 nickname으로 Vulnerability가 조회된 경우, 매칭된 nickname이 표시됩니다. (매칭된 nickname이 없는 경우 -로 표시)
     - OSS Version : Vulnerability 조회된 version
-        - OSS 버전이 공란인 경우, Vulnerability 에 존재하는 모든 버전에 대하여 정보를 출력합니다. 
-        - OSS Version이 설정되어 있는 경우 해당 Version의 하위 버전은 CSV 에 포함되지 않습니다. (상위 버전은 모두 포함)
     - Max Score : 해당 OSS, Version에 대한 Vulnerability Max Score
     - Vulnerability Link : 해당 OSS Name, OSS Version으로 조회된 Vulnerability 목록을 확인할 수 있는 팝업 링크를 출력합니다.
