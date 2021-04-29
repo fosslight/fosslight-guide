@@ -66,8 +66,15 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 #### 2-1. 3rd Party Tab
 ![prj](../images/4_project_3rd.png)
-1. 3rd Party 탭 작성 Process
-3rd Party Project Load -> Warning message 검토 -> Save
+*3rd Party 탭 작성 Process*
+- 3rd Party Software가 포함된 경우 : 사전에 리뷰 완료된 3rd Party를 Load → Save
+- 3rd Party Software가 포함되지 않은 경우 : Not Applicable 체크 → Save
+
+*리뷰 완료된 3rd Party를 Load하는 방법*  
+하기 방법 중 선택하여 3rd Party Software 정보를 불러올 수 있습니다. 
+💁 3rd Pary는 여러개 불러올 수 있습니다.
+1. 3rd Party Search : 3rd Party List 메뉴에서 리뷰받은 3rd Party Software를 검색하고 load합니다.
+2. Project Search : 다른 Project의 3rd Party 탭을 load합니다.
 
 #### 2-2. SRC Tab
 ![prj](../images/4_project_src.png)
@@ -80,13 +87,26 @@ Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
 Open Source Software 분석 결과 작성 -> Warning message 검토 -> Save
 
 #### 2-1. BOM Tab
+3rd Party, SRC, BIN 탭에 작성된 OSS 목록을 취합하고 리뷰 요청을 합니다.
 ![prj](../images/4_project_bom.png)
 
-- [Warning message별 검토 사항](#warning)
+##### Review 요청 방법
+1. Merge And Save 버튼을 클릭합니다.
+    - 3rd Party, SRC, BIN 탭에 작성한 OSS List를 취합합니다.
+2. [Warning message별 검토 사항](#warning) 검토 사항을 확인합니다.
+3. Request Review 버튼을 클릭하여 리뷰 요청을 합니다.
+    - 단, 빨간색 Warning Message가 있을 경우 리뷰 요청이 불가합니다.
+
+##### (Admin only) Review 방법
+1. BOM 탭 우측 상단 Review Start 버튼을 클릭합니다.
+2. [Warning message별 검토 사항](#warning) 검토 사항을 확인합니다.
+3. Merge And Save 클릭 후 Confirm을 클릭하면 Packaging 탭이 활성화됩니다. 
+    - Creator에게 재확인이 필요한 경우 Reject을 클릭하여 Status를 Progress로 변경합니다.
 
 ### 3. Packaging
 배포하는 Project에 대하여 Open Source Software 분석 결과를 작성합니다.
 - Project List의 Packaging column 내 버튼을 클릭하여 진입합니다.
+
 #### 3-1. Packaging Tab
 
 #### 3-2. Notice Tab
