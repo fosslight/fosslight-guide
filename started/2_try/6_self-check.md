@@ -69,7 +69,7 @@ Vulnerability 아이콘을 클릭하면 해당 OSS Name, OSS Version의 취약�
     - Self-Check Sheet   
     ![self_check_sheet](../images/6_self_sheet1.png)   
     사용자가 입력한 OSS 리스트가 OSS 보고서 양식에 준하여 기술됩니다.  
-    이 탭의 정보는 추후 [Project][4_project.md]의 Identification에서 활용될 수 있습니다.  
+    이 탭의 정보는 추후 [Project](4_project.md)의 Identification에서 활용될 수 있습니다.  
     - Vulnerability Sheet  
     ![self_check_sheet2](../images/6_self_sheet2.png)  
     취약점 정보가 발견된 OSS의 입력한 버전과 상위 버전의 정보들이 기술됩니다.  
