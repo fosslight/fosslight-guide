@@ -8,12 +8,40 @@ Project를 생성하고 OSC(Open Source Compliance) Process를 수행합니다.
 ```
 
 ## 1. Project 생성
-
+1-1. Project List에서 Add 버튼을 클릭합니다.  
+1-2. New_Project 탭에서 Project 정보를 입력합니다.  
+1-3. Project List에 Project가 생성된 것을 확인합니다.   
 
 ## 2. Identification
+Project List에서 생성한 Project의 Identification Column 내 버튼을 클릭합니다.  
+### 2-1. 3rd Party Tab으로 이동합니다.  
+    - Not Applicable을 체크하고 Save 클릭합니다.  
 
+### 2-2. SRC Tab으로 이동합니다.  
+    - OSS List가 쓰여진 Sample [OSS Report](result_files/OSS-Report_SampleProject.xlsx)를 다운로드합니다.
+    - Upload 버튼을 클릭하여 Load합니다. 이 때, Load할 Sheet로 SRC Sheet를 선택합니다. 
+    - OSS Report의 SRC Sheet가 Load된 것을 확인하고 Save를 클릭합니다. 
+
+### 2-3. BIN Tab으로 이동합니다.  
+![bin](images/1_prj_bin.png)  
+    - OSS Table 좌측 상단 + 버튼을 클릭합니다.
+    - 추가된 Row에 OSS 정보를 기입합니다.
+    - Save 버튼을 클릭합니다.
+
+### 2-4. BOM Tab으로 이동합니다. 
+    - Merge And Save 버튼을 클릭합니다.
+    - Request Review 버튼을 클릭하여 리뷰 요청합니다. 
+
+### 2-5. (Admin Only) Review
+    - ID: admin, PSWD: admin 으로 로그인합니다. 
+    - Project List > Status: Request인 Project의 BOM으로 이동합니다. 
+    - [Waring Message](../started/2_try/4_project.html#warning)를 검토합니다.
+    - 우측 상단의 Confirm을 클릭합니다. 
 
 ## 3. Packaging
+### 3-1. Packaging Tab
 
+### 3-2. Notice Tab
 
 ## 4. OSS Notice 다운로드
+- Project List의 Download column의 아이콘을 클릭하여 각 아이콘별 파일을 확인합니다.
