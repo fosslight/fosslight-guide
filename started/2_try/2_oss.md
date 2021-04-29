@@ -74,9 +74,10 @@ OSS List의 OSS Name Column 내 cell을 클릭하면 상세정보를 확인할 �
 1. OSS List에서 삭제할 OSS Name을 클릭합니다.
 2. OSS 상세정보 탭에서 Comment란에 삭제 사유를 기입합니다.
 3. 좌측 하단의 Delete 버튼을 클릭합니다.
-- 📢 해당 OSS가 Identification 단계가 Confirm된 Project에 포함된 경우, Delete 버튼 클릭 시 Rename할 다른 OSS를 선택하는 창이 팝업됩니다. 
-Rename할 OSS를 선택하면, 삭제하는 OSS는 선택한 OSS의 nickname으로 이동됩니다.
-![NEW_OSS](../images/2_oss_rename.png)
+    - 📢 해당 OSS가 Identification 단계가 Confirm된 Project에 포함된 경우, Delete 버튼 클릭 시 Rename할 다른 OSS를 선택하는 창이 팝업됩니다. 
+    ![NEW_OSS](../images/2_oss_rename.png)
+        - Rename할 OSS를 선택하면, 삭제하는 OSS는 선택한 OSS로 Merge됩니다. (삭제하는 OSS의 Name과 NickName은 Rename하는 OSS의 Nickname으로 이동됩니다.)
+
 
 
 
