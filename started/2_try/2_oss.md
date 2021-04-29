@@ -5,6 +5,7 @@ published: true
 # OSS List
 ```note
 등록된 OSS(Open Source Software) 정보를 확인하고, OSS를 추가할 수 있습니다.
+OSS List의 OSS Name Column 내 cell을 클릭하면 상세정보를 확인할 수 있습니다. 
 ```
 ![OssList](../images/oss_list.png)  
 
@@ -53,4 +54,28 @@ published: true
 ## Vulnerability 
 - NIST에서 제공하는 CVE DB에서 해당 OSS가 검색되면 취약 정도 (CVE Score)에 따라 Vulnerability 아이콘 색깔로 구분되어 표시됩니다.
 
-# OSS 추가
+# (Admin Only) OSS 추가, 수정, 삭제
+## OSS 추가
+![NEW_OSS](../images/2_oss_new.png)  
+1. OSS List에서 우측 상단 Add 버튼을 클릭합니다.
+2. "New_Opensource" 탭에서 신규 OSS의 정보를 입력합니다.
+    - OSS Name, Nick Name은 중복될 수 없습니다. 
+    - Summary Description : 해당 OSS에 대한 정보를 입력합니다.
+    - Attribution : OSS Notice 발행시 별도로 포함되어야 하는 문구를 기입합니다.
+3. 우측 하단의 Save 버튼을 클릭합니다.
+
+## OSS 수정
+1. OSS List에서 수정할 OSS Name을 클릭합니다.
+2. OSS 상세정보 탭에서 수정합니다.
+3. 우측 하단의 Save 버튼을 클릭합니다.
+
+## OSS 삭제
+1. OSS List에서 삭제할 OSS Name을 클릭합니다.
+2. OSS 상세정보 탭에서 Comment란에 삭제 사유를 기입합니다.
+3. 좌측 하단의 Delete 버튼을 클릭합니다.
+- 📢 해당 OSS가 Identification 단계가 Confirm된 Project에 포함된 경우, Delete 버튼 클릭 시 Rename할 다른 OSS를 선택하는 창이 팝업됩니다. 
+Rename할 OSS를 선택하면, 삭제하는 OSS는 선택한 OSS의 nickname으로 이동됩니다.
+![NEW_OSS](../images/2_oss_rename.png)
+
+
+
