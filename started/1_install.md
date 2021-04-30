@@ -31,7 +31,7 @@ java가 설치되어 있는 환경에서 명령어를 실행합니다.
 java -jar fosslight.war --root.dir=/data/fosslight --server.port=8180
 ```
 ### 실행 옵션
-- 포트 변경
+- 웹서버 포트 변경
 ```
 --server.port=<PORT>
 ```
@@ -49,4 +49,3 @@ java -jar fosslight.war --root.dir=/data/fosslight --server.port=8180
 ```
 --logging.path=<LOG_PATH>
 ```
-
