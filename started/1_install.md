@@ -49,7 +49,4 @@ java -jar fosslight.war --root.dir=/data/fosslight --server.port=8180
 ```
 --logging.path=<LOG_PATH>
 ```
-- ⚠️Database 생성 없이 Demo Site의 Database 사용
-```
-java -jar fosslight.war --spring.datasource.url=35.73.164.212:3306/fosslight
-```
+
