@@ -2,13 +2,16 @@
 ```note
 FOSSLight를 빠르고 쉽게 설치 및 실행하는 방법을 설명합니다.
 ```
-## 설치
+## 🔆 Demo 사이트 이용하기
+[https://demo.fosslight.org](https://demo.fosslight.org)를 이용하면 설치 없이 FOSSLight를 체엄할 수 있습니다. 
+
+## 🖥️ 설치
 ### 요구사항
 - JAVA 1.8 이상
 - MariaDB 10.0 이상 또는 MySql 5.6 이상
 
 ### 설치
-1. JAVA를 설치합니다. : [ https://openjdk.java.net][java]
+1. JAVA를 설치합니다. : [https://openjdk.java.net][java]
 2. MariaDB 또는 Mysql 설치합니다. : [https://mariadb.org/download][maria]
 3. DDL 파일을 다운로드 받습니다. : [fosslight_create.sql][sql]
 4. Database 생성 및 초기 Data 등록합니다.
