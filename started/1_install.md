@@ -2,8 +2,12 @@
 ```note
 FOSSLight를 빠르고 쉽게 설치 및 실행하는 방법을 설명합니다.
 ```
+
 ## 🔆 Demo 사이트 이용하기
-[https://demo.fosslight.org](https://demo.fosslight.org)를 이용하면 설치 없이 FOSSLight를 체엄할 수 있습니다. 
+[https://demo.fosslight.org](https://demo.fosslight.org)를 이용하면 설치 없이 FOSSLight를 체험할 수 있습니다. 
+- 계정 생성 및 등록 방법 : [로그인/계정 등록](2_try/1_sign.md)
+- (Sample) Admin 계정 : 하기 admin 계정을 통해 관리자 모드를 체험할 수 있습니다.
+    - id : admin, pswd : admin
 
 ## 🖥️ 설치
 ### 요구사항
