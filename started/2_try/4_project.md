@@ -149,6 +149,16 @@ Packaging tab에서는 OSS Package 파일을 Upload하고 이를 Verify합니다
 ![prj](../images/4_project_notice.png)
 OSS Notice는 Identification > BOM 탭을 기준으로 자동 생성됩니다. 이 때, 발행하는 OSS Notice의 포맷이나 Contents를 수정할 수 있습니다.
 
+#### 3-3. Review 요청
+- Packaging 탭 우측 상단 Request Review 버튼을 클릭하여 리뷰 요청을 합니다.
+
+#### 3-4. (Admin only) Review 방법
+- Packaging 탭 우측 상단 Review Start 버튼을 클릭합니다.
+- 우측 상단의 Confirm을 클릭하면 Packaging이 Confirm되고 OSC Process가 완료됩니다. 
+- Packaging이 Confirm된 Project에 대해서 Project List에서 발행된 OSS Notice를 다운로드 받을 수 있습니다.
+    - Creator에게 재확인이 필요한 경우 Reject을 클릭하여 Status를 Progress로 변경합니다.
+
+
 ## ⭐Tips for Project
 ### Check OSS Name 버튼 (SRC, BIN Tab)
 OSS Table에 작성된 Download location을 기반으로 FOSSLight에 저장된 OSS Name으로 자동 변경합니다.
