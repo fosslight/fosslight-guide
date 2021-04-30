@@ -33,26 +33,28 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 [maria]: https://mariadb.org/download
 
 ### 실행
-java가 설치되어 있는 환경에서 명령어를 실행합니다. 
-```
-java -jar fosslight.war --root.dir=/data/fosslight --server.port=8180
-```
+- Source code 빌드하는 방법 : [개발 환경 세팅](../learn/1_devloper.md)
+- java가 설치되어 있는 환경에서 명령어를 실행합니다. 
+    ```
+    java -jar fosslight.war --root.dir=/data/fosslight --server.port=8180
+    ```
+
 #### 실행 옵션
 - 웹서버 포트 변경
-```
---server.port=<PORT>
-```
+    ```
+    --server.port=<PORT>
+    ```
 - Work Directory 설정 (Default: /usr/share/fosslight)
-```
---root.dir=<WORK_DIRECTORY>
-```
+    ```
+    --root.dir=<WORK_DIRECTORY>
+    ```
 - Database 접속정보 변경 (Default: 127.0.0.1:3306/fosslight)
-```
---spring.datasource.url=<IP>:<Port>/<Database>
---spring.datasource.username=<USER_NAME>
---spring.datasource.password=<PASSWORD>
-```
+    ```
+    --spring.datasource.url=<IP>:<Port>/<Database>
+    --spring.datasource.username=<USER_NAME>
+    --spring.datasource.password=<PASSWORD>
+    ```
 - log 파일 경로 지정
-```
---logging.path=<LOG_PATH>
-```
+    ```
+    --logging.path=<LOG_PATH>
+    ```
