@@ -67,18 +67,17 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 [props]: https://github.com/fosslight/fosslight/blob/main/src/main/resources/application.properties
 
 ### Build & Run
-#### 빌드 후 실행
 하기 두 가지 방법으로 빌드 및 실행할 수 있습니다. 
 1. Gradle build & Run
     - build (war 파일 생성)
     ```
     $ gradlew build
     ```
-    - run - 방법 1 (직접 실행)
+    - run
     ```
     $ gradlew bootRun
     ```
-    - run - 방법 2 (빌드 후 어플리케이션 실행)
+    - build & run - 방법 2 (빌드 후 어플리케이션 실행)
     ```
     $ gradlew clean build && java -jar build/libs/FOSSLight-0.0.2.war
     ```
@@ -86,7 +85,7 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 2. IDE 에서 직접 실행
     - Boot Dashboard > local > FOSSLight 선택, 우클릭 start (Crtl + Alt + Shift + B, R)
 
-#### 동작 확인
+### 동작 확인
 - 웹브라우저에서 [http://localhost:8180][local]으로 접속하면 로그인 화면이 표시됩니다.
 - 초기 로그인 계정은 id: admin, pswd :admin 입니다.
 
