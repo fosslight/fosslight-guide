@@ -4,7 +4,7 @@ published: true
 ---
 # Developer Documentation
 ```note
-FOSSLight를 다운로드 받아 직접 설치하고 실행할 수 있습니다. 
+FOSSLight 소스를 다운로드받아 직접 컴파일하여 실행할 수 있습니다. 
 ```
 
 ## 설치
@@ -79,7 +79,7 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
     ```
     - build & run - 방법 2 (빌드 후 어플리케이션 실행)
     ```
-    $ gradlew clean build && java -jar build/libs/FOSSLight-0.0.2.war
+    $ gradlew clean build && java -jar build/libs/FOSSLight-1.0.0.war
     ```
 
 2. IDE 에서 직접 실행
