@@ -1,7 +1,3 @@
----
-sort: 1
-published: true
----
 # Developer Documentation
 ```note
 FOSSLight 소스를 다운로드받아 직접 컴파일하여 실행할 수 있습니다. 
