@@ -44,8 +44,8 @@ Self-Check를 생성하고 OSS(Open Source Software)정보를 확인합니다.
 ![new](images/2_self_export.png)
 - Self-Check Sheet : OSS Table에 쓰여진 사항을 출력합니다. 이 Sheet를 [Project](../started/2_try/4_project.md)의 Identification 탭에 업로드할 수 있습니다. 
 - Vulnerability Sheet : OSS별 Vulnerability 정보를 출력합니다.
-    - OSS Name : OSS Table에 작성한 OSS Name
+    - OSS Name : OSS Table에 작성한 OSS Name.
     - Nick Name : OSS Table에 작성한 OSS의 nickname으로 Vulnerability가 조회된 경우, 매칭된 nickname이 표시됩니다. (매칭된 nickname이 없는 경우 -로 표시)
-    - OSS Version : Vulnerability 조회된 version
-    - Max Score : 해당 OSS, Version에 대한 Vulnerability Max Score
+    - OSS Version : Vulnerability 조회된 version.
+    - Max Score : 해당 OSS, Version에 대한 Vulnerability Max Score.
     - Vulnerability Link : 해당 OSS Name, OSS Version으로 조회된 Vulnerability 목록을 확인할 수 있는 팝업 링크를 출력합니다.
