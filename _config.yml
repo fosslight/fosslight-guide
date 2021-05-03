@@ -1,11 +1,11 @@
-base_url: /fosslight-system-guide
+base_url: /fosslight-guide
 title: FOSSLight
 lang: ko
 description: FOSSLight Korean Guide
 
 remote_theme: fosslight/jekyll-rtd-theme
 
-top_link: "https://fosslight.github.io/fosslight-system-guide-en"
+top_link: "https://fosslight.github.io/fosslight-guide-en"
 top_link_word: "EN"
 
 readme_index:
