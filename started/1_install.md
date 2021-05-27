@@ -34,7 +34,7 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 
 ### 실행
 1. [FOSSLight.war][war] 파일 다운로드 
-- Source code 빌드하는 방법 : [개발 환경 세팅](../learn/1_devloper.html)
+- Source code 빌드하는 방법 : [개발 환경 세팅](../learn/1_developer.md)
 
 2. java가 설치되어 있는 환경에서 명령어를 실행합니다. 
     ```
