@@ -8,6 +8,9 @@ remote_theme: fosslight/jekyll-rtd-theme
 top_link: "https://fosslight.github.io/fosslight-guide-en"
 top_link_word: "EN"
 
+google:
+  gtag: UA-196813776-2
+  
 readme_index:
   with_frontmatter: true
 
