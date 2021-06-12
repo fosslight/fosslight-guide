@@ -3,7 +3,23 @@
 FOSSLight 소스를 다운로드받아 직접 컴파일하여 실행할 수 있습니다. 
 ```
 
-## 설치
+
+## 설치 및 실행 방법 - 1
+Docker를 이용하여 빌드 및 실행합니다.
+
+### 개발 환경
+1. [Docker][docker]
+2. [Docker Compose][doccompose]
+
+[docker]: https://docs.docker.com/engine/install/
+[doccompose]: https://docs.docker.com/compose/install/
+
+### 빌드 및 실행
+```
+sudo docker-compose up
+```
+
+## 설치 및 실행 방법 - 2
 ### 요구사항
 - JAVA 1.8 이상
 - MariaDB 10.0 이상 또는 MySql 5.6 이상
@@ -63,25 +79,50 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 [props]: https://github.com/fosslight/fosslight/blob/main/src/main/resources/application.properties
 
 ### Build & Run
-하기 두 가지 방법으로 빌드 및 실행할 수 있습니다. 
-1. Gradle build & Run
-    - build (war 파일 생성)
-    ```
-    $ gradlew build
-    ```
-    - run
-    ```
-    $ gradlew bootRun
-    ```
-    - build & run - 방법 2 (빌드 후 어플리케이션 실행)
-    ```
-    $ gradlew clean build && java -jar build/libs/FOSSLight-1.0.0.war
-    ```
+하기 방법으로 빌드 및 실행할 수 있습니다. 
+Official Release 버전의 build된 [war파일][war]을 다운로드 받으실 수도 있습니다.
 
-2. IDE 에서 직접 실행
+[war]: https://github.com/fosslight/fosslight/releases
+
+#### Gradle build & Run
+- build (war 파일 생성)
+```
+$ ./gradlew build
+```
+- run
+```
+$ ./gradlew bootRun
+```
+- build & run - 방법 2 (빌드 후 어플리케이션 실행)
+```
+$ ./gradlew clean build && java -jar build/libs/FOSSLight-1.0.0.war
+```
+    -   실행 옵션
+        - 웹서버 포트 변경
+        ```
+        --server.port=<PORT>
+        ```
+        - Work Directory 설정 (Default: /usr/share/fosslight)
+        ```
+        --root.dir=<WORK_DIRECTORY>
+        ```
+        - Database 접속정보 변경 (Default: 127.0.0.1:3306/fosslight)
+        ```
+        --spring.datasource.url=<IP>:<Port>/<Database>
+        --spring.datasource.username=<USER_NAME>
+        --spring.datasource.password=<PASSWORD>
+        ```
+        - log 파일 경로 지정
+        ```
+        --logging.path=<LOG_PATH>
+        ```
+
+
+#### IDE 에서 직접 실행
     - Boot Dashboard > local > FOSSLight 선택, 우클릭 start (Crtl + Alt + Shift + B, R)
 
-### 동작 확인
+
+## 동작 확인
 - 웹브라우저에서 [http://localhost:8180][local]으로 접속하면 로그인 화면이 표시됩니다.
 - 초기 로그인 계정은 id: admin, pswd :admin 입니다.
 
