@@ -79,7 +79,7 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 [props]: https://github.com/fosslight/fosslight/blob/main/src/main/resources/application.properties
 
 ### Build & Run
-하기 방법으로 빌드 및 실행할 수 있습니다. 
+하기 방법으로 빌드 및 실행할 수 있습니다.     
 Official Release 버전의 build된 [war파일][war]을 다운로드 받으실 수도 있습니다.
 
 [war]: https://github.com/fosslight/fosslight/releases
@@ -97,7 +97,8 @@ $ ./gradlew bootRun
 ```
 $ ./gradlew clean build && java -jar build/libs/FOSSLight-1.0.0.war
 ```
-    -   실행 옵션
+
+   -   실행 옵션
         - 웹서버 포트 변경
         ```
         --server.port=<PORT>
