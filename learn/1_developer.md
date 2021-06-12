@@ -65,8 +65,8 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 [java]: https://openjdk.java.net
 [git_repo]: https://github.com/fosslight/fosslight
 
-## 실행
-### 실행 옵션 변경
+### 실행
+- 실행 옵션 변경    
 [application.properties][props] 파일에서 실행 옵션 변경
  - server.port=8180: 웹서버 포트 (8180으로 설정한 경우 [http://localhost:8180][local])
  - spring.datasource.url=127.0.0.1:3306/fosslight: FOSSLight Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
@@ -78,13 +78,13 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 
 [props]: https://github.com/fosslight/fosslight/blob/main/src/main/resources/application.properties
 
-### Build & Run
+#### Build & Run
 하기 방법으로 빌드 및 실행할 수 있습니다.     
 Official Release 버전의 build된 [war파일][war]을 다운로드 받으실 수도 있습니다.
 
 [war]: https://github.com/fosslight/fosslight/releases
 
-#### Gradle build & Run
+##### Gradle build & Run
 - build (war 파일 생성)
 ```
 $ ./gradlew build
