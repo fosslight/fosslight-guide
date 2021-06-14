@@ -23,6 +23,7 @@ docker-compose up --build
 ### 요구사항
 - JAVA 1.8 이상
 - MariaDB 10.0 이상 또는 MySql 5.6 이상
+- Memory : 8GB+
 
 ### 개발 환경
 - Framework : Spring Boot 2.1.x
