@@ -16,7 +16,7 @@ Docker를 이용하여 빌드 및 실행합니다.
 
 ### 빌드 및 실행
 ```
-sudo docker-compose up
+docker-compose up --build
 ```
 
 ## 설치 및 실행 방법 - 2
