@@ -34,7 +34,7 @@ sudo docker-compose up
 
 ### 다운로드 & 설치
 1. JAVA를 설치합니다.: [https://openjdk.java.net][java]
-2. DDL : [https://github.com/fosslight/fosslight/blob/main/install/db/fosslight_create.sql][sql]
+2. DDL : [https://github.com/fosslight/fosslight/blob/main/db/initdb.d/fosslight_create.sql][sql]
 3. MariaDB 또는 Mysql 설치합니다. : [https://mariadb.org/download][maria]
 4. Database 생성 및 초기 Data 등록
 ```
