@@ -10,14 +10,14 @@ Open Source Software를 포함하는 Software의 개발 및 배포를 위해 수
 
 ## Project List
 ![ProjectList](../images/project_list.png)  
-Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 OSS Report, OSS Notice, OSS Package를 다운로드할 수 있습니다.
+Project를 검색하고, 해당 Project의 전체적인 정보를 확인하고 FOSSLight Report, OSS Notice, OSS Package를 다운로드할 수 있습니다.
 
 - Search : Project의 기본 정보, Status, License, OSS Name 등으로 Project를 검색할 수 있습니다.
 - Project Name (Version) : Row를 더블 클릭하면 Project 상세 화면으로 이동합니다.
 - Status : Project의 상태 정보를 표시합니다.
 - Identification, Packaging : 각 항목을 클릭하면 Identification, Packaging 상세 항목으로 이동합니다.
 - Download : 각 아이콘을 클릭하면 파일을 다운로드 받을 수 있습니다.
-    - OSS Report: Identification에서 입력한 목록을 OSS Report 형식으로 다운로드할 수 있습니다.
+    - FOSSLight Report: Identification에서 입력한 목록을 FOSSLight Report 형식으로 다운로드할 수 있습니다.
     - OSS Notice: Packaging 단계가 완료된 경우 표시되며 발행된 OSS Notice를 다운로드할 수 있습니다.
     - Packaging file: Packaging에서 공개할 Source Code가 업로드된 경우 표시되며 Packaging 파일을 다운로드할 수 있습니다.
 - Vulnerability : Project의 Identification에 포함된 전체 Open Source List의(Exclude 제외) Vulnerability 정보 중 가장 높은 Critical Level을 표시합니다.
@@ -86,8 +86,8 @@ Project List에서 Project Name을 더블 클릭합니다.
 - OSS Table에 수기로 작성
     - OSS Table의 좌측 상단 + 버튼을 클릭하여 OSS 정보를 기입합니다.
 - OSS 정보 일괄 Load 하는 방법
-    1. Upload Analysis Result 란에 OSS List를 작성한 OSS Report를 업로드합니다. 
-        - Load 가능한 OSS Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
+    1. Upload Analysis Result 란에 OSS List를 작성한 FOSSLight Report를 업로드합니다. 
+        - Load 가능한 FOSSLight Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
     2. Project Search : 다른 Project의 SRC 탭을 Load합니다.
 
 #### 2-3. BIN Tab
@@ -100,8 +100,8 @@ Project List에서 Project Name을 더블 클릭합니다.
 - OSS Table에 수기로 작성
     - OSS Table의 좌측 상단 + 버튼을 클릭하여 OSS 정보를 기입합니다.
 - OSS 정보 일괄 Load 하는 방법
-    1. Upload Analysis Result 란에 OSS List를 작성한 OSS Report를 업로드합니다. 
-        - Load 가능한 OSS Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
+    1. Upload Analysis Result 란에 OSS List를 작성한 FOSSLight Report를 업로드합니다. 
+        - Load 가능한 FOSSLight Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
     2. Project Search : 다른 Project의 BIN 탭을 Load합니다.
 
 #### 2-1. BOM Tab

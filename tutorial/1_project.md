@@ -20,10 +20,10 @@ Project List에서 생성한 Project의 Identification Column 내 버튼을 클�
 
 
 ### 2-2. SRC Tab으로 이동합니다.  
-- OSS List가 쓰여진 Sample [OSS Report](result_files/OSS-Report_SampleProject.xlsx)를 다운로드합니다.
+- OSS List가 쓰여진 Sample [FOSSLight Report](result_files/FOSSLight-Report_SampleProject.xlsx)를 다운로드합니다.
 - Upload 버튼을 클릭하여 다운로드받은 Sample 파일을 업로드합니다. 이때, Load 할 Sheet로 SRC Sheet를 선택합니다.   
     ![bin](images/1_prj_sheet.PNG)  
-- OSS Report의 SRC Sheet가 Load 된 것을 확인하고 Save를 클릭합니다. 
+- FOSSLight Report의 SRC Sheet가 Load 된 것을 확인하고 Save를 클릭합니다. 
 
 ### 2-3. BIN Tab으로 이동합니다.  
 ![bin](images/1_prj_bin.png)  

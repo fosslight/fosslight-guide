@@ -27,8 +27,8 @@ Self-Check는 아래와 같은 절차를 통해 진행할 수 있습니다.
 1. 개별 입력
     - +버튼을 클릭하여 행을 추가한 후 확인하고 싶은 OSS를 입력하고 Save합니다.
 2. OSS 보고서를 이용한 일괄 추가
-    1. Upload Analysis Result란에 OSS 리스트가 기재된 OSS Report를 업로드합니다. 
-        - 업로드 가능한 OSS Report 양식은 Export 버튼을 클릭하여 다운로드 받을 수 있습니다.
+    1. Upload Analysis Result란에 OSS 리스트가 기재된 FOSSLight Report를 업로드합니다. 
+        - 업로드 가능한 FOSSLight Report 양식은 Export 버튼을 클릭하여 다운로드 받을 수 있습니다.
     2. OSS List가 작성된 Sheet를 선택하고 OK 클릭합니다.  
     ![select_sheet](../images/6_self_select_sheet.png)
     3. Save 버튼을 클릭합니다. 
