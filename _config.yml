@@ -6,7 +6,7 @@ description: FOSSLight Korean Guide
 remote_theme: fosslight/guide_theme
 
 top_link: "https://fosslight.github.io/fosslight-guide-en"
-top_link_word: "EN"
+top_link_word: "English"
 
 google:
   gtag: UA-196813776-3
