@@ -19,7 +19,7 @@ Documentation에 대한 Contribution하는 방법
 
 당신의 기여는 이 프로젝트를 훌륭하게 유지하는 데 필수적입니다.
 
-## Pull request 생성하기
+### Pull request 생성하기
 
 1. Repository를 Fork 하고 clone 합니다.
 2. branch를 생성합니다. : `git checkout -b my-branch-name`
@@ -40,7 +40,7 @@ Documentation에 대한 Contribution하는 방법
 
 Work in Progress pull request는 초기에 피드백을 받거나 차단된 것이 있는 경우 환영합니다.
 
-## Developer Certificate of Origin
+### Developer Certificate of Origin
 
 이 프로젝트에 기여하려면 커밋 할 때마다 개발자 원본 인증서 (DCO)에 동의해야합니다.    
 
@@ -60,7 +60,7 @@ git commit에 -s 또는 --signoff 플래그를 사용하여 sign-off를 커밋�
 git commit -s -m "Write the commit message"
 ```
 
-## Resources
+### Resources
 
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
 - [Using Pull Requests](https://help.github.com/articles/about-pull-requests/)
