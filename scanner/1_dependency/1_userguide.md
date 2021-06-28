@@ -1,5 +1,4 @@
 ---
-sort: 1
 published: true
 ---
 # User Guide
