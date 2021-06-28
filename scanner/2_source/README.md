@@ -23,6 +23,6 @@ published: true
 
 ## 📄 License
 
-FOSSLight Source Scanner는 Apache-2.0입니다. License 원문 파일 [LICENSE][l]를 참고하십시오.
+FOSSLight Source Scanner는 [Apache-2.0][l]입니다.
 
 [l]: https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE
