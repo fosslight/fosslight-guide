@@ -21,7 +21,7 @@ FOSSLight Dependency Scanner는 여러 패키지 관리자에 대한 종속성 �
 
 ## 👏 기여 방법
 여러분의 기여를 환영합니다.
-기여하는 방법은 [CONTRIBUTING 가이드](2_contribute.md)를 참조하십시오.
+기여하는 방법은 [CONTRIBUTING 가이드](../learn/2_contribution.md)를 참조하십시오.
 
 ## 📄 License
 Copyright (c) 2020 LG Electronics, Inc.    
