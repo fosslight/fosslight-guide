@@ -6,14 +6,6 @@
 - [FOSSLight Dependency Scanner](https://github.com/fosslight/fosslight_dependency_scanner/issues)
 - [FOSSLight Source Scanner](https://github.com/fosslight/fosslight_source_scanner/issues)
 
-
-## Documentation
-Documentation에 대한 Contribution하는 방법
-1. [FOSSLight Guide](https://github.com/fosslight/fosslight-guide)의 Git Repository를 나의 저장소로 Fork합니다. 
-2. Fork한 Repository에서 수정한 후 Commit를 Push합니다.
-  - 이 때, [prose.io](https://prose.io/)를 이용하여 실시간으로 마크 다운을 미리보면서 편집할 수 있습니다.
-3. Fork Repository에서 Pull Request를 클릭하여 반영을 요청합니다. 
-
 ## Contributing
 
 당신의 기여는 이 프로젝트를 훌륭하게 유지하는 데 필수적입니다.
