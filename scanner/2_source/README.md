@@ -16,7 +16,7 @@ published: true
 설치 및 실행 방법에 대한 자세한 내용은 [사용 설명서](1_userguide.md)를 참조하십시오.
 
 ## 👏 기여 방법
-기여하는 방법은 [CONTRIBUTING 가이드](../learn/2_contribution.md)를 참조하십시오.    
+기여하는 방법은 [CONTRIBUTING 가이드](../../learn/2_contribution.md)를 참조하십시오.    
 개선 사항이나 버그는 [Git Repository][repo]에 이슈를 생성하여 리포트해주시기 바랍니다. 
 
 [repo]: https://github.com/fosslight/fosslight_source_scanner/issues

@@ -15,14 +15,15 @@ published: true
 
 ## 📋 Prerequisite
 
-FOSSLight Source Scanner는 Python 3.6+ 기반에서 동작합니다..    
+FOSSLight Source Scanner는 Python 3.6+ 기반에서 동작합니다.     
 Windows의 경우 [Microsoft Visual C++ Build Tools][ms_build]를 추가로 설치해야 합니다.
 
 [ms_build]: https://visualstudio.microsoft.com/vs/older-downloads/
 
 ## 🎉 How to install
 
-FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다. [python 3.6 + virtualenv](guide_virtualenv_kor.md) 환경에서 설치할 것을 권장합니다.
+FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.     
+[python 3.6 + virtualenv](guide_virtualenv_kor.md) 환경에서 설치할 것을 권장합니다.
 
 ```
 $ pip3 install fosslight_source
