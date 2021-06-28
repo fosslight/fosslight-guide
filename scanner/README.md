@@ -1,5 +1,5 @@
 ---
-sort: 6
+sort: 5
 published: true
 ---
 # FOSSLight Scanner
