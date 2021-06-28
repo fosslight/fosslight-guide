@@ -14,7 +14,7 @@ published: true
 ## User Management
 ![config](../images/9_system_user.png)
 등록된 계정 목록을 확인하고 정보를 수정합니다. 
-- Create 버튼: [Rest API](../../features/1_rest_api.md)에서 사용할 Token을 생성합니다. 
+- Create 버튼: [Rest API](../../features/2_rest_api.md)에서 사용할 Token을 생성합니다. 
 - reset 버튼 : 비밀번호를 ID와 동일하게 초기화합니다. 
 - Use YN : 휴면 계정을 설정합니다. 
 - Admin : Admin 권한을 부여합니다.

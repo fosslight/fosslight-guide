@@ -20,4 +20,4 @@ FOSSLight를 컨텐츠별로 살펴봅니다.
 
 ## 직접 실행해보기
 - [빠른 실행 방법](../started/1_install.md)
-- [개발 환경 세팅](../learn/1_developer.md)
+- [개발 환경 세팅](../features/1_developer.md)
