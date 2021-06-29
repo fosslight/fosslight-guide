@@ -48,7 +48,7 @@ Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니�
 | j | None | As an output, the result of executing ScanCode in json format other than FOSSLight Report is additionally generated. | 
 | o | String | Output file name without file extension. | 
 
-#### Ex. Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력
+Ex. Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력
 ```
 $ fosslight_source -p /home/source_path -j
 ```
@@ -61,7 +61,7 @@ json형태인 ScanCode 결과를 FOSSLight Report 형식으로 변환합니다.
 | p | String | Path of ScanCode json files. | 
 | o | String | Output file name without file extension. | 
 
-#### Ex. json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
+Ex. json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
 ```
 $ fosslight_convert -p /home/jsonfile_dir
 ```
