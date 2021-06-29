@@ -13,10 +13,14 @@ published: true
 
 ## 사용 방법
 
-- [Prerequisite](#-prerequisite)
-- [How to install](#-how-to-install)
-- [How to run](#-how-to-run)
-- [Result](#-result)
+- [FOSSLight Source Scanner](#fosslight-source-scanner)
+  - [사용 방법](#사용-방법)
+  - [📋 Prerequisite](#-prerequisite)
+  - [🎉 How to install](#-how-to-install)
+  - [🚀 How to run](#-how-to-run)
+    - [1. fosslight_source](#1-fosslight_source)
+    - [2. fosslight_convert](#2-fosslight_convert)
+  - [📁 Result](#-result)
 
 ## 📋 Prerequisite
 
@@ -28,7 +32,7 @@ Windows의 경우 [Microsoft Visual C++ Build Tools][ms_build]를 추가로 설�
 ## 🎉 How to install
 
 FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.     
-[python 3.6 + virtualenv](Etc/guide_virtualenv_kor.md) 환경에서 설치할 것을 권장합니다.
+[python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
 ```
 $ pip3 install fosslight_source
