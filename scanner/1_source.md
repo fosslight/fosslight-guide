@@ -12,15 +12,12 @@ published: true
 
 
 ## 사용 방법
-
-- [FOSSLight Source Scanner](#fosslight-source-scanner)
-  - [사용 방법](#사용-방법)
-  - [📋 Prerequisite](#-prerequisite)
-  - [🎉 How to install](#-how-to-install)
-  - [🚀 How to run](#-how-to-run)
+  - [Prerequisite](#-prerequisite)
+  - [How to install](#-how-to-install)
+  - [How to run](#-how-to-run)
     - [1. fosslight_source](#1-fosslight_source)
     - [2. fosslight_convert](#2-fosslight_convert)
-  - [📁 Result](#-result)
+  - [Result](#-result)
 
 ## 📋 Prerequisite
 
