@@ -1,8 +1,8 @@
 ---
-sort: 6
 published: true
-title: 📑 Learn more
+title: Etc
 ---
-# Learn more
+
+# Other guides to FOSSLight Scanner
 
 {% include list.liquid all=true %}

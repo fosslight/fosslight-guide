@@ -1,6 +1,7 @@
 ---
 sort: 1
 published: true
+title: 🔎 FOSSLight
 ---
 # FOSSLight Overview
 FOSSLight를 컨텐츠별로 살펴봅니다. 

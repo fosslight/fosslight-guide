@@ -1,49 +1,38 @@
 ---
 published: true
+title: FOSSLight Dependency Scanner
 ---
-# User Guide
+# FOSSLight Dependency Scanner
 
-## Contents
+<img src="https://img.shields.io/pypi/l/fosslight_dependency" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_dependency" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_dependency" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_dependency_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_dependency_scanner)
+    
+[**FOSSLight Dependency Scanner**](https://github.com/fosslight/fosslight_dependency_scanner)는 여러 패키지 관리자에 대한 종속성 분석을 지원하는 도구입니다. 패키지 관리자의 Manifest 파일을 자동으로 감지하고 오픈 소스 도구를 사용하여 종속성을 분석합니다. 그런 다음 종속성의 OSS 정보가 포함 된 보고서 파일을 생성합니다. 
 
-- [User Guide](#user-guide)
-  - [Contents](#contents)
-  - [🧐 How to analyze the dependencies](#-how-to-analyze-the-dependencies)
-  - [📋 Prerequisite](#-prerequisite)
+지원하는 Package Manager 목록은 하기와 같습니다.
+- [Gradle](https://gradle.org/) (Java)
+- [Maven](http://maven.apache.org/) (Java)
+- [NPM](https://www.npmjs.com/) (Node.js)
+- [PIP](https://pip.pypa.io/) (Python)
+- [Pub](https://pub.dev/) (Dart with flutter)
+- [Cocoapods](https://cocoapods.org/) (Swift/Obj-C)
+
+## 사용 방법
+
+  - [Prerequisite](#-prerequisite)
     - [NPM](#npm)
     - [Gradle](#gradle)
-    - [Android (gradle)](#android-gradle)
+    - [Android-gradle](#android-gradle)
     - [Pypi](#pypi)
     - [Maven (optional)](#maven-optional)
     - [Pub](#pub)
     - [Cocoapods](#cocoapods)
-  - [🎉 How to install](#-how-to-install)
-    - [From pip](#from-pip)
-    - [From source code](#from-source-code)
-  - [🚀 How to run](#-how-to-run)
-  - [📁 Result](#-result)
+  - [How to install](#-how-to-install)
+  - [How to run](#-how-to-run)
+  - [Result](#-result)
 
-<br>
-
-## 🧐 How to analyze the dependencies
-
-[**FOSSLight Dependency Scanner**](https://github.com/fosslight/fosslight_dependency_scanner)는 다른 오픈소스 소프트웨어를 이용하여 여러 패키지 매니저들의 dependency 분석을 수행하고 있습니다. 그 중 다음 기준에 따라 오픈소스 소프트웨어를 선택하고 있습니다.
-
-1. Direct dependency뿐만 아니라 transitive dependency까지 추출 가능
-2. 오픈소스 이름, 버전, License명 추출 가능
-
-각 패키지 매니저에 따라 이용하는 오픈소스 소프트웨어는 다음과 같습니다:
-
-- NPM : [NPM License Checker](https://github.com/davglass/license-checker)
-- Pypi : [pip-licenses](https://github.com/raimon49/pip-licenses)
-- Gradle : [License Gradle Plugin](https://github.com/hierynomus/license-gradle-plugin)
-- Maven : [license-maven-plugin](https://github.com/mojohaus/license-maven-plugin)
-- Pub : [flutter_oss_licenses](https://github.com/espresso3389/flutter_oss_licenses)
-
-따라서 각 패키지 매니저마다 다른 오픈소스 소프트웨어를 이용하기 때문에, 분석하고자 하는 패키지 매니저에 따라 아래 [Prerequisite](#-prerequisite) 단계를 수행하시기 바랍니다.
-
-<br>
 
 ## 📋 Prerequisite
+각 패키지 매니저마다 다른 오픈소스 소프트웨어를 이용하기 때문에, 분석하고자 하는 패키지 매니저에 따라 아래 [Prerequisite](#-prerequisite) 단계를 수행하시기 바랍니다.
 
 ### NPM
 
@@ -62,7 +51,6 @@ $ npm install
 > - package.json 파일이 input directory에 존재하는 경우, 해당 명령어 실행은 FOSSLight Dependency Scanner에서 자동으로 수행하므로 skip 가능합니다.
 > - 이미 dependency들이 설치된 node_modules 디렉토리가 존재하는 경우, node_modules폴더가 존재하는 path를 input directory로 설정하여 실행 가능합니다.
 
-<br>
 
 ### Gradle
 
@@ -86,8 +74,6 @@ downloadLicenses {
 ```
 $ gradle downloadLicenses
 ```
-
-<br>
 
 ### Android (gradle)
 
@@ -113,8 +99,6 @@ apply plugin: 'com.lge.android.licensetools'
 $ gradle generateLicenseTxt
 ```
 
-<br>
-
 ### Pypi
 
 시스템 내 전역으로 설치된 파이썬 dependency로부터 분석하고자 하는 프로젝트 dependency를 분리하기 위해 가상환경을 설정하여 이용하기를 권장합니다.
@@ -137,8 +121,6 @@ $ conda activate {venv name}
 // If you install the dependencies with requirements.txt...
 $ pip install -r requirements.txt
 ```
-
-<br>
 
 ### Maven (optional)
 
@@ -179,8 +161,6 @@ $ pip install -r requirements.txt
 $ mvn license:aggregate-download-licenses
 ```
 
-<br>
-
 ### Pub
 
 1. 다음 명령어를 통해 flutter_oss_licenses를 실행합니다.
@@ -191,8 +171,6 @@ $ flutter pub global activate flutter_oss_licenses
 $ flutter pub global run flutter_oss_licenses:generate.dart
 ```
 
-<br>
-
 ### Cocoapods
 
 1. Podfile을 통해 pod package를 설치합니다.
@@ -201,27 +179,15 @@ $ flutter pub global run flutter_oss_licenses:generate.dart
 $ pod install
 ```
 
-<br>
-
 ## 🎉 How to install
 
-FOSSLight Dependency Scanner는 Python3.6+ 환경에서 설치할 것을 권장합니다.
-
-### From pip
-
-```
-$ pip install fosslight-dependency
-```
-
-### From source code
+FOSSLight Dependency Scanner는 pip3를 이용하여 설치할 수 있습니다.     
+[python 3.6 + virtualenv](Etc/guide_virtualenv_kor.md) 환경에서 설치할 것을 권장합니다.
 
 ```
-$ git clone https://github.com/fosslight/fosslight_dependency_scanner.git
-$ cd fosslight_dependency_scanner
-$ pip install .
+$ pip3 install fosslight-dependency
 ```
 
-<br>
 
 ## 🚀 How to run
 
@@ -252,7 +218,7 @@ $ fosslight_dependency
 
 즉, FOSSLight Dependency Scanner 실행 시, input directory('-p' 옵션)는 위와 같이 패키지 매니저의 manifest 파일이 존재하는 프로젝트의 top directory로 지정해 주어야 합니다.
 Android 프로젝트의 실제 manifest file은 다른 gradle 프로젝트와 동일한 'build.gradle' 파일이지만, 다른 java 프로젝트와 구별하기 위해 gradlew 파일로 지정하였습니다.
-<br>
+
 
 ## 📁 Result
 
