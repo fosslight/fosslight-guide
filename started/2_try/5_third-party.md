@@ -7,6 +7,7 @@ published: true
 - 3rd Party로 부터 전달 받은 Software의 Open Source 정보를 등록하고 관리합니다.
 - Status: Confirm인 3rd Party에 한하여 Project > Identification - 3rd Party 탭에서 Load할 수 있습니다. 
 ```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U1u1jnQp5Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 3rd Party Project 
 ### 1. 3rd Party Project 생성하기
