@@ -9,7 +9,7 @@ title: FOSSLight Dependency Scanner
 [**FOSSLight Dependency Scanner**](https://github.com/fosslight/fosslight_dependency_scanner)는 여러 패키지 관리자에 대한 종속성 분석을 지원하는 도구입니다. 패키지 관리자의 Manifest 파일을 자동으로 감지하고 오픈 소스 도구를 사용하여 종속성을 분석합니다. 그런 다음 종속성의 OSS 정보가 포함 된 보고서 파일을 생성합니다. 
 
 지원하는 Package Manager 목록은 하기와 같습니다.
-- [Gradle](https://gradle.org/) (Java)
+- [Gradle](https://gradle.org/) (Java/Android)
 - [Maven](http://maven.apache.org/) (Java)
 - [NPM](https://www.npmjs.com/) (Node.js)
 - [PIP](https://pip.pypa.io/) (Python)
@@ -77,26 +77,27 @@ $ gradle downloadLicenses
 
 ### Android (gradle)
 
-1. 'build.gradle' 파일에 Android License Plugin을 추가합니다.
-
+1. 'build.gradle' 파일에 android-dependency-scanning Plugin을 추가합니다.
 ```
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.lge.android.licensetools:android-dependency-scanning:0.4.0'
+        classpath 'org.fosslight:android-dependency-scanning:1.0.0'
     }
 }
-
-apply plugin: 'com.lge.android.licensetools'
 ```
 
-2. 'generateLicenseTxt' task를 실행합니다.
-
+2. 플러그인이 적용되는 app디렉토리 내에 위치한 build.gralde파일 내에 다음과 같이 추가합니다. 
 ```
-$ gradle generateLicenseTxt
+apply plugin: 'org.fosslight'
+```
+
+3. 'generateLicenseTxt' task를 실행합니다.
+```
+$ gradlew generateLicenseTxt
 ```
 
 ### Pypi
@@ -158,7 +159,7 @@ $ pip install -r requirements.txt
 2. license-maven-plugin task를 실행합니다.
 
 ```
-$ mvn license:aggregate-download-licenses
+$ mvnw license:aggregate-download-licenses
 ```
 
 ### Pub
@@ -197,27 +198,26 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따라 다음 option들�
 $ fosslight_dependency
 ```
 
-| Option | Argument                                    | Description                                                                                  |
-| ------ | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| -m     | npm, maven, gradle, pip, pub, cocoapods     | (optional) <br> 프로젝트의 package manager                                                   |
-| -p     | (path)                                      | (optional) <br> 분석하고자 하는 input directory                                              |
-| -o     | (path)                                      | (optional) <br> 결과 파일이 생성되는 output directory                                        |
-| -a     | conda example: 'conda activate (venv name)' | (pypi only required) <br> 가상환경 activate command                                          |
-| -d     | conda example: 'conda deactivate'           | (pypi only required) <br> 가상환경 deactivate command                                        |
-| -c     | (customized output directory name)          | (gradle, maven only optional) <br> 커스터마이즈한 build output directory명 (default: target) |
-| -n     | (app name)                                  | (android only optional) <br> app directory name (default: app)                               |
-| -v     | N/A                                         | release 버전                                                                                 |
+| Option | Argument                                         | Description                                                                                  |
+| ------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| -m     | npm, maven, gradle, pip, pub, cocoapods, android | (optional) <br> 프로젝트의 package manager                                                   |
+| -p     | (path)                                           | (optional) <br> 분석하고자 하는 input directory                                              |
+| -o     | (path)                                           | (optional) <br> 결과 파일이 생성되는 output directory                                        |
+| -a     | conda example: 'conda activate (venv name)'      | (pypi only required) <br> 가상환경 activate command                                          |
+| -d     | conda example: 'conda deactivate'                | (pypi only required) <br> 가상환경 deactivate command                                        |
+| -c     | (customized output directory name)               | (gradle, maven only optional) <br> 커스터마이즈한 build output directory명 (default: target) |
+| -n     | (app name)                                       | (android only optional) <br> app directory name (default: app)                               |
+| -v     | N/A                                              | release 버전                                                                                 |
 
 이때, FOSSLight Dependency Scanner는 패키지 매니저의 manifest 파일이 존재하는 프로젝트의 top directory에서 실행되어야 합니다.
 예를 들면, NPM 패키지 매니저를 이용하는 프로젝트의 경우, input directory는 'package.json' 파일이 존재하는 directory여야 합니다.
 각 패키지 매니저별 manifest 파일은 다음과 같습니다.
 
-| Package manager | Npm          | Pip              | Maven   | Gradle       | Pub          | Cocoapods | Android |
-| --------------- | ------------ | ---------------- | ------- | ------------ | ------------ | --------- | ------- |
-| Manifest file   | package.json | requirements.txt | pom.xml | build.gradle | pubspec.yaml | Podfile   | gradlew |
+| Package manager | Npm          | Pip              | Maven   | Gradle (Android) | Pub          | Cocoapods |
+| --------------- | ------------ | ---------------- | ------- | ---------------- | ------------ | --------- |
+| Manifest file   | package.json | requirements.txt | pom.xml | build.gradle     | pubspec.yaml | Podfile   |
 
 즉, FOSSLight Dependency Scanner 실행 시, input directory('-p' 옵션)는 위와 같이 패키지 매니저의 manifest 파일이 존재하는 프로젝트의 top directory로 지정해 주어야 합니다.
-Android 프로젝트의 실제 manifest file은 다른 gradle 프로젝트와 동일한 'build.gradle' 파일이지만, 다른 java 프로젝트와 구별하기 위해 gradlew 파일로 지정하였습니다.
 
 
 ## 📁 Result
