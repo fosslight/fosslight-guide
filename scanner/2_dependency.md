@@ -6,7 +6,7 @@ title: FOSSLight Dependency Scanner
 
 <img src="https://img.shields.io/pypi/l/fosslight_dependency" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_dependency" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_dependency" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_dependency_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_dependency_scanner)
     
-[**FOSSLight Dependency Scanner**](https://github.com/fosslight/fosslight_dependency_scanner)는 여러 패키지 관리자에 대한 종속성 분석을 지원하는 도구입니다. 패키지 관리자의 Manifest 파일을 자동으로 감지하고 오픈 소스 도구를 사용하여 종속성을 분석합니다. 그런 다음 종속성의 OSS 정보가 포함 된 보고서 파일을 생성합니다. 
+[**FOSSLight Dependency Scanner**](https://github.com/fosslight/fosslight_dependency_scanner)는 여러 패키지 매니저에 대한 종속성 분석을 지원하는 도구입니다. 패키지 매니저의 Manifest 파일을 자동으로 감지하고 오픈 소스 도구를 사용하여 종속성을 분석합니다. 그 후 종속성의 OSS 정보가 포함된 보고서 파일을 생성합니다. 
 
 지원하는 Package Manager 목록은 하기와 같습니다.
 - [Gradle](https://gradle.org/) (Java/Android)
@@ -90,7 +90,7 @@ buildscript {
 }
 ```
 
-2. 플러그인이 적용되는 app디렉토리 내에 위치한 build.gralde파일 내에 다음과 같이 추가합니다. 
+2. 플러그인이 적용되는 app 디렉토리 내에 위치한 build.gradle 파일 내에 다음과 같이 추가합니다. 
 ```
 apply plugin: 'org.fosslight'
 ```
