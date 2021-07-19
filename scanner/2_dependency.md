@@ -41,6 +41,11 @@ title: FOSSLight Dependency Scanner
 ```
 $ npm install -g license-checker
 ```
+> license-checker를 전역 패키지로 설치하기 위해서는, 반드시 '-g' option을 추가해 주어야 합니다. 만약 'sudo' 권한이 없는 경우, 전역 모듈이 설치되는 기본 path를 변경하여 이용하실 수 있습니다.
+> ```
+$ npm set prefix ~/.npm
+$ PATH=~/.npm/bin:$PATH
+```
 
 2. dependency를 설치하기 위해 다음 명령어를 실행합니다. (optional)
 
