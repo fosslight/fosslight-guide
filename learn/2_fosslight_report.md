@@ -22,7 +22,7 @@ FOSSLight과 FOSSLight Scanner에서 사용하는 Template으로 Project별 포�
    OSC Process에 대한 정보를 작성합니다.
 
 ### 3rd Party Sheet
-배포하는 Project에 3rd Party로부터 제공받은 Software가 포함되어 있다면, 3rd party로부터 OSS Checklist를 입수하여 사용한 Open Source 현황을 파악해야 합니다. (참고 : [3rd Party OSS Checklist](./files/FOSSLight-OSS-Checklist-for-3rdParty_Eng_1.0.xlsx))    
+배포하는 Project에 3rd Party로부터 제공받은 Software가 포함되어 있다면, 3rd party로부터 OSS Checklist를 입수하여 사용한 Open Source 현황을 파악해야 합니다. (참고 : [3rd Party OSS Checklist](https://github.com/fosslight/fosslight/raw/main/src/main/resources/static/sample/FOSSLight-OSS-Checklist-for-3rdParty_Eng_1.0.xlsx))    
 파악한 사항은 OSC System의 [3rd Party](../started/2_try/5_third-party.md) 메뉴에 등록하고 Identification > 3rd Party 탭에서 취합합니다.   
 FOSSLight Report를 Identification > BOM 탭에서 Export하면 3rd Party 탭에 등록된 사항이 "3rd party" sheet에 채워집니다. 따라서, "3rd party" sheet는 임의로 작성하지 않습니다.    
 
