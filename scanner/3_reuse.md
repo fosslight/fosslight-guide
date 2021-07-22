@@ -15,7 +15,7 @@ FOSSLight Reuse는 [reuse-tool][ret]을 이용하여 소스 코드의 저작권 
 
 ##  기능
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
-2. `report` --- oss-pkg-info.yaml을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
+2. `report` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
      - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
      - [FOSSLight Report](../learn/2_fosslight_report.md)의 BIN(Android), BOM Sheet를 oss-pkg-info.yaml로 변환
 
@@ -109,9 +109,13 @@ $ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
 ```
 
 ## 🚀 실행 방법 - report (oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환)
+
+- 파일 예시 : [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml), [FOSSLight-Report.xlsx](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx)
+
 ``` 
 $ fosslight_reuse report
 ```
+
 ### Parameters     
 
 | Parameter  | Argument | 필수  | 설명 |
