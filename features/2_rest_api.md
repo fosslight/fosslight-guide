@@ -42,7 +42,7 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |/api/v1/package_upload|-	|Packaging 탭에 Packaging 파일을 업로드합니다. 이미 Packaging 파일이 업로드되어 있는 경우, 추가로 Packaging 파일을 업로드합니다. Packaging 파일 업로드 결과가 Mail로 발송됩니다.|
 |/api/v1/prj_bom_compare|	JSON	|두 개의 Project의 BOM의 OSS Name, OSS Version, License를 비교합니다.
 |/api/v1/prj_bom_export	|File	|Project의 BOM에서 Export한 결과 파일을 다운로드 받습니다.
-|/api/v1/prj_search	|-|보기 권한이 있는 Project에 대하여 하기 정보를 조회합니다. |
+|/api/v1/prj_search	| JSON |보기 권한이 있는 Project에 대하여 하기 정보를 조회합니다. |
 
 4\. Vulnerability 정보 조회
 
