@@ -68,19 +68,16 @@ FOSSLight Scanner 프로젝트는 다른 오픈 소스 프로젝트를 **상속*
   - Gradle : **[License Gradle Plugin](https://github.com/hierynomus/license-gradle-plugin)**
   - Maven : **[license-maven-plugin](https://github.com/mojohaus/license-maven-plugin)**
   - Pub : **[flutter_oss_licenses](https://github.com/espresso3389/flutter_oss_licenses)**
+- [**FOSSLight Reuse**](3_reuse.md) Reuse 준수 여부 체크시 **[reuse-tool](https://github.com/fsfe/reuse-tool)** 오픈 소스를 이용합니다.
 
 ## Scanner Projects
 
-- [**FOSSLight Source Scanner**](1_source.md)
-- [**FOSSLight Dependency Scanner**](2_dependency.md)
+- [**FOSSLight Source Scanner**](1_source.md) (License: [Apache-2.0](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE))
+- [**FOSSLight Dependency Scanner**](2_dependency.md) (License: [Apache-2.0](https://github.com/fosslight/fosslight_dependency_scanner/blob/main/LICENSE))
+- [**FOSSLight Reuse**](3_reuse.md) (License: [GPL-3.0-only](https://github.com/fosslight/fosslight_reuse/blob/main/LICENSE))
 - Release 예정 프로젝트 목록
   - FOSSLight Binary Scanner
-  - FOSSLight REUSE
   - FOSSLight Scanner
 
-## License
-
-FOSSLight Scanner 프로젝트들은 Open Source License인 [**Apache-2.0**](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE)하에 배포되고 있습니다.       
-     
       
 <div class="right"><a href="https://icons8.com/icon">&lt;Icons by Icons8&gt;</a></div>
