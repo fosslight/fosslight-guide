@@ -128,6 +128,8 @@ Project List에서 Project Name을 더블 클릭합니다.
 - Project List의 Packaging column 내 버튼을 클릭하여 진입합니다.
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/66uWu4qxOog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #### 3-1. Packaging Tab
 ![prj](../images/4_project_pkg.png)
 Packaging tab에서는 OSS Package 파일을 Upload하고 이를 Verify합니다. (단, Source Code 공개를 필요로하는 License하의 Open Source를 사용하지 않았다면 이 탭은 비활성화됩니다. )
