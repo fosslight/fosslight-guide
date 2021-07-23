@@ -45,7 +45,7 @@ OSS List의 OSS Name Column 내 cell을 클릭하면 상세정보를 확인할 �
 ### Download Location 
 - Open Source를 다운로드 받을 수 있는 URL이 Link로 표시되며, 클릭 시 해당 사이트로 이동하거나 파일을 다운로드 받을 수 있습니다.
 
-### Hoempage 
+### Homepage 
 - Open Source 공식 Site가 있으면, 로 표시되며 클릭 시 해당 사이트로  이동합니다.
 - 아이콘에 마우스 오버 시 상세주소를 확인할 수 있습니다.
 
