@@ -125,7 +125,7 @@ $ fosslight_reuse report
 | o | 결과 파일명 | X | 결과 파일명 |    
 | f | file1,file2,... | X | 1. FOSSLight Report로 변환할 Yaml 파일 (여러개인 경우 ,로 구분) <br> ex) -f src/oss-pkg-info.yaml,main/setting.yml <br> 2.  oss-pkg-info.yaml로 변환할 FOSSLight Report 파일 |
 
-### Ex 1. oss-pkg-info.yaml파일을 FOSSLight Report로 변환
+### Ex 1. oss-pkg-info.yaml 파일을 FOSSLight Report로 변환
 1-1. Path에 존재하는 oss-pkg-info*.yaml 또는 oss-pkg-info*.yml 파일을 모두 변환
 ``` 
 $ fosslight_reuse report -p /home/test/source
@@ -136,7 +136,7 @@ $ fosslight_reuse report -p /home/test/source
 $ fosslight_reuse report -f src/oss-pkg-info.yaml,main/setting.yml
 ```
 
-### Ex 2. FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
+### Ex 2. FOSSLight Report 를 oss-pkg-info.yaml 파일로 변환
 ```
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 ```
