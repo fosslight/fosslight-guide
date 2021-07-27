@@ -28,7 +28,7 @@ FOSSLight Reuse는 pip3를 이용하여 설치할 수 있습니다.
 $ pip3 install fosslight_reuse
 ```
 
-## 🚀 실행 방법 - lint (저작권 및 license 표기 규칙 준수 여부 확인)
+## 🚀 실행 방법 - lint (저작권 및 license 표기 규칙 준수 확인)
 ``` 
 $ fosslight_reuse lint
 ```
@@ -39,7 +39,7 @@ $ fosslight_reuse lint
 | p | 체크할 경로 | O | 체크할 소스 파일 경로 | 
 | h | None | X | 설명 메시지 출력 | 
 | n | None | X | venv*, node_modules, .*/ 에 대하여 분석 제외하지 않으려면 추가 |    
-| o | 경과 파일명 | X | 결과 파일명 (기본값: reuse_checker.xml) |    
+| o | 결과 파일명 | X | 결과 파일명 (기본값: reuse_checker.xml) |    
 | f | file1,file2,... | X | 저작권, License 를 확인할 파일 목록 |
 
 ### Ex 1. 최소한의 인자로 실행
@@ -122,7 +122,7 @@ $ fosslight_reuse report
 | ------------- | ------------- | ------------- |------------- |
 | p | 확인할 경로 | O | 변환할 oss-pkg-info*.yaml 또는 oss-pkg-info*.yml 파일이 위치한 경로 | 
 | h | None | X | 설명 메시지 출력 | 
-| o | 결과 파일명 | X | 출력 파일명 |    
+| o | 결과 파일명 | X | 결과 파일명 |    
 | f | file1,file2,... | X | 1. FOSSLight Report로 변환할 Yaml 파일 (여러개인 경우 ,로 구분) <br> ex) -f src/oss-pkg-info.yaml,main/setting.yml <br> 2.  oss-pkg-info.yaml로 변환할 FOSSLight Report 파일 |
 
 ### Ex 1. oss-pkg-info.yaml파일을 FOSSLight Report로 변환
