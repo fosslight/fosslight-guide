@@ -77,7 +77,7 @@ downloadLicenses {
 2. 'downloadLicenses' task를 실행합니다.
 
 ```
-$ gradle downloadLicenses
+$ gradlew downloadLicenses
 ```
 
 ### Android (gradle)
