@@ -6,6 +6,7 @@ published: true
 ```note
 Self-Check에서는 검토할 OSS에 대한 License, 보안 취약점 등의 정보를 리뷰 과정 없이 간편하게 확인할 수 있습니다.
 ```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yfWvm9ZdtEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Self-Check를 통해 확인할 수 있는 정보
 
