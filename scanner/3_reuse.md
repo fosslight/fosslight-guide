@@ -72,7 +72,7 @@ $ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
 ## 📁 결과
 ### Ex 1. 특정 경로 내 파일을 분석
 ```
-(venv)$ fosslight_reuse lint -p /home/test/reuse-example -r result.xml
+(venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
 ```
 # SUMMARY
