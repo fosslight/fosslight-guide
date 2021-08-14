@@ -11,7 +11,7 @@ published: true
 
 ## Authentication using LDAP
 FOSSLight는 JNDI를 사용하여 Active Directory 등 LDAP을 사용할 수 있는 환경에서는 LDAP을 이용한 사용자 패스워드 인증 처리를 지원합니다.
-- Provider Url: LDAP 서버 정보를 ldap://<AD_SERVER_IP>:<LDAP_PORT> 형식으로 설정합니다. (javax.naming.Context.PROVIDER_URL)
+- Provider Url: LDAP 서버 정보를 ldap://&lt;AD_SERVER_IP&gt;:&lt;LDAP_PORT&gt; 형식으로 설정합니다. (javax.naming.Context.PROVIDER_URL)
 
 ## SMTP Setting
 
