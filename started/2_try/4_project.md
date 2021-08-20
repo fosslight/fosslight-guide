@@ -64,6 +64,8 @@ Project List에서 Project Name을 더블 클릭합니다.
 배포하는 Project에 대하여 Open Source Software 분석 결과를 작성합니다.
 - Project List의 Identification column 내 버튼을 클릭하여 진입합니다.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zzopYiY2UOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #### 2-1. 3rd Party Tab
 ![prj](../images/4_project_3rd.png)
 *3rd Party 탭 작성 Process*
