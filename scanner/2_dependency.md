@@ -16,6 +16,7 @@ title: FOSSLight Dependency Scanner
 - [Pub](https://pub.dev/) (Dart with flutter)
 - [Cocoapods](https://cocoapods.org/) (Swift/Obj-C)
 - [Swift](https://swift.org/package-manager/) (Swift)
+- [Carthage](https://github.com/Carthage/Carthage) (Carthage)
 
 ## 사용 방법
 
@@ -28,6 +29,7 @@ title: FOSSLight Dependency Scanner
     - [Pub](#pub)
     - [Cocoapods](#cocoapods)
     - [Swift](#swift)
+    - [Carthage](#carthage)
   - [How to install](#-how-to-install)
   - [How to run](#-how-to-run)
   - [Result](#-result)
@@ -188,7 +190,17 @@ $ pod install
 ```
 
 ### Swift
-1. Github personal access token을 생성합니다. 이 토큰은 Github repository의 license정보를 가져오기 위해 Github API를 사용하기 위해 필요합니다.
+1. Github personal access token을 생성하여 FOSSLight Dependency Scanner 실행 시 '-t' 파라미터로 사용합니다. 이 토큰은 Github repository의 license정보를 가져오기 위해 Github API를 사용하기 위해 필요합니다.
+Token생성 방법은 [Github docs 가이드](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)를 참조하시기 바랍니다.
+
+
+### Carthage
+
+1. 다음과 같이 패키지 설치 명령어를 수행하여 'Cartfile.resolved' 파일을 생성합니다.
+```
+$ carthage update
+```
+2. Github personal access token을 생성하여 FOSSLight Dependency Scanner 실행 시 '-t' 파라미터로 사용합니다. 이 토큰은 Github repository의 license정보를 가져오기 위해 Github API를 사용하기 위해 필요합니다.
 Token생성 방법은 [Github docs 가이드](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)를 참조하시기 바랍니다.
 
 
@@ -212,7 +224,7 @@ $ fosslight_dependency
 
 | Option | Argument                                         | Description                                                                                  |
 | ------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| -m     | npm, maven, gradle, pip, pub, cocoapods, android, swift | (optional) <br> 프로젝트의 package manager                                                   |
+| -m     | npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage | (optional) <br> 프로젝트의 package manager                                                   |
 | -p     | (path)                                           | (optional) <br> 분석하고자 하는 input directory                                              |
 | -o     | (path)                                           | (optional) <br> 결과 파일이 생성되는 output directory                                        |
 | -a     | conda example: 'conda activate (venv name)'      | (pypi only required) <br> 가상환경 activate command                                          |
@@ -220,15 +232,15 @@ $ fosslight_dependency
 | -c     | (customized output directory name)               | (gradle, maven only optional) <br> 커스터마이즈한 build output directory명 (default: target) |
 | -n     | (app name)                                       | (android only optional) <br> app directory name (default: app)                               |
 | -v     | N/A                                              | release 버전                                                                                 |
-| -t     | github token                                     | (swift only required) <br> github personal access token                                     |
+| -t     | github token                                     | (swift, carthage only required) <br> github personal access token                                     |
 
 이때, FOSSLight Dependency Scanner는 패키지 매니저의 manifest 파일이 존재하는 프로젝트의 top directory에서 실행되어야 합니다.
 예를 들면, NPM 패키지 매니저를 이용하는 프로젝트의 경우, input directory는 'package.json' 파일이 존재하는 directory여야 합니다.
 각 패키지 매니저별 manifest 파일은 다음과 같습니다.
 
-| Package manager | Npm          | Pip              | Maven   | Gradle (Android) | Pub          | Cocoapods | Swift            |
-| --------------- | ------------ | ---------------- | ------- | ---------------- | ------------ | --------- | ---------------- |
-| Manifest file   | package.json | requirements.txt | pom.xml | build.gradle     | pubspec.yaml | Podfile   | Package.resolved |
+| Package manager | Npm          | Pip              | Maven   | Gradle (Android) | Pub          | Cocoapods | Swift            | Carthage          |
+| --------------- | ------------ | ---------------- | ------- | ---------------- | ------------ | --------- | ---------------- | ----------------- |
+| Manifest file   | package.json | requirements.txt | pom.xml | build.gradle     | pubspec.yaml | Podfile   | Package.resolved | Cartfile.resolved |
 
 즉, FOSSLight Dependency Scanner 실행 시, input directory('-p' 옵션)는 위와 같이 패키지 매니저의 manifest 파일이 존재하는 프로젝트의 top directory로 지정해 주어야 합니다.
 
@@ -251,3 +263,4 @@ FOSSLight Dependency Scanner는 xlsx(Microsoft Excel file)양식의 결과 파�
 | Pub                            | pub:(oss name)           | pub.dev/packages/(oss name)/versions/(version)                                                     | homepage in (pub information)                       |
 | Cocoapods                      | cocoapods:(oss name)     | source in (pod spec information)                                                                   | cocoapods.org/pods/(oss name)                            |
 | Swift                      | swift:(oss name)     | repositoryURL in Package.resolved                                                                   | repositoryURL in Package.resolved                            |
+| Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
