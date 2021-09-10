@@ -83,9 +83,9 @@ OSS 복사 기능은 동일한 OSS의 다른 버전을 추가할 때 유용합�
 #### OSS 삭제
 1. Comment란에 삭제 사유를 기입합니다.
 2. 좌측 하단의 Delete 버튼을 클릭합니다.
-    - 📢 해당 OSS가 Identification 단계가 Confirm된 Project에 포함된 경우, Delete 버튼 클릭 시 Rename할 다른 OSS를 선택하는 창이 팝업됩니다.   
+    - 📢 해당 OSS가 Identification 단계가 Confirm된 Project에 포함된 경우, Delete 버튼 클릭 시 다른 OSS로 Merge하는 창이 팝업됩니다.   
     ![NEW_OSS](../images/2_oss_rename.png)
-        - Rename할 OSS를 선택하면, 삭제하는 OSS는 선택한 OSS로 Merge됩니다. (삭제하는 OSS의 Name과 NickName은 Rename하는 OSS의 Nickname으로 이동됩니다.)
+        - Merge할 OSS를 선택하면, 삭제하는 OSS의 Name과 NickName은 Merge하는 OSS의 Nickname으로 이동됩니다.
 
 
 #### OSS 버전별 정보 일괄 변경 기능
