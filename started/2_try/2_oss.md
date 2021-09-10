@@ -65,18 +65,37 @@ OSS List의 OSS Name Column 내 cell을 클릭하면 상세정보를 확인할 �
     - Attribution : OSS Notice 발행시 별도로 포함되어야 하는 문구를 기입합니다.
 3. 우측 하단의 Save 버튼을 클릭합니다.
 
-### OSS 수정
-1. OSS List에서 수정할 OSS Name을 클릭합니다.
-2. OSS 상세정보 탭에서 수정합니다.
-3. 우측 하단의 Save 버튼을 클릭합니다.
+### OSS 상세정보탭
+![OSS_DETAIL](../images/2_oss_detail.png)  
+OSS List에서 OSS Name을 클릭합니다.
 
-### OSS 삭제
-1. OSS List에서 삭제할 OSS Name을 클릭합니다.
-2. OSS 상세정보 탭에서 Comment란에 삭제 사유를 기입합니다.
-3. 좌측 하단의 Delete 버튼을 클릭합니다.
+#### OSS 수정
+정보를 수정한 후 우측 하단의 Save 버튼을 클릭합니다.
+
+#### OSS 복사
+OSS 복사 기능은 동일한 OSS의 다른 버전을 추가할 때 유용합니다.
+1. 우측 하단의 Copy 버튼을 클릭합니다. 
+2. 동일한 OSS 정보로 "New_Opensource"탭이 뜹니다.
+3. 이때, OSS Name에는 "_Copied"가 append되어 있습니다. 
+4. 정보를 수정 후 우측 하단의 Save 버튼을 클릭하면 OSS가 등록됩니다.
+
+#### OSS 삭제
+1. Comment란에 삭제 사유를 기입합니다.
+2. 좌측 하단의 Delete 버튼을 클릭합니다.
     - 📢 해당 OSS가 Identification 단계가 Confirm된 Project에 포함된 경우, Delete 버튼 클릭 시 Rename할 다른 OSS를 선택하는 창이 팝업됩니다.   
     ![NEW_OSS](../images/2_oss_rename.png)
         - Rename할 OSS를 선택하면, 삭제하는 OSS는 선택한 OSS로 Merge됩니다. (삭제하는 OSS의 Name과 NickName은 Rename하는 OSS의 Nickname으로 이동됩니다.)
+
+
+#### OSS 버전별 정보 일괄 변경 기능
+우측 하단의 Sync 버튼을 클릭합니다.
+![OSS_SYNC](../images/2_oss_sync.png)  
+(1) 수정할 OSS 버전을 선택합니다. 
+    - 이미 동일한 OSS 정보를 가진 버전의 경우, 회색으로 표시되며 선택 불가합니다.
+(2) 수정할 OSS의 정보를 선택합니다. 체크된 항목에 대해서만 정보가 업데이트됩니다.
+    - 표시되는 정보는 (1)에서 선택된 Row의 해당 버전의 OSS 정보가 표시됩니다.
+(3) Comment 입력란으로 OK 클릭시 (1)에서 선택한 수정할 OSS 버전에 입력한 Comment가 추가됩니다.
+
 
 
 
