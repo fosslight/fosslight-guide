@@ -5,6 +5,7 @@
 - [FOSSLight](https://github.com/fosslight/fosslight/issues)
 - [FOSSLight Dependency Scanner](https://github.com/fosslight/fosslight_dependency_scanner/issues)
 - [FOSSLight Source Scanner](https://github.com/fosslight/fosslight_source_scanner/issues)
+- [FOSSLight Reuse](https://github.com/fosslight/fosslight_reuse/issues)
 - [FOSSLight Guide](https://github.com/fosslight/fosslight-guide/issues)
 
 ## Contributing
