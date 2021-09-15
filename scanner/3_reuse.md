@@ -168,7 +168,7 @@ $ fosslight_reuse add
 | l | License | O | 추가할 License 이름(SPDX Format) |
 | m | 수동모드 | X | 실행 중 사용자로부터 저작권 및 License를 입력 받는 모드 |    
 
-### Ex 1. 경로 내 저작권과 라이선스 없는 파일에 추가
+### Ex 1. 특정 경로 내 파일에 추가
 ``` 
 $ fosslight_reuse add -p src/ -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
 ```
