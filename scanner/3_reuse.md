@@ -18,6 +18,7 @@ FOSSLight Reuse는 [reuse-tool][ret]을 이용하여 소스 코드의 저작권 
 2. `report` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
      - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
      - [FOSSLight Report](../learn/2_fosslight_report.md)의 BIN(Android), BOM Sheet를 oss-pkg-info.yaml로 변환
+3. `add` --- Copyright와 License가 누락된 파일 Copyright와 License를 추가합니다.
 
 
 ## 🎉 설치 방법
@@ -146,10 +147,126 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 - FOSSLight-Report_[datetime].xlsx : oss-pkg-info.yaml 파일을 변환한 파일
 - oss-pkg-info_[datetime].yaml : FOSSLight-Report.xlsx가 변환된 파일
 
-
 ## 🚀 실행 방법 - report (실행 파일 이용 방법. windows용만 제공)
 1. [fosslight_reuse release][release]에서 실행 파일을 다운로드 받습니다.
 2. FOSSLight-Report*.xlsx 또는 oss-pkg-info.yaml이 있는 경로에 실행 파일 이동한 후  실행합니다.
 3. oss-pkg-info.yaml이 있으면 FOSSLight-Report.xlsx로 변환되고, FOSSLight-Report*.xlsx가 있으면 oss-pkg-info.yaml로 변환됩니다.
+
+
+## 🚀 실행 방법 - add (Copyright와 License를 추가)
+``` 
+$ fosslight_reuse add
+```
+
+### Parameters      
+
+| Parameter  | Argument | 필수  | 설명 |
+| ------------- | ------------- | ------------- |------------- |
+| p | 체크할 경로 | O | 체크할 소스 파일 경로 | 
+| f | file1,file2,... | X | 저작권, License 를 확인할 파일 목록 |
+| c | 저작권 | O | 추가할 저작권('Copyright <year> <holder name>' 형식 준수) | 
+| l | License | O | 추가할 License 이름(SPDX Format) |
+| m | 수동모드 | X | 실행 중 사용자로부터 저작권 및 License를 입력 받는 모드 |    
+
+### Ex 1. 경로 내 저작권과 라이선스 없는 파일에 추가
+``` 
+$ fosslight_reuse add -p src/ -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
+```
+    
+### Ex 2. 파일 지정하여 저작권과 라이선스 추가
+``` 
+$ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
+```
+ 
+### Ex 3. 실행 중 수동으로 입력받은 저작권과 라이선스 추가(-c, -l 옵션 필요 없음)
+``` 
+$ fosslight_reuse add -p src/ -m
+```
+
+## 동작 방법
+1. -p 옵션의 경로가 존재하는 지 체크     
+2. 추가할 저작권과 라이선스 확인
+3. Reuse Add 실행    
+    3-1. Project 단위로 실행하는 경우 (-f 없는 경우)
+    - 경로 내 존재하는 모든 파일 중 파일 확장자를 통해 확인할 파일 리스트 추출
+    - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
+    - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
+    
+    3-2. 파일 단위로 실행하는 경우 (-f 있는 경우)
+    - 파일별 저작권과 라이선스를 출력
+    - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
+
+## 📁 결과
+### Ex 1. 경로 내 파일을 분석
+```
+(venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0"
+```
+```
+# File list that have both license and copyright : 1 / 4
+# __init__.py
+* License:
+* Copyright:
+
+# Missing license File(s)
+  * test_add.py
+  * Your input license : GPL-3.0
+Successfully changed header of tests/add/test_add.py
+# Missing Copyright File(s)
+  * test_add.py
+  * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
+Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.py
+OS: Linux 4.15.0-144-generic
+Path to analyze: tests/add
+Python version: 3
+Tool Info: fosslight_reuse v2.0.3
+```
+    
+### Ex 2. 특정 파일을 분석하여 추가
+```
+(venv)$ fosslight_reuse add -f "src/fosslight_oss_pkg/_common.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+```
+```
+# src/fosslight_oss_pkg/_common.py
+* License:
+* Copyright:
+
+  * Your input license : GPL-3.0-only
+Successfully changed header of src/fosslight_oss_pkg/_common.py
+  * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
+Successfully changed header of src/fosslight_oss_pkg/_common.py
+OS: Linux 4.15.0-144-generic
+Path to analyze: /home/jaekwonbang/commit_0915
+Python version: 3
+Tool Info: fosslight_reuse v2.0.3
+```
+
+### Ex 3. 수동으로 입력받아 추가
+```
+(venv)$ fosslight_reuse add -p tests/add -m
+```
+```
+(venv) jaekwonbang@jaekwonbang-desktop:~/commit_0915$ fosslight_reuse add -p tests/add -m
+# File list that have both license and copyright : 1 / 4
+# __init__.py
+* License:
+* Copyright:
+
+# Missing license File(s)
+  * test_add.py
+# Select a license to write in the license missing files
+   1.MIT,  2.Apache-2.0,  3.LGE-Proprietary,  4.Manaully Input,  5.Not select now : 3
+  * Your input license : LicenseRef-LGE-Proprietary
+Successfully changed header of tests/add/test_add.py
+# Missing Copyright File(s)
+  * test_add.py
+# Input Copyright to write in the copyright missing files (ex, Copyright <year> <name>) : Copyright 2021 LGE Electronics Inc.
+  * Your input Copyright : Copyright 2021 LGE Electronics Inc.
+Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.py
+OS: Linux 4.15.0-144-generic
+Path to analyze: tests/add
+Python version: 3
+Tool Info: fosslight_reuse v2.0.3
+```
+
 
 [release]: https://github.com/fosslight/fosslight_reuse/releases
