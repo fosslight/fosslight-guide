@@ -215,10 +215,6 @@ Successfully changed header of tests/add/test_add.py
   * test_add.py
   * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
 Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.py
-OS: Linux 4.15.0-144-generic
-Path to analyze: tests/add
-Python version: 3
-Tool Info: fosslight_reuse v2.0.3
 ```
     
 ### Ex 2. 특정 파일을 분석하여 추가
@@ -234,10 +230,6 @@ Tool Info: fosslight_reuse v2.0.3
 Successfully changed header of src/fosslight_oss_pkg/_common.py
   * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
 Successfully changed header of src/fosslight_oss_pkg/_common.py
-OS: Linux 4.15.0-144-generic
-Path to analyze: /home/jaekwonbang/commit_0915
-Python version: 3
-Tool Info: fosslight_reuse v2.0.3
 ```
 
 ### Ex 3. 수동으로 입력받아 추가
@@ -257,15 +249,13 @@ Tool Info: fosslight_reuse v2.0.3
    1.MIT,  2.Apache-2.0,  3.LGE-Proprietary,  4.Manaully Input,  5.Not select now : 3
   * Your input license : LicenseRef-LGE-Proprietary
 Successfully changed header of tests/add/test_add.py
+
 # Missing Copyright File(s)
   * test_add.py
 # Input Copyright to write in the copyright missing files (ex, Copyright <year> <name>) : Copyright 2021 LGE Electronics Inc.
   * Your input Copyright : Copyright 2021 LGE Electronics Inc.
 Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.py
-OS: Linux 4.15.0-144-generic
-Path to analyze: tests/add
-Python version: 3
-Tool Info: fosslight_reuse v2.0.3
+
 ```
 
 
