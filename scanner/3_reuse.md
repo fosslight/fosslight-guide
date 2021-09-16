@@ -166,7 +166,6 @@ $ fosslight_reuse add
 | f | file1,file2,... | X | 저작권, License 를 확인할 파일 목록 |
 | c | 저작권 | O | 추가할 저작권('Copyright <year> <holder name>' 형식 준수) | 
 | l | License | O | 추가할 License 이름(SPDX Format) |
-| m | 수동모드 | X | 실행 중 사용자로부터 저작권 및 License를 입력 받는 모드 |    
 
 ### Ex 1. 특정 경로 내 파일에 추가
 ``` 
@@ -177,11 +176,7 @@ $ fosslight_reuse add -p src/ -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.
 ``` 
 $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
 ```
- 
-### Ex 3. 실행 중 수동으로 입력받은 Copyright, License를 추가 (-c, -l 옵션 필요 없음)
-``` 
-$ fosslight_reuse add -p src/ -m
-```
+
 
 ## 동작 방법
 1. -p 옵션의 경로가 존재하는 지 체크     
@@ -287,31 +282,6 @@ Successfully changed header of /home/jaekwonbang/commit_0915/tests/add_result/te
 Successfully changed header of add/test_no_license.py
   * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
 Successfully changed header of add/test_no_copyright.py
-```
-
-### Ex 3. Copyright과 License를 프로그램 실행 중 입력받아 추가
-```
-(venv)$ fosslight_reuse add -p tests/add -m
-```
-```bash
-# File list that have both license and copyright : 1 / 4
-# __init__.py
-* License:
-* Copyright:
-
-# Missing license File(s)
-  * test_add.py
-# Select a license to write in the license missing files
-   1.MIT,  2.Apache-2.0,  3.LGE-Proprietary,  4.Manaully Input,  5.Not select now : 3
-  * Your input license : LicenseRef-LGE-Proprietary
-Successfully changed header of tests/add/test_add.py
-
-# Missing Copyright File(s)
-  * test_add.py
-# Input Copyright to write in the copyright missing files (ex, Copyright <year> <name>) : Copyright 2021 LGE Electronics Inc.
-  * Your input Copyright : Copyright 2021 LGE Electronics Inc.
-Successfully changed header of tests/add/test_add.py
-
 ```
 
 
