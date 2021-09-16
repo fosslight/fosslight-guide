@@ -197,7 +197,7 @@ $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 
  * Missing License File(s) : 라이선스가 존재하지 않는 파일 목록
  * Missing Copyright File(s) : 저작권이 존재하지 않는 파일 목록
 
- < 결과 - 파일 상단에 저작권과 라이선스 추가>    
+ < 결과 - 파일 상단에 저작권과 라이선스 추가 >    
 <table>
 <tr>
     <td>Before</td>
