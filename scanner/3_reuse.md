@@ -234,22 +234,30 @@ $ fosslight_reuse add -p src/ -m
 
 ### Ex 1. 특정 경로 내 파일에 대하여 Copyright, License 추가
 ```
-(venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0"
+(venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 ```bash
-# File list that have both license and copyright : 1 / 4
+# File list that have both license and copyright : 3 / 7
 # __init__.py
 * License:
 * Copyright:
 
+# test_both_have_1.py
+* License: GPL-3.0-only
+* Copyright: SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
+
+# test_both_have_2.py
+* License: MIT
+* Copyright: SPDX-FileCopyrightText: Copyright (c) 2011 LG Electronics Inc.
+
 # Missing license File(s)
-  * test_add.py
-  * Your input license : GPL-3.0
-Successfully changed header of tests/add/test_add.py
+  * test_no_license.py
+  * Your input license : GPL-3.0-only
+Successfully changed header of tests/add_result/test_no_license.py
 # Missing Copyright File(s)
-  * test_add.py
+  * test_no_copyright.py
   * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
-Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.py
+Successfully changed header of /home/jaekwonbang/commit_0915/tests/add_result/test_no_copyright.py
 ```
     
 ### Ex 2. 특정 파일에 Copyright, License 추가
