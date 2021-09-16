@@ -75,7 +75,7 @@ $ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
 ```
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
-```
+```bash
 # SUMMARY
 # Open Source Package info: File to which OSS Package information is written.
 # Used licenses: License detected in the path.
@@ -94,7 +94,7 @@ $ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
 ```
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
-```
+```bash
 # src/load.c
 * License:
 * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
@@ -201,7 +201,7 @@ $ fosslight_reuse add -p src/ -m
 ```
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0"
 ```
-```
+```bash
 # File list that have both license and copyright : 1 / 4
 # __init__.py
 * License:
@@ -221,7 +221,7 @@ Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.
 ```
 (venv)$ fosslight_reuse add -f "src/fosslight_oss_pkg/_common.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
-```
+```bash
 # src/fosslight_oss_pkg/_common.py
 * License:
 * Copyright:
@@ -236,7 +236,7 @@ Successfully changed header of src/fosslight_oss_pkg/_common.py
 ```
 (venv)$ fosslight_reuse add -p tests/add -m
 ```
-```
+```bash
 # File list that have both license and copyright : 1 / 4
 # __init__.py
 * License:
