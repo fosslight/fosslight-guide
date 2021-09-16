@@ -193,7 +193,7 @@ $ fosslight_reuse add -p src/ -m
     - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
     
     3-2. 파일 단위로 실행하는 경우 (-f 있는 경우)
-    - 파일별 저작권과 라이선스를 출력
+    - 입력한 파일의 저작권과 라이선스를 출력
     - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
 
 ## 📁 결과
@@ -260,7 +260,7 @@ Successfully changed header of tests/add_result/test_no_license.py
 Successfully changed header of /home/jaekwonbang/commit_0915/tests/add_result/test_no_copyright.py
 ```
     
-### Ex 2. 특정 파일에 Copyright, License 추가
+### Ex 2. 입력특정 파일에 Copyright, License 추가
 ```
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
