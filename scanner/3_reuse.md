@@ -206,19 +206,18 @@ $ fosslight_reuse add -p src/ -m
 <tr>
 <td>
 
-  ```csharp
+ <pre lang="python">
   const int x = 3;
   const string y = "foo";
   readonly Object obj = getObject();
-  ```
+  </pre>
 </td>
 <td>
-
-  ```nemerle
+<pre lang="python">
   def x : int = 3;
   def y : string = "foo";
   def obj : Object = getObject();
-  ```
+</pre>
 </td>
 </tr>
 </table>
