@@ -218,12 +218,12 @@ $ fosslight_reuse add -p src/ -m
   </pre>
 </td>
 <td>
-<pre lang="python">
+
 # SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
 #
 # SPDX-License-Identifier: GPL-3.0-only   
 
-
+  <pre lang="python">
   const int x = 3;
   const string y = "foo";
   readonly Object obj = getObject();
@@ -254,6 +254,7 @@ $ fosslight_reuse add -p src/ -m
   * test_no_license.py
   * Your input license : GPL-3.0-only
 Successfully changed header of tests/add_result/test_no_license.py
+
 # Missing Copyright File(s)
   * test_no_copyright.py
   * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
