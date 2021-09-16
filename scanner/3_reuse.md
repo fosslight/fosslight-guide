@@ -178,7 +178,7 @@ $ fosslight_reuse add -p src/ -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.
 $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
 ```
  
-### Ex 3. 실행 중 수동으로 입력받은 저작권과 라이선스 추가(-c, -l 옵션 필요 없음)
+### Ex 3. 실행 중 수동으로 입력받은 Copyright, License를 추가 (-c, -l 옵션 필요 없음)
 ``` 
 $ fosslight_reuse add -p src/ -m
 ```
@@ -187,7 +187,7 @@ $ fosslight_reuse add -p src/ -m
 1. -p 옵션의 경로가 존재하는 지 체크     
 2. 추가할 저작권과 라이선스 확인
 3. Reuse Add 실행    
-    3-1. Project 단위로 실행하는 경우 (-f 없는 경우)
+    3-1. Path 단위로 실행하는 경우 (-f 없는 경우)
     - 경로 내 존재하는 모든 파일 중 파일 확장자를 통해 확인할 파일 리스트 추출
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
     - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
@@ -197,7 +197,7 @@ $ fosslight_reuse add -p src/ -m
     - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
 
 ## 📁 결과
-### Ex 1. 경로 내 파일을 분석
+### Ex 1. 특정 경로 내 파일에 대하여 Copyright, License 추가
 ```
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0"
 ```
@@ -217,7 +217,7 @@ Successfully changed header of tests/add/test_add.py
 Successfully changed header of /home/jaekwonbang/commit_0915/tests/add/test_add.py
 ```
     
-### Ex 2. 특정 파일을 분석하여 추가
+### Ex 2. 특정 파일에 Copyright, License 추가
 ```
 (venv)$ fosslight_reuse add -f "src/fosslight_oss_pkg/_common.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
@@ -232,7 +232,7 @@ Successfully changed header of src/fosslight_oss_pkg/_common.py
 Successfully changed header of src/fosslight_oss_pkg/_common.py
 ```
 
-### Ex 3. 수동으로 입력받아 추가
+### Ex 3. Copyright과 License를 프로그램 실행 중 입력받아 추가
 ```
 (venv)$ fosslight_reuse add -p tests/add -m
 ```
