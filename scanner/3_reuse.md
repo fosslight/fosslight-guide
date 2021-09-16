@@ -262,17 +262,29 @@ Successfully changed header of /home/jaekwonbang/commit_0915/tests/add_result/te
     
 ### Ex 2. 특정 파일에 Copyright, License 추가
 ```
-(venv)$ fosslight_reuse add -f "src/fosslight_oss_pkg/_common.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 ```bash
-# src/fosslight_oss_pkg/_common.py
-* License:
+# add/test_both_have_1.py
+* License: GPL-3.0-only
+* Copyright: SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
+
+# add/test_both_have_2.py
+* License: MIT
+* Copyright: SPDX-FileCopyrightText: Copyright (c) 2011 LG Electronics Inc.
+
+# add/test_no_copyright.py
+* License: GPL-3.0-only
 * Copyright:
 
+# add/test_no_license.py
+* License:
+* Copyright: SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
+
   * Your input license : GPL-3.0-only
-Successfully changed header of src/fosslight_oss_pkg/_common.py
+Successfully changed header of add/test_no_license.py
   * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
-Successfully changed header of src/fosslight_oss_pkg/_common.py
+Successfully changed header of add/test_no_copyright.py
 ```
 
 ### Ex 3. Copyright과 License를 프로그램 실행 중 입력받아 추가
