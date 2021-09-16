@@ -212,21 +212,22 @@ $ fosslight_reuse add -p src/ -m
 <td>
 
  <pre lang="python">
-  const int x = 3;
-  const string y = "foo";
-  readonly Object obj = getObject();
+  int x = 1
+  const string y = "FOSSLight"
+  z = sum(x, 1)
+  
   </pre>
 </td>
 <td>
-
+  <pre lang="python">
 # SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
 #
 # SPDX-License-Identifier: GPL-3.0-only   
 
-  <pre lang="python">
-  const int x = 3;
-  const string y = "foo";
-  readonly Object obj = getObject();
+
+  int x = 1
+  const string y = "FOSSLight"
+  z = sum(x, 1)
 </pre>
 </td>
 </tr>
