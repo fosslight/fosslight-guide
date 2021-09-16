@@ -218,9 +218,9 @@ $ fosslight_reuse add -p src/ -m
 </td>
 <td>
 <pre lang="python">
-  # SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-  #
-  # SPDX-License-Identifier: GPL-3.0-only   
+# SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
+#
+# SPDX-License-Identifier: GPL-3.0-only   
 
   const int x = 3;
   const string y = "foo";
