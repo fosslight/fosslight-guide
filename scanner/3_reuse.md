@@ -165,14 +165,14 @@ $ fosslight_reuse add
 | p | 체크할 경로 | O | 체크할 소스 파일 경로 | 
 | f | file1,file2,... | X | 저작권, License 를 확인할 파일 목록 |
 | c | 저작권 | O | 추가할 저작권('Copyright <year> <holder name>' 형식 준수) | 
-| l | License | O | 추가할 License 이름(SPDX Format) |
+| l | 라이선스 | O | 추가할 라이선스 이름(SPDX Format) |
 
 ### Ex 1. 특정 경로 내 파일에 추가
 ``` 
 $ fosslight_reuse add -p src/ -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
 ```
     
-### Ex 2. 파일 지정하여 저작권과 라이선스 추가
+### Ex 2. 특정 파일에 저작권과 라이선스 추가
 ``` 
 $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
 ```
@@ -228,7 +228,7 @@ $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 
 </tr>
 </table>
 
-### Ex 1. 특정 경로 내 파일에 대하여 Copyright, License 추가
+### Ex 1. 특정 경로 내 파일에 대하여 저작권과  추가
 ```
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
@@ -257,7 +257,7 @@ Successfully changed header of tests/add_result/test_no_license.py
 Successfully changed header of /home/jaekwonbang/commit_0915/tests/add_result/test_no_copyright.py
 ```
     
-### Ex 2. 입력특정 파일에 Copyright, License 추가
+### Ex 2. 특정 파일에 저작권과 라이선스를 추가
 ```
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
