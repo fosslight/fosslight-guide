@@ -197,6 +197,32 @@ $ fosslight_reuse add -p src/ -m
     - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
 
 ## 📁 결과
+
+<table>
+<tr>
+    <td>Before</td>
+    <td>After</td>
+</tr>
+<tr>
+<td>
+
+  ```csharp
+  const int x = 3;
+  const string y = "foo";
+  readonly Object obj = getObject();
+  ```
+</td>
+<td>
+
+  ```nemerle
+  def x : int = 3;
+  def y : string = "foo";
+  def obj : Object = getObject();
+  ```
+</td>
+</tr>
+</table>
+
 ### Ex 1. 특정 경로 내 파일에 대하여 Copyright, License 추가
 ```
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0"
