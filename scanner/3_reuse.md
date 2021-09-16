@@ -222,6 +222,7 @@ $ fosslight_reuse add -p src/ -m
 #
 # SPDX-License-Identifier: GPL-3.0-only   
 
+
   const int x = 3;
   const string y = "foo";
   readonly Object obj = getObject();
