@@ -202,7 +202,7 @@ $ fosslight_reuse add -p src/ -m
  * Missing License File(s) : 라이선스가 존재하지 않는 파일 목록
  * Missing Copyright File(s) : 저작권이 존재하지 않는 파일 목록
 
- < 저작권과 라이선스 Add 결과 >    
+ < 결과 - 파일 상단에 저작권과 라이선스 추가>    
 <table>
 <tr>
     <td>Before</td>
