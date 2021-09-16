@@ -197,6 +197,9 @@ $ fosslight_reuse add -p src/ -m
     - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
 
 ## 📁 결과
+ * File list that have both license and copyright : 파일 내에 저작권과 라이선스가 모두 존재하는 파일 목록
+ * Missing License File(s) : 라이선스가 존재하지 않는 파일 목록
+ * Missing Copyright File(s) : 저작권이 존재하지 않는 파일 목록
 
 <table>
 <tr>
