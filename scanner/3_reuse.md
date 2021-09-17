@@ -207,8 +207,8 @@ $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 
 <td>
 
  <pre lang="python">
-  int x = 1
-  const string y = "FOSSLight"
+  x = 1
+  y = "FOSSLight"
   z = sum(x, 1)
   
   </pre>
@@ -220,8 +220,8 @@ $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 
 # SPDX-License-Identifier: GPL-3.0-only   
 
 
-  int x = 1
-  const string y = "FOSSLight"
+  x = 1
+  y = "FOSSLight"
   z = sum(x, 1)
 </pre>
 </td>
