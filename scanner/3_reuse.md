@@ -164,7 +164,7 @@ $ fosslight_reuse add
 | ------------- | ------------- | ------------- |------------- |
 | p | 체크할 경로 | O | 체크할 소스 파일 경로 | 
 | f | file1,file2,... | X | 저작권, License 를 확인할 파일 목록 |
-| c | 저작권 | O | 추가할 저작권('Copyright <year> <holder name>' 형식 준수) | 
+| c | 저작권 | O | 추가할 저작권('Copyright <year> <holder name>') | 
 | l | 라이선스 | O | 추가할 라이선스 이름(SPDX Format) |
 
 ### Ex 1. 특정 경로 내 파일에 추가
@@ -228,7 +228,7 @@ $ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 
 </tr>
 </table>
 
-### Ex 1. 특정 경로 내 파일에 대하여 저작권과  추가
+### Ex 1. 특정 경로 내 파일에 저작권과 라이선스를 추가
 ```
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
