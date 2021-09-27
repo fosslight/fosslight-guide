@@ -18,7 +18,7 @@ FOSSLight Reuse는 [reuse-tool][ret]을 이용하여 소스 코드의 저작권 
 2. `report` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
      - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
      - [FOSSLight Report](../learn/2_fosslight_report.md)의 BIN(Android), BOM Sheet를 oss-pkg-info.yaml로 변환
-3. `add` --- Copyright와 License가 없는 파일 Copyright와 License를 추가합니다.
+3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
 
 
 ## 🎉 설치 방법
