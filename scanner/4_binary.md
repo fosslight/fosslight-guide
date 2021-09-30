@@ -55,7 +55,7 @@ $ fosslight_binary [option] <arg>
                          'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
     1-2. 파일 Type : ['data','timezone data', 'apple binary property list']    
     1-3. 경로 : ['.git']    
-2. 하기 사항에 대하여 Output Report에 "Exclude"를 체크합니다.     
+2. 하기 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.     
      - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
      - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
 3. -a 옵션의 경우 file 커맨드에 해당 값이 포함되는 경우만 최종 result에 포함합니다.         
