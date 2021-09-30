@@ -73,7 +73,9 @@ $ tree
 └── FOSSLight-Report_20210601_201646.xlsx
 
 ```
-- FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)         
-- FOSSLight-Report_[datetime]_BIN.csv : FOSSLight binary의 결과 (csv 형태. windows는 생성안 함)
-- fosslight_bin_log_[datetime].txt : 실행 log
 - binary_[datetime].txt : Binary별 checksum, tlsh 값이 출력된 결과
+- fosslight_bin_log_[datetime].txt : 실행 log
+- FOSSLight-Report_[datetime]_BIN.csv : FOSSLight binary의 결과 (csv 형태. windows는 생성 안 함)
+- FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)         
+
+
