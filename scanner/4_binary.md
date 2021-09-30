@@ -14,12 +14,11 @@ published: true
 - [How to run](#-how-to-run)
 - [How it works](#-how-it-works)
 - [Result](#-result)
-- [Development](#-development)
 
 
 ## 📋 Prerequisite
 - [**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Python 3.6+ 기반에서 동작합니다.  
-- OSS 정보(OSS Name, OSS Version, License)를 Binary DB로 부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.
+- OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.
 
 ## 🎉 How to install
 FOSSLight Binary Scanner는 pip3를 이용하여 설치할 수 있습니다.     
