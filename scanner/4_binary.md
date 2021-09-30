@@ -49,20 +49,19 @@ $ fosslight_binary [option] <arg>
 
 
 ## 🧐 How it works
-1. Binary를 추출합니다.    
-    1-0. link 파일과 FIFO 파일을 제외합니다.    
-    1-1. 파일 extension이 동일하면 제외합니다. ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',
-                                              'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
-    1-2. 파일 Type이 동일하면 제외합니다. ['data','timezone data', 'apple binary property list']    
-    1-3. 경로에 포함되면 제외합니다. ['.git']    
-    1-4. 하기 사항에 대하여 Output Report에 "Exclude"를 체크합니다.     
-        - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
-        - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
-    1-5. -a 옵션의 경우 file 커맨드에 해당 값이 포함되는 경우만 최종 result에 포함합니다.         
-2. Binary별 checksum과 tlsh를 출력합니다.     
-3. OSS 정보를 Binary DB로 부터 불러옵니다.       
-4. binary.txt 파일을 생성합니다.          
-5. 최종 Spreadsheet와 csv 파일을 생성합니다.          
+1. 하기 사항을 제외하고 Binary를 추출합니다.    
+    1-0. link 파일과 FIFO 파일    
+    1-1. 파일 extension : ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',
+                         'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
+    1-2. 파일 Type : ['data','timezone data', 'apple binary property list']    
+    1-3. 경로 : ['.git']    
+2. 하기 사항에 대하여 Output Report에 "Exclude"를 체크합니다.     
+     - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
+     - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
+3. -a 옵션의 경우 file 커맨드에 해당 값이 포함되는 경우만 최종 result에 포함합니다.         
+4. Binary별 checksum과 tlsh를 출력합니다.     
+5. OSS 정보를 Binary DB로 부터 불러옵니다.       
+6. Output 파일을 생성합니다.        
 
 ## 📁 Result
 
