@@ -74,10 +74,9 @@ FOSSLight Scanner 프로젝트는 다른 오픈 소스 프로젝트를 **상속*
 
 - [**FOSSLight Source Scanner**](1_source.md) (License: [Apache-2.0](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE))
 - [**FOSSLight Dependency Scanner**](2_dependency.md) (License: [Apache-2.0](https://github.com/fosslight/fosslight_dependency_scanner/blob/main/LICENSE))
+- [**FOSSLight Binary Scanner**](4_binary.md) (License : [Apache-2.0](https://github.com/fosslight/fosslight_binary_scanner/blob/main/LICENSE))
 - [**FOSSLight Reuse**](3_reuse.md) (License: [GPL-3.0-only](https://github.com/fosslight/fosslight_reuse/blob/main/LICENSE))
-- Release 예정 프로젝트 목록
-  - FOSSLight Binary Scanner
-  - FOSSLight Scanner
+- [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner) (License : [Apache-2.0](https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE))
 
       
 <div class="right"><a href="https://icons8.com/icon">&lt;Icons by Icons8&gt;</a></div>
