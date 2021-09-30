@@ -50,7 +50,7 @@ $ fosslight_binary [option] <arg>
 
 ## 🧐 How it works
 1. 하기 사항을 제외하고 Binary를 추출합니다.    
-    1-0. link 파일과 FIFO 파일    
+    1-0. symbolic link, FIFO 파일    
     1-1. 파일 extension : ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',
                          'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
     1-2. 파일 Type : ['data','timezone data', 'apple binary property list']    
