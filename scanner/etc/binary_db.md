@@ -2,7 +2,7 @@
 published: true
 ---
 
-# How to set up FOSSLight Binary Scanner Database
+# FOSSLight Binary Scanner Database 세팅 방법
 OSS information (OSS Name, OSS Version, License)를 DB로 부터 출력하기 위해 DB 세팅이 필요합니다. 
 
 ## Prerequisite
