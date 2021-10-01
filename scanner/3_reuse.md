@@ -63,18 +63,20 @@ Options for only 'add' mode
 # Ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
-```bash
-# SUMMARY
-# Open Source Package info: File to which OSS Package information is written.
-# Used licenses: License detected in the path.
-# Files with copyright information: Number of files with copyright / Total number of files.
-# Files with license information: Number of files with license / Total number of files.
- 
-* Open Source Package info: /home/test/reuse-example/oss-package.info
-* Used licenses: CC-BY-4.0, CC0-1.0, GPL-3.0-or-later
-* Files with copyright information: 6 / 7
-* Files with license information: 6 / 7
-```
+<details>
+    <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
+
+    # SUMMARY
+    # Open Source Package info: File to which OSS Package information is written.
+    # Used licenses: License detected in the path.
+    # Files with copyright information: Number of files with copyright / Total number of files.
+    # Files with license information: Number of files with license / Total number of files.
+
+    * Open Source Package info: /home/test/reuse-example/oss-package.info
+    * Used licenses: CC-BY-4.0, CC0-1.0, GPL-3.0-or-later
+    * Files with copyright information: 6 / 7
+    * Files with license information: 6 / 7
+</details>    
 
 ```
 # Ex.2) 특정 파일만 분석
@@ -123,6 +125,7 @@ $ fosslight_reuse report -p /home/test/source
       homepage: http://dev.mysql.com/doc/connector-j/en
       license:
       - GPL-2.0
+    
 </details>
 
 
