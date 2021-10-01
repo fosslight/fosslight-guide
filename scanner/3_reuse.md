@@ -57,37 +57,10 @@ Options for only 'add' mode
 (ex3 )$ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "LicenseRef-LGE-Proprietary"
 ```
 
-
-### Ex 1. 최소한의 인자로 실행
-``` 
-$ fosslight_reuse lint -p [root_path_to_check]
+## 📁 실행 결과
+### lint
 ```
-### Ex 2. 특정 파일에 대해서만 체크
-/home/test/notice/sample.py, /home/test/src/init.py 파일의 저작권, License 정보를 출력    
-```
-$ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
-```
-## 동작 방법
-1. -p 옵션의 경로가 존재하는 지 체크     
-2. OSS Package Information 파일의 존재 여부를 체크     
-3. Reuse lint 실행    
-    3-1. Project 단위로 실행하는 경우 (-f 없는 경우)
-    - ./reuse/dep5 파일 없으면 생성    
-    - ./reuse/dep5 파일이 이미 존재하는 경우 bk 파일을 복사하고 기본 세팅값을 추가
-    - dep5 파일 생성하여 binary 또는 .json, venv*/*, node_modules/*,. */* 파일을 체크 대상에서 제외시킴     
-    - reuse lint 실행 
-        (OSS Package Information file이 존재하면, license 정보 없는 파일 목록은 출력하지 않음)
-    - ./reuse/dep5 파일을 원래대로 복구      
-    
-    3-2. 파일 단위로 실행하는 경우 (-f 있는 경우)
-    - 파일별 저작권, License를 출력
-    - 단, 파일이 존재하지 않거나 파일이 binary 또는 .json인 경우 출력되지 않음
-
-4. 결과를 출력하고 xml 파일로 저장
-
-## 📁 결과
-### Ex 1. 특정 경로 내 파일을 분석
-```
+# Ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
 ```bash
@@ -101,12 +74,10 @@ $ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
 * Used licenses: CC-BY-4.0, CC0-1.0, GPL-3.0-or-later
 * Files with copyright information: 6 / 7
 * Files with license information: 6 / 7
-
 ```
 
-### Ex 2. 특정 파일만 분석 
-각 파일에 대한 License 및 저작권 정보가 출력됩니다.     
 ```
+# Ex.2) 특정 파일만 분석
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
 ```bash
@@ -121,8 +92,54 @@ $ fosslight_reuse lint -p /home/test/ -f "notice/sample.py,src/init.py"
 # src/main.c
 * License: GPL-3.0-or-later
 * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
+```
+
+### report
+```
+# Ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
+$ fosslight_reuse report -p /home/test/source
+```
+<details open>
+<summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
+<p>
+Open Source Package:
+- name: Apache Commons
+  version: '2.4'
+  source: http://svn.apache.org/repos/asf/commons
+  homepage: https://commons.apache.org
+  license:
+  - Apache-2.0
+- name: dbus
+  version: 1.10.20
+  source: https://dbus.freedesktop.org/releases/dbus
+  copyright: Copyright (c) 2002-2007, Red Hat, Inc.
+  homepage: https://www.freedesktop.org
+  license:
+  - AFL-2.1
+- name: mysql-connector-java
+  version: 5.1.38
+  source: https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.38
+  homepage: http://dev.mysql.com/doc/connector-j/en
+  license:
+  - GPL-2.0    
+    </p>    
 
 ```
+# Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
+$ fosslight_reuse report -f src/FOSSLight-Report.xlsx
+```
+
+### add
+```
+# Ex.1) 특정 경로 내 파일에 저작권과 라이선스를 추가
+(venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+
+# Ex.2) 특정 파일에 저작권과 라이선스를 추가
+(venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+```
+
+
+
 
 ## 🚀 실행 방법 - report (oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환)
 
