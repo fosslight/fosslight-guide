@@ -35,6 +35,7 @@ $ fosslight_reuse lint
 ```
 ### Mode별 실행 방법 및 Parameters
 ```fosslight_reuse [Mode] [option1] <arg1> [option2] <arg2>...```   
+
     * Required parameter : **Mode**   
     * Optional parameter : **Options**
 
