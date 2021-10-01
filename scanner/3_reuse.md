@@ -123,9 +123,10 @@ Open Source Package:
   homepage: http://dev.mysql.com/doc/connector-j/en
   license:
   - GPL-2.0    
+```
 </p>
 </details>
-```
+
 
 ```
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
