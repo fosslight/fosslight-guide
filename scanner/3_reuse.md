@@ -102,6 +102,7 @@ $ fosslight_reuse report -p /home/test/source
 <details open>
 <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
 <p>
+```   
 Open Source Package:
 - name: Apache Commons
   version: '2.4'
@@ -123,7 +124,7 @@ Open Source Package:
   license:
   - GPL-2.0    
     </p>    
-
+```
 ```
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
