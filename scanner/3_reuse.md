@@ -38,7 +38,7 @@ $ fosslight_reuse lint
 * Required parameter : **Mode**   
 * Optional parameter : **Options**
 
-```
+```bash
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
     report                oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환
@@ -233,7 +233,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
         - "MODULE_LICENSE_ "로 시작하는 파일
     ```
 
-2. fsfe-reuse lint 실행<br>
+2. fsfe-reuse lint 실행   
     2-1. Project 단위로 실행하는 경우 (-f 없는 경우)
     - ./reuse/dep5 파일 없으면 생성
     - ./reuse/dep5 파일이 이미 존재하는 경우 bk 파일을 복사하고 기본 설정값 추가
