@@ -246,9 +246,9 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 [yml]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml
 [xlsx]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx
 
-2. 파일을 변환<br>
-    2-1. Path 단위로 실행하는 경우 (-f 없는 경우)<br>
-        * 경로 내 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환<br>
+2. 파일을 변환
+    2-1. Path 단위로 실행하는 경우 (-f 없는 경우)
+        * 경로 내 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
     2-2. 입력한 파일을 변환 
         * oss-pkg-info.yaml을 FOSSLight-Report.xlsx로 또는 그 반대로 변환
         * 단, -o 로 output file명을 지정한 경우 해당 이름으로 결과 파일이 생성
