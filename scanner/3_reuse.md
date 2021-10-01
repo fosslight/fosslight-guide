@@ -64,7 +64,7 @@ Options for only 'add' mode
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
 <details>
-    <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
+    <summary>lint ex.1 실행 결과 </summary>
 
     ```bash
     # SUMMARY
@@ -85,19 +85,24 @@ Options for only 'add' mode
 # Ex.2) 특정 파일만 분석
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
-```bash
-# src/load.c
-* License:
-* Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
- 
-# src/dummy.c
-* License:
-* Copyright:
- 
-# src/main.c
-* License: GPL-3.0-or-later
-* Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
-```
+<details>
+    <summary>lint ex.1 실행 결과 </summary>
+    
+    ```bash
+    # src/load.c
+    * License:
+    * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
+
+    # src/dummy.c
+    * License:
+    * Copyright:
+
+    # src/main.c
+    * License: GPL-3.0-or-later
+    * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
+    ```
+
+</details>  
 
 ### report
 ```
