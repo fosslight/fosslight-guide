@@ -206,25 +206,20 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 1. OSS Package Information 파일 존재 여부 체크
     OSS Package Information 파일
     * 하기 파일 중 1개 이상 존재하는지 체크 (대소문자 구분 없음)
-    
-    ```
-    
-    - oss-pkg-info.yaml
-    - oss-pkg-info.yml
-    - requirement.txt
-    - requirements.txt
-    - package.json
-    - pom.xml
-    - build.gradle
-    - Podfile.lock
-    - Cartfile.resolved
-    - oss-package.info 
-    - "MODULE_LICENSE_ "로 시작하는 파일
-
-    ```
+        - oss-pkg-info.yaml
+        - oss-pkg-info.yml
+        - requirement.txt
+        - requirements.txt
+        - package.json
+        - pom.xml
+        - build.gradle
+        - Podfile.lock
+        - Cartfile.resolved
+        - oss-package.info 
+        - "MODULE_LICENSE_ "로 시작하는 파일
 
 
-2. fsfe-reuse lint 실행
+2. fsfe-reuse lint 실행<br>
     2-1. Project 단위로 실행하는 경우 (-f 없는 경우)
     * ./reuse/dep5 파일 없으면 생성
     * ./reuse/dep5 파일이 이미 존재하는 경우 bk 파일을 복사하고 기본 설정값 추가
