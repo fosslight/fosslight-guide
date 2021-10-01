@@ -33,9 +33,10 @@ $ pip3 install fosslight_reuse
 ``` 
 $ fosslight_reuse lint
 ```
-### Parameters      
+### Mode별 실행 방법 및 Parameters
+## fosslight_reuse [Mode] [option1] <arg1> [option2] <arg2>...
 ```
-Mode
+[Mode]
     lint                  저작권 및 License 표기 규칙 준수 확인
     report                oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환
     add                   Copyright와 License 추가
@@ -86,7 +87,7 @@ Options for only 'add' mode
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
 <details>
-    <summary>lint ex.1 실행 결과 </summary>
+    <summary>lint ex.2 실행 결과 </summary>
     
     ```bash
     # src/load.c
