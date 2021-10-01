@@ -59,6 +59,13 @@ Options for only 'add' mode
 (ex3 )$ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "LicenseRef-LGE-Proprietary"
 ```
 
+** (windows인 경우) ** 실행 파일을 이용한 방법
+    1. FOSSLight Reuse - Release 에서 fosslight_reuse_windows.exe를 다운로드
+    2. oss-pkg-info.yaml 파일 또는 [FOSSLight|OSS]-Report*.xlsx가 위치한 Path에 다운로드 받은 파일을 이동
+    3. 일을 더블 클릭하여 실행
+ 
+    
+    
 ## 📁 실행 결과
 ### lint
 ```
@@ -248,179 +255,8 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     
 
 ### add
-
-- 파일 예시 : [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml), [FOSSLight-Report.xlsx](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx)
-
-``` 
-$ fosslight_reuse report
-```
-
-### Parameters     
-
-| Parameter  | Argument | 필수  | 설명 |
-| ------------- | ------------- | ------------- |------------- |
-| p | 확인할 경로 | O | 변환할 oss-pkg-info*.yaml 또는 oss-pkg-info*.yml 파일이 위치한 경로 | 
-| h | None | X | 설명 메시지 출력 | 
-| o | 결과 파일명 | X | 결과 파일명 |    
-| f | file1,file2,... | X | 1. FOSSLight Report로 변환할 Yaml 파일 (여러개인 경우 ,로 구분) <br> ex) -f src/oss-pkg-info.yaml,main/setting.yml <br> 2.  oss-pkg-info.yaml로 변환할 FOSSLight Report 파일 |
-
-### Ex 1. oss-pkg-info.yaml 파일을 FOSSLight Report로 변환
-1-1. Path에 존재하는 oss-pkg-info*.yaml 또는 oss-pkg-info*.yml 파일을 모두 변환
-``` 
-$ fosslight_reuse report -p /home/test/source
-```
-
-1-2. 특정 oss-pkg-info.yaml 파일들만 변환
-``` 
-$ fosslight_reuse report -f src/oss-pkg-info.yaml,main/setting.yml
-```
-
-### Ex 2. FOSSLight Report 를 oss-pkg-info.yaml 파일로 변환
-```
-$ fosslight_reuse report -f src/FOSSLight-Report.xlsx
-```
-
-## 📁 결과
-출력 파일 이름이 -o로 지정되면 해당 이름으로 결과 파일이 생성됩니다.
-- FOSSLight-Report_[datetime].xlsx : oss-pkg-info.yaml 파일을 변환한 파일
-- oss-pkg-info_[datetime].yaml : FOSSLight-Report.xlsx가 변환된 파일
-
-## 🚀 실행 방법 - report (실행 파일 이용 방법. windows용만 제공)
-1. [fosslight_reuse release][release]에서 실행 파일을 다운로드 받습니다.
-2. FOSSLight-Report*.xlsx 또는 oss-pkg-info.yaml이 있는 경로에 실행 파일 이동한 후  실행합니다.
-3. oss-pkg-info.yaml이 있으면 FOSSLight-Report.xlsx로 변환되고, FOSSLight-Report*.xlsx가 있으면 oss-pkg-info.yaml로 변환됩니다.
-
-
-## 🚀 실행 방법 - add (Copyright와 License를 추가)
-``` 
-$ fosslight_reuse add
-```
-
-### Parameters      
-
-| Parameter  | Argument | 필수  | 설명 |
-| ------------- | ------------- | ------------- |------------- |
-| p | 체크할 경로 | O | 체크할 소스 파일 경로 | 
-| f | file1,file2,... | X | 저작권, License 를 확인할 파일 목록 |
-| c | 저작권 | O | 추가할 저작권('Copyright <year> <holder name>') | 
-| l | 라이선스 | O | 추가할 라이선스 이름(SPDX Format) |
-
-### Ex 1. 특정 경로 내 파일에 추가
-``` 
-$ fosslight_reuse add -p src/ -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
-```
-    
-### Ex 2. 특정 파일에 저작권과 라이선스 추가
-``` 
-$ fosslight_reuse add -f "src/load.c,src/dummy.c,src/main.c" -c "Copyright 2021 LG Electronics Inc." -l "GPL-3.0"
-```
-
-
-## 동작 방법
-1. -p 옵션의 경로가 존재하는 지 체크     
-2. 추가할 저작권과 라이선스 확인
-3. Reuse Add 실행    
-    3-1. Path 단위로 실행하는 경우 (-f 없는 경우)
-    - 경로 내 존재하는 모든 파일 중 파일 확장자를 통해 확인할 파일 리스트 추출
+1. 추가할 저작권과 라이선스 확인
+2. 저작권과 라이선스 탐색 및 추가
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
-    - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
+    - -c와 -l 옵션울 이용하여 저작권 또는 라이선스가 없는 파일의 상단에 저작권과 라이선스를 추가
     
-    3-2. 파일 단위로 실행하는 경우 (-f 있는 경우)
-    - 입력한 파일의 저작권과 라이선스를 출력
-    - 저작권 또는 라이선스가 없는 파일의 상단에 -c와 -l 옵션으로 추가한 저작권과 라이선스를 추가
-
-## 📁 결과
-### 출력 결과
- * File list that have both license and copyright : 파일 내에 저작권과 라이선스가 모두 존재하는 파일 목록
- * Missing License File(s) : 라이선스가 존재하지 않는 파일 목록
- * Missing Copyright File(s) : 저작권이 존재하지 않는 파일 목록
-
-### 파일 변경 사항 : 상단에 저작권과 라이선스 추가
-<table>
-<tr>
-    <td>Before</td>
-    <td>After</td>
-</tr>
-<tr>
-<td>
-
- <pre lang="python">
-  x = 1
-  y = "FOSSLight"
-  z = sum(x, 1)
-  
-  </pre>
-</td>
-<td>
-  <pre lang="python">
-# SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-#
-# SPDX-License-Identifier: GPL-3.0-only   
-
-
-  x = 1
-  y = "FOSSLight"
-  z = sum(x, 1)
-</pre>
-</td>
-</tr>
-</table>
-
-### Ex 1. 특정 경로 내 파일에 저작권과 라이선스를 추가
-```
-(venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
-```
-```bash
-# File list that have both license and copyright : 3 / 7
-# __init__.py
-* License:
-* Copyright:
-
-# test_both_have_1.py
-* License: GPL-3.0-only
-* Copyright: SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-
-# test_both_have_2.py
-* License: MIT
-* Copyright: SPDX-FileCopyrightText: Copyright (c) 2011 LG Electronics Inc.
-
-# Missing license File(s)
-  * test_no_license.py
-  * Your input license : GPL-3.0-only
-Successfully changed header of tests/add_result/test_no_license.py
-
-# Missing Copyright File(s)
-  * test_no_copyright.py
-  * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
-Successfully changed header of /home/jaekwonbang/commit_0915/tests/add_result/test_no_copyright.py
-```
-    
-### Ex 2. 특정 파일에 저작권과 라이선스를 추가
-```
-(venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
-```
-```bash
-# add/test_both_have_1.py
-* License: GPL-3.0-only
-* Copyright: SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-
-# add/test_both_have_2.py
-* License: MIT
-* Copyright: SPDX-FileCopyrightText: Copyright (c) 2011 LG Electronics Inc.
-
-# add/test_no_copyright.py
-* License: GPL-3.0-only
-* Copyright:
-
-# add/test_no_license.py
-* License:
-* Copyright: SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-
-  * Your input license : GPL-3.0-only
-Successfully changed header of add/test_no_license.py
-  * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
-Successfully changed header of add/test_no_copyright.py
-```
-
-
-[release]: https://github.com/fosslight/fosslight_reuse/releases
