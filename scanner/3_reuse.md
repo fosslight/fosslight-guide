@@ -143,9 +143,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 # Ex.2) 특정 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
-<details>
-    <summary> add 실행 결과 </summary>
-    
+실행 결과
     * 파일 변경 사항 : 상단에 저작권과 라이선스 추가
 <table>
 <tr>
@@ -177,6 +175,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 </tr>
 </table>    
 
+```bash    
     # File list that have both license and copyright : 3 / 7
     # __init__.py
     * License:
@@ -199,8 +198,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     * test_no_copyright.py
     * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
     Successfully changed header of tests/add_result/test_no_copyright.py
-
-</details>   
+```
 
 
 ## 🚀 동작 방법 
