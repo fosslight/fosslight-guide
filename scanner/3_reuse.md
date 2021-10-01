@@ -79,12 +79,13 @@ ex.1 실행 결과
     * Files with license information: 6 / 7
 ```
 
+```
 # Ex.2) 특정 파일만 분석
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
-<details>
-    <summary>lint ex.2 실행 결과 </summary>
-    
+ex.2 실행 결과
+
+```bash    
     # src/load.c
     * License:
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
@@ -96,18 +97,17 @@ ex.1 실행 결과
     # src/main.c
     * License: GPL-3.0-or-later
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
-
-</details>  
+```
 
 ### report
 ```
 # Ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
 $ fosslight_reuse report -p /home/test/source
 ```
-<details>
-    <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
-    oss-pkg-info.yaml
-    
+
+oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과
+
+```bash    
     Open Source Package:
     - name: Apache Commons
       version: '2.4'
@@ -128,9 +128,7 @@ $ fosslight_reuse report -p /home/test/source
       homepage: http://dev.mysql.com/doc/connector-j/en
       license:
       - GPL-2.0
-    
-</details>
-
+```
 
 ```
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
