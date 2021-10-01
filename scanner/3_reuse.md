@@ -101,8 +101,7 @@ $ fosslight_reuse report -p /home/test/source
 ```
 <details>
     <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
-
-    ```bash
+    ### oss-pkg-info.yaml
     Open Source Package:
     - name: Apache Commons
       version: '2.4'
@@ -122,14 +121,17 @@ $ fosslight_reuse report -p /home/test/source
       source: https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.38
       homepage: http://dev.mysql.com/doc/connector-j/en
       license:
-      - GPL-2.0    
-    \```
+      - GPL-2.0
 </details>
 
 
 ```
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
+```
+```
+<details>
+    <summary>FOSSLight-Report.xlsx → oss-pkg-info.yaml 결과 </summary>
 ```
 
 ### add
