@@ -38,7 +38,7 @@ $ fosslight_reuse lint
 * Required parameter : **Mode**   
 * Optional parameter : **Options**
 
-```bash
+```
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
     report                oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환
