@@ -206,7 +206,9 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 1. OSS Package Information 파일 존재 여부 체크
     OSS Package Information 파일
     * 하기 파일 중 1개 이상 존재하는지 체크 (대소문자 구분 없음)
-    ```    
+    
+    ```
+    
     - oss-pkg-info.yaml
     - oss-pkg-info.yml
     - requirement.txt
@@ -217,8 +219,10 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     - Podfile.lock
     - Cartfile.resolved
     - oss-package.info 
-    - "MODULE_LICENSE_ "로 시작하는 파일 
+    - "MODULE_LICENSE_ "로 시작하는 파일
+
     ```
+
 
 2. fsfe-reuse lint 실행
     2-1. Project 단위로 실행하는 경우 (-f 없는 경우)
