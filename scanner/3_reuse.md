@@ -111,8 +111,8 @@ ex.2 실행 결과
 $ fosslight_reuse report -p /home/test/source
 ```
 
-oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과
-
+oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과   
+_oss-pkg-info.yaml_
 ```yaml    
     Open Source Package:
     - name: Apache Commons
@@ -135,6 +135,11 @@ oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과
       license:
       - GPL-2.0
 ```
+_FOSS-Report.xlsx_
+    | ID | OSS Name | OSS Version | License | Download Location | Homapage | Copyright Text |
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | 
+    | 7 | Apache Commons | 2.4 | Apache-2.0 | [http://svn.apache.org/repos/asf/commons] | [https://commons.apache.org] | |
+    
 
 ```
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
