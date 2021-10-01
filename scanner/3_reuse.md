@@ -59,7 +59,7 @@ Options for only 'add' mode
 (ex3 )$ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "LicenseRef-LGE-Proprietary"
 ```
 
-**(windows인 경우)** 실행 파일을 이용한 방법
+**(windows인 경우)** 실행 파일을 이용한 방법<br>
     1. FOSSLight Reuse - Release 에서 fosslight_reuse_windows.exe를 다운로드
     2. oss-pkg-info.yaml 파일 또는 [FOSSLight|OSS]-Report*.xlsx가 위치한 Path에 다운로드 받은 파일을 이동
     3. 일을 더블 클릭하여 실행
