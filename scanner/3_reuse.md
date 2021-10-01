@@ -207,8 +207,41 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 </details>   
 
 
+## 🚀 동작 방법 
+### lint
+1. OSS Package Information 파일 존재 여부 체크
+<details>
+    <summary> OSS Package Information 파일 </summary>
+    
+    하기 파일 중 1개 이상 존재하는지 체크 (대소문자 구분 없음)
+    * oss-pkg-info.yaml
+    * oss-pkg-info.yml
+    * requirement.txt
+    * requirements.txt
+    * package.json
+    * pom.xml
+    * build.gradle
+    * Podfile.lock
+    * Cartfile.resolved
+    * oss-package.info 
+    * "MODULE_LICENSE_ "로 시작하는 파일 
 
-## 🚀 실행 방법 - report (oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환)
+    </details>
+2. fsfe-reuse lint 실행
+    2-1. Project 단위로 실행하는 경우 (-f 없는 경우)
+        * ./reuse/dep5 파일 없으면 생성
+        * ./reuse/dep5 파일이 이미 존재하는 경우 bk 파일을 복사하고 기본 설정값 추가
+        * dep5 파일 생성하여 binary 또는 .json, venv/, node_modules/,. */ 파일을 체크 대상에서 제외시킴
+        * fsfe-reuse lint 실행 (OSS Package Information file이 존재하면, license 정보 없는 파일 목록은 출력하지 않음)
+        * ./reuse/dep5 파일을 원래대로 복구
+    2-2. 파일 단위로 실행하는 경우 (-f 있는 경우)
+        * 파일별 저작권, License 출력
+        * 단, 파일이 존재하지 않거나 파일이 binary 또는 .json인 경우 출력되지 않음
+3. 결과를 출력하여 xml 파일로 저장
+    
+### report
+       
+### add
 
 - 파일 예시 : [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml), [FOSSLight-Report.xlsx](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx)
 
