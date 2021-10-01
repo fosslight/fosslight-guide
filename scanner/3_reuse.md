@@ -140,7 +140,9 @@ oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과
     |**ID**|**OSS Name**  |**OSS Version**|**License**|           **Download Location**       |        **Homapage**      |**Copyright Text**|   
     |:-----|:-------------|:--------------|:----------|:--------------------------------------|:-------------------------|:-----------------|   
     |7     |Apache Commons|2.4            |Apache-2.0 |http://svn.apache.org/repos/asf/commons|https://commons.apache.org|                  | 
-
+    |8     |dbus          |10.10.20       |AFL-2.1    |https://dbus.freedesktop.org/releases/dbus|https://www.freedesktop.org|Copyright (c) 2002-2007, Red Hat, Inc.                 |   
+    
+    
 ```
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
