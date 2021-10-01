@@ -99,32 +99,31 @@ Options for only 'add' mode
 # Ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
 $ fosslight_reuse report -p /home/test/source
 ```
-<details open>
+<details>
     <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
-<p>
-```bash
-Open Source Package:
-- name: Apache Commons
-  version: '2.4'
-  source: http://svn.apache.org/repos/asf/commons
-  homepage: https://commons.apache.org
-  license:
-  - Apache-2.0
-- name: dbus
-  version: 1.10.20
-  source: https://dbus.freedesktop.org/releases/dbus
-  copyright: Copyright (c) 2002-2007, Red Hat, Inc.
-  homepage: https://www.freedesktop.org
-  license:
-  - AFL-2.1
-- name: mysql-connector-java
-  version: 5.1.38
-  source: https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.38
-  homepage: http://dev.mysql.com/doc/connector-j/en
-  license:
-  - GPL-2.0    
-\```
-</p>
+
+    ```bash
+    Open Source Package:
+    - name: Apache Commons
+      version: '2.4'
+      source: http://svn.apache.org/repos/asf/commons
+      homepage: https://commons.apache.org
+      license:
+      - Apache-2.0
+    - name: dbus
+      version: 1.10.20
+      source: https://dbus.freedesktop.org/releases/dbus
+      copyright: Copyright (c) 2002-2007, Red Hat, Inc.
+      homepage: https://www.freedesktop.org
+      license:
+      - AFL-2.1
+    - name: mysql-connector-java
+      version: 5.1.38
+      source: https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.38
+      homepage: http://dev.mysql.com/doc/connector-j/en
+      license:
+      - GPL-2.0    
+    \```
 </details>
 
 
