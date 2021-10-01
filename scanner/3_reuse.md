@@ -34,7 +34,7 @@ $ pip3 install fosslight_reuse
 $ fosslight_reuse lint
 ```
 ### Mode별 실행 방법 및 Parameters
-#### fosslight_reuse [Mode] [option1] <arg1> [option2] <arg2>...
+* fosslight_reuse [Mode] [option1] <arg1> [option2] <arg2>...
 ```
 [Mode]
     lint                  저작권 및 License 표기 규칙 준수 확인
