@@ -66,7 +66,6 @@ Options for only 'add' mode
 <details>
     <summary>oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과 </summary>
 
-
     ```bash
     # SUMMARY
     # Open Source Package info: File to which OSS Package information is written.
@@ -79,6 +78,7 @@ Options for only 'add' mode
     * Files with copyright information: 6 / 7
     * Files with license information: 6 / 7
     ```
+
 </details>    
 
 ```
