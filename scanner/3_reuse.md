@@ -142,20 +142,50 @@ $ fosslight_reuse report -p /home/test/source
 # Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 ```
-```
-<details>
-    <summary>FOSSLight-Report.xlsx → oss-pkg-info.yaml 결과 </summary>
-```
-
+ 
 ### add
 ```
 # Ex.1) 특정 경로 내 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
-
+    
 # Ex.2) 특정 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
+<details>
+    <summary> add 실행 결과 </summary>
+    
+    * 파일 변경 사항 : 상단에 저작권과 라이선스 추가
+    <table>
+    <tr>
+        <td>Before</td>
+        <td>After</td>
+    </tr>
+    <tr>
+    <td>
 
+     <pre lang="python">
+      x = 1
+      y = "FOSSLight"
+      z = sum(x, 1)
+
+      </pre>
+    </td>
+    <td>
+      <pre lang="python">
+    # SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
+    #
+    # SPDX-License-Identifier: GPL-3.0-only   
+
+
+      x = 1
+      y = "FOSSLight"
+      z = sum(x, 1)
+    </pre>
+    </td>
+    </tr>
+    </table>    
+
+</details>   
 
 
 
