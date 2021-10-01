@@ -60,9 +60,10 @@ Options for only 'add' mode
 ```
 
 **(windows인 경우)** 실행 파일을 이용한 방법<br>
+
     1. FOSSLight Reuse - Release 에서 fosslight_reuse_windows.exe를 다운로드
     2. oss-pkg-info.yaml 파일 또는 [FOSSLight|OSS]-Report*.xlsx가 위치한 Path에 다운로드 받은 파일을 이동
-    3. 일을 더블 클릭하여 실행
+    3. 파일을 더블 클릭하여 실행
  
     
     
