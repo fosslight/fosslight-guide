@@ -67,7 +67,6 @@ Options for only 'add' mode
 <details>
     <summary>lint ex.1 실행 결과 </summary>
 
-    ```bash
     # SUMMARY
     # Open Source Package info: File to which OSS Package information is written.
     # Used licenses: License detected in the path.
@@ -78,7 +77,6 @@ Options for only 'add' mode
     * Used licenses: CC-BY-4.0, CC0-1.0, GPL-3.0-or-later
     * Files with copyright information: 6 / 7
     * Files with license information: 6 / 7
-    ```
 
 </details>    
 
@@ -89,7 +87,6 @@ Options for only 'add' mode
 <details>
     <summary>lint ex.2 실행 결과 </summary>
     
-    ```bash
     # src/load.c
     * License:
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
@@ -101,7 +98,6 @@ Options for only 'add' mode
     # src/main.c
     * License: GPL-3.0-or-later
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
-    ```
 
 </details>  
 
@@ -155,35 +151,35 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     <summary> add 실행 결과 </summary>
     
     * 파일 변경 사항 : 상단에 저작권과 라이선스 추가
-    <table>
-    <tr>
-        <td>Before</td>
-        <td>After</td>
-    </tr>
-    <tr>
-    <td>
+<table>
+<tr>
+    <td>Before</td>
+    <td>After</td>
+</tr>
+<tr>
+<td>
 
-     <pre lang="python">
-      x = 1
-      y = "FOSSLight"
-      z = sum(x, 1)
+ <pre lang="python">
+  x = 1
+  y = "FOSSLight"
+  z = sum(x, 1)
 
-      </pre>
-    </td>
-    <td>
-      <pre lang="python">
-    # SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-    #
-    # SPDX-License-Identifier: GPL-3.0-only   
+  </pre>
+</td>
+<td>
+  <pre lang="python">
+# SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
+#
+# SPDX-License-Identifier: GPL-3.0-only   
 
 
-      x = 1
-      y = "FOSSLight"
-      z = sum(x, 1)
-    </pre>
-    </td>
-    </tr>
-    </table>    
+  x = 1
+  y = "FOSSLight"
+  z = sum(x, 1)
+</pre>
+</td>
+</tr>
+</table>    
 
 </details>   
 
