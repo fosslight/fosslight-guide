@@ -66,10 +66,7 @@ Options for only 'add' mode
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
 <details>
- 
-    <summary>
-    lint ex.1 실행 결과 
-    </summary>
+    <summary>lint ex.1 실행 결과</summary>
 
     # SUMMARY
     # Open Source Package info: File to which OSS Package information is written.
