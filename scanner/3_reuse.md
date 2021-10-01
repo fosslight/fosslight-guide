@@ -113,7 +113,7 @@ $ fosslight_reuse report -p /home/test/source
 
 oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과
 
-```bash    
+```yaml    
     Open Source Package:
     - name: Apache Commons
       version: '2.4'
