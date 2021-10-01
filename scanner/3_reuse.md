@@ -65,9 +65,7 @@ Options for only 'add' mode
 # Ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
-<details>
-    <summary>lint ex.1 실행 결과</summary>
-
+ex.1 실행 결과
     # SUMMARY
     # Open Source Package info: File to which OSS Package information is written.
     # Used licenses: License detected in the path.
@@ -78,9 +76,6 @@ Options for only 'add' mode
     * Used licenses: CC-BY-4.0, CC0-1.0, GPL-3.0-or-later
     * Files with copyright information: 6 / 7
     * Files with license information: 6 / 7
-    
-</details>    
-
 ```
 # Ex.2) 특정 파일만 분석
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
