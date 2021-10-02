@@ -41,7 +41,7 @@ $ fosslight_reuse lint
 ```
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
-    report                oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 변환
+    report                oss-pkg-info.yaml <-> FOSSLight-Report 변환
     add                   Copyright와 License 추가
  
 Options:
@@ -58,10 +58,10 @@ Options for only 'add' mode
 ```
 (ex1) $ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 (ex2) $ fosslight_reuse report -p /home/test/source
-(ex3 )$ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "LicenseRef-LGE-Proprietary"
+(ex3) $ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "LicenseRef-LGE-Proprietary"
 ```
 
-**(windows인 경우)** 실행 파일을 이용한 방법  
+**(Windows인 경우)** 실행 파일을 이용한 방법  
     1. FOSSLight Reuse - Release 에서 fosslight_reuse_windows.exe를 다운로드  
     2. oss-pkg-info.yaml 파일 또는 [FOSSLight|OSS]-Report*.xlsx가 위치한 Path에 다운로드 받은 파일을 이동  
     3. 파일을 더블 클릭하여 실행  
