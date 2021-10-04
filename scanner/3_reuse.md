@@ -73,7 +73,7 @@ Options for only 'add' mode
 # ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
-ex.1 실행 결과
+ > ex.1 실행 결과
 ```bash
     # SUMMARY
     # Open Source Package info: File to which OSS Package information is written.
@@ -91,7 +91,7 @@ ex.1 실행 결과
 # ex.2) 특정 파일만 분석
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
-ex.2 실행 결과
+ > ex.2 실행 결과
 
 ```bash    
     # src/load.c
@@ -113,7 +113,7 @@ ex.2 실행 결과
 $ fosslight_reuse report -p /home/test/source
 ```
 
-oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과   
+> oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과   
     **_oss-pkg-info.yaml_**   
 ```yaml    
     Open Source Package:
@@ -156,7 +156,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 # ex.2) 특정 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
-실행 결과   
+ > 실행 결과   
     * 파일 변경 사항 : 상단에 저작권과 라이선스 추가   
 <table>
 <tr>
