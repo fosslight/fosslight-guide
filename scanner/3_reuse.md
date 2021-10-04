@@ -70,7 +70,7 @@ Options for only 'add' mode
 ## 📁 실행 결과
 ### lint
 ```
-# Ex.1) 특정 경로 내 파일을 분석
+# ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
 ex.1 실행 결과
@@ -88,7 +88,7 @@ ex.1 실행 결과
 ```
 
 ```
-# Ex.2) 특정 파일만 분석
+# ex.2) 특정 파일만 분석
 (venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
 ```
 ex.2 실행 결과
@@ -109,7 +109,7 @@ ex.2 실행 결과
 
 ### report
 ```
-# Ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
+# ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
 $ fosslight_reuse report -p /home/test/source
 ```
 
@@ -144,16 +144,16 @@ oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과
 
 
 ```
-# Ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
+# ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 ```
  
 ### add
 ```
-# Ex.1) 특정 경로 내 파일에 저작권과 라이선스를 추가
+# ex.1) 특정 경로 내 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
     
-# Ex.2) 특정 파일에 저작권과 라이선스를 추가
+# ex.2) 특정 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 실행 결과   
@@ -265,5 +265,5 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 1. 추가할 저작권과 라이선스 확인
 2. 저작권과 라이선스 탐색 및 추가
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
-    - -c와 -l 옵션울 이용하여 저작권 또는 라이선스가 없는 파일의 상단에 저작권과 라이선스를 추가
+    - -c와 -l 옵션을 이용하여 저작권 또는 라이선스가 없는 파일의 상단에 저작권과 라이선스를 추가
     
