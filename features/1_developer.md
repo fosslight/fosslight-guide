@@ -21,6 +21,27 @@ Docker를 이용하여 빌드 및 실행합니다.
 docker-compose up --build
 ```
 
+### 메일 서버 세팅
+[docker-mailserver]: https://github.com/docker-mailserver/docker-mailserver
+
+1. Configuration 로 이동합니다.
+2. SMTP Setting 체크박스를 활성화합니다.
+3. 메일 서버 정보를 입력 후 저장합니다.
+```
+Mail Server : fosslight_mail
+Email Address : no-reply@fosslight.org
+Port : 587
+Encoding : UTF-8
+Username : no-reply@fosslight.org
+Password : fosslight
+```
+
+4. 웹 서버를 재시작해줍니다. 
+```
+docker-compose restart fosslight_web
+```
+
+
 ## 설치 및 실행 방법 - 2
 ### 요구사항
 - JAVA 1.8 이상
