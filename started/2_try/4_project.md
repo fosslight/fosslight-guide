@@ -125,7 +125,7 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 ### 3. Packaging
 ```note
-- Packaging 단계에서는 Source Code 공개 의무가 있는 Open Source를 사용한 경우 공개할 Source Code를 취합(OSS Package)하고 이를 OSC System에 등록합니다.
+- Packaging 단계에서는 Source Code 공개 의무가 있는 Open Source를 사용한 경우 공개할 Source Code를 취합(OSS Package)하고 이를 FOSSLight에 등록합니다.
 - OSS 고지문은 Packaging 단계가 Confirm되면 자동으로 생성됩니다. 만약, OSS 고지문 내용을 변경해야 할 경우, Notice tab에서 수정할 수 있습니다.
 - Project List의 Packaging column 내 버튼을 클릭하여 진입합니다.
 ```
