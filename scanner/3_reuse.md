@@ -247,12 +247,10 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 3. 결과를 출력하여 xml 파일로 저장
 
 ### report
-1. 변환할 파일의 존재 여부 확인
-    * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
-
+1. 변환할 파일의 존재 여부 확인   
+   * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
 [yml]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml
 [xlsx]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx
-
 
 2. 파일을 변환   
     2-1. Path 단위로 실행하는 경우 (-f 없는 경우)   
