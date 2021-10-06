@@ -140,8 +140,7 @@ $ fosslight_reuse report -p /home/test/source
 ```
     
 **_FOSS-Report.xlsx_**   
-
-
+![Report_xlsx](images/fosslight_reuse_report.JPG)
 
 
 ```
