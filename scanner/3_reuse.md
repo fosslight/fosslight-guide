@@ -113,8 +113,12 @@ Options for only 'add' mode
 # ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
 $ fosslight_reuse report -p /home/test/source
 ```
+```
+# ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
+$ fosslight_reuse report -f src/FOSSLight-Report.xlsx
+```
 
-> oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과   
+> oss-pkg-info.yaml <-> OSS Report(OSS-Report.xlsx) 결과   
 
 **_oss-pkg-info.yaml_**   
 ```yaml    
@@ -150,11 +154,6 @@ $ fosslight_reuse report -p /home/test/source
 **_FOSS-Report.xlsx_**   
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
-
-```
-# ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
-$ fosslight_reuse report -f src/FOSSLight-Report.xlsx
-```
  
 ### add
 ```
