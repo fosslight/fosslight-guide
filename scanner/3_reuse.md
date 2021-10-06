@@ -161,10 +161,6 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     * 파일 변경 사항 : 상단에 저작권과 라이선스 추가   
 <table>
 <tr>
-    <td>Before</td>
-    <td>After</td>
-</tr>
-<tr>
 <td>
  [![Before](/images/fosslight_reuse_add_test.JPG)]
 </td>
