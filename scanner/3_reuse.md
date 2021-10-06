@@ -249,7 +249,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 ### report
 1. 변환할 파일의 존재 여부 확인   
    * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
-   * 
+
 [yml]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml   
 [xlsx]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx   
 
