@@ -120,7 +120,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 
 > oss-pkg-info.yaml <-> OSS Report(OSS-Report.xlsx) 결과   
 
-**_oss-pkg-info.yaml_**   
+▪️ **_oss-pkg-info.yaml_**   
 ```yaml    
 Open Source Software Package:
     - name: glibc
@@ -151,7 +151,7 @@ Open Source Software Package:
       exclude : True
 ```
     
-**_FOSS-Report.xlsx_**   
+▪️ **_FOSS-Report.xlsx_**   
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
  
