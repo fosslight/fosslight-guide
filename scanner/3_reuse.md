@@ -166,25 +166,10 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 </tr>
 <tr>
 <td>
-
- <pre lang="python">
-  x = 1
-  y = "FOSSLight"
-  z = sum(x, 1)
-
-  </pre>
+ [![Before](/images/fosslight_reuse_add_test.JPG)]
 </td>
 <td>
-  <pre lang="python">
-# SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-#
-# SPDX-License-Identifier: GPL-3.0-only   
-
-
-  x = 1
-  y = "FOSSLight"
-  z = sum(x, 1)
-</pre>
+ [![After](/images/fosslight_reuse_add_test_result.JPG)]
 </td>
 </tr>
 </table>    
