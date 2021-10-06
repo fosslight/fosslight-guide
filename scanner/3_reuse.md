@@ -118,26 +118,33 @@ $ fosslight_reuse report -p /home/test/source
 
 **_oss-pkg-info.yaml_**   
 ```yaml    
-    Open Source Package:
-    - name: Apache Commons
-      version: '2.4'
-      source: http://svn.apache.org/repos/asf/commons
-      homepage: https://commons.apache.org
+    Open Source Software Package:
+    - name: glibc
+      version: 2.3
+      source: https://github.com/fsfe/glibc
       license:
-      - Apache-2.0
-    - name: dbus
-      version: 1.10.20
-      source: https://dbus.freedesktop.org/releases/dbus
-      copyright: Copyright (c) 2002-2007, Red Hat, Inc.
-      homepage: https://www.freedesktop.org
-      license:
-      - AFL-2.1
-    - name: mysql-connector-java
-      version: 5.1.38
-      source: https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.38
-      homepage: http://dev.mysql.com/doc/connector-j/en
-      license:
-      - GPL-2.0
+      - GPL-3.0
+      - LGPL-2.1
+      file : 
+      - a.c
+      - b.c
+    - name : dbus
+      version : 1.3
+      source : https://github.com/fsfe/dbus
+      license : GPL-2.0
+      file : src/*
+      copyright : |
+        Copyright (c) 2020 Test
+        Copyright (c) 2020 Test
+    - name : reuse-tool
+      source : https://github.com/fsfe/reuse
+      homepage : http://google.com
+      license : MIT
+      copyright: Copyright (c) 2020 Test
+    - name : build-tool
+      source : http://gihub.com/bazel
+      license : Apache-2.0
+      exclude : True
 ```
     
 **_FOSS-Report.xlsx_**   
