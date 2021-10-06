@@ -68,7 +68,7 @@ Options for only 'add' mode
     
     
 ## 📁 실행 결과
-▪️### lint
+⚫️ ### lint
 ```
 # ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
@@ -108,7 +108,7 @@ Options for only 'add' mode
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
 ```
 
-▪️### report
+⚫️ ###report
 ```
 # ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
 $ fosslight_reuse report -p /home/test/source
@@ -155,7 +155,7 @@ Open Source Software Package:
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
  
-▪️### add
+⚫️ ### add
 ```
 # ex.1) 특정 경로 내 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
@@ -197,7 +197,7 @@ Open Source Software Package:
 
 
 ## 🚀 동작 방법 
-▪️### lint
+⚫️ ### lint
 1. OSS Package Information 파일 존재 여부 체크
     OSS Package Information 파일  
     * 하기 파일 중 1개 이상 존재하는지 체크 (대소문자 구분 없음)  
@@ -227,7 +227,7 @@ Open Source Software Package:
     - 단, 파일이 존재하지 않거나 파일이 binary 또는 .json인 경우 출력되지 않음   
 3. 결과를 출력하여 xml 파일로 저장
 
-▪️### report
+⚫️ ### report
 1. 변환할 파일의 존재 여부 확인   
    * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
 
@@ -243,7 +243,7 @@ Open Source Software Package:
     - 단, -o 로 output file명을 지정한 경우 해당 이름으로 결과 파일이 생성   
     
 
-▪️### add
+⚫️ ### add
 1. 추가할 저작권과 라이선스 확인
 2. 저작권과 라이선스 탐색 및 추가
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
