@@ -160,9 +160,11 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
  > 실행 결과   
     * 파일 변경 사항 : 상단에 저작권과 라이선스 추가   
 
- [![Before](/images/fosslight_reuse_add_test.JPG)]
 
- [![After](/images/fosslight_reuse_add_test_result.JPG)]
+
+![Before](images/fosslight_reuse_add_test.JPG)
+
+![After](images/fosslight_reuse_add_test_result.JPG)
  
 
 ```bash    
