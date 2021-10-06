@@ -73,7 +73,8 @@ Options for only 'add' mode
 # ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 ```
- > ex.1 실행 결과
+ > ex.1 실행 결과   
+
 ```bash
     # SUMMARY
     # Open Source Package info: File to which OSS Package information is written.
