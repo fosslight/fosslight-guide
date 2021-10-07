@@ -111,7 +111,9 @@ Options for only 'add' mode
 [![asciicast](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.svg)](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX)
 
    
-<script id="asciicast-p1vjzWM1hNBVNe7jcwABGvjpX" src="https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.js" async></script>
+<script id="asciicast-p1vjzWM1hNBVNe7jcwABGvjpX" src="https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.js" async>
+</script>
+
 
 
 ### 🏷 report
