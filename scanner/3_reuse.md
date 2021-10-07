@@ -107,8 +107,20 @@ Options for only 'add' mode
     * License: GPL-3.0-or-later
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
 ```
-**Demo**
+**Demo**   
 [![asciicast](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.svg)](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX)
+
+   
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+</head>
+<body>
+  <asciinema-player src="/440552.cast" cols="108" rows="44"></asciinema-player>
+  ...
+  <script src="/asciinema-player.js"></script>
+</body>
+</html>
 
 
 ### 🏷 report
