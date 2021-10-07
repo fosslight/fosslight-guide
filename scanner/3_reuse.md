@@ -107,6 +107,9 @@ Options for only 'add' mode
     * License: GPL-3.0-or-later
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
 ```
+**Demo**
+[![asciicast](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.svg)](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX)
+
 
 ### 🏷 report
 ```
