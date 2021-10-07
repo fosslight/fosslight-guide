@@ -110,7 +110,7 @@ Options for only 'add' mode
 
 ### 🏷 report
 ```
-# ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
+# ex.1) Path 내에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 FOSSLight-Report로 변환
 $ fosslight_reuse report -p /home/test/source
 ```
 ```
