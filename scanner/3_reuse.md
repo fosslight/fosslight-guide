@@ -107,10 +107,7 @@ Options for only 'add' mode
     * License: GPL-3.0-or-later
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
 ```
-**Demo**   
-[![asciicast](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.svg)](https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX)
-
-   
+▪️ **Demo**     
 <script id="asciicast-p1vjzWM1hNBVNe7jcwABGvjpX" src="https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.js" async>
 </script>
 
@@ -161,6 +158,8 @@ Open Source Software Package:
     
 ▪️ **_FOSS-Report.xlsx_**   
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
+
+▪️ **Demo**     
 
  
 ### 🏷 add
