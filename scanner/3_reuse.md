@@ -160,7 +160,7 @@ Open Source Software Package:
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
 ▪️ **Demo**     
-<script id="asciicast-xA9OxWy18YLF2L5WoAkXJsVRk" src="https://asciinema.org/a/xA9OxWy18YLF2L5WoAkXJsVRk.js" async>  
+<script id="asciicast-xA9OxWy18YLF2L5WoAkXJsVRk" src="https://asciinema.org/a/xA9OxWy18YLF2L5WoAkXJsVRk.js" async>   
 </script>  
 
  
@@ -204,8 +204,8 @@ Open Source Software Package:
     * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
     Successfully changed header of tests/add_result/test_no_copyright.py
 ```
-▪️ **Demo**  
-<script id="asciicast-wCbElcVJLcFYTidzV250qBLQm" src="https://asciinema.org/a/wCbElcVJLcFYTidzV250qBLQm.js" async>  
+▪️ **Demo**   
+<script id="asciicast-wCbElcVJLcFYTidzV250qBLQm" src="https://asciinema.org/a/wCbElcVJLcFYTidzV250qBLQm.js" async>   
 </script>
 
 
