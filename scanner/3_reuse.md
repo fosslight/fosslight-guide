@@ -160,6 +160,8 @@ Open Source Software Package:
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
 ▪️ **Demo**     
+<script id="asciicast-xA9OxWy18YLF2L5WoAkXJsVRk" src="https://asciinema.org/a/xA9OxWy18YLF2L5WoAkXJsVRk.js" async>
+</script>  
 
  
 ### 🏷 add
