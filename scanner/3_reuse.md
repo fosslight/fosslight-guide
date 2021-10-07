@@ -209,7 +209,7 @@ Open Source Software Package:
 </script>
 
 
-## 🚀 동작 방법 
+## 🔍 동작 방법 
 ### 🏷 lint
 1. OSS Package Information 파일 존재 여부 체크
     OSS Package Information 파일  
