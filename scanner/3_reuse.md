@@ -7,8 +7,7 @@ title: FOSSLight Reuse
 <img src="https://img.shields.io/pypi/l/fosslight-reuse" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_reuse" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_reuse" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_reuse)](https://api.reuse.software/info/github.com/fosslight/fosslight_reuse)
     
 
-[**FOSSLight Reuse**](https://github.com/fosslight/fosslight_reuse)는 [소스 코드의 저작권 및 License 표기 규칙][rule]을 준수하기 위해 사용할 수 있는 도구입니다.
-FOSSLight Reuse는 [reuse-tool][ret]을 이용하여 소스 코드의 저작권 및 라이선스 작성 규칙을 준수하는지 확인합니다.
+[**FOSSLight Reuse**](https://github.com/fosslight/fosslight_reuse)는 [reuse-tool][ret]을 이용하여 [소스 코드의 저작권 및 License 표기 규칙][rule]을 준수하는지 확인하고 보완하기 위해 사용할 수 있는 도구입니다.
 
 [ret]: https://github.com/fsfe/reuse-tool
 [rule]: https://oss.lge.com/guide/process/osc_process/1-identification/copyright_license_rule.html
@@ -18,7 +17,7 @@ FOSSLight Reuse는 [reuse-tool][ret]을 이용하여 소스 코드의 저작권 
 2. `report` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
      - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
      - [FOSSLight Report](../learn/2_fosslight_report.md)의 BIN(Android), BOM Sheet를 oss-pkg-info.yaml로 변환
-3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
+3. `add` --- 소스 코드에 Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
 
 
 ## 🎉 설치 방법
@@ -58,7 +57,7 @@ Options for only 'add' mode
 ```
 (ex1) $ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
 (ex2) $ fosslight_reuse report -p /home/test/source
-(ex3) $ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "LicenseRef-LGE-Proprietary"
+(ex3) $ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "MIT"
 ```
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
