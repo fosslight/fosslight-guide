@@ -108,10 +108,7 @@ Options for only 'add' mode
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
 ```
 ▪️ **Demo**     
-<script id="asciicast-p1vjzWM1hNBVNe7jcwABGvjpX" src="https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.js" async>
-</script>   
-
-![demo_lint](images/lint.gif)
+![demo_lint](images/lint.gif)  
 
 
 ### 🏷 report
@@ -161,10 +158,7 @@ Open Source Software Package:
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
 ▪️ **Demo**     
-<script id="asciicast-xA9OxWy18YLF2L5WoAkXJsVRk" src="https://asciinema.org/a/xA9OxWy18YLF2L5WoAkXJsVRk.js" async>   
-</script>  
-
-![demo_lint](images/report.gif)
+![demo_lint](images/report.gif)   
 
  
 ### 🏷 add
@@ -208,10 +202,7 @@ Open Source Software Package:
     Successfully changed header of tests/add_result/test_no_copyright.py
 ```
 ▪️ **Demo**   
-<script id="asciicast-wCbElcVJLcFYTidzV250qBLQm" src="https://asciinema.org/a/wCbElcVJLcFYTidzV250qBLQm.js" async>   
-</script>
-
-![demo_lint](images/add.gif)
+![demo_lint](images/add.gif)   
 
 
 ## 🔍 동작 방법 
