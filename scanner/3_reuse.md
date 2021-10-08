@@ -68,7 +68,7 @@ Options for only 'add' mode
     
     
 ## 📁 실행 결과
-### lint
+### 🏷 lint
 ```
 # ex.1) 특정 경로 내 파일을 분석
 (venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
@@ -107,49 +107,64 @@ Options for only 'add' mode
     * License: GPL-3.0-or-later
     * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
 ```
+▪️ **Demo**     
+<script id="asciicast-p1vjzWM1hNBVNe7jcwABGvjpX" src="https://asciinema.org/a/p1vjzWM1hNBVNe7jcwABGvjpX.js" async>
+</script>
 
-### report
+
+
+### 🏷 report
 ```
-# ex.1) Path에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 변환
+# ex.1) Path 내에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 FOSSLight-Report로 변환
 $ fosslight_reuse report -p /home/test/source
 ```
-
-> oss-pkg-info.yaml -> OSS Report(OSS-Report.xlsx) 결과   
-    **_oss-pkg-info.yaml_**   
-```yaml    
-    Open Source Package:
-    - name: Apache Commons
-      version: '2.4'
-      source: http://svn.apache.org/repos/asf/commons
-      homepage: https://commons.apache.org
-      license:
-      - Apache-2.0
-    - name: dbus
-      version: 1.10.20
-      source: https://dbus.freedesktop.org/releases/dbus
-      copyright: Copyright (c) 2002-2007, Red Hat, Inc.
-      homepage: https://www.freedesktop.org
-      license:
-      - AFL-2.1
-    - name: mysql-connector-java
-      version: 5.1.38
-      source: https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.38
-      homepage: http://dev.mysql.com/doc/connector-j/en
-      license:
-      - GPL-2.0
-```
-    
-**_FOSS-Report.xlsx_**   
-
-
-
-
 ```
 # ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
 $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 ```
+
+> oss-pkg-info.yaml <-> OSS Report(OSS-Report.xlsx) 결과   
+
+▪️ **_oss-pkg-info.yaml_**   
+```yaml    
+Open Source Software Package:
+    - name: glibc
+      version: 2.3
+      source: https://github.com/fsfe/glibc
+      license:
+      - GPL-3.0
+      - LGPL-2.1
+      file : 
+      - a.c
+      - b.c
+    - name : dbus
+      version : 1.3
+      source : https://github.com/fsfe/dbus
+      license : GPL-2.0
+      file : src/*
+      copyright : |
+        Copyright (c) 2020 Test
+        Copyright (c) 2020 Test
+    - name : reuse-tool
+      source : https://github.com/fsfe/reuse
+      homepage : http://google.com
+      license : MIT
+      copyright: Copyright (c) 2020 Test
+    - name : build-tool
+      source : http://gihub.com/bazel
+      license : Apache-2.0
+      exclude : True
+```
+    
+▪️ **_FOSS-Report.xlsx_**   
+![Report_xlsx](images/fosslight_reuse_report.JPG)
+
+▪️ **Demo**     
+<script id="asciicast-xA9OxWy18YLF2L5WoAkXJsVRk" src="https://asciinema.org/a/xA9OxWy18YLF2L5WoAkXJsVRk.js" async>   
+</script>  
+
  
-### add
+### 🏷 add
 ```
 # ex.1) 특정 경로 내 파일에 저작권과 라이선스를 추가
 (venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
@@ -158,36 +173,12 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
 (venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
  > 실행 결과   
-    * 파일 변경 사항 : 상단에 저작권과 라이선스 추가   
-<table>
-<tr>
-    <td>Before</td>
-    <td>After</td>
-</tr>
-<tr>
-<td>
-
- <pre lang="python">
-  x = 1
-  y = "FOSSLight"
-  z = sum(x, 1)
-
-  </pre>
-</td>
-<td>
-  <pre lang="python">
-# SPDX-FileCopyrightText: Copyright 2019-2021 LG Electronics Inc.
-#
-# SPDX-License-Identifier: GPL-3.0-only   
-
-
-  x = 1
-  y = "FOSSLight"
-  z = sum(x, 1)
-</pre>
-</td>
-</tr>
-</table>    
+   
+  ▪️ **파일 변경 사항 : 상단에 저작권과 라이선스 추가**  
+   
+|Before          |After          |
+|:---------------|:--------------|
+|![Before](images/fosslight_reuse_add_test.JPG)|![After](images/fosslight_reuse_add_test_result.JPG)|
 
 ```bash    
     # File list that have both license and copyright : 3 / 7
@@ -213,10 +204,13 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
     Successfully changed header of tests/add_result/test_no_copyright.py
 ```
+▪️ **Demo**   
+<script id="asciicast-wCbElcVJLcFYTidzV250qBLQm" src="https://asciinema.org/a/wCbElcVJLcFYTidzV250qBLQm.js" async>   
+</script>
 
 
-## 🚀 동작 방법 
-### lint
+## 🔍 동작 방법 
+### 🏷 lint
 1. OSS Package Information 파일 존재 여부 체크
     OSS Package Information 파일  
     * 하기 파일 중 1개 이상 존재하는지 체크 (대소문자 구분 없음)  
@@ -246,7 +240,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     - 단, 파일이 존재하지 않거나 파일이 binary 또는 .json인 경우 출력되지 않음   
 3. 결과를 출력하여 xml 파일로 저장
 
-### report
+### 🏷 report
 1. 변환할 파일의 존재 여부 확인   
    * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
 
@@ -262,7 +256,7 @@ $ fosslight_reuse report -f src/FOSSLight-Report.xlsx
     - 단, -o 로 output file명을 지정한 경우 해당 이름으로 결과 파일이 생성   
     
 
-### add
+### 🏷 add
 1. 추가할 저작권과 라이선스 확인
 2. 저작권과 라이선스 탐색 및 추가
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
