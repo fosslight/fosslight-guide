@@ -23,7 +23,7 @@ title: FOSSLight Reuse
 ## 🎉 설치 방법
 
 FOSSLight Reuse는 pip3를 이용하여 설치할 수 있습니다.
-[python 3.6 + virtualenv](https://fosslight.org/fosslight-guide-en/scanner/etc/guide_virtualenv.html)환경에서 설치할 것을 권장합니다.
+[python 3.6 + virtualenv](https://fosslight.org/fosslight-guide-en/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
 ```
 $ pip3 install fosslight_reuse
 ```
@@ -41,7 +41,7 @@ $ fosslight_reuse lint
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
     report                oss-pkg-info.yaml <-> FOSSLight-Report 변환
-    add                   Copyright와 License 추가
+    add                   소스 코드에 Copyright와 License 추가
  
 Options:
     -h                    설명 메시지 출력
@@ -51,8 +51,8 @@ Options:
     -n                    venv, node_modules, ./ 에 대하여 분석 제외하지 않으려면 추가
  
 Options for only 'add' mode
-    -l <license>          추가할 라이선스 이름(SPDX Format)
-    -c <copyright>        추가할 저작권(ex, <year> <holder name>)
+    -l <license>          추가할 라이선스 (SPDX License Identifer)
+    -c <copyright>        추가할 저작권 (ex, <year> <copyright holder>)
 ```
 ```
 (ex1) $ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
@@ -61,7 +61,7 @@ Options for only 'add' mode
 ```
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
-    1. [FOSSLight Reuse](https://github.com/fosslight/fosslight_reuse) - Release 에서 fosslight_reuse_windows.exe를 다운로드  
+    1. [FOSSLight Reuse - Release](https://github.com/fosslight/fosslight_reuse/releases) 에서 fosslight_reuse_windows.exe를 다운로드  
     2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml) 파일 또는 [FOSSLight_OSS-Report*.xlsx](../learn/2_fosslight_report.md) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
     3. 파일을 더블 클릭하여 실행  
     
@@ -153,7 +153,7 @@ Open Source Software Package:
       exclude : True
 ```
     
-▪️ **_FOSS-Report.xlsx_**   
+▪️ **_FOSSLight-Report.xlsx_**   
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
 ▪️ **Demo**     
