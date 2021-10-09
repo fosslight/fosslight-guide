@@ -10,8 +10,8 @@ FOSSLight 소스를 다운로드받아 직접 컴파일하여 실행할 수 있�
 Docker를 이용하여 빌드 및 실행합니다.
 
 ### 개발 환경
-1. [Docker][docker]
-2. [Docker Compose][doccompose]
+- [Docker][docker]
+- [Docker Compose][doccompose]
 
 [docker]: https://docs.docker.com/engine/install/
 [doccompose]: https://docs.docker.com/compose/install/
