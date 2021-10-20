@@ -157,7 +157,7 @@ Open Source Software Package:
 ![Report_xlsx](images/fosslight_reuse_report.JPG)
 
 ▪️ **Demo**     
-![demo_lint](images/report.gif)   
+![demo_lint](images/convert.gif)   
 
  
 ### 🏷 add
