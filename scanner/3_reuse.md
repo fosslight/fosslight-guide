@@ -14,7 +14,7 @@ title: FOSSLight Reuse
 
 ##  기능
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
-2. `report` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
+2. `convert` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
      - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
      - [FOSSLight Report](../learn/2_fosslight_report.md)의 BIN(Android), BOM Sheet를 oss-pkg-info.yaml로 변환
 3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
@@ -40,7 +40,7 @@ $ fosslight_reuse lint
 ```
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
-    report                oss-pkg-info.yaml <-> FOSSLight-Report 변환
+    convert                oss-pkg-info.yaml <-> FOSSLight-Report 변환
     add                   소스 코드에 Copyright와 License 추가
  
 Options:
@@ -56,13 +56,13 @@ Options for only 'add' mode
 ```
 ```
 (ex1) $ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
-(ex2) $ fosslight_reuse report -p /home/test/source
+(ex2) $ fosslight_reuse convert -p /home/test/source
 (ex3) $ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "MIT"
 ```
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
     1. [FOSSLight Reuse - Release](https://github.com/fosslight/fosslight_reuse/releases) 에서 fosslight_reuse_windows.exe를 다운로드  
-    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml) 파일 또는 [FOSSLight_OSS-Report*.xlsx](../learn/2_fosslight_report.md) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
+    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml) 파일 또는 [FOSSLight_OSS-Report*.xlsx](../learn/2_fosslight_report.md) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
     3. 파일을 더블 클릭하여 실행  
     
     
@@ -110,14 +110,14 @@ Options for only 'add' mode
 ![demo_lint](images/lint.gif)  
 
 
-### 🏷 report
+### 🏷 convert
 ```
 # ex.1) /home/test/source Path 내에 존재하는 oss-pkg-info.yaml 또는 oss-pkg-info.yml 파일을 모두 FOSSLight-Report로 변환
-$ fosslight_reuse report -p /home/test/source
+$ fosslight_reuse convert -p /home/test/source
 ```
 ```
 # ex.2) FOSSLight Report를 oss-pkg-info.yaml 파일로 변환
-$ fosslight_reuse report -f src/FOSSLight-Report.xlsx
+$ fosslight_reuse convert -f src/FOSSLight-Report.xlsx
 ```
 
 > oss-pkg-info.yaml <-> FOSSLight-Report.xlsx 결과   
@@ -235,12 +235,12 @@ Open Source Software Package:
     - 단, 파일이 존재하지 않거나 파일이 binary 또는 .json인 경우 출력되지 않음   
 3. 결과를 출력하여 xml 파일로 저장
 
-### 🏷 report
+### 🏷 convert
 1. 변환할 파일의 존재 여부 확인   
    * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
 
-[yml]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/oss-pkg-info.yaml   
-[xlsx]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/report/OSS-Report-Sample_0.xlsx   
+[yml]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml   
+[xlsx]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/OSS-Report-Sample_0.xlsx   
 
 2. 파일을 변환   
     2-1. Path 단위로 실행하는 경우 (-f 없는 경우)   
