@@ -48,7 +48,7 @@ Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니�
 | p | String | Path to analyze source. | 
 | j | None | As an output, the result of executing ScanCode in json format other than FOSSLight Report is additionally generated. | 
 | o | String | Output path (If you want to generate the specific file name, add the output path with file name.) | 
-| f | String | Output file format (excel, csv, opossum) | 
+| f | String | Output file format (excel, csv, opossum) (default: excel and csv (window : excel only) | 
 | m | None | Print the Matched text for each license on a separate sheet. | 
 
 Ex. Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력

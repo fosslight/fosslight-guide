@@ -250,7 +250,6 @@ $ fosslight_dependency
   * 이 경우에는 {프로젝트명}.xcodeproj/project.xcworkspace/xcshareddata/swiftpm path에서 'Package.resolved' 파일을 자동으로 찾고 프로그램이 실행됩니다.
 
 ## 📁 Result
-
 ```
 $ tree
 .
