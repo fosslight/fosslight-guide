@@ -41,8 +41,8 @@ $ fosslight_binary [option] <arg>
     Options:
         -h                            Help Message 출력
         -a <target_architecture>      특정 Target Architecture(x86-64, ARM, MIPS, Mach-O, and etc.)인 Binary만 추출
-        -o <output_path>              결과물 저장할 경로
-        -f <customized_file_name>     결과물 파일명, 파일 확장자는 제외합니다 (기본값: 'binary_[datetime].txt')
+        -o <output_path>              결과물 저장할 경로 (특정 결과 파일명을 원하는 경우에는 파일명까지 입력합니다.)
+        -f <format>                   결과 파일 format (excel, csv, opossum)
         -d <db_url>                   Binary DB 접속 정보(format :'postgresql://username:password@host:port/database_name')
 ```` 
 
@@ -70,12 +70,14 @@ $ tree
 ├── binary_20210601_201646.txt
 ├── fosslight_bin_log_20210601_201646.txt
 ├── FOSSLight-Report_20210601_201646_BIN.csv
-└── FOSSLight-Report_20210601_201646.xlsx
+├── FOSSLight-Report_20210601_201646.xlsx
+└── Opossum_input_20210601_201646.xlsx
 
 ```
 - binary_[datetime].txt : Binary별 checksum, tlsh 값이 출력된 결과
 - fosslight_bin_log_[datetime].txt : 실행 log
 - FOSSLight-Report_[datetime]_BIN.csv : FOSSLight binary의 결과 (csv 형태. windows는 생성 안 함)
-- FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)         
+- FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
+- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과     
 
 

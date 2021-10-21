@@ -47,7 +47,8 @@ Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니�
 | h | None | Print help message. | 
 | p | String | Path to analyze source. | 
 | j | None | As an output, the result of executing ScanCode in json format other than FOSSLight Report is additionally generated. | 
-| o | String | Output file name without file extension. | 
+| o | String | Output path (If you want to generate the specific file name, add the output path with file name.) | 
+| f | String | Output file format (excel, csv, opossum) | 
 | m | None | Print the Matched text for each license on a separate sheet. | 
 
 Ex. Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력
@@ -61,7 +62,8 @@ json형태인 ScanCode 결과를 FOSSLight Report 형식으로 변환합니다.
 | ------------- | ------------- | ------------- |
 | h | None | Print help message. | 
 | p | String | Path of ScanCode json files. | 
-| o | String | Output file name without file extension. | 
+| o | String | Output path (If you want to generate the specific file name, add the output path with file name.) | 
+| f | String | Output file format (excel, csv, opossum) | 
 | m | None | Print the Matched text for each license on a separate sheet. | 
 
 Ex. json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
@@ -77,11 +79,12 @@ $ tree
 ├── FOSSLight-Report_2021-05-03_00-39-49_SRC.csv
 ├── FOSSLight-Report_2021-05-03_00-39-49.xlsx
 ├── scancode_2021-05-03_00-39-49.json
-└── fosslight_src_log_2021-05-03_00-39-49.txt
-
+├── fosslight_src_log_2021-05-03_00-39-49.txt
+└── Opossum_input_2021-05-03_00-39-49.txt
 ```
 - FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과 (Windows 제외)
 - fosslight_src_log_[datetime].txt: 실행 로그가 저장된 파일
 - scancode_[datetime].json : ScanCode 실행 결과 (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
+- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 

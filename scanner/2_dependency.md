@@ -226,7 +226,8 @@ $ fosslight_dependency
 | ------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
 | -m     | npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage | (optional) <br> 프로젝트의 package manager                                                   |
 | -p     | (path)                                           | (optional) <br> 분석하고자 하는 input directory                                              |
-| -o     | (path)                                           | (optional) <br> 결과 파일이 생성되는 output directory                                        |
+| -o     | (path)                                           | (optional) <br> 결과 파일이 생성되는 output directory (특정 결과 파일명을 원하는 경우에는 파일명까지 입력합니다.)                                        |
+| -f     | excel, csv, opossum                             | (optional) <br> output file format                                        |
 | -a     | conda example: 'conda activate (venv name)'      | (pypi only required) <br> 가상환경 activate command                                          |
 | -d     | conda example: 'conda deactivate'                | (pypi only required) <br> 가상환경 deactivate command                                        |
 | -c     | (customized output directory name)               | (gradle, maven only optional) <br> 커스터마이즈한 build output directory명 (default: target) |
@@ -250,7 +251,18 @@ $ fosslight_dependency
 
 ## 📁 Result
 
-FOSSLight Dependency Scanner는 xlsx(Microsoft Excel file)양식의 결과 파일을 생성합니다.
+```
+$ tree
+.
+├── FOSSLight-Report_2021-05-03_00-39-49_SRC.csv
+├── FOSSLight-Report_2021-05-03_00-39-49.xlsx
+├── fosslight_dependency_log_2021-05-03_00-39-49.txt
+└── Opossum_input_2021-05-03_00-39-49.txt
+```
+- FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
+- FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과 (Windows 제외)
+- fosslight_dependency_log_[datetime].txt: 실행 로그가 저장된 파일
+- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
 결과 파일에는 transitive dependency들을 포함한 모든 분석된 dependency들의 manifest 파일을 기반으로 OSS 정보가 기록됩니다.
 이때, 고유한 OSS명을 작성하기 위해, OSS명은 (패키지 매니저):(OSS명) 또는 (group id):(artifact id) 양식으로 기록됩니다.
