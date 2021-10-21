@@ -42,7 +42,7 @@ $ fosslight_binary [option] <arg>
         -h                            Help Message 출력
         -a <target_architecture>      특정 Target Architecture(x86-64, ARM, MIPS, Mach-O, and etc.)인 Binary만 추출
         -o <output_path>              결과물 저장할 경로 (특정 결과 파일명을 원하는 경우에는 파일명까지 입력합니다.)
-        -f <format>                   결과 파일 format (excel, csv, opossum)
+        -f <format>                   결과 파일 format (excel, csv, opossum) (default: excel and csv (window : excel only)
         -d <db_url>                   Binary DB 접속 정보(format :'postgresql://username:password@host:port/database_name')
 ```` 
 
@@ -78,6 +78,6 @@ $ tree
 - fosslight_bin_log_[datetime].txt : 실행 log
 - FOSSLight-Report_[datetime]_BIN.csv : FOSSLight binary의 결과 (csv 형태. windows는 생성 안 함)
 - FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
-- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과     
+- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
 
