@@ -12,6 +12,9 @@ title: FOSSLight Reuse
 [ret]: https://github.com/fsfe/reuse-tool
 [rule]: https://oss.lge.com/guide/process/osc_process/1-identification/copyright_license_rule.html
 
+**Github Repository** : [https://github.com/fosslight/fosslight_reuse]()  
+**License** : [GPL-3.0-only](https://github.com/fosslight/fosslight_reuse/blob/main/LICENSE)
+
 ##  기능
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
 2. `convert` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.

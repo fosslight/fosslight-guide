@@ -7,18 +7,20 @@ published: true
 
 [**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Binary를 찾아 출력하고 Binary DB에 동일하거나 비슷한 Binary가 있으면 해당 OSS 정보를 출력합니다. 
 
-## Contents
+**Github Repository** : [https://github.com/fosslight/fosslight_binary_scanner]()  
+**License** : [Apache-2.0](https://github.com/fosslight/fosslight_binary_scanner/blob/main/LICENSE)
 
+## Contents
 - [Prerequisite](#-prerequisite)
 - [How to install](#-how-to-install)
 - [How to run](#-how-to-run)
-- [How it works](#-how-it-works)
 - [Result](#-result)
+- [How it works](#-how-it-works)
 
 
 ## 📋 Prerequisite
-- [**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Python 3.6+ 기반에서 동작합니다.  
-- OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.
+[**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Python 3.6+ 기반에서 동작합니다.  
+OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.
 
 ## 🎉 How to install
 FOSSLight Binary Scanner는 pip3를 이용하여 설치할 수 있습니다.     
@@ -33,8 +35,8 @@ $ pip3 install fosslight_binary
 $ fosslight_binary [option] <arg>
 ````    
 
-### About Options
-```` 
+### Options
+````
     Mandatory:
         -p <binary_path>              Binary를 추출할 경로
 
@@ -45,22 +47,6 @@ $ fosslight_binary [option] <arg>
         -f <format>                   결과 파일 format (excel, csv, opossum) (default: excel and csv (window : excel only)
         -d <db_url>                   Binary DB 접속 정보(format :'postgresql://username:password@host:port/database_name')
 ```` 
-
-
-## 🧐 How it works
-1. 하기 사항을 제외하고 Binary를 추출합니다.    
-    1-0. symbolic link, FIFO 파일    
-    1-1. 파일 extension : ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',
-                         'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
-    1-2. 파일 Type : ['data','timezone data', 'apple binary property list']    
-    1-3. 경로 : ['.git']    
-2. 하기 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.     
-     - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
-     - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
-3. -a 옵션의 경우 file 커맨드에 해당 값이 포함되는 경우만 최종 result에 포함합니다.         
-4. Binary별 checksum과 tlsh를 출력합니다.     
-5. OSS 정보를 Binary DB로 부터 불러옵니다.       
-6. Output 파일을 생성합니다.        
 
 ## 📁 Result
 
@@ -80,4 +66,17 @@ $ tree
 - FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
-
+## 🧐 How it works
+1. 하기 사항을 제외하고 Binary를 추출합니다.    
+    1-0. symbolic link, FIFO 파일    
+    1-1. 파일 extension : ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',
+                         'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
+    1-2. 파일 Type : ['data','timezone data', 'apple binary property list']    
+    1-3. 경로 : ['.git']    
+2. 하기 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.     
+     - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
+     - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
+3. -a 옵션의 경우 file 커맨드에 해당 값이 포함되는 경우만 최종 result에 포함합니다.         
+4. Binary별 checksum과 tlsh를 출력합니다.     
+5. OSS 정보를 Binary DB로 부터 불러옵니다.       
+6. Output 파일을 생성합니다.    

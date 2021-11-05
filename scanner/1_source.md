@@ -10,8 +10,10 @@ published: true
 
 [sc]: https://github.com/nexB/scancode-toolkit
 
+**Github Repository** : [https://github.com/fosslight/fosslight_source_scanner]()  
+**License** : [Apache-2.0](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE)
 
-## 사용 방법
+## Contents
   - [Prerequisite](#-prerequisite)
   - [How to install](#-how-to-install)
   - [How to run](#-how-to-run)
@@ -20,14 +22,12 @@ published: true
   - [Result](#-result)
 
 ## 📋 Prerequisite
-
 [**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.6+ 기반에서 동작합니다.     
 Windows의 경우 [Microsoft Visual C++ Build Tools][ms_build]를 추가로 설치해야 합니다.
 
 [ms_build]: https://visualstudio.microsoft.com/vs/older-downloads/
 
 ## 🎉 How to install
-
 FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.     
 [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
@@ -36,37 +36,51 @@ $ pip3 install fosslight_source
 ```
 
 ## 🚀 How to run
-
-FOSSLight Source Scanner에는 하기 두 가지 명령어가 있습니다. 
-
 ### 1. fosslight_source     
 Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니다.
+````
+$ fosslight_source [option] <arg>
+````  
+#### Options
+```
+  Mandatory
+    -p <source_path>               Path to analyze source
 
-| Parameter  | Argument | Description |
-| ------------- | ------------- | ------------- |
-| h | None | Print help message. | 
-| p | String | Path to analyze source. | 
-| j | None | As an output, the result of executing ScanCode in json format other than FOSSLight Report is additionally generated. | 
-| o | String | Output path (If you want to generate the specific file name, add the output path with file name.) | 
-| f | String | Output file format (excel, csv, opossum) (default: excel and csv (window : excel only) | 
-| m | None | Print the Matched text for each license on a separate sheet. | 
+  Optional
+    -h                             Print help message
+    -j                             Generate additional result of executing ScanCode in json format
+    -m                             Print the Matched text for each license on a separate sheet
+    -o <output_path>               Output path
+                                    (If you want to generate the specific file name, add the output path with file name.)
+    -f <format>                    Output file format (excel, csv, opossum)
 
-Ex. Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력
+```
+#### Example
+Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력
 ```
 $ fosslight_source -p /home/source_path -j
 ```
+
 ### 2. fosslight_convert     
 json형태인 ScanCode 결과를 FOSSLight Report 형식으로 변환합니다.
+````
+$ fosslight_convert [option] <arg>
+```` 
+#### Options
+```
+  Mandatory
+    -p <path_dir>                  Path of ScanCode json files
 
-| Parameter  | Argument | Description |
-| ------------- | ------------- | ------------- |
-| h | None | Print help message. | 
-| p | String | Path of ScanCode json files. | 
-| o | String | Output path (If you want to generate the specific file name, add the output path with file name.) | 
-| f | String | Output file format (excel, csv, opossum) (default: excel and csv (window : excel only) | 
-| m | None | Print the Matched text for each license on a separate sheet. | 
+  Optional
+      -h                             Print help message
+      -m                             Print the Matched text for each license on a separate sheet
+      -o <output_path>               Output path
+                                      (If you want to generate the specific file name, add the output path with file name.)
+      -f <format>                    Output file format (excel, csv, opossum)
 
-Ex. json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
+```
+#### Example
+json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
 ```
 $ fosslight_convert -p /home/jsonfile_dir
 ```
