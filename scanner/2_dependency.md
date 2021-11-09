@@ -166,7 +166,6 @@ Maven의 경우, input directory에 pom.xml 파일이 존재하는 경우, plugi
 $ mvnw license:aggregate-download-licenses
 </pre>
 </ol>
-
 </details>
 
 <details>
@@ -274,7 +273,7 @@ $ tree
 ├── FOSSLight-Report_2021-05-03_00-39-49_SRC.csv
 ├── FOSSLight-Report_2021-05-03_00-39-49.xlsx
 ├── fosslight_dependency_log_2021-05-03_00-39-49.txt
-└── Opossum_input_2021-05-03_00-39-49.txt
+└── Opossum_input_2021-05-03_00-39-49.json
 ```
 - FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
 - FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과

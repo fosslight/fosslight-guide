@@ -94,7 +94,7 @@ $ tree
 ├── FOSSLight-Report_2021-05-03_00-39-49.xlsx
 ├── scancode_2021-05-03_00-39-49.json
 ├── fosslight_src_log_2021-05-03_00-39-49.txt
-└── Opossum_input_2021-05-03_00-39-49.txt
+└── Opossum_input_2021-05-03_00-39-49.json
 ```
 - FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과
