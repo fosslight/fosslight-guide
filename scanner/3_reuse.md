@@ -228,6 +228,7 @@ Open Source Software Package:
     <summary markdown="span">하기 파일 중 1개 이상 존재하는지 체크 (대소문자 구분 없음)</summary>
     <ul>
     <li>oss-pkg-info.yaml</li>
+    <li>oss-pkg-info.yml</li>
     <li>requirement.txt</li>
     <li>requirements.txt</li>
     <li>package.json</li>
