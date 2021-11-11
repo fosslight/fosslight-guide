@@ -10,19 +10,19 @@ published: true
 **Github Repository** : [https://github.com/fosslight/fosslight_binary_scanner]()  
 **License** : [Apache-2.0](https://github.com/fosslight/fosslight_binary_scanner/blob/main/LICENSE)
 
-## Contents
-- [Prerequisite](#-prerequisite)
-- [How to install](#-how-to-install)
-- [How to run](#-how-to-run)
-- [Result](#-result)
-- [How it works](#-how-it-works)
+## 목차
+- [필요 조건](#-필요-조건)
+- [설치 방법](#-설치-방법)
+- [실행 방법](#-실행-방법)
+- [결과](#-결과)
+- [동작 방식](#-동작-방식)
 
 
-## 📋 Prerequisite
+## 📋 필요 조건
 [**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Python 3.6+ 기반에서 동작합니다.  
 OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.
 
-## 🎉 How to install
+## 🎉 설치 방법
 FOSSLight Binary Scanner는 pip3를 이용하여 설치할 수 있습니다.     
 [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
@@ -30,7 +30,7 @@ FOSSLight Binary Scanner는 pip3를 이용하여 설치할 수 있습니다.
 $ pip3 install fosslight_binary
 ```
 
-## 🚀 How to run
+## 🚀 실행 방법
 ````
 $ fosslight_binary [option] <arg>
 ````    
@@ -48,7 +48,7 @@ $ fosslight_binary [option] <arg>
         -d <db_url>                   Binary DB 접속 정보(format :'postgresql://username:password@host:port/database_name')
 ```` 
 
-## 📁 Result
+## 📁 결과
 
 ```
 $ tree
@@ -66,7 +66,7 @@ $ tree
 - FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
-## 🧐 How it works
+## 🧐 동작 방식
 1. 하기 사항을 제외하고 Binary를 추출합니다.    
     1-0. symbolic link, FIFO 파일    
     1-1. 파일 extension : ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',

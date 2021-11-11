@@ -13,21 +13,21 @@ published: true
 **Github Repository** : [https://github.com/fosslight/fosslight_source_scanner]()  
 **License** : [Apache-2.0](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE)
 
-## Contents
-  - [Prerequisite](#-prerequisite)
-  - [How to install](#-how-to-install)
-  - [How to run](#-how-to-run)
+## 목차
+  - [필요 조건](#-필요-조건)
+  - [설치 방법](#-설치-방법)
+  - [실행 방법](#-실행-방법)
     - [1. fosslight_source](#1-fosslight_source)
     - [2. fosslight_convert](#2-fosslight_convert)
-  - [Result](#-result)
+  - [결과](#-결과)
 
-## 📋 Prerequisite
+## 📋 필요 조건
 [**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.6+ 기반에서 동작합니다.     
 Windows의 경우 [Microsoft Visual C++ Build Tools][ms_build]를 추가로 설치해야 합니다.
 
 [ms_build]: https://visualstudio.microsoft.com/vs/older-downloads/
 
-## 🎉 How to install
+## 🎉 설치 방법
 FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.     
 [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
@@ -35,7 +35,7 @@ FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.
 $ pip3 install fosslight_source
 ```
 
-## 🚀 How to run
+## 🚀 실행 방법
 ### 1. fosslight_source     
 Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니다.
 ````
@@ -85,7 +85,7 @@ json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
 $ fosslight_convert -p /home/jsonfile_dir
 ```
 
-## 📁 Result
+## 📁 결과
 
 ```
 $ tree

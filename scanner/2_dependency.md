@@ -25,15 +25,15 @@ title: FOSSLight Dependency Scanner
 **Github Repository** : [https://github.com/fosslight/fosslight_dependency_scanner]()  
 **License** : [Apache-2.0](https://github.com/fosslight/fosslight_dependency_scanner/blob/main/LICENSE)
 
-## Contents
-  - [Prerequisite](#-prerequisite)
-  - [How to install](#-how-to-install)
-  - [How to run](#-how-to-run)
-  - [Result](#-result)
-  - [How it works](#-how-it-works)
+## 목차
+  - [필요 조건](#-필요-조건)
+  - [설치 방법](#-설치-방법)
+  - [실행 방법](#-실행-방법)
+  - [결과](#-결과)
+  - [동작 방식](#-동작-방식)
 
 
-## 📋 Prerequisite
+## 📋 필요 조건
 각 패키지 매니저마다 다른 오픈소스 소프트웨어를 이용하여 Dependency 분석을 수행하고 있습니다. 이에 분석하고자 하는 패키지 매니저에 따라 각각의 Prerequisite 단계를 수행하시기 바랍니다.
 
 {::options parse_block_html="true" /}
@@ -203,7 +203,7 @@ Token생성 방법은 [Github docs 가이드](https://docs.github.com/en/github/
 </details>
 {::options parse_block_html="false" /}
 
-## 🎉 How to install
+## 🎉 설치 방법
 
 FOSSLight Dependency Scanner는 pip3를 이용하여 설치할 수 있습니다.     
 [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
@@ -213,7 +213,7 @@ $ pip3 install fosslight_dependency
 ```
 
 
-## 🚀 How to run
+## 🚀 실행 방법
 
 FOSSLight Dependency Scanner는 패키지 매니저에 따라 다음 option들을 이용하여 실행할 수 있습니다.
 
@@ -266,7 +266,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - 예외적으로 Swift package manager는 {프로젝트명}.xcodeproj 파일이 위치한 path에서 "fosslight_dependency -m swift -t {token}" 명령어를 실행하실 수 있습니다.
   - 이 경우에는 {프로젝트명}.xcodeproj/project.xcworkspace/xcshareddata/swiftpm path에서 'Package.resolved' 파일을 자동으로 찾고 프로그램이 실행됩니다.
 
-## 📁 Result
+## 📁 결과
 ```
 $ tree
 .
@@ -294,7 +294,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Swift                      | swift:(oss name)     | repositoryURL in Package.resolved                                                                   | repositoryURL in Package.resolved                            |
 | Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
 
-## 🧐 How it works
+## 🧐 동작 방식
 FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분석하기 위해 오픈 소스 소프트웨어를 활용합니다. 이때 활용되는 오픈 소스 소프트웨어는 direct dependency뿐만 아니라 transitive dependency까지 추출 가능하며, 오픈소스명, 버전, 라이선스명을 추출 가능합니다.
 
 각 패키지 매니저별 사용하는 소프트웨어는 다음과 같습니다:
