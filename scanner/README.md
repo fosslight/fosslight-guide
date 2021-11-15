@@ -56,26 +56,32 @@ FOSSLight Scanner는 Open Source Compliance를 위한 분석 과정을 한번에
   </div>
 </div>
 
-## Description
+## Scanner Projects
 
-FOSSLight Scanner 프로젝트는 다른 오픈 소스 프로젝트를 **상속**합니다.
+#### 1. [**FOSSLight Reuse**](1_reuse.md)
+- FOSSLight Reuse는 reuse-tool을 이용하여 소스 코드의 저작권 및 License 표기 규칙을 준수하는지 확인하고 보완하기 위해 사용할 수 있는 도구입니다.
+- Reuse 준수 여부 체크시 **[reuse-tool](https://github.com/fsfe/reuse-tool)** 오픈 소스를 이용합니다.
 
-- [**FOSSLight Source Scanner**](1_source.md)는 소스코드 스캔 작업을 위해 **[scancode-toolkit](https://github.com/nexB/scancode-toolkit)** 오픈 소스를 이용합니다.
-- [**FOSSLight Dependency Scanner**](2_dependency.md)는 Package manager에 따라 다음 오픈소스를 이용하여 디펜던시 분석을 수행합니다.
+#### 2. [**FOSSLight Source Scanner**](2_source.md)
+- FOSSLight Source Scanner는 소스 코드 스캐너인 ScanCode를 이용하여, 파일 안에 포함된 Copyright과 License 문구를 검출합니다. 
+- 소스코드 스캔 작업을 위해 **[scancode-toolkit](https://github.com/nexB/scancode-toolkit)** 오픈 소스를 이용합니다.
+
+#### 3. [**FOSSLight Dependency Scanner**](3_dependency.md)
+- FOSSLight Dependency Scanner는 여러 패키지 매니저에 대한 종속성 분석을 지원하는 도구입니다.
+- Package manager에 따라 다음 오픈소스를 이용하여 디펜던시 분석을 수행합니다.
   - NPM : **[NPM License Checker](https://github.com/davglass/license-checker)**
   - Pypi : **[pip-licenses](https://github.com/raimon49/pip-licenses)**
   - Gradle : **[License Gradle Plugin](https://github.com/hierynomus/license-gradle-plugin)**
   - Maven : **[license-maven-plugin](https://github.com/mojohaus/license-maven-plugin)**
   - Pub : **[flutter_oss_licenses](https://github.com/espresso3389/flutter_oss_licenses)**
-- [**FOSSLight Reuse**](3_reuse.md) Reuse 준수 여부 체크시 **[reuse-tool](https://github.com/fsfe/reuse-tool)** 오픈 소스를 이용합니다.
 
-## Scanner Projects
+#### 4. [**FOSSLight Binary Scanner**](4_binary.md)
+- FOSSLight Binary Scanner는 Binary를 찾아 출력하고 Binary DB에 동일하거나 비슷한 Binary가 있으면 해당 OSS 정보를 출력합니다.
 
-- [**FOSSLight Source Scanner**](1_source.md) (License: [Apache-2.0](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE))
-- [**FOSSLight Dependency Scanner**](2_dependency.md) (License: [Apache-2.0](https://github.com/fosslight/fosslight_dependency_scanner/blob/main/LICENSE))
-- [**FOSSLight Binary Scanner**](4_binary.md) (License : [Apache-2.0](https://github.com/fosslight/fosslight_binary_scanner/blob/main/LICENSE))
-- [**FOSSLight Reuse**](3_reuse.md) (License: [GPL-3.0-only](https://github.com/fosslight/fosslight_reuse/blob/main/LICENSE))
-- [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner) (License : [Apache-2.0](https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE))
+#### 5. [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner)
+- FOSSLight Scanner는 로컬 소스코드 또는 소스를 다운로드 받은 후 오픈 소스 분석을 수행합니다.
+- 오픈 소스 분석 수행 시, FOSSLight Source Scanner, FOSSLight Dependency Scanner, FOSSLight Binary Scanner를 이용합니다.
+
 
       
 <div class="right"><a href="https://icons8.com/icon">&lt;Icons by Icons8&gt;</a></div>
