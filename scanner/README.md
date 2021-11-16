@@ -67,7 +67,7 @@ FOSSLight Scanner는 Open Source Compliance를 위한 분석 과정을 한번에
 - 소스코드 스캔 작업을 위해 **[scancode-toolkit](https://github.com/nexB/scancode-toolkit)** 오픈 소스를 이용합니다.
 
 #### 3. [**FOSSLight Dependency Scanner**](3_dependency.md)
-- FOSSLight Dependency Scanner는 여러 패키지 매니저에 대한 종속성 분석을 지원하는 도구입니다.
+- FOSSLight Dependency Scanner는 여러 패키지 매니저에 대한 Dependency 분석을 지원하는 도구로써, 사용된 Dependency들의 License를 포함한 OSS 정보를 자동으로 출력합니다.
 - Package manager에 따라 다음 오픈소스를 이용하여 디펜던시 분석을 수행합니다.
   - NPM : **[NPM License Checker](https://github.com/davglass/license-checker)**
   - Pypi : **[pip-licenses](https://github.com/raimon49/pip-licenses)**
