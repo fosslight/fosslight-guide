@@ -2,10 +2,10 @@
 sort: 1
 published: true
 ---
-# FOSSLight Menu
+# FOSSLight Hub Menu
 
 ```note
-FOSSLight의 Menu별 기능을 소개합니다.
+FOSSLight Hub의 Menu별 기능을 소개합니다.
 ```
 ## [Sign In & Sign Up](1_sign.md)
 로그인 및 계정 등록

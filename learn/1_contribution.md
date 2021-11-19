@@ -2,7 +2,7 @@
 
 ## Report an issue
 개선 사항이나 버그는 Git Repository에 이슈를 생성하여 리포트해주시기 바랍니다. 이슈 리포트는 FOSSLight 업그레이드에 많은 도움이 됩니다.
-- [FOSSLight](https://github.com/fosslight/fosslight/issues)
+- [FOSSLight Hub](https://github.com/fosslight/fosslight/issues)
 - [FOSSLight Dependency Scanner](https://github.com/fosslight/fosslight_dependency_scanner/issues)
 - [FOSSLight Source Scanner](https://github.com/fosslight/fosslight_source_scanner/issues)
 - [FOSSLight Reuse](https://github.com/fosslight/fosslight_reuse/issues)

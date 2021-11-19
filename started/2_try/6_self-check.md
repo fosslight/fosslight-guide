@@ -37,10 +37,10 @@ Self-Check는 아래와 같은 절차를 통해 진행할 수 있습니다.
 ### 3. OSS 및 License 정보 확인
 ![oss_table](../images/6_self_oss_table.png)
 #### Warning Messages
-- Unconfirmed open source : FOSSLight에 동일한 OSS Name이 등록되어 있지 않은 경우 표시됩니다.
-- Unconfirmed version : FOSSLight에 동일한 OSS Name은 있으나, 동일 Version이 등록되어 있지 않은 경우 표시됩니다.
+- Unconfirmed open source : FOSSLight Hub에 동일한 OSS Name이 등록되어 있지 않은 경우 표시됩니다.
+- Unconfirmed version : FOSSLight Hub에 동일한 OSS Name은 있으나, 동일 Version이 등록되어 있지 않은 경우 표시됩니다.
 - This field is required : License 정보가 기입되어있지 않을 경우에 표시됩니다. (Self-Check에서는 필수 항목이 아닙니다.)
-- Non-included license : FOSSLight에 동일 OSS Name, OSS Version이 등록되어 있으나, 기존 등록된 License와 다를 경우 표시됩니다.
+- Non-included license : FOSSLight Hub에 동일 OSS Name, OSS Version이 등록되어 있으나, 기존 등록된 License와 다를 경우 표시됩니다.
 
 #### OSS 및 License 정보
 하기 Column의 아이콘을 클릭하면 등록된 OSS의 상세정보, License에 대한 상세정보, 그리고 해당 License에 대한 Guide가 제공됩니다.
@@ -62,7 +62,7 @@ Self-Check는 아래와 같은 절차를 통해 진행할 수 있습니다.
 - Export 파일 (.xlsx)로 확인 : 기술된 전체 OSS의 리스트와 취약점 정보가 포함된 엑셀 파일이 다운로드 됩니다.
 - Vulnerability 관련 상세 정보는 [Vulnerability](7_vulnerability.md) 에서 확인 가능합니다.
 ```
-1. FOSSLight UI에서 확인  
+1. FOSSLight Hub UI에서 확인  
 ![self_pop](../images/6_self_pop.png)  
 Vulnerability 아이콘을 클릭하면 해당 OSS Name, OSS Version의 취약점 정보가 팝업창으로 제공됩니다.
 

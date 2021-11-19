@@ -125,7 +125,7 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 ### 3. Packaging
 ```note
-- Packaging 단계에서는 Source Code 공개 의무가 있는 Open Source를 사용한 경우 공개할 Source Code를 취합(OSS Package)하고 이를 FOSSLight에 등록합니다.
+- Packaging 단계에서는 Source Code 공개 의무가 있는 Open Source를 사용한 경우 공개할 Source Code를 취합(OSS Package)하고 이를 FOSSLight Hub에 등록합니다.
 - OSS 고지문은 Packaging 단계가 Confirm되면 자동으로 생성됩니다. 만약, OSS 고지문 내용을 변경해야 할 경우, Notice tab에서 수정할 수 있습니다.
 - Project List의 Packaging column 내 버튼을 클릭하여 진입합니다.
 ```
@@ -165,10 +165,10 @@ OSS Notice는 Identification > BOM 탭을 기준으로 자동 생성됩니다. �
 
 ## ⭐Tips for Project
 ### Check OSS Name 버튼 (SRC, BIN Tab)
-OSS Table에 작성된 Download location을 기반으로 FOSSLight에 저장된 OSS Name으로 자동 변경합니다.
+OSS Table에 작성된 Download location을 기반으로 FOSSLight Hub에 저장된 OSS Name으로 자동 변경합니다.
 - 팝업에 자동 변환될 OSS 목록이 표시됩니다.
     - Change OSS Name 버튼 : 체크된 Row에 대하여 OSS Table의 OSS Name이 변경됩니다. 
-    - (Admin Only) Add Nickname 버튼 : 체크된 Row에 대하여 FOSSLight에 저장된 OSS에 Nickname으로 OSS Table에 쓰여진 OSS Name이 추가됩니다.
+    - (Admin Only) Add Nickname 버튼 : 체크된 Row에 대하여 FOSSLight Hub에 저장된 OSS에 Nickname으로 OSS Table에 쓰여진 OSS Name이 추가됩니다.
 
 ### <a name="comment"></a> Comment 남기기
 - 탭별 우측 상단의 Comment Edit 버튼을 클릭하면 Comment를 남기고 해당 Comment를 Reviewer, Watcher, Creator에게 메일로 발송할 수 있습니다.
@@ -191,5 +191,5 @@ OSS Table에 작성된 Download location을 기반으로 FOSSLight에 저장된 
 |Specify OSS Name or put 1 license in a row|OSS Name이 - 또는 공란이면서, 여러 License가 하나의 Row에 쓰여져 있습니다. OSS Name이 - 또는 공란인 경우, License별로 Row를 분리하여 작성하여주십시오.|
 |The address should be started with www|주소 format이 맞지 않습니다.|
 |Formatting error|줄바꿈 문자가 포함되어 있습니다. 여러 줄 작성이 필요한 경우, Row를 추가하여 작성하시기 바랍니다.|
-|Not the same as property|입력한 URL이 FOSSLight에 등록된 해당 OSS의 URL과 다릅니다.|
+|Not the same as property|입력한 URL이 FOSSLight Hub에 등록된 해당 OSS의 URL과 다릅니다.|
 

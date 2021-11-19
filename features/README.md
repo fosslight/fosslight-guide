@@ -2,10 +2,10 @@
 sort: 4
 published: true
 ---
-# FOSSLight Advanced
+# FOSSLight Hub Advanced
 
 ```note
-FOSSLight에 대하여 Advanced features를 확인하실 수 있습니다.
+FOSSLight Hub에 대하여 Advanced features를 확인하실 수 있습니다.
 ```
 ## 개발 환경
 - [개발 환경 세팅](1_developer.md)

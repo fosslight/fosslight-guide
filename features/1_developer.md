@@ -1,10 +1,10 @@
 # Developer Documentation
 ```note
-FOSSLight 소스를 다운로드받아 직접 컴파일하여 실행할 수 있습니다. 
+FOSSLight Hub 소스를 다운로드받아 직접 컴파일하여 실행할 수 있습니다. 
 ```
 
-## FOSSLight 소스 다운로드
-[FOSSLight](https://github.com/fosslight/fosslight)에서 소스를 다운로드 받습니다.
+## FOSSLight Hub 소스 다운로드
+[FOSSLight Hub](https://github.com/fosslight/fosslight)에서 소스를 다운로드 받습니다.
 
 ## 설치 및 실행 방법 - 1
 Docker를 이용하여 빌드 및 실행합니다.
@@ -93,7 +93,7 @@ mysql -u root -p <DATABASE_NAME> < fosslight_create.sql
 - 실행 옵션 변경    
 [application.properties][props] 파일에서 실행 옵션 변경
  - server.port=8180: 웹서버 포트 (8180으로 설정한 경우 [http://localhost:8180][local])
- - spring.datasource.url=127.0.0.1:3306/fosslight: FOSSLight Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
+ - spring.datasource.url=127.0.0.1:3306/fosslight: FOSSLight Hub Database가 설치되어 있는 DB 서버의 IP, Port, Database Name을 설정
  - spring.datasource.username=fosslight: Database 접속자명을 설정
  - spring.datasource.password=fosslight: Database 접속자 패스워드 설정
  - logging.path=./logs : 로그파일 출력 경로 설정 ( Default "./logs" 는 Application 실행 위치를 의미)

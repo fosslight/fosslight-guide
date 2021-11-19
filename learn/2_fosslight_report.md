@@ -1,7 +1,7 @@
 # FOSSLight Report
 
 ```note
-FOSSLight과 FOSSLight Scanner에서 사용하는 Template으로 Project별 포함하는 Open Source 현황을 파악하기 위해 작성하는 문서입니다.
+FOSSLight Hub와 FOSSLight Scanner에서 사용하는 Template으로 Project별 포함하는 Open Source 현황을 파악하기 위해 작성하는 문서입니다.
 ```
 
 ## 양식
@@ -49,7 +49,7 @@ Binary 별 포함되는 Open Source 정보를 작성합니다.
 ### BOM Sheet
 "BOM" (Bill of Materials) sheet는 FOSSLight 보고서 내 작성한 Open Source 내역을 취합한 내용을 보여주게 됩니다.      
      
-이 sheet는 임의로 작성하지 않고, FOSSLight의 Project에서 다운로드한 FOSSLight 보고서에 자동으로 채워집니다.
+이 sheet는 임의로 작성하지 않고, FOSSLight Hub의 Project에서 다운로드한 FOSSLight 보고서에 자동으로 채워집니다.
 
 ![info](./images/bom.png)
 
