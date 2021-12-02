@@ -247,7 +247,7 @@ Open Source Software Package:
     - ./reuse/dep5 파일이 이미 존재하는 경우 bk 파일을 복사하고 기본 설정값 추가   
     - dep5 파일 생성하여 binary 또는 .json, venv/, node_modules/,. */ 파일을 체크 대상에서 제외시킴   
     - fsfe-reuse lint 실행 (OSS Package Information file이 존재하면, license 정보 없는 파일 목록은 출력하지 않음)   
-    - ./reuse/dep5 파일을 원래대로 복구   
+    - ./reuse/dep5 파일을 원래대로 복구 (원래 존재한 경우 기존 파일로 복구, 존재하지 않은 경우 삭제) 
  
     2-2. 파일 단위로 실행하는 경우 (-f 있는 경우)   
     - 파일별 저작권, License 출력   
