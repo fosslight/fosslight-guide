@@ -4,7 +4,7 @@ published: true
 ---
 # System
 ```note
-(Admin Only) FOSSLight 운영 Log를 확인하거나 운영 Data를 변경합니다.
+(Admin Only) FOSSLight Hub 운영 Log를 확인하거나 운영 Data를 변경합니다.
 ```
 
 ## Code Management

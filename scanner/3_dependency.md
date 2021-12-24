@@ -19,6 +19,7 @@ title: FOSSLight Dependency Scanner
 - [Cocoapods](https://cocoapods.org/) (Swift/Obj-C)
 - [Swift](https://swift.org/package-manager/) (Swift)
 - [Carthage](https://github.com/Carthage/Carthage) (Carthage)
+- [Go](https://pkg.go.dev/) (Go)
 </details>
 {::options parse_block_html="false" /}
 
@@ -201,6 +202,14 @@ $ carthage update
 2. Github personal access token을 생성하여 FOSSLight Dependency Scanner 실행 시 '-t' 파라미터로 사용합니다. 이 토큰은 Github repository의 license정보를 가져오기 위해 Github API를 사용하기 위해 필요합니다.
 Token생성 방법은 [Github docs 가이드](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)를 참조하시기 바랍니다.
 </details>
+
+<details>
+<summary markdown="span">**Prerequisite for Go**</summary>
+```tip
+Go의 경우, go module에 한해 dependency 분석을 지원합니다. FOSSLight Dependency Scanner 내부에서 자동으로 'go list -m all' 명령어를 수행하여 dependency 목록을 얻은 뒤, license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
+```
+</details>
+
 {::options parse_block_html="false" /}
 
 ## 🎉 설치 방법
@@ -226,7 +235,7 @@ $ fosslight_dependency [option] <arg>
             -h                              Print help message.
             -v                              Print the version of the fosslight_dependency.
             -m <package_manager>            Enter the package manager.
-                                             (npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage)
+                                             (npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage, go)
             -p <input_path>                 Enter the path where the script will be run.
             -o <output_path>                Output path
                                              (If you want to generate the specific file name, add the output path with file name.)
@@ -260,6 +269,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - Cocoapods : Podfile
   - Swift : Package.resolved
   - Carthage : Cartfile.resolved
+  - Go : go.mod
 ```
 
 - Swift package manager
@@ -293,6 +303,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Cocoapods                      | cocoapods:(oss name)     | source in (pod spec information)                                                                   | cocoapods.org/pods/(oss name)                            |
 | Swift                      | swift:(oss name)     | repositoryURL in Package.resolved                                                                   | repositoryURL in Package.resolved                            |
 | Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
+| Go                      | go:(oss name)     | pkg.go.dev/(oss name)@(oss version)                                                                   | repository in pkg.go.dev/(oss name)@(oss version)                        |
 
 ## 🧐 동작 방식
 FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분석하기 위해 오픈 소스 소프트웨어를 활용합니다. 이때 활용되는 오픈 소스 소프트웨어는 direct dependency뿐만 아니라 transitive dependency까지 추출 가능하며, 오픈소스명, 버전, 라이선스명을 추출 가능합니다.
