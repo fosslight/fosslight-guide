@@ -6,13 +6,16 @@ published: true
 Python package를 설치 및 실행하기 위한 virtualenv 환경 세팅하는 가이드입니다.
 
 ## Contents
-- [Python 설치 방법](#python)
+- [Python, python-dev 설치](#python)
 - [virtualenv 세팅하는 법](#virtualenv)
 - [virtualenv 명령어](#command)
 
-## 💻 <a name="python"></a>Python 설치 방법
+## 💻 <a name="python"></a>Python, python-dev 설치
 
-- Python 설치 방법은 [설치 가이드][install] 링크를 참조하세요
+- Python 설치 방법은 [설치 가이드][install] 링크를 참조하세요.
+- 사용하는 python 버전에 맞게 python-dev를 설치합니다.
+    - ex. python 3.6의 경우
+    `sudo apt-get install python3.6-dev`
 
 [install]: https://realpython.com/installing-python
 
