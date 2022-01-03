@@ -5,7 +5,7 @@ published: true
 
 <img src="https://img.shields.io/pypi/l/fosslight_source" alt="FOSSLight Source is released under the Apache-2.0 License." /> <img src="https://img.shields.io/pypi/v/fosslight_source" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_source" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_source_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_source_scanner)
 
-[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 소스 코드 스캐너인 [ScanCode][sc],[SCANOSS][scanoss]를 이용합니다. [ScanCode][sc]를 이용하면 파일 안에 포함된 Copyright과 License 문구를 검출하고, [SCANOSS][scanoss]를 이용하면 OSS Name, OSS Version, Download Location, Copyright, License 정보를 [OSSKB][osskb]에서 검색합니다. 
+[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 소스 코드 스캐너인 [ScanCode][sc], [SCANOSS][scanoss]를 이용합니다. [ScanCode][sc]를 이용하면 파일 안에 포함된 Copyright과 License 문구를 검출하고, [SCANOSS][scanoss]를 이용하면 OSS Name, OSS Version, Download Location, Copyright, License 정보를 [OSSKB][osskb]에서 검색합니다. 
 Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일은 제외되고, 그리고 License 이름에서 "-only", "-old-style"와 같은 문구는 제거됩니다. 결과는 spreadsheet, csv 형태로 출력됩니다.
 
 [sc]: https://github.com/nexB/scancode-toolkit
@@ -106,8 +106,8 @@ $ tree
 - FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과
 - FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - fosslight_src_log_[datetime].txt: 실행 로그가 저장된 파일
-- scancode_raw_result.json : ScanCode 실행 결과 (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
-- scanoss_fingerprint.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
-- scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
+- scancode_raw_result.json : ScanCode 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
+- scanoss_fingerprint.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
+- scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
