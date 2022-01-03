@@ -5,10 +5,11 @@ published: true
 
 <img src="https://img.shields.io/pypi/l/fosslight_source" alt="FOSSLight Source is released under the Apache-2.0 License." /> <img src="https://img.shields.io/pypi/v/fosslight_source" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_source" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_source_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_source_scanner)
 
-[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 소스 코드 스캐너인 [ScanCode][sc]를 이용하여, 파일 안에 포함된 Copyright과 License 문구를 검출합니다. Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일을 제외시킵니다.    
+[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 소스 코드 스캐너인 [ScanCode][sc]를 이용하여, 파일 안에 포함된 Copyright과 License 문구를 검출하고, [SCANOSS][scanoss]를 이용하여 OSS Name, OSS Version Download Location을 검출합니다. Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일을 제외시킵니다.    
 그리고 License 이름에서 "-only", "-old-style"와 같은 문구를 제거합니다. 결과는 spreadsheet, csv 형태로 출력됩니다.
 
 [sc]: https://github.com/nexB/scancode-toolkit
+[scanoss]: https://github.com/scanoss/scanoss.py
 
 **Github Repository** : [https://github.com/fosslight/fosslight_source_scanner]()  
 **License** : [Apache-2.0](https://github.com/fosslight/fosslight_source_scanner/blob/main/LICENSE)
@@ -24,6 +25,7 @@ published: true
 ## 📋 필요 조건
 [**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.6+ 기반에서 동작합니다.     
 Windows의 경우 [Microsoft Visual C++ Build Tools][ms_build]를 추가로 설치해야 합니다.
+SCANOSS를 사용하기 위해서는 Python 3.7+ 환경을 권장합니다.
 
 [ms_build]: https://visualstudio.microsoft.com/vs/older-downloads/
 
@@ -73,10 +75,12 @@ $ fosslight_convert [option] <arg>
 
   Optional
       -h                             Print help message
-      -m                             Print the Matched text for each license on a separate sheet
+      -j                             Generate raw result of scanners in json format
+      -m                             Print the Matched text for each license on a separate sheet (Scancode Only)
       -o <output_path>               Output path
                                       (If you want to generate the specific file name, add the output path with file name.)
       -f <format>                    Output file format (excel, csv, opossum)
+      -s <scanner>                   Select which scanner to be run (scancode, scanoss, all)
 
 ```
 #### Example
@@ -90,15 +94,19 @@ $ fosslight_convert -p /home/jsonfile_dir
 ```
 $ tree
 .
-├── FOSSLight-Report_2021-05-03_00-39-49_SRC.csv
-├── FOSSLight-Report_2021-05-03_00-39-49.xlsx
-├── scancode_2021-05-03_00-39-49.json
-├── fosslight_src_log_2021-05-03_00-39-49.txt
-└── Opossum_input_2021-05-03_00-39-49.json
+├── FOSSLight-Report_20220103_154024_SRC_FL_Source.csv
+├── FOSSLight-Report_20220103_154024.xlsx
+├── fosslight_src_log_20220103_154024.txt
+├── scancode_raw_result.json
+├── scanoss_fingerprint.wfp
+├── scanoss_raw_result.json
+└── Opossum_input_20220103_154024.json
 ```
-- FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과
+- FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - fosslight_src_log_[datetime].txt: 실행 로그가 저장된 파일
-- scancode_[datetime].json : ScanCode 실행 결과 (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
+- scancode_raw_result.json : ScanCode 실행 결과 (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
+- scanoss_fingerprint.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
+- scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source명령어에 -j 옵션이 포함된 경우에만 생성)
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
