@@ -51,15 +51,18 @@ $ fosslight_source [option] <arg>
 
   Optional
     -h                             Print help message
-    -j                             Generate additional result of executing ScanCode in json format
-    -m                             Print the Matched text for each license on a separate sheet
+    -j                             Generate raw result of scanners in json format
+    -m                             Print the Matched text for each license on a separate sheet (Scancode Only)
     -o <output_path>               Output path
-                                    (If you want to generate the specific file name, add the output path with file name.)
+                                   (If you want to generate the specific file name, add the output path with file name.)
     -f <format>                    Output file format (excel, csv, opossum)
+    -s <scanner>                   Select which scanner to be run (scancode, scanoss, all)
 
 ```
+-s 옵션이 추가되지 않을 경우 모든 Scanner (ScanCode, SCANOSS)가 동작한 결과가 취합됩니다.
+
 #### Example
-Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode 결과 출력
+Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode, SCANOSS 결과 출력
 ```
 $ fosslight_source -p /home/source_path -j
 ```
@@ -75,13 +78,12 @@ $ fosslight_convert [option] <arg>
     -p <path_dir>                  Path of ScanCode json files
 
   Optional
-      -h                             Print help message
-      -j                             Generate raw result of scanners in json format
-      -m                             Print the Matched text for each license on a separate sheet (Scancode Only)
-      -o <output_path>               Output path
-                                      (If you want to generate the specific file name, add the output path with file name.)
-      -f <format>                    Output file format (excel, csv, opossum)
-      -s <scanner>                   Select which scanner to be run (scancode, scanoss, all)
+    -h                             Print help message
+    -m                             Print the Matched text for each license on a separate sheet
+    -o <output_path>               Output path
+                                   (If you want to generate the specific file name, add the output path with file name.)
+    -f <format>                    Output file format (excel, csv, opossum)
+
 
 ```
 #### Example
