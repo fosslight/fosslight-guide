@@ -43,7 +43,6 @@ $ fosslight_binary [option] <arg>
 
     Options:
         -h                            Help Message 출력
-        -a <target_architecture>      특정 Target Architecture(x86-64, ARM, MIPS, Mach-O, and etc.)인 Binary만 추출
         -o <output_path>              결과물 저장할 경로 (특정 결과 파일명을 원하는 경우에는 파일명까지 입력합니다.)
         -f <format>                   결과 파일 format (excel, csv, opossum) (default: excel and csv (window : excel only)
         -d <db_url>                   Binary DB 접속 정보(format :'postgresql://username:password@host:port/database_name')
@@ -77,7 +76,6 @@ $ tree
 2. 하기 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.     
      - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
      - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
-3. -a 옵션의 경우 file 커맨드에 해당 값이 포함되는 경우만 최종 result에 포함합니다.         
-4. Binary별 checksum과 tlsh를 출력합니다.     
-5. OSS 정보를 Binary DB로 부터 불러옵니다.       
-6. Output 파일을 생성합니다.    
+3. Binary별 checksum과 tlsh를 출력합니다.     
+4. OSS 정보를 Binary DB로 부터 불러옵니다.       
+5. Output 파일을 생성합니다.    
