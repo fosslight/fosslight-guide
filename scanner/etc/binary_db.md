@@ -3,7 +3,7 @@ published: true
 ---
 
 # FOSSLight Binary Scanner Database 세팅 방법
-OSS information (OSS Name, OSS Version, License)를 DB로 부터 출력하기 위해 DB 세팅이 필요합니다. 
+OSS Information (OSS Name, OSS Version, License)를 DB로부터 출력하기 위해 DB 세팅이 필요합니다. 
 
 ## Prerequisite
 1. [PostgreSQL][PostgreSQL]를 설치합니다.
@@ -24,12 +24,12 @@ postgres=# CREATE DATABASE bat OWNER bin_analysis_script_user ENCODING 'utf-8';
 
 2. [fosslight_create.sql][sql_link] 파일을 다운로드합니다.
 
-[sql_link]: https://github.com/fosslight/fosslight_binary_scanner/blob/main/db/initdb.d/fosslight_create.sql
-
 3. Table을 생성합니다.
 ````
 $ psql -U bin_analysis_script_user -d bat -f fosslight_create.sql
 ````
+
+[sql_link]: https://github.com/fosslight/fosslight_binary_scanner/blob/main/db/initdb.d/fosslight_create.sql
 
 ### Table schema
 <img alt="table" src="../images/table_schema.png">
