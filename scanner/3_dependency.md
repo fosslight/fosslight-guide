@@ -305,6 +305,10 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
 | Go                      | go:(oss name)     | pkg.go.dev/(oss name)@(oss version)                                                                   | repository in pkg.go.dev/(oss name)@(oss version)                        |
 
+```warning
+Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
+```
+
 ## 🧐 동작 방식
 FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분석하기 위해 오픈 소스 소프트웨어를 활용합니다. 이때 활용되는 오픈 소스 소프트웨어는 direct dependency뿐만 아니라 transitive dependency까지 추출 가능하며, 오픈소스명, 버전, 라이선스명을 추출 가능합니다.
 
