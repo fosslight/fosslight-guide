@@ -64,6 +64,7 @@ $ tree
 - fosslight_bin_log_[datetime].txt : 실행 log
 - FOSSLight-Report_[datetime]_BIN.csv : FOSSLight binary의 결과 (csv 형태. windows는 생성 안 함)
 - FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
+   - jar 파일 분석 시, Vulnerability Link Column이 FOSSLight-Report_[datetime].xlsx에 추가 됨.    
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
 ## 🧐 동작 방식
