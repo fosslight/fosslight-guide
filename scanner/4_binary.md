@@ -25,7 +25,7 @@ OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 �
 
 ## 🎉 설치 방법
 Jar 파일에 대한 분석을 위해서는 Java를 설치해야 합니다.    
-   - Java 설치 링크 : https://openjdk.java.net (Open Source JDK를 설치)    
+   - Java 설치 링크 : https://openjdk.java.net (Open Source JDK를 설치)       
 FOSSLight Binary Scanner는 pip3를 이용하여 설치할 수 있습니다.     
 [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
