@@ -12,12 +12,16 @@ $ mysqldump -ufosslight -pfosslight fosslight > fosslight_backup.sql
 ```
 
 #### 선택2. FOSSLight 최신 버전으로 업데이트를 위한 DB 백업 (Data만 추출)
-1. DBMS를 다운로드 받습니다. (권장 DBMS : HeidiSQL https://github.com/HeidiSQL/HeidiSQL)
-2. DB에 접속 후 '데이터베이스를 SQL로 내보내기'를 클릭합니다.
-3. DELETE + INSERT로 데이터를 추출합니다. 
-    ![config](./images/sql_backup.png)
+mysqldump -u[아이디] -p[패스워드] [데이터베이스명] --no-create-info > [백업파일명].sql
+```
+$ mysqldump -ufosslight -pfosslight fosslight --no-create-info > fosslight_backup.sql
+```
 
 ### 2. 복구
+1. 버전에 따른 Table 구조를 반영하기 위해 빈 DB를 새로 만들고 기본 값을 설정합니다. 
+[Developer Documentation - 다운로드 & 설치 - 4. Database 생성 및 Data 초기 등록](https://fosslight.org/fosslight-guide/features/1_developer.html#다운로드--설치)
+
+2. 백업한 파일로 복구합니다.
 mysql -u[아이디] -p[패스워드] [데이터베이스명] < [백업파일명].sql
 ```
 $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
