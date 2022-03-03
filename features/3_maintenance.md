@@ -27,6 +27,11 @@ mysql -u[아이디] -p[패스워드] [데이터베이스명] < [백업파일명]
 $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
 ```
 
+### 추천 DBMS
+- [DBeaver Community edition](https://dbeaver.io/download/) 
+- [MySQL workbench Community edition](https://dev.mysql.com/downloads/workbench/)
+- [HeidiSQL](https://www.heidisql.com/download.php)
+
 ## NVD Data를 2002년 Data부터 다운로드 받기
 FOSSLight Hub는 일 1회 NVD(NATIONAL VULNERABILITY DATABASE) 에서 제공되는 [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds)를 다운로드하여 Database에 저장하며 저장된 NVD Data는 [Vulnerability List](../started/2_try/7_vulnerability.md)에서 조회할 수 있습니다.      
 이 때, 2002년 Data부터 NVD Data를 다운로드 받을 경우 하기와 같이 세팅합니다.     
