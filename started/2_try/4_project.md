@@ -74,7 +74,7 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 *리뷰 완료된 3rd Party를 Load하는 방법*  
 하기 방법 중 선택하여 3rd Party Software 정보를 불러올 수 있습니다. 
-(💁 3rd Pary는 여러개 불러올 수 있습니다.)
+(💁 3rd Party는 여러개 불러올 수 있습니다.)
 1. 3rd Party Search : 3rd Party List 메뉴에서 Status: confirm인 3rd Party Software를 검색하고 load합니다.
 2. Project Search : 다른 Project의 3rd Party 탭을 load합니다.
 
