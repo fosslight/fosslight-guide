@@ -37,9 +37,6 @@ FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.
 ```
 $ pip3 install fosslight_source
 ```
-```warning
-python 3.6 환경에서 scanoss 기능을 사용하기 위해서는 ['scanoss'](https://pypi.org/project/scanoss/)와 ['dataclasses'](https://pypi.org/project/dataclasses/)를 별도로 설치해야합니다.
-```
 
 ## 🚀 실행 방법
 ### 1. fosslight_source     
