@@ -113,3 +113,13 @@ $ tree
 - scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
+## 🐳 Docker를 이용하여 설치 및 실행 방법
+1. Dockerfile을 이용하여 이미지 빌드
+```
+$docker build -t fosslight_source .
+```
+2. 빌드한 이미지로 실행합니다.     
+ex. Output 경로 : /Users/fosslight_source_scanner/test_output, 분석 경로 : tests/test_files
+```
+$docker run -it -v /Users/fosslight_source_scanner/test_output:/app/output fosslight -p tests/test_files -o output
+```
