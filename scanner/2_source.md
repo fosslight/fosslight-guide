@@ -121,5 +121,5 @@ $docker build -t fosslight_source .
 2. 빌드한 이미지로 실행합니다.     
 ex. Output 경로 : /Users/fosslight_source_scanner/test_output, 분석 경로 : tests/test_files
 ```
-$docker run -it -v /Users/fosslight_source_scanner/test_output:/app/output fosslight -p tests/test_files -o output
+$docker run -it -v /Users/fosslight_source_scanner/test_output:/app/output fosslight_source -p tests/test_files -o output
 ```
