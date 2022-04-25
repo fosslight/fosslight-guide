@@ -26,11 +26,11 @@ OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 �
 Jar 파일에 대한 분석을 위해서는 [**Java**](https://openjdk.java.net)를 설치해야 합니다.(Open Source JDK를 설치)    
 
 ## 🎉 설치 방법    
-### 방법 1. 실행 파일을 다운로드
+### 방법 1. 실행 파일 다운로드
 OS(Operating System)에 맞는 실행 파일을 다운로드 받습니다. : https://github.com/fosslight/fosslight_binary_scanner/releases
 지원하지 않는 OS인 경우 '방법 2'로 설치합니다.
 
-### 방법 2. Python 환경 세팅 후 fosslight_binary를 설치합니다.
+### 방법 2. Python 환경 기반 fosslight_binary 설치
 1. [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
 2. Python package인 fosslight_binary 설치
 ```
