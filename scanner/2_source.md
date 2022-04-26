@@ -101,7 +101,7 @@ $ tree
 ├── FOSSLight-Report_20220103_154024.xlsx
 ├── fosslight_src_log_20220103_154024.txt
 ├── scancode_raw_result.json
-├── scanoss_fingerprint.wfp
+├── scanner_output.wfp
 ├── scanoss_raw_result.json
 └── Opossum_input_20220103_154024.json
 ```
@@ -109,7 +109,7 @@ $ tree
 - FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - fosslight_src_log_[datetime].txt: 실행 로그가 저장된 파일
 - scancode_raw_result.json : ScanCode 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
-- scanoss_fingerprint.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
+- scanner_output.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
