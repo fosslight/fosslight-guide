@@ -175,7 +175,7 @@ Open Source Software Package:
 ### 🔖 add mode
 **1) 특정 경로 내 파일에 저작권과 라이선스 추가 예시**
 ```
-(venv)$ fosslight_reuse add -p tests/add -c "Copyright 2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 
 **2) 특정 파일에 저작권과 라이선스 추가 예시**

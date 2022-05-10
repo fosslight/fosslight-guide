@@ -52,7 +52,7 @@ $ fosslight_source [option] <arg>
   Optional
     -h                             Print help message
     -j                             Generate raw result of scanners in json format
-    -m                             Print the Matched text for each license on a separate sheet (Scancode Only)
+    -m                             Print additional information for scan result on separate sheets
     -o <output_path>               Output path
                                    (If you want to generate the specific file name, add the output path with file name.)
     -f <format>                    Output file format (excel, csv, opossum)
@@ -101,7 +101,7 @@ $ tree
 ├── FOSSLight-Report_20220103_154024.xlsx
 ├── fosslight_src_log_20220103_154024.txt
 ├── scancode_raw_result.json
-├── scanoss_fingerprint.wfp
+├── scanner_output.wfp
 ├── scanoss_raw_result.json
 └── Opossum_input_20220103_154024.json
 ```
@@ -109,7 +109,17 @@ $ tree
 - FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
 - fosslight_src_log_[datetime].txt: 실행 로그가 저장된 파일
 - scancode_raw_result.json : ScanCode 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
-- scanoss_fingerprint.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
+- scanner_output.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
+## 🐳 Docker를 이용하여 설치 및 실행 방법
+1. Dockerfile을 이용하여 이미지 빌드
+```
+$docker build -t fosslight_source .
+```
+2. 빌드한 이미지로 실행합니다.     
+ex. Output 경로 : /Users/fosslight_source_scanner/test_output, 분석 경로 : tests/test_files
+```
+$docker run -it -v /Users/fosslight_source_scanner/test_output:/app/output fosslight_source -p tests/test_files -o output
+```

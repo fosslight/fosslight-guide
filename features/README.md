@@ -12,3 +12,6 @@ FOSSLight Hub에 대하여 Advanced features를 확인하실 수 있습니다.
 
 ## 부가 기능
 - [REST API](2_rest_api.md)
+
+## 유지 보수
+- [유지 보수 Tips](3_maintenance.md)

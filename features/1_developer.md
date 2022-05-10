@@ -21,27 +21,6 @@ Docker를 이용하여 빌드 및 실행합니다.
 docker-compose up --build
 ```
 
-### 메일 서버 세팅
-[docker-mailserver]: https://github.com/docker-mailserver/docker-mailserver
-
-1. Configuration 로 이동합니다.
-2. SMTP Setting 체크박스를 활성화합니다.
-3. 메일 서버 정보를 입력 후 저장합니다.
-```
-Mail Server : fosslight_mail
-Email Address : no-reply@fosslight.org
-Port : 587
-Encoding : UTF-8
-Username : no-reply@fosslight.org
-Password : fosslight
-```
-
-4. 웹 서버를 재시작해줍니다. 
-```
-docker-compose restart fosslight_web
-```
-
-
 ## 설치 및 실행 방법 - 2
 ### 요구사항
 - JAVA 1.8 이상
@@ -150,5 +129,28 @@ $ ./gradlew clean build && java -jar build/libs/FOSSLight-1.0.0.war
 ## 동작 확인
 - 웹브라우저에서 [http://localhost:8180][local]으로 접속하면 로그인 화면이 표시됩니다.
 - 초기 로그인 계정은 id: admin, pswd :admin 입니다.
+
+## 세부 설정
+### 메일 서버 세팅
+1. Configuration 로 이동합니다.
+2. SMTP Setting 체크박스를 활성화합니다.
+3. 메일 서버 정보를 입력 후 저장합니다.    
+ex) docker-compose 로 메일 서비스 실행한 경우    
+    ```
+    Mail Server : fosslight_mail
+    Email Address : no-reply@fosslight.org
+    Port : 587
+    Encoding : UTF-8
+    Username : no-reply@fosslight.org
+    Password : fosslight
+    ```
+
+4. 웹 서버를 재시작해줍니다. 
+```
+docker-compose restart fosslight_web
+```
+
+### NVD Data 세팅
+서버 세팅 후 최초 1회 NVD Data를 2002년 Data부터 다운로드 받도록 설정합니다. : [NVD Data 다운로드](https://fosslight.org/fosslight-guide/features/3_maintenance.html#nvd-data%EB%A5%BC-2002%EB%85%84-data%EB%B6%80%ED%84%B0-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%9B%EA%B8%B0)
 
 [local]: http://localhost:8180
