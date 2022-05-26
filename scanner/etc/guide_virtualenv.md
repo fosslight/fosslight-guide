@@ -15,8 +15,7 @@ Python package를 설치 및 실행하기 위한 virtualenv 환경 세팅하는 
 - Python 설치 방법은 [설치 가이드][install] 링크를 참조하세요.
 - 사용하는 python 버전에 맞게 python-dev, python-distutils를 설치합니다.
   ```
-  $ sudo apt-get install python3.6-distutils
-  $ sudo apt-get install python3.6-dev
+  $ sudo apt-get install python3.7 python3-pip python3.7-dev python3.7-distutils
   ```
 
 [install]: https://realpython.com/installing-python
@@ -25,7 +24,7 @@ Python package를 설치 및 실행하기 위한 virtualenv 환경 세팅하는 
 
 ```
 $ pip3 install virtualenv
-$ virtualenv -p /usr/bin/python3.6 venv
+$ virtualenv -p /usr/bin/python3.7 venv
 $ source venv/bin/activate
 ```
 자세한 virtualenv 설명: [Python virtaulenv page][venv]
