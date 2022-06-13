@@ -6,9 +6,18 @@ published: true
 Python package를 설치 및 실행하기 위한 virtualenv 환경 세팅하는 가이드입니다.
 
 ## Contents
+- [추가 Package 설치](#pre)
 - [Python, python-dev 설치](#python)
 - [virtualenv 세팅하는 법](#virtualenv)
 - [virtualenv 명령어](#command)
+
+## 📋 <a name="pre"></a>Prerequisite
+macOS의 경우, 하기 package를 추가로 설치합니다.
+```
+brew install openssl
+brew install libmagic
+brew install postgresql
+```
 
 ## 💻 <a name="python"></a>Python, python-dev 설치
 
