@@ -157,33 +157,42 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
 > <details>
 > <summary markdown="span">oss-pkg-info.yaml 파일</summary>
 ```yaml    
-Open Source Software Package:
-    - name: glibc
-    version: 2.3
-    source: https://github.com/fsfe/glibc
-    license:
-    - GPL-3.0
-    - LGPL-2.1
-    file : 
-    - a.c
-    - b.c
-    - name : dbus
-    version : 1.3
-    source : https://github.com/fsfe/dbus
-    license : GPL-2.0
-    file : src/*
-    copyright : |
-        Copyright (c) 2020 Test
-        Copyright (c) 2020 Test
-    - name : reuse-tool
-    source : https://github.com/fsfe/reuse
-    homepage : http://google.com
-    license : MIT
-    copyright: Copyright (c) 2020 Test
-    - name : build-tool
-    source : http://gihub.com/bazel
-    license : Apache-2.0
-    exclude : True
+glibc:
+- version: '2.3'
+  source name or path:
+  - tests/convert/b.c
+  - tests/convert/a.c
+  license:
+  - GPL-3.0
+  - LGPL-2.1
+  download location: https://github.com/fsfe/glibc
+dbus:
+- version: '1.3'
+  source name or path:
+  - tests/convert/src/*
+  license:
+  - GPL-2.0
+  download location: https://github.com/fsfe/dbus
+  copyright text: 'Copyright (c) 2020 Test
+
+    Copyright (c) 2020 Sample'
+reuse-tool:
+- version: ''
+  source name or path:
+  - tests/convert/
+  license:
+  - MIT
+  download location: https://github.com/fsfe/reuse
+  homepage: http://google.com
+  copyright text: Copyright (c) 2020 Test
+build-tool:
+- version: ''
+  source name or path:
+  - tests/convert/
+  license:
+  - Apache-2.0
+  download location: http://gihub.com/bazel
+  exclude: true
 ```
 > </details>
 > <details>
