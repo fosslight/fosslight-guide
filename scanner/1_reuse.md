@@ -143,7 +143,7 @@ Options for only 'add' mode
 ### 🔖 convert mode
 **1) Path 내 존재하는 oss-pkg-info.yaml (여러개인 경우 전체 해당) -> FOSSLight-Report 변환 예시**
 ```
-$ fosslight_reuse convert -p test/src/
+$ fosslight_reuse convert -p tests/convert/
 ```
 
 **2) FOSSLight Report -> oss-pkg-info.yaml 파일 변환 예시**
