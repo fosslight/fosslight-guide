@@ -157,7 +157,7 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
 > <details>
 > <summary markdown="span">oss-pkg-info.yaml 파일</summary>
 ```yaml    
-    glibc:
+glibc:
     - version: '2.3'
       source name or path:
       - tests/convert/b.c
@@ -166,7 +166,7 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
       - GPL-3.0
       - LGPL-2.1
       download location: https://github.com/fsfe/glibc
-    dbus:
+dbus:
     - version: '1.3'
       source name or path:
       - tests/convert/src/*
@@ -176,7 +176,7 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
       copyright text: 'Copyright (c) 2020 Test
 
         Copyright (c) 2020 Sample'
-    reuse-tool:
+reuse-tool:
     - version: ''
       source name or path:
       - tests/convert/
@@ -185,7 +185,7 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
       download location: https://github.com/fsfe/reuse
       homepage: http://google.com
       copyright text: Copyright (c) 2020 Test
-    build-tool:
+build-tool:
     - version: ''
       source name or path:
       - tests/convert/
