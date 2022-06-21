@@ -56,7 +56,7 @@ Mode
 Options:
     -h                    설명 메시지 출력
     -p <path>             체크할 소스 경로
-    -f <file1,file2,..>   체크할 파일 리스트
+    -f <format>           결과 파일 포맷 (yaml, xml, html)
     -o <file_name>        결과 파일 이름 지정
     -n                    venv, node_modules, ./ 에 대하여 분석 제외하지 않으려면 추가
  
@@ -76,7 +76,7 @@ Options for only 'add' mode
 
 **1) 특정 경로 내 파일 분석 예시**  
 ```
-(venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.xml
+(venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.yaml
 ```
 - 실행 결과
     <pre>
@@ -92,21 +92,34 @@ Options for only 'add' mode
 
 **2) 특정 파일만 분석 예시**
 ```
-(venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -f "src/load.c,src/dummy.c,src/main.c"
+(venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -p "src/load.c,src/dummy.c,src/main.c"
 ```
 - 실행 결과
     <pre>
-        # src/load.c
-        * License:
-        * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>
-        
-        # src/dummy.c
-        * License:
-        * Copyright:
-        
-        # src/main.c
-        * License: GPL-3.0-or-later
-        * Copyright: SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com> </pre>
+        Checking copyright/license writing rules:
+          Compliant: Not OK
+          Files without copyright:
+          - add/test_no_copyright.py
+          Files without license:
+          - add/test_no_license.py
+          Files without license and copyright: N/A
+          Summary:
+            Detected Licenses:
+            - '-'
+            - GPL-3.0-only
+            - MIT
+            Files without copyright / total: 1 / 14
+            Files without license / total: 1 / 14
+            Open Source Package File:
+            - convert/oss-pkg-info.yaml
+            - add/oss-pkg-info.yaml
+          Tool Info:
+            Analyze path: tests
+            OS: Linux 4.15.0-144-generic
+            Python version: 3
+            fosslight_reuse version: fosslight_reuse v2.2.0
+
+Created file name: /home/jaekwonbang/fosslight_reuse_test_0617/result.yaml </pre>
 
 <details>
     <summary markdown="span" style="font-weight:bold">Demo 영상 (lint)</summary>
