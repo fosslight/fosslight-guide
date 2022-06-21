@@ -174,7 +174,7 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
       - GPL-2.0
       download location: https://github.com/fsfe/dbus
       copyright text: 'Copyright (c) 2020 Test
-                       Copyright (c) 2020 Sample'
+  Copyright (c) 2020 Sample'
     reuse-tool:
     - version: ''
       source name or path:
