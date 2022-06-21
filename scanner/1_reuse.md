@@ -76,27 +76,11 @@ Options for only 'add' mode
 
 **1) 특정 경로 내 파일 분석 예시**  
 ```
-(venv)$ fosslight_reuse lint -p /home/test/reuse-example -o result.yaml
+(venv)$ fosslight_reuse lint -p /home/tests -o result.yaml
 ```
 - 실행 결과
     <pre>
-        # SUMMARY
-        # Open Source Package info: File to which OSS Package information is written.
-        # Used licenses: License detected in the path.
-        # Files with copyright information: Number of files with copyright / Total number of files.
-        # Files with license information: Number of files with license / Total number of files.  
-        * Open Source Package info: /home/test/reuse-example/oss-package.info
-        * Used licenses: CC-BY-4.0, CC0-1.0, GPL-3.0-or-later
-        * Files with copyright information: 6 / 7
-        * Files with license information: 6 / 7 </pre>
-
-**2) 특정 파일만 분석 예시**
-```
-(venv)$ fosslight_reuse lint -p /home/soimkim/test/reuse-example -p "src/load.c,src/dummy.c,src/main.c"
-```
-- 실행 결과
-    <pre>
-        Checking copyright/license writing rules:
+       Checking copyright/license writing rules:
           Compliant: Not OK
           Files without copyright:
           - add/test_no_copyright.py
@@ -117,9 +101,38 @@ Options for only 'add' mode
             Analyze path: tests
             OS: Linux 4.15.0-144-generic
             Python version: 3
-            fosslight_reuse version: fosslight_reuse v2.2.0
+            fosslight_reuse version: fosslight_reuse v2.2.0  </pre>
 
-Created file name: /home/jaekwonbang/fosslight_reuse_test_0617/result.yaml </pre>
+**2) 특정 파일만 분석 예시**
+```
+(venv)$ fosslight_reuse lint -p "src/file1.py,src/file2.py"
+```
+- 실행 결과
+    <pre>
+        # src/file1.py
+        * License: 
+        * Copyright: 
+
+        # src/file2.py
+        * License: GPL-3.0-only
+        * Copyright: Copyright (c) 2022 LG Electronics Inc.
+
+        Checking copyright/license writing rules:
+          Compliant: Not OK
+          Files without copyright: N/A
+          Files without license: N/A
+          Files without license and copyright:
+          - src/fosslight_reuse/_fosslight_reuse.py
+          Summary:
+            Detected Licenses: N/A
+            Files without copyright / total: 1 / 2
+            Files without license / total: 1 / 2
+            Open Source Package File: []
+          Tool Info:
+            Analyze path: /home/jaekwonbang/tests
+            OS: Linux 4.15.0-144-generic
+            Python version: 3
+            fosslight_reuse version: fosslight_reuse v2.2.0  </pre>
 
 <details>
     <summary markdown="span" style="font-weight:bold">Demo 영상 (lint)</summary>
@@ -135,7 +148,7 @@ $ fosslight_reuse convert -p /home/test/source
 
 **2) FOSSLight Report -> oss-pkg-info.yaml 파일 변환 예시**
 ```
-$ fosslight_reuse convert -f src/FOSSLight-Report.xlsx
+$ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
 ```
 
 **3) 실행 결과 파일 예시**
@@ -193,7 +206,7 @@ Open Source Software Package:
 
 **2) 특정 파일에 저작권과 라이선스 추가 예시**
 ```
-(venv)$ fosslight_reuse add -f "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_reuse add -p "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 
 **3) 실행 결과**  
