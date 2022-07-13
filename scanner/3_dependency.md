@@ -171,7 +171,7 @@ $ mvnw license:aggregate-download-licenses
 
 <details>
 <summary markdown="span">**Prerequisite for Pub**</summary>
-> FOSSLight Dependency Scanner 실행 환경에서 바로 flutter pub 명령어 사용 가능한 경우, 이 단계는 skip 가능합니다.
+> FOSSLight Dependency Scanner 실행하는 환경에서 flutter pub 명령어 사용 가능하지 않은 경우,  flutter pub 사용 가능한 환경에서 미리 아래 과정을 수행하시기 바랍니다.
 1. pubspec.yaml 파일 내 dev_dependencies에 flutter_oss_licenses 2.0.1버전을 추가합니다. (optional)
 ```
 dev_dependencies:
