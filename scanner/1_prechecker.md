@@ -1,18 +1,18 @@
 ---
 published: true
-title: FOSSLight Reuse
+title: FOSSLight Prechecker
 ---
-# FOSSLight Reuse
+# FOSSLight Prechecker
 
-<img src="https://img.shields.io/pypi/l/fosslight-reuse" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_reuse" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_reuse" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_reuse)](https://api.reuse.software/info/github.com/fosslight/fosslight_reuse)
+<img src="https://img.shields.io/pypi/l/fosslight-prechecker" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_prechecker" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_prechecker" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_prechecker)](https://api.reuse.software/info/github.com/fosslight/fosslight_prechecker)
 
-[**FOSSLight Reuse**](https://github.com/fosslight/fosslight_reuse)는 [reuse-tool][ret]을 이용하여 [소스 코드의 저작권 및 License 표기 규칙][rule]을 준수하는지 확인하고 보완하기 위해 사용할 수 있는 도구입니다.
+[**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 [reuse-tool][ret]을 이용하여 [소스 코드의 저작권 및 License 표기 규칙][rule]을 준수하는지 확인하고 보완하기 위해 사용할 수 있는 도구입니다.
 
 [ret]: https://github.com/fsfe/reuse-tool
 [rule]: https://oss.lge.com/guide/process/osc_process/1-identification/copyright_license_rule.html
 
-**Github Repository** : [https://github.com/fosslight/fosslight_reuse]()  
-**License** : [GPL-3.0-only](https://github.com/fosslight/fosslight_reuse/blob/main/LICENSE)
+**Github Repository** : [https://github.com/fosslight/fosslight_prechecker]()  
+**License** : [GPL-3.0-only](https://github.com/fosslight/fosslight_prechecker/blob/main/LICENSE)
 
 ## 목차
   - [필요 조건](#-필요-조건)
@@ -22,25 +22,25 @@ title: FOSSLight Reuse
   - [동작 방식](#-동작-방식)
 
 ## 📋 필요 조건
-[**FOSSLight Reuse**](https://github.com/fosslight/fosslight_reuse)는 Python 3.6+ 기반에서 동작합니다.
+[**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 Python 3.6+ 기반에서 동작합니다.
 
 ## 🎉 설치 방법
-FOSSLight Reuse는 pip3를 이용하여 설치할 수 있습니다.
+FOSSLight Prechecker는 pip3를 이용하여 설치할 수 있습니다.
 [python 3.6 + virtualenv](https://fosslight.org/fosslight-guide-en/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
 ```
-$ pip3 install fosslight_reuse
+$ pip3 install fosslight_prechecker
 ```
 
 ## 🚀 실행 방법
-FOSSLight Reuse는 다음 세가지 모드를 가지고 있습니다.
+FOSSLight Prechecker 다음 세가지 모드를 가지고 있습니다.
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
-2. `convert` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
+2. `convert` --- [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml)을 FOSSLight-Report.xlsx로 또는 그 반대로 변환합니다.
      - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
      - [FOSSLight Report](../learn/2_fosslight_report.md)의 BIN(Android), BOM Sheet를 oss-pkg-info.yaml로 변환
 3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
 
 ``` 
-$ fosslight_reuse [Mode] [option1] <arg1> [option2] <arg2>...
+$ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
 ```
 
 ### Mode별 실행 방법 및 Parameters
@@ -66,8 +66,8 @@ Options for only 'add' mode
 ```
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
-    1. [FOSSLight Reuse - Release](https://github.com/fosslight/fosslight_reuse/releases) 에서 fosslight_reuse_windows.exe를 다운로드  
-    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml) 파일 또는 [FOSSLight_OSS-Report*.xlsx](../learn/2_fosslight_report.md) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
+    1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
+    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml) 파일 또는 [FOSSLight_OSS-Report*.xlsx](../learn/2_fosslight_report.md) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
     3. 파일을 더블 클릭하여 실행  
     
     
@@ -76,7 +76,7 @@ Options for only 'add' mode
 
 **1) 특정 경로 내 파일 분석 예시**  
 ```
-(venv)$ fosslight_reuse lint -p /home/tests -o result.yaml
+(venv)$ fosslight_prechecker lint -p /home/tests -o result.yaml
 ```
 - 실행 결과
     <pre>
@@ -101,11 +101,11 @@ Options for only 'add' mode
             Analyze path: tests
             OS: Linux 4.15.0-144-generic
             Python version: 3
-            fosslight_reuse version: fosslight_reuse v2.2.0  </pre>
+            fosslight_prechecker version: fosslight_prechecker v2.2.0  </pre>
 
 **2) 특정 파일만 분석 예시**
 ```
-(venv)$ fosslight_reuse lint -p "src/file1.py,src/file2.py"
+(venv)$ fosslight_prechecker lint -p "src/file1.py,src/file2.py"
 ```
 - 실행 결과
     <pre>
@@ -122,7 +122,7 @@ Options for only 'add' mode
           Files without copyright: N/A
           Files without license: N/A
           Files without license and copyright:
-          - src/fosslight_reuse/_fosslight_reuse.py
+          - src/fosslight_prechecker/_precheck.py
           Summary:
             Detected Licenses: N/A
             Files without copyright / total: 1 / 2
@@ -132,7 +132,7 @@ Options for only 'add' mode
             Analyze path: /home/jaekwonbang/tests
             OS: Linux 4.15.0-144-generic
             Python version: 3
-            fosslight_reuse version: fosslight_reuse v2.2.0  </pre>
+            fosslight_prechecker version: fosslight_prechecker v2.2.0  </pre>
 
 <details>
     <summary markdown="span" style="font-weight:bold">Demo 영상 (lint)</summary>
@@ -143,12 +143,12 @@ Options for only 'add' mode
 ### 🔖 convert mode
 **1) Path 내 존재하는 oss-pkg-info.yaml (여러개인 경우 전체 해당) -> FOSSLight-Report 변환 예시**
 ```
-$ fosslight_reuse convert -p tests/
+$ fosslight_prechecker convert -p tests/
 ```
 
 **2) FOSSLight Report -> oss-pkg-info.yaml 파일 변환 예시**
 ```
-$ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
+$ fosslight_prechecker convert -p src/FOSSLight-Report.xlsx
 ```
 
 **3) 실행 결과 파일 예시**
@@ -209,12 +209,12 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
 ### 🔖 add mode
 **1) 특정 경로 내 파일에 저작권과 라이선스 추가 예시**
 ```
-(venv)$ fosslight_reuse add -p tests/add -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_prechecker add -p tests/add -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 
 **2) 특정 파일에 저작권과 라이선스 추가 예시**
 ```
-(venv)$ fosslight_reuse add -p "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_prechecker add -p "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
 ```
 
 **3) 실행 결과**  
@@ -292,8 +292,8 @@ $ fosslight_reuse convert -p src/FOSSLight-Report.xlsx
 1. 변환할 파일의 존재 여부 확인   
    * 파일 예시 : [oss-pkg-info.yaml][yml], [FOSSLight-Report.xlsx][xlsx]   
 
-[yml]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/oss-pkg-info.yaml   
-[xlsx]: https://github.com/fosslight/fosslight_reuse/blob/main/tests/convert/OSS-Report-Sample_0.xlsx   
+[yml]: https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml   
+[xlsx]: https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/OSS-Report-Sample_0.xlsx   
 
 2. 파일을 변환   
     2-1. Path 단위로 실행하는 경우      
