@@ -48,10 +48,8 @@ $ fosslight_binary [option] <arg>
 
 ### Options
 ````
-    Mandatory:
-        -p <binary_path>              Binary를 추출할 경로
-
     Options:
+        -p <binary_path>              Binary를 추출할 경로 (기본 값: 현재 directory)
         -h                            Help Message 출력
         -o <output_path>              결과물 저장할 경로 (특정 결과 파일명을 원하는 경우에는 파일명까지 입력합니다.)
         -f <format>                   결과 파일 format (excel, csv, opossum) (default: excel and csv (window : excel only)
@@ -86,7 +84,8 @@ $ tree
     1-3. 경로 : ['.git']    
 2. 하기 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.     
      - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
-     - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우     
+     - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우
+     - directory가 숨긴 폴더인 경우 (폴더명이 .로 시작하는 경우)            
 3. Binary별 checksum과 tlsh를 출력합니다.     
 4. OSS 정보를 Binary DB로 부터 불러옵니다.       
 5. Output 파일을 생성합니다.    
