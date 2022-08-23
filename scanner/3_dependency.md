@@ -108,24 +108,20 @@ $ gradlew generateLicenseTxt
 <summary markdown="span">**Prerequisite for Pypi**</summary>
 ```tip
 - 시스템 내 전역으로 설치된 파이썬 dependency로부터 분석하고자 하는 프로젝트 dependency를 분리하기 위해 가상환경을 설정하여 이용하기를 권장합니다.
-- 만약 input path내 requirements.txt가 존재한다면, FOSSLight Dependency가 자동으로 dependency 설치하여 분석 실행 가능하므로, prerequisite단계 skip 가능합니다.
+- 만약 input path내 requirements.txt가 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행 가능하므로, prerequisite단계는 skip합니다.
 ```
 
 1. 가상환경을 생성하고 활성화합니다.
 ```
 // virtualenv example
-$ virtualenv -p /usr/bin/python3.6 venv
+$ virtualenv -p /usr/bin/python3.7 venv
 $ source venv/bin/activate
 // conda example
 $ conda create --name {venv name}
 $ conda activate {venv name}
 ```
-
-2. 가상환경 내 분석하고자 하는 프로젝트의 dependency를 설치합니다.
-```
-// If you install the dependencies with requirements.txt...
-$ pip install -r requirements.txt
-```
+2. 가상환경 내 분석하고자 하는 프로젝트에서 사용된 패키지를 설치합니다.
+3. FOSSLight Dependency Scanner 실행 시, '-a', '-d' 옵션을 이용하여 해당 가상환경 activate, deactivate 명령어를 추가합니다.
 </details>
 
 <details>
@@ -248,14 +244,14 @@ $ fosslight_dependency [option] <arg>
                                              (If you want to generate the specific file name, add the output path with file name.)
             -f <format>                     Output file format (excel, csv, opossum)
             --direct <true/false>           Print the direct/transitive dependency type in comment.
-                                             Choose 'True' or 'False'. (default:True)
-
-        Required only for pypi
-            -a <activate_cmd>               Virtual environment activate command (ex, 'conda activate (venv name)')
-            -d <deactivate_cmd>             Virtual environment deactivate command (ex, 'conda deactivate')
+                                             Choose 'True' or 'False'. (default:True
 
         Required only for swift, carthage
             -t <token>                      Enter the github personal access token.
+
+        Optional only for pypi
+            -a <activate_cmd>               Virtual environment activate command (ex, 'conda activate (venv name)')
+            -d <deactivate_cmd>             Virtual environment deactivate command (ex, 'conda deactivate')
 
         Optional only for gradle, maven
             -c <dir_name>                   Enter the customized build output directory name
