@@ -22,11 +22,11 @@ title: FOSSLight Prechecker
   - [동작 방식](#-동작-방식)
 
 ## 📋 필요 조건
-[**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 Python 3.6+ 기반에서 동작합니다.
+[**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 Python 3.7+ 기반에서 동작합니다.
 
 ## 🎉 설치 방법
 FOSSLight Prechecker는 pip3를 이용하여 설치할 수 있습니다.
-[python 3.6 + virtualenv](https://fosslight.org/fosslight-guide-en/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
+[python 3.7 + virtualenv](https://fosslight.org/fosslight-guide-en/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
 ```
 $ pip3 install fosslight_prechecker
 ```

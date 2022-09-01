@@ -38,7 +38,7 @@ $ source venv/bin/activate
 ```
 자세한 virtualenv 설명: [Python virtaulenv page][venv]
 
-[venv]: https://docs.python.org/3.6/library/venv.html
+[venv]: https://docs.python.org/3.7/library/venv.html
 
 ## ⌨️ <a name="command"></a>virtualenv 명령어
 

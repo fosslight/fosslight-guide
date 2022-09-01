@@ -218,7 +218,7 @@ Go의 경우, go module에 한해 dependency 분석을 지원합니다. FOSSLigh
 ## 🎉 설치 방법
 
 FOSSLight Dependency Scanner는 pip3를 이용하여 설치할 수 있습니다.     
-[python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
+[python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
 ```
 $ pip3 install fosslight_dependency

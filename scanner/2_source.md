@@ -25,7 +25,7 @@ Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일은 제
   - [Docker를 이용한 설치](#-docker를-이용하여-설치-및-실행-방법)
 
 ## 📋 필요 조건
-[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.6+ 기반에서 동작합니다.     
+[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.7+ 기반에서 동작합니다.     
 SCANOSS를 사용하기 위해서는 Python 3.7+ 환경을 권장합니다.       
          
 ⚠️ **windows**와 **mac m1**의 경우 설치가 불가합니다. 이 경우 [Docker를 이용](#-docker를-이용하여-설치-및-실행-방법)하여 설치 및 사용을 권장합니다.      
@@ -33,7 +33,7 @@ SCANOSS를 사용하기 위해서는 Python 3.7+ 환경을 권장합니다.
 
 ## 🎉 설치 방법
 FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.     
-[python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
+[python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
 ```
 $ pip3 install fosslight_source

@@ -20,7 +20,7 @@ jar 파일에 대한 오픈 소스 분석 시, 오픈 소스인 [**Dependency-ch
 
 
 ## 📋 필요 조건
-[**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Python 3.6+ 기반에서 동작합니다.  
+[**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Python 3.7+ 기반에서 동작합니다.  
 OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.    
 
 Jar 파일에 대한 분석을 위해서는 [**Java**](https://openjdk.java.net)를 설치해야 합니다.(Open Source JDK를 설치)    
@@ -31,7 +31,7 @@ OS(Operating System)에 맞는 실행 파일을 다운로드 받습니다. : [ht
 단, 지원하지 않는 OS인 경우 '방법 2'로 설치합니다.
 
 ### 방법 2. Python 환경 기반 fosslight_binary 설치
-1. [python 3.6 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
+1. [python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
 2. Python package인 fosslight_binary 설치
 ```
 $ pip3 install fosslight_binary
