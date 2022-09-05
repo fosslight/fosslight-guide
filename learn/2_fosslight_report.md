@@ -6,7 +6,7 @@ FOSSLight Hub와 FOSSLight Scanner에서 사용하는 Template으로 Project별 
 
 ## 양식
 
-1.0 버전 : [FOSSLight-Report.xlsx](https://github.com/fosslight/fosslight/raw/main/src/main/resources/template/ProjectReport.xlsx)
+1.0 버전 : [fosslight_report.xlsx](https://github.com/fosslight/fosslight/raw/main/src/main/resources/template/ProjectReport.xlsx)
 
 ## Sheet 별 설명
 
