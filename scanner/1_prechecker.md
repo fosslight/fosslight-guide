@@ -291,7 +291,7 @@ $ fosslight_prechecker convert -p tests/
 
 2. 파일을 변환   
     2-1. Path 단위로 실행하는 경우      
-    - 경로 내 존재하는 sbom-info.yaml 또는 oss-pkg-info.yaml 파일을 모두 fosslight_report.xlsx로 변환   
+    - 경로 내 존재하는 모든 sbom-info.yaml 또는 oss-pkg-info.yaml 파일을 fosslight_report.xlsx로 변환   
     
     2-2. 입력한 파일을 변환  
     - 입력한 yaml 파일을 fosslight_report.xlsx로 변환   
