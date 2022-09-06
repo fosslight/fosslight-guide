@@ -289,7 +289,7 @@ $ fosslight_prechecker convert -p src/FOSSLight-Report.xlsx
 
 ### 🔖 convert mode
 1. 변환할 파일의 존재 여부 확인   
-   * 파일 예시 : [sbom-info.yaml][sbom_info] [oss-pkg-info.yaml][oss_pkg_info]       
+   * 파일 예시 : [sbom-info.yaml][sbom_info], [oss-pkg-info.yaml][oss_pkg_info]       
 
 [sbom_info]: https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml    
 [oss_pkg_info]: https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml   
