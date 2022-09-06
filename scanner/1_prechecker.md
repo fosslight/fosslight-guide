@@ -35,7 +35,7 @@ $ pip3 install fosslight_prechecker
 FOSSLight Prechecker 다음 세가지 모드를 가지고 있습니다.
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
 2. `convert` --- [sbom-info.yam](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml)을 fosslight_report.xlsx로 변환합니다.
-     - oss-pkg-info.yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
+     - yaml을 [FOSSLight Report](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
 3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
 
 ``` 
@@ -145,12 +145,7 @@ Options for only 'add' mode
 $ fosslight_prechecker convert -p tests/
 ```
 
-**2) FOSSLight Report -> oss-pkg-info.yaml 파일 변환 예시**
-```
-$ fosslight_prechecker convert -p src/FOSSLight-Report.xlsx
-```
-
-**3) 실행 결과 파일 예시**
+**2) 실행 결과 파일 예시**
 
 {::options parse_block_html="true" /}
 > <details>
@@ -299,7 +294,7 @@ $ fosslight_prechecker convert -p src/FOSSLight-Report.xlsx
     - 경로 내 존재하는 sbom-info.yaml 또는 oss-pkg-info.yaml 파일을 모두 fosslight_report.xlsx로 변환   
     
     2-2. 입력한 파일을 변환  
-    - oss-pkg-info.yaml을 FOSSLight-Report.xlsx로 변환   
+    - 입력한 yaml 파일을 fosslight_report.xlsx로 변환   
     - 단, -o 로 output file명을 지정한 경우 해당 이름으로 결과 파일이 생성   
     
 
