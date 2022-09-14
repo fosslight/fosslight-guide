@@ -140,7 +140,7 @@ Options for only 'add' mode
 
 
 ### 🔖 convert mode
-**1) Path 내 존재하는 oss-pkg-info.yaml (여러개인 경우 전체 해당) -> FOSSLight-Report 변환 예시**
+**1) Path 내 존재하는 oss-pkg-info.yaml (여러개인 경우 전체 해당) -> fosslight_report.xlsx 변환 예시**
 ```
 $ fosslight_prechecker convert -p tests/
 ```
