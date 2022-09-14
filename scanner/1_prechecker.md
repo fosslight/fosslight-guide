@@ -49,7 +49,7 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
 ```
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
-    convert               oss-pkg-info.yaml -> FOSSLight-Report 변환
+    convert               oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
     add                   소스 코드에 Copyright와 License 추가
  
 Options:
@@ -66,7 +66,7 @@ Options for only 'add' mode
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
     1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
-    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml) 파일 또는 [FOSSLight_OSS-Report*.xlsx](../learn/2_fosslight_report.md) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
+    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
     3. 파일을 더블 클릭하여 실행  
     
     
@@ -189,7 +189,7 @@ $ fosslight_prechecker convert -p tests/
 > </details>
 
 > <details>
-> <summary markdown="span">FOSSLight-Report.xlsx 파일</summary>
+> <summary markdown="span">fosslight_report.xlsx 파일</summary>
 <img src="images/fosslight_reuse_report.JPG" alt="FOSSLight Report">
 > </details>
 
