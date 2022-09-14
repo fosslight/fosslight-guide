@@ -66,7 +66,7 @@ Options for only 'add' mode
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
     1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
-    2. [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
+    2. [sbom-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
     3. 파일을 더블 클릭하여 실행  
     
     
