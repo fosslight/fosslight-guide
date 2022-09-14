@@ -49,7 +49,7 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
 ```
 Mode
     lint                  저작권 및 License 표기 규칙 준수 확인
-    convert               oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
+    convert               sbom-info.yaml or oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
     add                   소스 코드에 Copyright와 License 추가
  
 Options:
