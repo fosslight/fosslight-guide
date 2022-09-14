@@ -61,19 +61,17 @@ $ fosslight_binary [option] <arg>
 ```
 $ tree
 .
-├── binary_20210601_201646.txt
-├── fosslight_bin_log_20210601_201646.txt
-├── FOSSLight-Report_20210601_201646_BIN.csv
-├── FOSSLight-Report_20210601_201646.xlsx
-└── Opossum_input_20210601_201646.json
+├── fosslight_binary_220904_0912.txt
+├── fosslight_log_220904_0912.txt
+├── fosslight_report_220904_0912.xlsx
+└── fosslight_opossum_220904_0912.json
 
 ```
-- binary_[datetime].txt : Binary별 checksum, tlsh 값이 출력된 결과
-- fosslight_bin_log_[datetime].txt : 실행 log
-- FOSSLight-Report_[datetime]_BIN.csv : FOSSLight binary의 결과 (csv 형태. windows는 생성 안 함)
-- FOSSLight-Report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
+- fosslight_binary_[datetime].txt : Binary별 checksum, tlsh 값이 출력된 결과
+- fosslight_log_[datetime].txt : 실행 log
+- fosslight_report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
    - jar 파일 분석 시, Vulnerability Link Column이 FOSSLight-Report_[datetime].xlsx에 추가 됨.    
-- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
+- fosslight_opossum_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
 ## 🧐 동작 방식
 1. 하기 사항을 제외하고 Binary를 추출합니다.    
