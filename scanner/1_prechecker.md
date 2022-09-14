@@ -35,7 +35,7 @@ $ pip3 install fosslight_prechecker
 FOSSLight Prechecker 다음 세가지 모드를 가지고 있습니다.
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
 2. `convert` --- [sbom-info.yam](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml)을 [fosslight_report.xlsx](https://github.com/fosslight/fosslight-guide/blob/master/learn/2_fosslight_report.md)로 변환합니다.
-     - yaml을 [fosslight_report.xlsx](../learn/2_fosslight_report.md)의 SRC Sheet로 변환
+     - yaml 파일을 fosslight_report.xlsx의 SRC Sheet로 변환
 3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
 
 ``` 
