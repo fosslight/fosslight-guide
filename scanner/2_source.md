@@ -94,21 +94,21 @@ $ fosslight_convert -p /home/jsonfile_dir
 ```
 $ tree
 .
-├── FOSSLight-Report_20220103_154024_SRC_FL_Source.csv
-├── FOSSLight-Report_20220103_154024.xlsx
-├── fosslight_src_log_20220103_154024.txt
+├── fosslight_log_220103_1540.txt
+├── fosslight_opossum_220103_1540.json
+├── fosslight_report_220103_1540.xlsx
+├── fosslight_report_220103_1540.csv
 ├── scancode_raw_result.json
 ├── scanner_output.wfp
-├── scanoss_raw_result.json
-└── Opossum_input_20220103_154024.json
+└── scanoss_raw_result.json
 ```
-- FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과
-- FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
-- fosslight_src_log_[datetime].txt: 실행 로그가 저장된 파일
+- fosslight_log_[datetime].txt : 실행 로그가 저장된 파일
+- fosslight_opossum_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
+- fosslight_report_[datetime].xlsx : FOSSLight Report 형태의 Source Code 분석 결과
+- fosslight_report_[datetime].csv : FOSSLight Report를 csv로 출력한 결과
 - scancode_raw_result.json : ScanCode 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - scanner_output.wfp : SCANOSS 실행 시 생성된 Finger Print (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
 - scanoss_raw_result.json : SCANOSS 실행 결과 (fosslight_source 명령어에 -j 옵션이 포함된 경우에만 생성)
-- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Source Code 분석 결과
 
 ## 🐳 Docker를 이용하여 설치 및 실행 방법
 1. Dockerfile을 이용하여 이미지 빌드
