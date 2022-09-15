@@ -285,15 +285,13 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
 ```
 $ tree
 .
-├── FOSSLight-Report_2021-05-03_00-39-49_SRC.csv
-├── FOSSLight-Report_2021-05-03_00-39-49.xlsx
-├── fosslight_dependency_log_2021-05-03_00-39-49.txt
-└── Opossum_input_2021-05-03_00-39-49.json
+├── fosslight_report_210503_0039.xlsx
+├── fosslight_dep_log_210503_0039.txt
+└── fosslight_opossum_210503_0039.json
 ```
-- FOSSLight-Report_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
-- FOSSLight-Report_[datetime]_[sheet_name].csv : FOSSLight Report를 csv로 출력한 결과
-- fosslight_dependency_log_[datetime].txt: 실행 로그가 저장된 파일
-- Opossum_input_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과
+- fosslight_report_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
+- fosslight_dep_log_[datetime].txt: 실행 로그가 저장된 파일
+- fosslight_opossum_2[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과 (-f opossum 결과)
 
 ### 결과 파일 내용
 FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모든 분석된 dependency들의 manifest 파일을 기반으로 OSS 정보가 기록됩니다.
