@@ -1,4 +1,9 @@
-# Self-Check 생성하기
+---
+published: true
+title: Self-Check
+---
+
+# Self-Check Tutorial
 ```note
 Self-Check를 생성하고 OSS(Open Source Software)정보를 확인합니다.
 1. Self-Check 생성

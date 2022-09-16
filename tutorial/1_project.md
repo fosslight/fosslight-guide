@@ -1,4 +1,9 @@
-# Project 생성하기
+---
+published: true
+title: Project
+---
+
+# Project Tutorial
 ```note
 Project를 생성하고 OSC(Open Source Compliance) Process를 수행합니다.
 1. Project 생성
