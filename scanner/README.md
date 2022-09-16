@@ -5,84 +5,130 @@ title: 🔎 FOSSLight Scanner
 ---
 # FOSSLight Scanner
 
+<a href="https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/fosslight_scanner" alt="FOSSLight Scanner is released under the Apache-2.0." /></a> <a href="https://pypi.org/project/fosslight-scanner/"><img src="https://img.shields.io/pypi/v/fosslight_scanner" alt="Current python package version." /></a> <img src="https://img.shields.io/pypi/pyversions/fosslight_scanner" />
 
-## Introduction
+FOSSLight Scanner는 로컬 소스코드 또는 입력받은 링크를 통해 소스를 다운로드 받은 후 소스코드, 바이너리 및 디펜던시에 대한 오픈 소스 분석을 수행할 뿐만 아니라 저작권/License 표기 규칙 준수 여부 또한 체크할 수 있습니다.  
+<br />
+이때 오픈 소스 분석과 저작권/License 표기 규칙 확인을 위해 사용하는 툴은 다음과 같습니다.
 
-FOSSLight Scanner는 Open Source Compliance를 위한 분석 과정을 한번에 수행 가능한 툴입니다. 소스코드, 바이너리, 디펜던시에 대한 Open Source 분석을 수행하고, 저작권/License 표기 규칙 준수 여부를 체크할 수 있습니다.
+1. [FOSSLight Prechecker](1_prechecker.md) : 소스 코드 내 저작권 및 License 표기 Rule을 준수하는지 체크합니다. 
+2. [FOSSLight Source Scanner](2_source.md) : 소스 코드를 분석하여 오픈 소스 분석 결과를 생성합니다. 
+3. [FOSSLight Dependency Scanner](3_dependency.md) : Package manager 또는 빌드 시스템을 통해 사용되는 dependency의 오픈 소스 분석 결과를 생성합니다. 
+4. [FOSSLight Binary Scanner](4_binary.md) : Binary를 분석하여 오픈 소스 분석 결과를 생성합니다. 
+<br />
 
-## Features
+**Github Repository** : [https://github.com/fosslight/fosslight_scanner]()  
+**License** : [Apache-2.0](https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE)
 
-<div class="flex-container">
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        Inclusive Scanning
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/dotty/80/000000/check-all.png"/>
-      </div>
-      <div id="feature_content">
-        소스코드, 바이너리<br>그리고 디펜던시 분석까지<br>수행할 수 있습니다.
-      </div>
-    </div>
-  </div>
+## 목차
+- [📋 필요 조건](#-필요-조건)
+- [🎉 설치 방법](#-설치-방법)
+- [🚀 실행 방법](#-실행-방법)
+- [📁 결과](#-결과)
+- [🐳 Docker를 이용하여 설치 및 실행 방법](#-docker를-이용하여-설치-및-실행-방법)
+  
+## 📋 필요 조건
+[**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner)는 Python 3.7+ 기반에서 동작합니다.   
+Jar 파일에 대한 분석을 위해서는 [**Java**](https://openjdk.java.net)를 설치해야 합니다.(Open Source JDK를 설치)
 
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        Integrated One
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/wired/64/000000/workspace-one.png"/>
-      </div>
-      <div id="feature_content">
-        하나로 통합된 패키지로<br>단 한줄의 명령어로<br>실행 가능합니다.
-      </div>
-    </div>
-  </div>
+## 🎉 설치 방법   
+FOSSLight Scanner는 pip3를 이용하여 설치할 수 있습니다.     
+[python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
-  <div class="flex-contents">
-    <div>
-      <div id="feature_title">
-        Independent Module
-      </div>
-      <div id="feature_img">
-        <img src="https://img.icons8.com/dotty/80/000000/module.png"/>
-      </div>
-      <div id="feature_content">
-        스캐너 모듈은 독립적으로,<br>가볍게 사용할 수 있습니다.
-      </div>
-    </div>
-  </div>
-</div>
+```
+$ pip3 install fosslight_scanner
+```
 
-## Scanner Projects
+## 🚀 실행 방법
+### Mode별 실행 방법 및 Parameters
+```
+$ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
+```
+```
+ Parameters:
+    Mode
+        source                  Run FOSSLight Source
+        dependency              Run FOSSLight Dependency
+        binary                  Run FOSSLight Binary
+        prechecker              Run FOSSLight Prechecker
+        all                     Run all scanners
+        compare                 Compare two FOSSLight reports
+ 
+    Options:
+        -h                      Print help message
+        -p <path>               Path to analyze (ex, -p {input_path})
+                                 * Compare mode input file: Two FOSSLight reports (supports excel, yaml)
+                                   (ex, -p {before_name}.xlsx {after_name}.xlsx)
+        -w <link>               Link to be analyzed can be downloaded by wget or git clone
+        -f <format>             FOSSLight Report file format (excel, yaml)
+                                 * Compare mode result file: supports excel, json, yaml, html
+        -o <output>             Output directory or file
+        -c <number>             Number of processes to analyze source
+        -r                      Keep raw data
+        -t                      Hide the progress bar
+        -v                      Print FOSSLight Scanner version
+ 
+    Options for only 'all' or 'bin' mode
+        -u <db_url>             DB Connection(format :'postgresql://username:password@host:port/database_name')
+ 
+    Options for only 'all' or 'dependency' mode
+        -d <dependency_argument>        Additional arguments for running dependency analysis
+```
+- -d 옵션은 FOSSLight Dependency 실행시 argument 입력이 필요한 경우만 입력합니다. : https://fosslight.org/fosslight-guide-en/scanner/3_dependency.html
 
-#### 1. [**FOSSLight Reuse**](1_reuse.md)
-- FOSSLight Reuse는 reuse-tool을 이용하여 소스 코드의 저작권 및 License 표기 규칙을 준수하는지 확인하고 보완하기 위해 사용할 수 있는 도구입니다.
-- Reuse 준수 여부 체크시 **[reuse-tool](https://github.com/fsfe/reuse-tool)** 오픈 소스를 이용합니다.
+#### Ex.1 Local의 Path를 분석하는 방법
+```
+fosslight all -p /home/source_path
+```
 
-#### 2. [**FOSSLight Source Scanner**](2_source.md)
-- FOSSLight Source Scanner는 소스 코드 스캐너인 ScanCode를 이용하여, 파일 안에 포함된 Copyright과 License 문구를 검출합니다. 
-- 소스코드 스캔 작업을 위해 **[scancode-toolkit](https://github.com/nexB/scancode-toolkit)** 및 **[scanoss.py](https://github.com/scanoss/scanoss.py)** 오픈 소스를 이용합니다.
+#### Ex.2 링크를 다운로드 받고 분석하는 방법
+```
+fosslight all -o test_result_wget -w "https://github.com/LGE-OSS/example.git"
+```
 
-#### 3. [**FOSSLight Dependency Scanner**](3_dependency.md)
-- FOSSLight Dependency Scanner는 여러 패키지 매니저에 대한 Dependency 분석을 지원하는 도구로써, 사용된 Dependency들의 License를 포함한 OSS 정보를 자동으로 출력합니다.
-- Package manager에 따라 다음 오픈소스를 이용하여 디펜던시 분석을 수행합니다.
-  - NPM : **[NPM License Checker](https://github.com/davglass/license-checker)**
-  - Pypi : **[pip-licenses](https://github.com/raimon49/pip-licenses)**
-  - Gradle : **[License Gradle Plugin](https://github.com/hierynomus/license-gradle-plugin)**
-  - Maven : **[license-maven-plugin](https://github.com/mojohaus/license-maven-plugin)**
-  - Pub : **[flutter_oss_licenses](https://github.com/espresso3389/flutter_oss_licenses)**
+#### Ex.3 FOSSLight Report BOM 결과 비교하여 변경/추가/삭제 내역 확인하는 방법
+```
+fosslight compare -p FOSSLight_before_proj.yaml FOSSLight_after_proj.yaml -o test_result
+```
 
-#### 4. [**FOSSLight Binary Scanner**](4_binary.md)
-- FOSSLight Binary Scanner는 Binary를 찾아 출력하고 Binary DB에 동일하거나 비슷한 Binary가 있으면 해당 OSS 정보를 출력합니다.
-- jar 파일에 대한 오픈 소스 분석 시, **[Dependency-check-py](https://github.com/jhermann/dependency-check-py)** 오픈 소스를 이용합니다.
+## 📁 결과
+### 오픈소스 분석 모드 결과 (all, source, dependency, binary)
+```
+test_result/
+├── fosslight_binary_220214_1824.txt
+├── fosslight_log
+│   └── fosslight_log_220214_1824.txt
+├── fosslight_lint_220214_1824.yaml
+├── fosslight_report_220214_1824.xlsx
+└── fosslight_raw_data
+    ├── fosslight_src_220214_1824.xlsx
+    ├── fosslight_bin_220214_1824.xlsx
+    └── fosslight_dep_220214_1824.xlsx
+```
+- fosslight_lint_(datetime).yaml : FOSSLight Prechecker의 lint 모드 실행 결과 생성되는 yaml 파일
+- fosslight_binary_(datetime).txt : FOSSLight Binary결과 binary 별 checksum, tlsh 값이 추출된 파일
+- fosslight_report_(datetime).xlsx : Source code 분석, Binary 분석, Dependency 분석 결과가 작성된 FOSSLight Report 형식의 파일
+- fosslight_raw_data directory: 분석 결과 Raw Data 파일이 생성되는 폴더 (-r option 있는 경우)
+  - fosslight_src_(datetime).xlsx : Source code 분석 결과 파일
+  - fosslight_dep_(datetime).xlsx : Dependency 분석 결과 파일
+  - fosslight_bin_(datetime).xlsx : Binary 분석 결과 파일
 
-#### 5. [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner)
-- FOSSLight Scanner는 로컬 소스코드 또는 소스를 다운로드 받은 후 오픈 소스 분석을 수행합니다.
-- 오픈 소스 분석 수행 시, FOSSLight Source Scanner, FOSSLight Dependency Scanner, FOSSLight Binary Scanner를 이용합니다.
+### compare 모드 결과
+```
+test_result/
+├── fosslight_log
+│   └── fosslight_log_20220817_114259.txt
+└── fosslight_compare_20220817_114259.xlsx
+```
+- fosslight_compare_(datetime).xlsx : 두 개의 BOM 비교 결과가 (add/delete/change) 테이블 양식으로 작성된 파일
 
-
-      
-<div class="right"><a href="https://icons8.com/icon">&lt;Icons by Icons8&gt;</a></div>
+## 🐳 Docker를 이용하여 설치 및 실행 방법
+1. Dockerfile을 이용하여 이미지 빌드
+```
+$docker build -t fosslight .
+```
+2. 빌드한 이미지로 실행합니다.     
+ex. Output 경로 : /Users/fosslight_scanner/test_output, 분석 경로 : tests/test_files
+```
+$docker run -it -v /Users/fosslight_scanner/test_output:/app/output fosslight -p tests/test_files -o output
+```
