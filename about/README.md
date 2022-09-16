@@ -20,8 +20,8 @@ FOSSLight Hub에 대한 가이드 목차입니다.
   - [System](../started/2_try/9_system.md)
 
 ## FOSSLight Hub 기본 Tutorial
-- [Project Tutorial](../tutorial/1_project.md)
-- [Self-check Tutorial](../tutorial/2_self_check.md)
+- [Project Tutorial](../tutorial/1_project.md) : Project를 등록하여 OSC Process를 순차적으로 수행하기
+- [Self-check Tutorial](../tutorial/2_self_check.md) : Self-check로 Open Source 정보 간단히 확인하기
 
 ## FOSSLight Hub 고급 기능
 - [개발 환경 세팅](../features/1_developer.md)
