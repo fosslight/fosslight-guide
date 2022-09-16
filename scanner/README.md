@@ -74,7 +74,7 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
     Options for only 'all' or 'dependency' mode
         -d <dependency_argument>        Additional arguments for running dependency analysis
 ```
-- -d 옵션은 FOSSLight Dependency 실행시 argument 입력이 필요한 경우만 입력합니다. : https://fosslight.org/fosslight-guide-en/scanner/3_dependency.html
+- -d 옵션은 FOSSLight Dependency 실행시 argument 입력이 필요한 경우만 입력합니다.[참고](3_dependency.md)
 
 #### Ex.1 Local의 Path를 분석하는 방법
 ```
