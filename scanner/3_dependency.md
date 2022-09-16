@@ -290,7 +290,7 @@ $ tree
 └── fosslight_opossum_210503_0039.json
 ```
 - fosslight_report_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
-- fosslight_dep_log_[datetime].txt: 실행 로그가 저장된 파일
+- fosslight_log_[datetime].txt: 실행 로그가 저장된 파일
 - fosslight_opossum_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과 (-f opossum 결과)
 
 ### 결과 파일 내용
