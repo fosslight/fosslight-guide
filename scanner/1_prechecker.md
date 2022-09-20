@@ -9,7 +9,7 @@ title: FOSSLight Prechecker
 [**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 [reuse-tool][ret]을 이용하여 [소스 코드의 저작권 및 License 표기 규칙][rule]을 준수하는지 확인하고 보완하기 위해 사용할 수 있는 도구입니다.
 
 [ret]: https://github.com/fsfe/reuse-tool
-[rule]: https://oss.lge.com/guide/process/osc_process/1-identification/copyright_license_rule.html
+[rule]: https://opensource.lge.com/guide/19    
 
 **Github Repository** : [https://github.com/fosslight/fosslight_prechecker](https://github.com/fosslight/fosslight_prechecker)     
 **License** : [GPL-3.0-only](https://github.com/fosslight/fosslight_prechecker/blob/main/LICENSE)
@@ -26,7 +26,7 @@ title: FOSSLight Prechecker
 
 ## 🎉 설치 방법
 FOSSLight Prechecker는 pip3를 이용하여 설치할 수 있습니다.
-[python 3.7 + virtualenv](https://fosslight.org/fosslight-guide-en/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
+[python 3.7 + virtualenv](https://fosslight.org/fosslight-guide/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
 ```
 $ pip3 install fosslight_prechecker
 ```
