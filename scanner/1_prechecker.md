@@ -26,7 +26,7 @@ title: FOSSLight Prechecker
 
 ## 🎉 설치 방법
 FOSSLight Prechecker는 pip3를 이용하여 설치할 수 있습니다.
-[python 3.7 + virtualenv](https://fosslight.org/fosslight-guide/scanner/etc/guide_virtualenv.html) 환경에서 설치할 것을 권장합니다.
+[python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 ```
 $ pip3 install fosslight_prechecker
 ```
