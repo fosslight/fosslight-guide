@@ -9,7 +9,7 @@ OSS Information (OSS Name, OSS Version, License)를 DB로부터 출력하기 위
 1. [PostgreSQL][PostgreSQL]를 설치합니다.
 2. 원격으로 접속하기 위해 configuration file을 수정하는 방법 : [reference link][ref_link]
 
-[PostgreSQL]: https://github.com/fosslight/fosslight_binary/blob/main/LICENSE
+[PostgreSQL]: https://www.postgresql.org/download/    
 [ref_link]: https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html
 
 

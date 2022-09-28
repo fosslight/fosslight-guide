@@ -8,7 +8,7 @@ published: true
 [**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Binary를 찾아 출력하고 Binary DB에 동일하거나 비슷한 Binary가 있으면 해당 OSS 정보를 출력합니다.    
 jar 파일에 대한 오픈 소스 분석 시, 오픈 소스인 [**Dependency-check-py**](https://github.com/jhermann/dependency-check-py)를 이용합니다.   
    
-**Github Repository** : [https://github.com/fosslight/fosslight_binary_scanner]()  
+**Github Repository** : [https://github.com/fosslight/fosslight_binary_scanner](https://github.com/fosslight/fosslight_binary_scanner)  
 **License** : [Apache-2.0](https://github.com/fosslight/fosslight_binary_scanner/blob/main/LICENSE)
 
 ## 목차
@@ -27,10 +27,13 @@ Jar 파일에 대한 분석을 위해서는 [**Java**](https://openjdk.java.net)
 
 ## 🎉 설치 방법    
 ### 방법 1. 실행 파일 다운로드
-OS(Operating System)에 맞는 실행 파일을 다운로드 받습니다. : [https://github.com/fosslight/fosslight_binary_scanner/releases]()    
+OS(Operating System)에 맞는 실행 파일을 다운로드 받습니다.    
+    - [FOSSLight Binary Scanner - Release](https://github.com/fosslight/fosslight_binary_scanner/releases)    
+
 단, 지원하지 않는 OS인 경우 '방법 2'로 설치합니다.
 
 ### 방법 2. Python 환경 기반 fosslight_binary 설치
+0. (windows의 경우) https://visualstudio.microsoft.com/ko/vs/older-downloads/ > 재배포 가능 패키지 및 빌드 도구에서 Microsoft Build Tools 설치
 1. [python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
 2. Python package인 fosslight_binary 설치
 ```
