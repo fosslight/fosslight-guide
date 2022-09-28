@@ -1,5 +1,5 @@
 base_url: /fosslight-guide
-title: FOSSLight
+title: FOSSLight Guide
 lang: ko
 description: FOSSLight Korean Guide
 
@@ -7,6 +7,9 @@ remote_theme: fosslight/guide_theme
 
 top_link: "https://fosslight.github.io/fosslight-guide-en"
 top_link_word: "English"
+
+addons_title: "FOSSLight Homepage"
+addons_url: "https://fosslight.org"
 
 google:
   gtag: UA-196813776-3

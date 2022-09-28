@@ -1,7 +1,7 @@
 ---
 sort: 1
 published: true
-title: 🔎 FOSSLight Hub
+title: 🚩FOSSLight Hub
 ---
 # Contents
 FOSSLight Hub에 대한 가이드 목차입니다.
