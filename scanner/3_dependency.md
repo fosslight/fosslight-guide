@@ -20,6 +20,7 @@ title: FOSSLight Dependency Scanner
 - [Swift](https://swift.org/package-manager/) (Swift)
 - [Carthage](https://github.com/Carthage/Carthage) (Carthage)
 - [Go](https://pkg.go.dev/) (Go)
+- [Nuget](https://www.nuget.org/) (.NET)
 </details>
 {::options parse_block_html="false" /}
 
@@ -213,6 +214,12 @@ Go의 경우, go module에 한해 dependency 분석을 지원합니다. FOSSLigh
 ```
 </details>
 
+<details>
+<summary markdown="span">**Prerequisite for Nuget**</summary>
+```tip
+FOSSLight Dependency Scanner 내부에서 packages.config 파일 또는 PackageReference형태로 이용하는 경우 obj/project.assets.json 파일을 통해 패키지 목록을 확인하고, nuget api를 통해 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
+```
+</details>
 {::options parse_block_html="false" /}
 
 ## 🎉 설치 방법
@@ -238,7 +245,7 @@ $ fosslight_dependency [option] <arg>
             -h                              Print help message.
             -v                              Print the version of the fosslight_dependency.
             -m <package_manager>            Enter the package manager.
-                                             (npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage, go)
+                                             (npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage, go, nuget)
             -p <input_path>                 Enter the path where the script will be run.
             -o <output_path>                Output path
                                              (If you want to generate the specific file name, add the output path with file name.)
@@ -267,7 +274,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
 각 패키지 매니저별 manifest 파일은 다음과 같습니다.
 ```
   - Npm : package.json
-  - Pypi : requirements.txt
+  - Pypi : requirements.txt / setup.py
   - Maven : pom.xml
   - Gradle (Android) : build.gradle
   - Pub : pubspec.yaml
@@ -275,6 +282,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - Swift : Package.resolved
   - Carthage : Cartfile.resolved
   - Go : go.mod
+  - Nuget : packages.config / {project name}.csproj
 ```
 
 - Swift package manager
@@ -307,6 +315,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Swift                      | swift:(oss name)     | repositoryURL in Package.resolved                                                                   | repositoryURL in Package.resolved                            |
 | Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
 | Go                      | go:(oss name)     | pkg.go.dev/(oss name)@(oss version)                                                                   | repository in pkg.go.dev/(oss name)@(oss version)                        |
+| Nuget                      | nuget:(oss name)     | 우선순위1. repository in nuget.org/packages/(oss name)/(oss version) <br> 우선순위2. projectUrl in nuget.org/packages/(oss name)/(oss version) <br> 우선순위3. nuget.org/packages/(oss name)/(oss version)  | nuget.org/packages/(oss name)/(oss version) |
 
 ```warning
 Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
