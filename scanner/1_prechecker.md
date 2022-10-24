@@ -48,16 +48,18 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
 
 ```
 Mode
-    lint                  저작권 및 License 표기 규칙 준수 확인
+    lint                  (Default) 저작권 및 License 표기 규칙 준수 확인
     convert               sbom-info.yaml or oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
     add                   소스 코드에 Copyright와 License 추가
  
 Options:
     -h                    설명 메시지 출력
+    -v                    FOSSLight Prechecker 버전 출력
     -p <path>             체크할 소스 경로
     -f <format>           결과 파일 포맷 (yaml, xml, html)
     -o <file_name>        결과 파일 이름 지정
     -n                    venv, node_modules, ./ 에 대하여 분석 제외하지 않으려면 추가
+    -i                    log 파일 미생성 및 Progress bar 제거
  
 Options for only 'add' mode
     -l <license>          추가할 라이선스 (SPDX License Identifer)
