@@ -69,9 +69,9 @@ Options for only 'add' mode
 **(Windows인 경우)** 실행 파일을 이용한 방법  
     1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
     2. 두 가지 실행 방법    
-        a. 실행 파일을 원하는 path로 이동 후 더블 클릭하여 실행   
+        1. 실행 파일을 원하는 path로 이동 후 더블 클릭하여 실행   
           - Default 모드인 Lint mode만 실행    
-        b. command로 실행    
+        2. command로 실행    
           - 'cmd' 실행   
           - 파일이 위치한 Path에서 'Mode별 실행 방법 및 Parameters'와 같이 실행    
             - ex) fosslight_prechecker lint -p src/   
