@@ -65,14 +65,13 @@ $ npm install
 1. 'build.gradle' 파일에 License Gradle Plugin을 추가합니다.
 ```
 plugins {
-    id 'com.github.hierynomus.license' version '0.15.0'
+    id 'com.github.hierynomus.license' version '0.16.1' // gradle 버전이 6.x 이하인 경우에는 version '0.15.0'을 이용해야 합니다.
 }
 downloadLicenses {
     includeProjectDependencies = true
-    dependencyConfiguration = 'runtimeClasspath'
+    dependencyConfiguration = 'runtimeClasspath' // gradle 버전이 4.6 이하인 경우에는 'runtimeClasspath' 대신 'runtime'으로 추가합니다.
 }
 ```
- > 사용하는 gradle 버전이 4.6 또는 더 낮은 버전인 경우에는, dependencyConfiguration에 'runtimeClasspath' 대신 'runtime'을 추가합니다.
 
 2. 'downloadLicenses' task를 실행합니다.
 ```
