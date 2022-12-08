@@ -48,16 +48,18 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
 
 ```
 Mode
-    lint                  저작권 및 License 표기 규칙 준수 확인
+    lint                  (Default) 저작권 및 License 표기 규칙 준수 확인
     convert               sbom-info.yaml or oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
     add                   소스 코드에 Copyright와 License 추가
  
 Options:
     -h                    설명 메시지 출력
+    -v                    FOSSLight Prechecker 버전 출력
     -p <path>             체크할 소스 경로
     -f <format>           결과 파일 포맷 (yaml, xml, html)
     -o <file_name>        결과 파일 이름 지정
     -n                    venv, node_modules, ./ 에 대하여 분석 제외하지 않으려면 추가
+    -i                    log 파일 미생성 및 Progress bar 제거
  
 Options for only 'add' mode
     -l <license>          추가할 라이선스 (SPDX License Identifer)
@@ -65,9 +67,14 @@ Options for only 'add' mode
 ```
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
-    1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
-    2. [sbom-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml) 파일이 위치한 Path에 다운로드 받은 파일을 이동  
-    3. 파일을 더블 클릭하여 실행  
+1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
+2. 두 가지 실행 방법        
+2-1. 실행 파일을 원하는 path로 이동 후 더블 클릭하여 실행   
+    * Default 모드인 Lint mode만 실행    
+2-2. command로 실행    
+    * 'cmd' 실행   
+    * 파일이 위치한 Path에서 'Mode별 실행 방법 및 Parameters'와 같이 실행    
+        * ex) fosslight_prechecker lint -p src/      
     
     
 ## 📁 결과
@@ -150,7 +157,8 @@ $ fosslight_prechecker convert -p tests/
 {::options parse_block_html="true" /}
 > <details>
 > <summary markdown="span">oss-pkg-info.yaml 파일</summary>
-```yaml    
+> yaml 파일 내 경로 작성 시, 특수 문자({, }, [, ], &, *, #, ?, |, -, <, >, =, !, %, @)로 시작하는 경우 쌍따옴표("")를 사용하여 작성해주시기 바랍니다.
+  ```yaml    
     glibc:
     - version: '2.3'
       source name or path:
@@ -264,6 +272,11 @@ $ fosslight_prechecker convert -p tests/
     <li>build.gradle</li>
     <li>Podfile.lock</li>
     <li>Cartfile.resolved</li>
+    <li>pubspec.yaml</li>
+    <li>Package.resolved</li>
+    <li>go.mod</li>
+    <li>packages.config</li>
+    <li>package.assets.json</li>
     <li>oss-package.info </li>
     <li>"MODULE_LICENSE_ "로 시작하는 파일</li>
     </ul>
