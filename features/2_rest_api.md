@@ -64,3 +64,58 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 | ------------- | ------------- | ------------- |
 |/api/v1/code_search|	JSON	|Project, 3rd Party 조회, Project 생성시 사용할 하기 Parameter의 값 List를 조회합니다. |
 
+## REST API 활용 Sample
+prj_search 를 이용하여 user과 admin 계정의 Project 정보를 조회하는 예제
+```python
+# SPDX-FileCopyrightText: Copyright 2023 LG Electronics Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+import csv
+import requests
+from datetime import datetime
+from collections import OrderedDict
+
+header_list = ['prjId', 'prjName', 'prjVersion', 'createDate', 'updateDate', 'identificationStatus', 'verificationStatus', 'distributionStatus', 'status', 'vulnerabilityScore', 'distributionType', 'notice', 'networkService', 'priority', 'noticePlatform']
+
+def get_data(period, user):
+    url = "https://demo.fosslight.org/api/v1/prj_search"
+
+    querystring = {"createDate":period,"creator":user}
+
+    payload = ""
+    headers = {"_token": "abCDe...."}
+
+    response = requests.request("GET", url, data=payload, headers=headers, params=querystring, verify=False)
+
+    # print(response.text)
+    data = response.json()['data']
+
+    content_list = data['content']
+
+    data_list = []
+    for content in content_list:
+        data = OrderedDict() 
+        for header in header_list:
+            if header in content.keys():
+                data[header] = content[header]
+            else:
+                data[header] = ''
+        data_list.append(data)
+
+    return data_list
+
+if __name__ == "__main__":
+    current_year = datetime.now().year
+    
+    content_list = []
+    content_list.extend(get_data('20220101-{0}1231'.format(current_year), "user"))
+    content_list.extend(get_data('20220101-{0}1231'.format(current_year), "admin"))
+
+    content_list.sort(key=lambda x:x['prjId'],reverse=True)
+    with open('api_data.csv','w',encoding='utf-8',newline='') as f:
+        wr = csv.writer(f)
+        wr.writerow(header_list)
+        for content in content_list:
+            wr.writerow(list(content.values()))
+
+```
