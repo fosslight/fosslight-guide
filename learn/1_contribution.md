@@ -60,4 +60,4 @@ git commit -s -m "Write the commit message"
 - [GitHub Help](https://help.github.com)
 
 ### FOSSLight Guide의 License
-[FOSSLight Guide 페이지](https://fosslight.org/fosslight-guide)에 작성된 모든 콘텐츠는 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0) License하에 이용하실 수 있습니다.
+별도로 표기된 것이 없다면 [FOSSLight Guide 페이지](https://fosslight.org/fosslight-guide)에 작성된 콘텐츠는 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0), Sample Code는 [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) License하에 이용하실 수 있습니다.
