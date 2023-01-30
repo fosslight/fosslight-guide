@@ -141,30 +141,30 @@ Options for only 'add' mode
             fosslight_prechecker version: fosslight_prechecker v2.2.0  </pre>
 
 <details>
-<summary markdown="span">결과 출력 항목</summary>
-포맷에 따라 결과로 출력되는 항목이 다를 수 있습니다.(Default 포맷 : yaml)
+	<summary markdown="span">결과 출력 항목</summary>
+	포맷에 따라 결과로 출력되는 항목이 다를 수 있습니다.(Default 포맷 : yaml)
 
- - **Compliant**: lint 결과가 Compliant한지 여부 (OK or Not OK)
- - **Files without copyright**: Copyright가 없는 파일 리스트
- - **Files without license**: License가 없는 파일 리스트
- - **Files without license and copyright**: Copyright와 License 모두 없는 파일 리스트
- - **Summary**
-	 - **Detected Licenses**: 검출된 License
-	 - **Files without copyright / total:** Copyright 없는 파일 수 / 전체 파일 수
-		 - 파일 개수에는 다음 항목들이 제외됩니다.
-			 - 파일 내 Code가 전혀 없는 파일
-			 - .gitignore에 정의된 파일
-			 - git repo 기준 untracked 파일
-			 - FOSSLight의 산출물
-			 - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path
-	 - **Files without license / total**: License 없는 파일 수 / 전체 파일 수
-	 - **Files without copyright / total**: Copyright 없는 파일 수 / 전체 파일 수
-	 - **Open Source Package File**: sbom-info*.yaml 또는 oss-pkg-info*.yaml 파일 리스트
-	 - **Tool Info**
-		 - **Analysis path**: 분석 진행한 path
-		 - **OS**: FOSSLight Prechecker가 실행된 OS 버전
-		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
-		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
+	 - **Compliant**: lint 결과가 Compliant한지 여부 (OK or Not OK)
+	 - **Files without copyright**: Copyright가 없는 파일 리스트
+	 - **Files without license**: License가 없는 파일 리스트
+	 - **Files without license and copyright**: Copyright와 License 모두 없는 파일 리스트
+	 - **Summary**
+		 - **Detected Licenses**: 검출된 License
+		 - **Files without copyright / total:** Copyright 없는 파일 수 / 전체 파일 수
+			 - 파일 개수에는 다음 항목들이 제외됩니다.
+				 - 파일 내 Code가 전혀 없는 파일
+				 - .gitignore에 정의된 파일
+				 - git repo 기준 untracked 파일
+				 - FOSSLight의 산출물
+				 - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path
+		 - **Files without license / total**: License 없는 파일 수 / 전체 파일 수
+		 - **Files without copyright / total**: Copyright 없는 파일 수 / 전체 파일 수
+		 - **Open Source Package File**: sbom-info*.yaml 또는 oss-pkg-info*.yaml 파일 리스트
+		 - **Tool Info**
+			 - **Analysis path**: 분석 진행한 path
+			 - **OS**: FOSSLight Prechecker가 실행된 OS 버전
+			 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
+			 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
 </details>
 
 <details>
