@@ -22,7 +22,6 @@ Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일은 제
     - [1. fosslight_source](#1-fosslight_source)
     - [2. fosslight_convert](#2-fosslight_convert)
   - [결과](#-결과)
-  - [Docker를 이용한 설치](#-docker를-이용하여-설치-및-실행-방법)
 
 ## 📋 필요 조건
 [**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.7+ 기반에서 동작합니다.     
@@ -46,15 +45,17 @@ $ fosslight_source [option] <arg>
 #### Options
 ```
   Optional
-    -p <source_path>               Path to analyze source (Default: current directory)
-    -h                             Print help message
-    -j                             Generate raw result of scanners in json format
-    -m                             Print additional information for scan result on separate sheets
-    -o <output_path>               Output path
-                                   (If you want to generate the specific file name, add the output path with file name.)
-    -f <format>                    Output file format (excel, csv, opossum)
-    -s <scanner>                   Select which scanner to be run (scancode, scanoss, all)
-
+      -p <source_path>       Path to analyze source (Default: current directory)
+      -h                     Print help message
+      -v                     Print FOSSLight Source Scanner version
+      -m                     Print additional information for scan result on separate sheets
+      -o <output_path>       Output path (Path or file name)
+      -f <format>            Output file format (excel, csv, opossum, yaml)
+  Options only for FOSSLight Source Scanner
+      -s <scanner>           Select which scanner to be run (scancode, scanoss, all)
+      -j                     Generate raw result of scanners in json format
+      -t <float>             Stop scancode scanning if scanning takes longer than a timeout in seconds.
+      -c <core>              Select the number of cores to be scanned with ScanCode.
 ```
 -s 옵션이 추가되지 않을 경우 모든 Scanner (ScanCode, SCANOSS)가 동작한 결과가 취합됩니다.
 
