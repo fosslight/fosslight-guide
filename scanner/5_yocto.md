@@ -125,9 +125,7 @@ fosslight_doubleopen 명령어를 실행합니다.
 $ source venv/bin/activate
 (.venv) $  fosslight_doubleopen -f core-image-minimal.spdx.json
 ```
-|Option|Arguemnt|Description|
-|------|---|---|
-|f|[image].spdx.json|meta-doubleopen 실행 결과 생성되는 spdx.json 파일|
+- Option f {[image].spdx.json} : meta-doubleopen 실행 결과 생성되는 spdx.json 파일
 
 ## 📁 결과
 
