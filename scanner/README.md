@@ -15,7 +15,9 @@ FOSSLight Scanner는 로컬 소스코드 또는 입력받은 링크를 통해 �
 2. [FOSSLight Source Scanner](2_source.md) : 소스 코드를 분석하여 오픈 소스 분석 결과를 생성합니다. 
 3. [FOSSLight Dependency Scanner](3_dependency.md) : Package manager 또는 빌드 시스템을 통해 사용되는 dependency의 오픈 소스 분석 결과를 생성합니다. 
 4. [FOSSLight Binary Scanner](4_binary.md) : Binary를 분석하여 오픈 소스 분석 결과를 생성합니다. 
+5. [FOSSLight Yocto Scanner](5_yocto.md) : Yocto Project에 대한 오픈 소스 분석 결과를 생성합니다. (별도 실행 필요)
 <br />
+
 
 **Github Repository** : [https://github.com/fosslight/fosslight_scanner](https://github.com/fosslight/fosslight_scanner)  
 **License** : [Apache-2.0](https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE)
