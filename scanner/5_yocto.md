@@ -37,14 +37,16 @@ OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 �
 
 ## 🚀 실행 방법
 ### 방법 1. bom.bbclass를 이용하는 방법
+
 ---
 [bom.bbclass](https://github.com/fosslight/fosslight_yocto_scanner/blob/main/files_for_preparation/bom.bbclass) 를 이용하여 추출한 결과를 FOSSLight Yocto를 이용하여 OSS Report형태로 변환합니다. 
 - Sheet 별 출력 사항:
     - SRC Sheet : Installed package 목록을 추출하고 OSS 정보를 출력합니다.
     - BIN Sheet : rootfs image를 압축 해제한 폴더에서 binary를 추출한 후 binary별 OSS 정보를 출력합니다. 
----
-#### 준비 사항
 
+---
+
+#### 준비 사항
 1. build directory (ex-poky/build)로 이동한 후, conf/local.conf에 buildhistory와 bom을 inherit시킵니다.
     ```
     $ cd poky/build
@@ -109,7 +111,9 @@ $ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistor
     - SRC_distributed: rootfs 이미지에 포함되는 Package
     - SRC_recipe: build에 포함되는 Recipe
     - SRC_not_distributed: rootfs 이미지에 포함되지 않는 Package
+
 - Package별 OSS 정보 출력 방법 : Recipe에 정의된 OSS 정보(OSS Name, OSS Version, LICENSE, Download Location, Homepage)를 출력합니다. 이 때, OSS Name은 Recipe name으로 출력합니다.
+
 ---
 
 #### 준비 사항
