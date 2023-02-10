@@ -56,7 +56,7 @@ OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 �
     
     INHERIT += "bom"
     ```
-2. 최상위 directory 아래 meta/classes 디렉토리에 bom.bbclass 파일을 다운로드합니다.
+2. 최상위 directory 아래 meta/classes 디렉토리에 [bom.bbclass](https://github.com/fosslight/fosslight_yocto_scanner/blob/main/files_for_preparation/bom.bbclass) 파일을 다운로드합니다.
     - meta/classes 가 없는 경우 build에 포함되는 meta layer의 classes폴더에 bom.bbclass를 다운로드합니다.
         ```
         poky/meta/classes$ wget -O bom.bbclass "https://github.com/fosslight/fosslight_yocto_scanner/raw/main/files_for_preparation/bom.bbclass"
