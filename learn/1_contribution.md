@@ -5,8 +5,10 @@
 - [FOSSLight Hub](https://github.com/fosslight/fosslight/issues)
 - [FOSSLight Dependency Scanner](https://github.com/fosslight/fosslight_dependency_scanner/issues)
 - [FOSSLight Source Scanner](https://github.com/fosslight/fosslight_source_scanner/issues)
-- [FOSSLight Reuse](https://github.com/fosslight/fosslight_reuse/issues)
-- [FOSSLight Guide](https://github.com/fosslight/fosslight-guide/issues)
+- [FOSSLight Binary Scanner]([https://github.com/fosslight/fosslight_dependency_scanner/issues)
+- [FOSSLight Yocto Scanner](https://github.com/fosslight/fosslight_yocto_scanner/issues)
+- [FOSSLight Prechecker](https://github.com/fosslight/fosslight_prechecker/issues)
+- [FOSSLight Guide](https://github.com/fosslight/fosslight-guide-en/issues)
 
 ## Contributing
 
