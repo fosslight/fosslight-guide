@@ -5,7 +5,7 @@ published: true
 
 <img src="https://img.shields.io/pypi/l/fosslight_yocto" alt="FOSSLight Yocto is released under the Apache-2.0." /> <img src="https://img.shields.io/pypi/v/fosslight_yocto" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_yocto" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_yocto_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_yocto_scanner)
 
-[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Yocto Project에 기반하여 build 시, rootfs 이미지에 포함되는 Package에 대한 OSS 정보를 OSS Report형식으로 출력해주는 Python Script입니다.
+[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Yocto Project에 기반하여 build 시, rootfs 이미지에 포함되는 Package에 대한 OSS 정보를 FOSS Report형식으로 출력해주는 Python Script입니다.
 
 - Package별 OSS 정보 출력 방법 : Recipe에 정의된 OSS 정보(OSS Name, OSS Version, LICENSE, Download Location)를 출력합니다.
 이 때, OSS Name은 Recipe name으로 출력합니다.
@@ -106,7 +106,7 @@ $ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistor
 
 ### 방법 2. meta-doubleopen을 이용하는 방법
 ---
-[meta-doubleopen](http://collab.lge.com/main/display/FOSS/%5Bopenembedded-core%5D+meta-doubleopen)를 이용하여 spdx.json으로 추출하고 FOSSLight Yocto를 이용하여 OSS Report형식으로 변환합니다.
+[meta-doubleopen](https://github.com/doubleopen-project/meta-doubleopen)를 이용하여 spdx.json으로 추출하고 FOSSLight Yocto를 이용하여 FOSS Report 형식으로 변환합니다.
 - Sheet 별 출력 사항:
     - SRC_distributed: rootfs 이미지에 포함되는 Package
     - SRC_recipe: build에 포함되는 Recipe
@@ -117,7 +117,7 @@ $ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistor
 ---
 
 #### 준비 사항
-[meta-doubleopen](http://collab.lge.com/main/display/FOSS/%5Bopenembedded-core%5D+meta-doubleopen)을 이용하여 이미지에 대한 spdx.json 파일을 생성합니다.
+[meta-doubleopen](https://github.com/doubleopen-project/meta-doubleopen)을 이용하여 이미지에 대한 spdx.json 파일을 생성합니다.
 
 #### 실행
 fosslight_doubleopen 명령어를 실행합니다.
