@@ -3,7 +3,7 @@ published: true
 ---
 # FOSSLight Android Scanner
 
-<img src="https://img.shields.io/pypi/l/fosslight_android" alt="FOSSLight Android is released under the Apache-2.0." /> <img src="https://img.shields.io/pypi/v/fosslight_yocto" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_yocto" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_yocto_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_yocto_scanner)
+<img src="https://img.shields.io/pypi/l/fosslight_android" alt="FOSSLight Android is released under the Apache-2.0." /> <img src="https://img.shields.io/pypi/v/fosslight_yocto" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_yocto" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_android_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_android_scanner)
 
 [**FOSSLight Android Scanner**](https://github.com/fosslight/fosslight_android_scanner)는 Android 모델에 탑재되는 Binary를 모두 나열하여 각 Binary별로 Open Source가 사용되었는지 확인하고, 고지해야 할 사항이 OSS 고지문(ex. NOTICE.html)에 적절하게 포함되었는지 확인하기 위해 수행합니다.
 
@@ -48,7 +48,9 @@ Android 7.0 이전 version의 모델일 경우, 먼저 module-info.mk 파일을 
 $ wget https://raw.githubusercontent.com/aosp-mirror/platform_build/android-cts-7.0_r33/core/tasks/module-info.mk
 $ mv ./module-info.mk ./build/core/tasks
 ```
+
 </details>   
+
 #### 실행
 fosslight_android 명령어를 실행합니다.
 이때, build 산출물 (/out directory) 및 build log file (android.log) 가 android source path 에 존재해야 합니다.
@@ -83,8 +85,11 @@ fosslight_android 명령어를 실행합니다.
 - REMOVED_BIN_BY_DUPLICATION_[datetime].txt : output path내 binary name과 checksum이 동일한 파일이 2개 이상 존재하여 FOSSLight Report에서 중복 제거된 목록입니다.
 더불어 -r 옵션으로 추가로 제거된 목록도 출력됩니다.
 
-|Column          |내용          |
-|:---------------|:--------------|
-|Binary Name|out directory 내 존재하는 Binary 목록 (binary, library, APK, font 등 )|  
-|Source Code Path|Binary를 구성하는 Source Code의 Path 정보 (LOCAL_PATH)|  
+| Column           | 내용                                                                                                                                               |
+|:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Binary Name      | out directory 내 존재하는 Binary 목록 (binary, library, APK, font 등 )                                                                                   |  
+| Source Code Path | Binary를 구성하는 Source Code의 Path 정보 (LOCAL_PATH)                                                                                                   |  
+| Notice           | NOTICE 파일에 Binary 정보가 표시되었는지 여부       Open Source가 사용된 Binary라면, NOTICE.html 값이 ok여야 함.ok : LOCAL_PATH에 NOTICE 파일이 있고, NOTICE.html에 Binary 정보 포함 |
+
+
 
