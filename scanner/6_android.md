@@ -90,6 +90,7 @@ fosslight_android 명령어를 실행합니다.
 | Binary Name      | out directory 내 존재하는 Binary 목록 (binary, library, APK, font 등 )                                                                                   |  
 | Source Code Path | Binary를 구성하는 Source Code의 Path 정보 (LOCAL_PATH)                                                                                                   |  
 | Notice           | NOTICE 파일에 Binary 정보가 표시되었는지 여부       Open Source가 사용된 Binary라면, NOTICE.html 값이 ok여야 함.ok : LOCAL_PATH에 NOTICE 파일이 있고, NOTICE.html에 Binary 정보 포함 |
+| OSS Name           | Binary DB 에서 load한 OSS 정보 또는 Android Open Source Project인 경우 해당 Repository 기반의 이름을 출력합니다.                                                        |
 
 
 
