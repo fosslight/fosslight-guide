@@ -100,7 +100,6 @@ fosslight_android 명령어를 실행합니다.
 ## 🚗 추가 기능
 ---
 하기 옵션을 통해 부가 기능을 활용할 수 있습니다.
-- Option: -b, -n, -c : NOTICE.html에 Binary 이름 포함 여부 확인
 - Option: -p : Packaging 파일에 포함되지 않아야 하는 파일 확인
 - Option: -f : Source Code Path를 찾지 못하는 binary에 대하여 Find Command 실행 결과 출력
 - Option: -i : Android reference 의 repository기준으로 OSS Name 자동 출력 끄기
@@ -108,23 +107,6 @@ fosslight_android 명령어를 실행합니다.
 - Option: -m : License가 빈칸인 부분에 대해 자동으로 Source path 내 Source code 분석(소스 파일 내 License text 기반 License 검출)을 실행하여 License 값을 채워줍니다. (그러나 분석에 시간이 오래 걸립니다. Android native에서 44개 Path기준 약 35분 소요)
 
 ---
-
-### -b, -n, -c : NOTICE.html에 Binary 이름 포함 여부 확인 기능
-- **OSS가 사용 된 경우 ( NOTICE.html이 ok 또는 ok(NA)인 경우 )** FOSSLight Report의 BIN(Android) sheet내 NOTICE.html column의 값이 ok 또는 ok(NA)라면, 그 Binary 이름은 NOTICE.html에 포함되어 있어야 합니다.      
-Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음과 같습니다.
-    1. NOTICE.html 의 값을 ok, ok(NA)만 조회합니다. 
-    2. Binary Name column에서 모든 항목을 선택하여 Copy합니다.
-    3. binary.txt 라는 파일을 생성하고 2에서 Copy한 내용을 저장합니다.
-    4. NOTICE.html을 binary.txt와 같은 directory에 위치시킵니다.
-    5. "-c" option을 사용하여 결과를 추출합니다. 이때, -c option parameter로 ok 항목에 대한 체크사항이므로 ok라고 입력합니다.
-       ```
-       (command)
-       (venv)$ fosslight_android -b [binary.txt] -n [NOTICE.html] -c [ok|nok]
-       
-       (ex)
-       (venv)$ fosslight_android -b binary.txt -n NOTICE.xml,NOTICE_VENDOR.xml,NOTICE_PRODUCT.xml -c ok
-       ```
-    6. result.txt 파일을 열면, nok 항목인 binary 목록이 출력됩니다.
 
 ### -p: Packaging 파일에 포함되지 않아야 하는 파일 확인
 공개할 Source Code 취합시, 포함되지 말아야 하는 파일 이름, 확장자, 디렉토리를 체크합니다.      
