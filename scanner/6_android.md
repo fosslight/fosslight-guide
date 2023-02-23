@@ -117,7 +117,7 @@ fosslight_android 명령어를 실행합니다.
 
 Example : pkgConfig.json
 
-    ```
+```
     {
        "Prohibited_File_Names":[
           "key_file",
@@ -132,14 +132,14 @@ Example : pkgConfig.json
           ".git"
        ]
     }
-    ```
+```
 
-    - Prohibited_File_Names : 검출하려는 파일 이름 
-    - Prohibited_File_Extensions : 검출하려는 파일 확장자 
-    - Prohibited_Path : 검출할 파일 디렉토리
-    - 공개할 소스 코드를 취합한 디렉토리 위치 혹은 압축 파일 확인 
-      - 공개할 소스 코드 취합한 디렉토리나 압축 파일 내 압축된 파일이 있을 경우, 압축을 해제하여 검색합니다. 
-      - 압축 해제 지원 확장자 : tar, tar.gz, zip
+- Prohibited_File_Names : 검출하려는 파일 이름 
+- Prohibited_File_Extensions : 검출하려는 파일 확장자 
+- Prohibited_Path : 검출할 파일 디렉토리
+- 공개할 소스 코드를 취합한 디렉토리 위치 혹은 압축 파일 확인 
+  - 공개할 소스 코드 취합한 디렉토리나 압축 파일 내 압축된 파일이 있을 경우, 압축을 해제하여 검색합니다. 
+  - 압축 해제 지원 확장자 : tar, tar.gz, zip
 
 **실행 방법**
 1. Packaging Config File을 pkgConfig.json 파일명(json 형식)으로 준비합니다.
