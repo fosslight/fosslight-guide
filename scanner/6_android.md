@@ -106,7 +106,9 @@ fosslight_android 명령어를 실행합니다.
 - Option: -i : Android reference 의 repository기준으로 OSS Name 자동 출력 끄기
 - Option: -r : 특정 binary를 FOSSLight Report에서 중복 제거. Android native와 vendor가 분리되어 build되는 구조에서 사용하는 옵션으로 중복으로 포함되는 Binary를 제거합니다. vendor에 대한 FOSSLight Android 실행시 -r 옵션으로 android native 결과 생성되는 result_*.txt 파일을 parameter로 추가합니다.
 - Option: -m : License가 빈칸인 부분에 대해 자동으로 Source path 내 Source code 분석(소스 파일 내 License text 기반 License 검출)을 실행하여 License 값을 채워줍니다. (그러나 분석에 시간이 오래 걸립니다. Android native에서 44개 Path기준 약 35분 소요)
+
 ---
+
 ### -b, -n, -c : NOTICE.html에 Binary 이름 포함 여부 확인 기능
 - **OSS가 사용 된 경우 ( NOTICE.html이 ok 또는 ok(NA)인 경우 )** FOSSLight Report의 BIN(Android) sheet내 NOTICE.html column의 값이 ok 또는 ok(NA)라면, 그 Binary 이름은 NOTICE.html에 포함되어 있어야 합니다.      
 Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음과 같습니다.
@@ -131,70 +133,73 @@ Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음
 - Packaging Config File : 체크할 항목을 json 형식의 pkgConfig.json 파일 이름으로 생성합니다.
 
 Example : pkgConfig.json
-```
-{
-   "Prohibited_File_Names":[
-      "key_file",
-      "confidential_key"
-   ],
-   "Prohibited_File_Extensions":[
-      "exe",
-      "jar"
-   ],
-   "Prohibited_Path":[
-      "confidential",
-      ".git"
-   ]
-}
-```
-- 항목 별 설명 : 항목 별 작성할 사항이 1개 이상인 경우 "," 로 구분하여 작성합니다. 
-  - Prohibited_File_Names : 검출하려는 파일 이름 
-  - Prohibited_File_Extensions : 검출하려는 파일 확장자 
-  - Prohibited_Path : 검출할 파일 디렉토리
-- 공개할 소스 코드를 취합한 디렉토리 위치 혹은 압축 파일 확인 
-  - 공개할 소스 코드 취합한 디렉토리나 압축 파일 내 압축된 파일이 있을 경우, 압축을 해제하여 검색합니다. 
-  - 압축 해제 지원 확장자 : tar, tar.gz, zip
+    ```
+    {
+       "Prohibited_File_Names":[
+          "key_file",
+          "confidential_key"
+       ],
+       "Prohibited_File_Extensions":[
+          "exe",
+          "jar"
+       ],
+       "Prohibited_Path":[
+          "confidential",
+          ".git"
+       ]
+    }
+    ```
+    - Prohibited_File_Names : 검출하려는 파일 이름 
+    - Prohibited_File_Extensions : 검출하려는 파일 확장자 
+    - Prohibited_Path : 검출할 파일 디렉토리
+    - 공개할 소스 코드를 취합한 디렉토리 위치 혹은 압축 파일 확인 
+      - 공개할 소스 코드 취합한 디렉토리나 압축 파일 내 압축된 파일이 있을 경우, 압축을 해제하여 검색합니다. 
+      - 압축 해제 지원 확장자 : tar, tar.gz, zip
 
 실행 방법
 1. Packaging Config File을 pkgConfig.json 파일명(json 형식)으로 준비합니다.
 2. -p 옵션을 추가하여 실행합니다. (-p : 공개할 소스 코드를 취합한 Path 혹은 압축 파일)
-```
-(venv)$ fosslight_android -p [A path or compressed file containing the source code to be disclosed]
- 
-ex
-(venv)$ fosslight_android -p /home/test/sourceCodeToBeDisclosed.tar.gz
-```
+    ```
+    (venv)$ fosslight_android -p [A path or compressed file containing the source code to be disclosed]
+     
+    ex
+    (venv)$ fosslight_android -p /home/test/sourceCodeToBeDisclosed.tar.gz
+    ```
+
 3. 결과 확인 
-검출된 항목별로 추출된 목록을 보여줍니다.     
+검출된 항목별로 추출된 목록을 보여줍니다.          
 결과 example :       
-```
-(venv)$ fosslight_android  -p /home/test/sourceCodeToBeDisclosed.tar.gz
-1. Prohibited file names : 1
-sourceCode/executable/LgeOscClient/confidential_key
-2. Prohibited file extension : 4
-sourceCode/executable/Report_Jenkins_ubuntu.exe
-sourceCode/executable/ReportTool_v3.03_181128U.jar
-sourceCode/executable/Protex_Create_Upload_Analyze_v3.03_181128U.jar
-sourceCode/executable/ReportTool_CLI_v3.03_181128U.jar
-3. Prohibited Path : 2
-sourceCode/.git
-sourceCode/executable/LgeOscClient/confidential
-4. Fail to read : 0
-```
-- Prohibited file names : 공개할 소스 코드 중 파일명에 pkgConfig.json의 Prohibited_File_Names 값을 포함하는 경우 출력합니다.
-- Prohibited file extension : 공개할 소스 코드 중 파일 확장자가 pkgConfig.json의 Prohibited_File_Extensions 값인 경우 출력합니다.
-- Prohibited Path : 공개할 소스 코드 중 파일 Path 중 pkgConfig.json의 Prohibited_Path 값을 포함하는 경우 출력합니다.
-- Fail to read : 압축 해제에 실패한 파일 목록을 출력합니다.
+    ```
+    (venv)$ fosslight_android  -p /home/test/sourceCodeToBeDisclosed.tar.gz
+    1. Prohibited file names : 1
+    sourceCode/executable/LgeOscClient/confidential_key
+    2. Prohibited file extension : 4
+    sourceCode/executable/Report_Jenkins_ubuntu.exe
+    sourceCode/executable/ReportTool_v3.03_181128U.jar
+    sourceCode/executable/Protex_Create_Upload_Analyze_v3.03_181128U.jar
+    sourceCode/executable/ReportTool_CLI_v3.03_181128U.jar
+    3. Prohibited Path : 2
+    sourceCode/.git
+    sourceCode/executable/LgeOscClient/confidential
+    4. Fail to read : 0
+    ```
+   
+   - Prohibited file names : 공개할 소스 코드 중 파일명에 pkgConfig.json의 Prohibited_File_Names 값을 포함하는 경우 출력합니다.
+   - Prohibited file extension : 공개할 소스 코드 중 파일 확장자가 pkgConfig.json의 Prohibited_File_Extensions 값인 경우 출력합니다.
+   - Prohibited Path : 공개할 소스 코드 중 파일 Path 중 pkgConfig.json의 Prohibited_Path 값을 포함하는 경우 출력합니다.
+   - Fail to read : 압축 해제에 실패한 파일 목록을 출력합니다.
 
 ### -f: Source Code Path를 찾지 못하는 binary에 대하여 Find Command 실행 결과 출력
 Source Code Path를 찾지 못하는 Binary에 대하여 Android의 Source Path내 폴더 (out directory, .으로 시작하는 숨김 directory 제외)별로 Find Command 실행 결과를 출력합니다.     
+
 1. -f 옵션을 추가하여 실행합니다.
-```commandline
-(venv)$ fosslight_android  -s [android source path] -a [build log file name] -f
- 
-ex
-(venv)$ fosslight_android  -s /home/soim/android/source -a android.log -f
-```
+    ```commandline
+    (venv)$ fosslight_android  -s [android source path] -a [build log file name] -f
+     
+    ex
+    (venv)$ fosslight_android  -s /home/soim/android/source -a android.log -f
+    ```
+
 2. 결과 확인        
 Source Code Path를 찾지 못하는 Binary별 Find command 실행 결과는 'FIND_RESULT_OF_BINARIES.txt' 파일로 생성됩니다.
 단, Source Code Path를 찾지 못하는 Binary가 없을 경우 해당 파일은 생성되지 않습니다.
@@ -209,13 +214,15 @@ vendor에 대한 FOSSLight Android 실행시 -r 옵션을 이용하여 Android n
 
 중복 제거 조건 : Binary name이 같고 checksum이 같거나, Binary name이 같고 TLSH 값 차이가 120이하인 경우
 중복 제거된 binary는 REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
+
 1. -r 옵션을 추가하여 실행합니다. 
-```commandline
-(venv)$ fosslight_android -s [vendor_source_path] -a [android_build_log_file] -r [android_native_result.txt]
- 
-ex
-(venv)$ fosslight_android -s [vendor_source_path] -a android.log -r android_native_result.txt
-```
+    ```commandline
+    (venv)$ fosslight_android -s [vendor_source_path] -a [android_build_log_file] -r [android_native_result.txt]
+     
+    ex
+    (venv)$ fosslight_android -s [vendor_source_path] -a android.log -r android_native_result.txt
+    ```
+
 2. 결과 확인         
 android_native_result.txt와 중복된 binary는 FOSSLight-Report.xlsx에서 제거되고, REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
 
@@ -224,12 +231,13 @@ android_native_result.txt와 중복된 binary는 FOSSLight-Report.xlsx에서 제
 License 정보를 못 찾은 경우에 한하여 FOSSLight Source를 이용하여 Source code를 분석한 결과를 License란에 출력합니다.        
 
 1. -m 옵션을 추가합니다.
-```commandline
-(venv)$ fosslight_android -s [vendor_source_path] -a [android_build_log_file] -m
- 
-ex
-(venv)$ fosslight_android -s [vendor_source_path] -a android.log -m
-```
+    ```commandline
+    (venv)$ fosslight_android -s [vendor_source_path] -a [android_build_log_file] -m
+     
+    ex
+    (venv)$ fosslight_android -s [vendor_source_path] -a android.log -m
+    ```
+
 2. 결과 확인         
-FOSSLight Report의 License column에 분석한 결과가 채워집니다.         
+FOSSLight Report의 License column에 분석한 결과가 채워집니다.              
 추가로 source_analyzed_[datetime] 폴더에 소스 코드별 분석한 결과가 생성됩니다.       
