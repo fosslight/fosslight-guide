@@ -42,7 +42,8 @@ $ make -j4 2>&1 | tee android.log
 
 {::options parse_block_html="true" /}
 <details>
-    <summary markdown="span" style="font-weight:bold">Android 7.0 이전 version의 모델</summary>
+<summary markdown="span">**Android 7.0 이전 version의 모델**</summary>
+
 Android 7.0 이전 version의 모델일 경우, 먼저 module-info.mk 파일을 build/core/tasks/하위에 위치시킨 후 build합니다. (build시 module-info.json 파일을 생성하게 하기 위함)
 
 ```
