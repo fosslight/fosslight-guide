@@ -156,7 +156,7 @@ Example : pkgConfig.json
        
 결과 example :       
 
-    ```
+```
     (venv)$ fosslight_android  -p /home/test/sourceCodeToBeDisclosed.tar.gz
     1. Prohibited file names : 1
     sourceCode/executable/LgeOscClient/confidential_key
@@ -169,12 +169,12 @@ Example : pkgConfig.json
     sourceCode/.git
     sourceCode/executable/LgeOscClient/confidential
     4. Fail to read : 0
-    ```
+```
    
-   - Prohibited file names : 공개할 소스 코드 중 파일명에 pkgConfig.json의 Prohibited_File_Names 값을 포함하는 경우 출력합니다.
-   - Prohibited file extension : 공개할 소스 코드 중 파일 확장자가 pkgConfig.json의 Prohibited_File_Extensions 값인 경우 출력합니다.
-   - Prohibited Path : 공개할 소스 코드 중 파일 Path 중 pkgConfig.json의 Prohibited_Path 값을 포함하는 경우 출력합니다.
-   - Fail to read : 압축 해제에 실패한 파일 목록을 출력합니다.
+- Prohibited file names : 공개할 소스 코드 중 파일명에 pkgConfig.json의 Prohibited_File_Names 값을 포함하는 경우 출력합니다.
+- Prohibited file extension : 공개할 소스 코드 중 파일 확장자가 pkgConfig.json의 Prohibited_File_Extensions 값인 경우 출력합니다.
+- Prohibited Path : 공개할 소스 코드 중 파일 Path 중 pkgConfig.json의 Prohibited_Path 값을 포함하는 경우 출력합니다.
+- Fail to read : 압축 해제에 실패한 파일 목록을 출력합니다.
 
 ### -f: Source Code Path를 찾지 못하는 binary에 대하여 Find Command 실행 결과 출력
 Source Code Path를 찾지 못하는 Binary에 대하여 Android의 Source Path내 폴더 (out directory, .으로 시작하는 숨김 directory 제외)별로 Find Command 실행 결과를 출력합니다.     
