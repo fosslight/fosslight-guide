@@ -115,6 +115,7 @@ fosslight_android 명령어를 실행합니다.
 - Packaging Config File : 체크할 항목을 json 형식의 pkgConfig.json 파일 이름으로 생성합니다.
 
 Example : pkgConfig.json
+
     ```
     {
        "Prohibited_File_Names":[
@@ -195,10 +196,9 @@ OSS Name 자동 완성 기능을 끄고자 할 경우 선택합니다.
 
 ### -r: 특정 binary를 FOSSLight Report에서 중복 제거
 하나의 Model에 탑재하는 Android native와 vendor가 분리된 output으로 생성되는 경우에 한하여 활용합니다.        
-vendor에 대한 FOSSLight Android 실행시 -r 옵션을 이용하여 Android native에도 포함되는 binary를 중복 제거합니다.       
-
-중복 제거 조건 : Binary name이 같고 checksum이 같거나, Binary name이 같고 TLSH 값 차이가 120이하인 경우
-중복 제거된 binary는 REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
+- vendor에 대한 FOSSLight Android 실행시 -r 옵션을 이용하여 Android native에도 포함되는 binary를 중복 제거합니다.
+- 중복 제거 조건 : Binary name이 같고 checksum이 같거나, Binary name이 같고 TLSH 값 차이가 120이하인 경우
+- 중복 제거된 binary는 REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
 
 1. -r 옵션을 추가하여 실행합니다. 
     ```commandline
