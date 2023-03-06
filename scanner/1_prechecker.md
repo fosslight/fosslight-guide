@@ -164,6 +164,7 @@ Options for only 'add' mode
 ><details>
 ><summary markdown="span" style="font-weight:bold">파일 개수 산정 시, 제외 항목</summary>        
 >
+> - 숨김 
 > - 파일 내 Code가 전혀 없는 파일     
 > - .gitignore에 정의된 파일     
 > - git repo 기준 untracked 파일      
