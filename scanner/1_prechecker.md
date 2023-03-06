@@ -33,7 +33,7 @@ $ pip3 install fosslight_prechecker
 
 ## 🚀 실행 방법
 FOSSLight Prechecker 다음 세가지 모드를 가지고 있습니다.
-1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는 지 체크합니다.    
+1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하는지 체크합니다.    
 2. `convert` --- [sbom-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml)을 [fosslight_report.xlsx](https://github.com/fosslight/fosslight-guide/blob/master/learn/2_fosslight_report.md)로 변환합니다.
      - yaml 파일을 fosslight_report.xlsx의 SRC Sheet로 변환
 3. `add` --- Copyright와 License가 없는 파일에 Copyright와 License를 추가합니다.
@@ -69,18 +69,18 @@ Options for only 'add' mode
 **(Windows인 경우)** 실행 파일을 이용한 방법  
 1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
 2. 두 가지 실행 방법        
-2-1. 실행 파일을 원하는 path로 이동 후 더블 클릭하여 실행   
-    * Default 모드인 Lint mode만 실행    
-2-2. command로 실행    
-    * 'cmd' 실행   
-    * 파일이 위치한 Path에서 'Mode별 실행 방법 및 Parameters'와 같이 실행    
-        * ex) fosslight_prechecker lint -p src/      
+2-1. 실행 파일을 원하는 path로 이동 후 더블 클릭하여 실행
+    * Default 모드인 Lint mode만 실행
+2-2. command로 실행
+    * 'cmd' 실행
+    * 파일이 위치한 Path에서 'Mode별 실행 방법 및 Parameters'와 같이 실행
+        * ex) fosslight_prechecker lint -p src/
     
     
 ## 📁 결과
 ### 🔖 lint mode
 
-**1) 특정 경로 내 파일 분석 예시**  
+**1) 특정 경로분석 예시**  
 ```
 (venv)$ fosslight_prechecker lint -p /home/tests -o result.yaml
 ```
@@ -109,7 +109,7 @@ Options for only 'add' mode
             Python version: 3
             fosslight_prechecker version: fosslight_prechecker v2.2.0  </pre>
 
-**2) 특정 파일만 분석 예시**
+**2) 특정 파일 분석 예시**
 ```
 (venv)$ fosslight_prechecker lint -p "src/file1.py,src/file2.py"
 ```
@@ -164,7 +164,7 @@ Options for only 'add' mode
 ><details>
 ><summary markdown="span" style="font-weight:bold">파일 개수 산정 시, 제외 항목</summary>        
 >
-> - 숨김 
+> - 숨김 파일
 > - 파일 내 Code가 전혀 없는 파일     
 > - .gitignore에 정의된 파일     
 > - git repo 기준 untracked 파일      
@@ -342,7 +342,7 @@ $ fosslight_prechecker convert -p tests/
     
     2-2. 입력한 파일을 변환  
     - 입력한 yaml 파일을 fosslight_report.xlsx로 변환   
-    - 단, -o 로 output file명을 지정한 경우 해당 이름으로 결과 파일이 생성   
+    - 단, -o 로 output file 명을 지정한 경우 해당 이름으로 결과 파일이 생성   
     
 
 ### 🔖 add mode
@@ -350,4 +350,3 @@ $ fosslight_prechecker convert -p tests/
 2. 저작권과 라이선스 탐색 및 추가
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
     - -c와 -l 옵션을 이용하여 저작권 또는 라이선스가 없는 파일의 상단에 저작권과 라이선스를 추가
-    
