@@ -160,9 +160,7 @@ Options for only 'add' mode
 		 - **OS**: FOSSLight Prechecker가 실행된 OS 버전
 		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
-</details>
 
-><details>
 ><summary markdown="span" style="font-weight:bold">파일 개수 산정 시, 제외 항목</summary>        
 >
 > - 파일 내 Code가 전혀 없는 파일     
