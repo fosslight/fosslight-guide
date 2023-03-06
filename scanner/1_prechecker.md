@@ -167,7 +167,7 @@ Options for only 'add' mode
 		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
 </details>
-
+{::options parse_block_html="false" /}
 
 <details>
     <summary markdown="span" style="font-weight:bold">Demo 영상 (lint)</summary>
@@ -182,7 +182,7 @@ $ fosslight_prechecker convert -p tests/
 ```
 
 **2) 실행 결과 파일 예시**
-
+{::options parse_block_html="true" /}
 > <details>
 > <summary markdown="span">oss-pkg-info.yaml 파일</summary>
 > yaml 파일 내 경로 작성 시, 특수 문자({, }, [, ], &, *, #, ?, |, -, <, >, =, !, %, @)로 시작하는 경우 쌍따옴표("")를 사용하여 작성해주시기 바랍니다.
