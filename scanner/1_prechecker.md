@@ -162,13 +162,14 @@ Options for only 'add' mode
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
 </details>
 
-<details>
-<summary markdown="span" style="font-weight:bold">파일 개수 산정 시, 제외 항목</summary>     
- - 파일 내 Code가 전혀 없는 파일     
- - .gitignore에 정의된 파일     
- - git repo 기준 untracked 파일      
- - FOSSLight의 산출물     
- - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path      
+><details>
+><summary markdown="span" style="font-weight:bold">파일 개수 산정 시, 제외 항목</summary>        
+>
+> - 파일 내 Code가 전혀 없는 파일     
+> - .gitignore에 정의된 파일     
+> - git repo 기준 untracked 파일      
+> - FOSSLight의 산출물     
+> - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path      
 </details>
 
 {::options parse_block_html="false" /}
