@@ -160,8 +160,8 @@ Options for only 'add' mode
 		 - **OS**: FOSSLight Prechecker가 실행된 OS 버전
 		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
+</details>
 	
-
 <details>
 ※ 아래 항목들은 모든 파일 개수에서 제외됩니다.    
 - 파일 내 Code가 전혀 없는 파일    
@@ -171,7 +171,6 @@ Options for only 'add' mode
 - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path    
 </details>
 
-</details>
 {::options parse_block_html="false" /}
 
 <details>
