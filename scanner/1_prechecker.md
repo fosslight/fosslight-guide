@@ -152,12 +152,6 @@ Options for only 'add' mode
  - **Summary**
 	 - **Detected Licenses**: 검출된 License
 	 - **Files without copyright / total:** Copyright 없는 파일 수 / 전체 파일 수
-		 - 파일 개수에는 다음 항목들이 제외됩니다.
-			 - 파일 내 Code가 전혀 없는 파일
-			 - .gitignore에 정의된 파일
-			 - git repo 기준 untracked 파일
-			 - FOSSLight의 산출물
-			 - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path
 	 - **Files without license / total**: License 없는 파일 수 / 전체 파일 수
 	 - **Files without copyright / total**: Copyright 없는 파일 수 / 전체 파일 수
 	 - **Open Source Package File**: sbom-info*.yaml 또는 oss-pkg-info*.yaml 파일 리스트
@@ -166,6 +160,13 @@ Options for only 'add' mode
 		 - **OS**: FOSSLight Prechecker가 실행된 OS 버전
 		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
+	
+※ 아래 항목들은 모든 파일 개수에서 제외됩니다.
+	- 파일 내 Code가 전혀 없는 파일
+	- .gitignore에 정의된 파일
+	- git repo 기준 untracked 파일
+	- FOSSLight의 산출물
+	- sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path
 </details>
 {::options parse_block_html="false" /}
 
