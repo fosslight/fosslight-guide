@@ -161,6 +161,7 @@ Options for only 'add' mode
 		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
 
+><details>
 ><summary markdown="span" style="font-weight:bold">파일 개수 산정 시, 제외 항목</summary>        
 >
 > - 파일 내 Code가 전혀 없는 파일     
@@ -168,6 +169,7 @@ Options for only 'add' mode
 > - git repo 기준 untracked 파일      
 > - FOSSLight의 산출물     
 > - sbom-info.yaml 또는 oss-pkg-info.yaml 내에 exclude가 True인 path      
+> </details>
 </details>
 
 {::options parse_block_html="false" /}
