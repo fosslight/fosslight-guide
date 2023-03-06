@@ -140,9 +140,9 @@ Options for only 'add' mode
             Python version: 3
             fosslight_prechecker version: fosslight_prechecker v2.2.0  </pre>
 
-
+{::options parse_block_html="true" /}
 <details>
-<summary markdown="span">결과 출력 항목</summary>
+<summary markdown="span" style="font-weight:bold">결과 출력 항목</summary>
 포맷에 따라 결과로 출력되는 항목이 다를 수 있습니다.(Default 포맷 : yaml)
 
  - **Compliant**: lint 결과가 Compliant한지 여부 (OK or Not OK)
@@ -183,7 +183,6 @@ $ fosslight_prechecker convert -p tests/
 
 **2) 실행 결과 파일 예시**
 
-{::options parse_block_html="true" /}
 > <details>
 > <summary markdown="span">oss-pkg-info.yaml 파일</summary>
 > yaml 파일 내 경로 작성 시, 특수 문자({, }, [, ], &, *, #, ?, |, -, <, >, =, !, %, @)로 시작하는 경우 쌍따옴표("")를 사용하여 작성해주시기 바랍니다.
