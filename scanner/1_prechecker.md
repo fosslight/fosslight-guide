@@ -161,6 +161,9 @@ Options for only 'add' mode
 		 - **Python version**: FOSSLight Prechecker가 실행된 Python 버전
 		 - **fosslight_prechecker version**: FOSSLight Prechecker 버전
 	
+{::options parse_block_html="false" /}
+
+{::options parse_block_html="true" /}	
 <details>
 <suummary markdown="span" style="font-weight:bold">개수 산정 시 제외 항목</summary>
 ※ 아래 항목들은 모든 파일 개수에서 제외됩니다.    
