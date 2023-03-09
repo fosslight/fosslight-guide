@@ -21,6 +21,7 @@ title: FOSSLight Dependency Scanner
 - [Carthage](https://github.com/Carthage/Carthage) (Carthage)
 - [Go](https://pkg.go.dev/) (Go)
 - [Nuget](https://www.nuget.org/) (.NET)
+- [Helm](https://helm.sh/) (Kubernetes)
 </details>
 {::options parse_block_html="false" /}
 
@@ -219,6 +220,13 @@ Go의 경우, go module에 한해 dependency 분석을 지원합니다. FOSSLigh
 FOSSLight Dependency Scanner 내부에서 packages.config 파일 또는 PackageReference형태로 이용하는 경우 obj/project.assets.json 파일을 통해 패키지 목록을 확인하고, nuget api를 통해 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
 ```
 </details>
+
+<details>
+<summary markdown="span">**Prerequisite for Helm**</summary>
+```tip
+FOSSLight Dependency Scanner 내부에서 Chart.yaml 파일과 helm dependency build 명령어를 통해 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
+```
+</details>
 {::options parse_block_html="false" /}
 
 ## 🎉 설치 방법
@@ -244,7 +252,7 @@ $ fosslight_dependency [option] <arg>
             -h                              Print help message.
             -v                              Print the version of the fosslight_dependency.
             -m <package_manager>            Enter the package manager.
-                                             (npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage, go, nuget)
+                                             (npm, maven, gradle, pip, pub, cocoapods, android, swift, carthage, go, nuget, helm)
             -p <input_path>                 Enter the path where the script will be run.
             -o <output_path>                Output path
                                              (If you want to generate the specific file name, add the output path with file name.)
@@ -282,6 +290,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - Carthage : Cartfile.resolved
   - Go : go.mod
   - Nuget : packages.config / {project name}.csproj
+  - Helm : Chart.yaml
 ```
 
 - Swift package manager
@@ -292,13 +301,13 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
 ```
 $ tree
 .
-├── fosslight_report_210503_0039.xlsx
+├── fosslight_report_dep_210503_0039.xlsx
 ├── fosslight_log_210503_0039.txt
 └── fosslight_opossum_210503_0039.json
 ```
-- fosslight_report_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
-- fosslight_log_[datetime].txt: 실행 로그가 저장된 파일
-- fosslight_opossum_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과 (-f opossum 결과)
+- fosslight_report_dep_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
+- fosslight_log_dep_[datetime].txt: 실행 로그가 저장된 파일
+- fosslight_opossum_dep_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과 (-f opossum 결과)
 
 ### 결과 파일 내용
 FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모든 분석된 dependency들의 manifest 파일을 기반으로 OSS 정보가 기록됩니다.
@@ -315,9 +324,12 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
 | Go                      | go:(oss name)     | pkg.go.dev/(oss name)@(oss version)                                                                   | repository in pkg.go.dev/(oss name)@(oss version)                        |
 | Nuget                      | nuget:(oss name)     | 우선순위1. repository in nuget.org/packages/(oss name)/(oss version) <br> 우선순위2. projectUrl in nuget.org/packages/(oss name)/(oss version) <br> 우선순위3. nuget.org/packages/(oss name)/(oss version)  | nuget.org/packages/(oss name) |
+| Helm                        | helm:(oss name)     | first url of sources in (Chart.yaml)                                                                   | home in (Chart.yaml)                           |
 
 ```warning
-Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
+- Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
+- Helm은 root 프로젝트의 Chart.yaml파일에 작성된 dependencies 항목에 대해서만 출력 가능하며, 각 dependency의 dependency 항목 출력은 현재 지원하지 않고 있습니다. 또한, 'helm dependency build' 명령어 수행 후 charts/ 디렉토리 내 다운로드된 .tgz 파일 내 Chart.yaml 파일 정보에서 각 dependency의 OSS 정보를 얻어오고 있습니다.
+따라서 Chart.yaml에 License 또는 Homepage와 같은 정보가 누락된 경우, 해당 정보 얻어올 수 없기에 사용자가 수기로 확인 및 보완하는 작업이 필요합니다.
 ```
 
 ## 🧐 동작 방식
