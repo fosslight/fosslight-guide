@@ -2,7 +2,6 @@
 ```note
 FOSSLight Hub를 운영하는 데 유용한 가이드입니다.
 ```
-
 ## DB 백업 및 복구하기
 ### 1. 백업
 #### 선택1. 전체 백업    
@@ -31,6 +30,29 @@ $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
 - [DBeaver Community edition](https://dbeaver.io/download/) 
 - [MySQL workbench Community edition](https://dev.mysql.com/downloads/workbench/)
 - [HeidiSQL](https://www.heidisql.com/download.php)
+
+## DB 버전 업그레이드하기
+MyBatis Migrations를 이용하여 DB 버전을 업그레이드하는 방법 (v1.4.9버전 부터 버전업 Script를 제공하고 있습니다.)
+1. fosslight/migration/mybatis-migrations-3.3.11 폴더를 MIGRATIONS_HOME로 export합니다.
+    ```
+    $ cd fosslight
+    $ pwd
+    $ /home/test/fosslight
+    $ export MIGRATIONS_HOME=/home/test/fosslight/migration/mybatis-migrations-3.3.11
+    $ export MIGRATIONS=$MIGRATIONS_HOME/bin
+    $ export PATH=$MIGRATIONS:$PATH
+    ```
+2. migrate status를 확인 후 업그레이드합니다.
+    ```
+    $ cd /home/test/fosslight/migration/migration
+    $ migrate status
+    $ migrate up
+    ```
+4. 버전 업이 적용되었는지 확인합니다. 
+    ```
+    $ migrate status
+    ```
+
 
 ## NVD Data를 2002년 Data부터 다운로드 받기
 FOSSLight Hub는 일 1회 NVD(NATIONAL VULNERABILITY DATABASE) 에서 제공되는 [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds)를 다운로드하여 Database에 저장하며 저장된 NVD Data는 [Vulnerability List](../started/2_try/7_vulnerability.md)에서 조회할 수 있습니다.      
