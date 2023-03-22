@@ -178,6 +178,8 @@ dev_dependencies:
 ```
 $ flutter pub get
 $ flutter pub deps --no-dev > tmp_no_deps_result.txt
+$ flutter pub deps --json > tmp_deps.json
+$ flutter pub deps --no-dev -s compact > tmp_no_dev_deps.txt
 $ flutter pub run flutter_oss_licenses:generate.dart -o tmp_flutter_oss_licenses.json --json
 ```
 3. 2번 수행 결과에서 생성된 파일이 존재하는 path에서 FOSSLight Dependency Scanner를 실행합니다.
