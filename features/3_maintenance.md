@@ -33,7 +33,24 @@ $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
 
 ## DB 버전 업그레이드하기
 [MyBatis Migrations](https://mybatis.org/migrations/migrate.html)를 이용하여 DB 버전을 업그레이드하는 방법 (v1.4.9버전 부터 버전업 Script를 제공하고 있습니다.)
-1. fosslight/migration/mybatis-migrations-3.3.11 폴더를 MIGRATIONS_HOME로 export합니다.
+
+1. migration/migration/environments/development.properties 파일에 DB 접속 정보를 수정합니다. 
+    ```
+    $ cd migration/migration
+    $ cat environments/development.properties
+    ## Base time zone to ensure times are consistent across machines
+    time_zone=GMT+0:00
+
+    ## The character set that scripts are encoded with
+    # script_char_set=UTF-8
+
+    ## JDBC connection properties.
+    driver=org.mariadb.jdbc.Driver
+    url=jdbc:mysql://localhost:3306/fosslight
+    username=fosslight
+    password=fosslight
+    ```
+2. fosslight/migration/mybatis-migrations-3.3.11 폴더를 MIGRATIONS_HOME로 export합니다.
     ```
     $ cd fosslight
     $ pwd
@@ -42,7 +59,7 @@ $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
     $ export MIGRATIONS=$MIGRATIONS_HOME/bin
     $ export PATH=$MIGRATIONS:$PATH
     ```
-2. migrate status를 확인 후 업그레이드합니다.
+3. migrate status를 확인 후 업그레이드합니다.
     ```
     $ cd /home/test/fosslight/migration/migration
     $ migrate status
