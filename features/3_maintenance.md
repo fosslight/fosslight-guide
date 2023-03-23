@@ -101,7 +101,7 @@ $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
 
     ```
 
-✏️참고. 특정 버전만 적용하는 방법 : migrate version [ID]를 입력합니다.
+✏️참고. 특정 버전만 적용하는 방법 : `migrate version [ID]`를 입력합니다.
 - ex. v1.4.9는 적용되어 있고, v1.5.0만 적용하는 경우 
     ```
     $ cd /home/test/fosslight/migration/migration
