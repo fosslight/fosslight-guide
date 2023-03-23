@@ -32,7 +32,7 @@ $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
 - [HeidiSQL](https://www.heidisql.com/download.php)
 
 ## DB 버전 업그레이드하기
-MyBatis Migrations를 이용하여 DB 버전을 업그레이드하는 방법 (v1.4.9버전 부터 버전업 Script를 제공하고 있습니다.)
+[MyBatis Migrations](https://mybatis.org/migrations/migrate.html)를 이용하여 DB 버전을 업그레이드하는 방법 (v1.4.9버전 부터 버전업 Script를 제공하고 있습니다.)
 1. fosslight/migration/mybatis-migrations-3.3.11 폴더를 MIGRATIONS_HOME로 export합니다.
     ```
     $ cd fosslight
