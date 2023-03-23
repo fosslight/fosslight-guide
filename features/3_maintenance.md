@@ -101,6 +101,28 @@ $ mysql -ufosslight -pfosslight fosslight < fosslight_backup.sql
 
     ```
 
+✏️참고. 특정 버전만 적용하는 방법 : migrate version [ID]를 입력합니다.
+- ex. v1.4.9는 적용되어 있고, v1.5.0만 적용하는 경우 
+    ```
+    $ cd /home/test/fosslight/migration/migration
+    $ migrate status
+    ------------------------------------------------------------------------
+    -- MyBatis Migrations - status
+    ------------------------------------------------------------------------
+    ID             Applied At          Description
+    ================================================================================
+    20230322085317    2023-03-22 20:12:35    create changelog
+    20230322091138    2023-03-22 20:12:35    update v1.4.9
+    20230322092534    ...pending...          update v1.5.0
+
+    ------------------------------------------------------------------------
+    -- MyBatis Migrations SUCCESS
+    -- Total time: 0s
+    -- Finished at: Wed Mar 22 20:12:07 KST 2023
+    -- Final Memory: 7M/500M
+
+    $ migrate version 20230322092534
+    ```
 
 ## NVD Data를 2002년 Data부터 다운로드 받기
 FOSSLight Hub는 일 1회 NVD(NATIONAL VULNERABILITY DATABASE) 에서 제공되는 [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds)를 다운로드하여 Database에 저장하며 저장된 NVD Data는 [Vulnerability List](../started/2_try/7_vulnerability.md)에서 조회할 수 있습니다.      
