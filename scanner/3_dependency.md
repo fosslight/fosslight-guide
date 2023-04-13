@@ -34,6 +34,7 @@ title: FOSSLight Dependency Scanner
   - [실행 방법](#-실행-방법)
   - [결과](#-결과)
   - [동작 방식](#-동작-방식)
+  - [패키지별 지원 레벨](#-패키지별-지원-레벨)
 
 
 ## 📋 필요 조건
@@ -347,3 +348,113 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
 - Android(gradle) : [android-dependency-scanning](https://github.com/fosslight/android-dependency-scanning)
 
 이에 패키지 매니저마다 각기 다른 오픈 소스 소프트웨어를 활용함으로써, FOSSLight Dependency Scanner를 실행하기 위해 패키지 매니저별 **Prerequisite** 단계를 먼저 수행해야 합니다.
+
+## 👀 패키지별 지원 레벨
+<table>
+<thead>
+  <tr>
+    <th>Language/<br>Project</th>
+    <th>Package Manager</th>
+    <th>Manifest file</th>
+    <th>Direct dependencies</th>
+    <th>Transitive dependencies</th>
+    <th>Relationship of dependencies<br>(Dependencies of each dependency)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Javascript</td>
+    <td>Npm</td>
+    <td>package.json</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Java</td>
+    <td>Gradle</td>
+    <td>build.gradle</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Maven</td>
+    <td>pom.xml</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Java (Android)</td>
+    <td>Gradle</td>
+    <td>build.gradle</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td rowspan="2">ObjC, Swift (iOS)</td>
+    <td>Cocoapods</td>
+    <td>Podfile.lock</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Carthage</td>
+    <td>Cartfile.resolved</td>
+    <td>O</td>
+    <td>O</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td>Swift (iOS)</td>
+    <td>Swift</td>
+    <td>Package.resolved</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Dart, Flutter</td>
+    <td>Pub</td>
+    <td>pubspec.yaml</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Go</td>
+    <td>Go</td>
+    <td>go.mod</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>Pip</td>
+    <td>requirements.txt, setup.py</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>.NET</td>
+    <td>Nuget</td>
+    <td>packages.config, obj/project.assets.json</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Kubernetes</td>
+    <td>Helm</td>
+    <td>Chart.yaml</td>
+    <td>O</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+</tbody>
+</table>
