@@ -57,6 +57,7 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 | ------------- | ------------- | ------------- |
 |/api/v1/create_selfcheck|	JSON	|Self-Check Project를 생성하고, 생성된 Self-Check ID를 return 받습니다.|
 |/api/v1/oss_report_selfcheck|	-	|Self-Check에 FOSSLight Report를 업로드합니다. 이미 OSS Table이 작성된 경우, Reset한 후 업로드하는 FOSSLight Report를 반영합니다.(반영 Sheet Name : "Self-Check")|
+|/api/v1/export_selfcheck|	File	|Self-Check에서 Export한 결과 파일을 다운로드 받습니다.|
 
 6\. API 활용시, Code 값 확인
 
