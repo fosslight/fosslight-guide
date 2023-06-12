@@ -64,7 +64,7 @@ Options:
 Options for only 'add' mode
     -l <license>          추가할 라이선스 (SPDX License Identifer)
     -c <copyright>        추가할 저작권 (ex, <year> <copyright holder>)
-    -u <dl_location>	  추가할 Download Location(ex, https://www.testurl.com>
+    -u <dl_location>	  추가할 Download Location(ex, https://www.testurl.com)
 ```
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
@@ -246,12 +246,12 @@ $ fosslight_prechecker convert -p tests/
 ### 🔖 add mode
 **1) 특정 경로 내 파일에 저작권과 라이선스 추가 예시**
 ```
-(venv)$ fosslight_prechecker add -p tests/add -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_prechecker add -p tests/add -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only" -u "https://www.testurl.com"
 ```
 
 **2) 특정 파일에 저작권과 라이선스 추가 예시**
 ```
-(venv)$ fosslight_prechecker add -p "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only"
+(venv)$ fosslight_prechecker add -p "tests/add/test_both_have_1.py,tests/add/test_both_have_2.py,tests/add/test_no_copyright.py,tests/add/test_no_license.py" -c "2019-2021 LG Electronics Inc." -l "GPL-3.0-only" -u "https://www.testurl.com"
 ```
 
 **3) 실행 결과**  
@@ -284,6 +284,13 @@ $ fosslight_prechecker convert -p tests/
     * test_no_copyright.py
     * Your input Copyright : Copyright 2019-2021 LG Electronics Inc.
     Successfully changed header of tests/add_result/test_no_copyright.py
+	
+    # Adding Download Location into your files
+    * Your input DownloadLocation : https://www.testurl.com
+    Successfully changed header of tests/add_result/test_no_copyright.py
+    Successfully changed header of tests/add_result/test_no_license.py
+    Successfully changed header of tests/add_result/test_both_have_1.py
+    Successfully changed header of tests/add_result/test_both_have_2.py
 ```
 
 <details>
@@ -351,3 +358,4 @@ $ fosslight_prechecker convert -p tests/
 2. 저작권과 라이선스 탐색 및 추가
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
     - -c와 -l 옵션을 이용하여 저작권 또는 라이선스가 없는 파일의 상단에 저작권과 라이선스를 추가
+    - -u 옵션을 이용하여 Download Location을 파일의 상단에 추가
