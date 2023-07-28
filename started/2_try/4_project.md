@@ -162,6 +162,29 @@ OSS Notice는 Identification > BOM 탭을 기준으로 자동 생성됩니다. �
 - Packaging이 Confirm된 Project에 대해서 Project List에서 발행된 OSS Notice를 다운로드 받을 수 있습니다.
     - Creator에게 재확인이 필요한 경우 Reject을 클릭하여 Status를 Progress로 변경합니다.
 
+## Security
+Security탭에서는 Identification단계의 BOM 탭 기준 vulnerability score가 기준 점수 이상인 OSS에 대하여 CVE ID별로 확인 및 조치 상태를 관리할 수 있습니다.
+- vulnerability score 기준 점수는 Code Management > 760 (Security Vulnerability Score)에서 설정하실 수 있습니다.
+
+### Column 정보
+- OSS Name, OSS version
+    - Identification단계의 BOM 탭에 작성된 OSS 정보가 자동 출력됩니다.
+- CVE ID, CVSS Score, Published Date
+    - CVE ID 및 해당 CVE ID의 score, 발행일 정보가 자동 출력됩니다. 
+- Vulnerability Resolution
+    - 기본값으로 Unresolved로 설정되며, 수정 시 Fixed로 변경하실 수 있습니다. 
+
+#### OSS version 미입력시
+- Security탭에서는 OSS version 미기입된 CVE ID에 대해 정확한 vulnerability 확인이 어렵기에 전체 CVE ID 리스트를 보여주지 않고 있습니다.
+- 탭 진입 시 다음 팝업 화면 뜨는 경우, OSS version 미기입된 OSS 목록 확인하셔서 Identification탭에서 정확히 해당 OSS에 대해 사용된 OSS version 입력하신 후 BOM탭 save and merge해주시면,
+Security탭에서 기입된 OSS version에 대한 vulnerability 확인하실 수 있습니다.  
+![prj](../images/4_project_security1.png)
+
+### Vulnerability Resolution 여부 Identification 단계 반영
+Identification 단계의 SRC, BIN, BOM 탭에서 vulnerability score 확인 시, Security 탭에서 vulnerability resolution값을 'Fixed'로 변경한 CVE ID에 대해서는 제외된 Max score를 확인할 수 있습니다.
+SRC, BIN, BOM탭에서 vulnerabilty icon 클릭 시, 해당 OSS name 및 version에 대한 전체 CVE ID 리스트 창에서 'Fixed'된 CVE ID는 아래와 같이 비활성화 처리된 것을 확인할 수 있습니다.  
+![prj](../images/4_project_security2.png)
+
 
 ## ⭐Tips for Project
 ### Check OSS Name 버튼 (SRC, BIN Tab)
