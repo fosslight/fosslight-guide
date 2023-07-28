@@ -23,7 +23,7 @@ Security탭에서 기입된 OSS version에 대한 vulnerability 확인하실 수
 ![prj](../images/4_project_security1.png)
 
 ## Vulnerability Resolution 여부 Identification 단계 반영
-Identification 단계의 SRC, BIN, BOM 탭에서 vulnerability score 확인 시, Security 탭에서 vulnerability resolution값을 'Fixed'로 변경한 CVE ID에 대해서는 제외된 Max score를 확인할 수 있습니다.
-SRC, BIN, BOM탭에서 vulnerabilty icon 클릭 시, 해당 OSS name 및 version에 대한 전체 CVE ID 리스트 창에서 'Fixed'된 CVE ID는 아래와 같이 비활성화 처리된 것을 확인할 수 있습니다.  
+Identification 단계 탭에서 vulnerability score 확인 시, Security 탭에서 vulnerability resolution값을 'Fixed'로 변경한 CVE ID에 대해서는 제외된 Max score를 확인할 수 있습니다.
+Identification 단계 탭에서 vulnerabilty icon 클릭 시, 해당 OSS name 및 version에 대한 전체 CVE ID 리스트 창에서 'Fixed'된 CVE ID는 아래와 같이 비활성화 처리된 것을 확인할 수 있습니다.  
 ![prj](../images/4_project_security2.png)
 
