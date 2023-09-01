@@ -32,16 +32,21 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 | ------------- | ------------- | ------------- |
 |/api/v1/partner_search|	JSON	|보기 권한이 있는 3rd Party에 대하여 하기 정보를 조회합니다. |
 
+
 3\. Project 정보 조회, 생성, FOSSLight Report 등록, Packaging 파일 업로드, BOM Export, Project 비교
 
 | API  | 응답 형식 | 설명 |
 | ------------- | ------------- | ------------- |
 |/api/v1/create_project|	JSON|	Project를 생성하고, 생성된 Project ID를 return 받습니다.|
+|/api/v1/model_search| JOSN| Project에 대하여 Model List를 조회합니다. (최대 Return Item 수 : 1000) <br>  - Project ID, Category, Model, Name, Release Date|
+|/api/v1/model_update|  JSON| Model 정보 문자열 목록을 통해 Project의 Model 정보를 업데이트합니다. <br>  - Model 정보 문자열 목록 (format . MODEL_NAME\|Category\|Release Date) <br>  - ex) MODEL_NAME\|ETC > Etc\|20220428|
+|/api/v1/model_update_upload_file	|JSON| Model List 엑셀 파일을 통해 Project의 Model 정보를 업데이트합니다. <br>  - Model List의 엑셀 파일 : Project > Basic Information 탭 > Download 버튼 클릭|
 |/api/v1/oss_report_bin	|-	|BIN 탭에 FOSSLight Report를 업로드합니다.이미 OSS Table이 작성된 경우, Reset한 후 업로드하는 FOSSLight Report를 반영합니다. (반영 Sheet Name: "BIN")|
 |/api/v1/oss_report_src|	-	|SRC 탭에 FOSSLight Report를 업로드합니다.이미 OSS Table이 작성된 경우, Reset한 후 업로드하는 FOSSLight Report를 반영합니다. (반영 Sheet Name : "SRC")|
 |/api/v1/package_upload|-	|Packaging 탭에 Packaging 파일을 업로드합니다. 이미 Packaging 파일이 업로드되어 있는 경우, 추가로 Packaging 파일을 업로드합니다. Packaging 파일 업로드 결과가 Mail로 발송됩니다.|
-|/api/v1/prj_bom_compare|	JSON	|두 개의 Project의 BOM의 OSS Name, OSS Version, License를 비교합니다.
-|/api/v1/prj_bom_export	|File	|Project의 BOM에서 Export한 결과 파일을 다운로드 받습니다.
+|/api/v1/prj_bom_compare|	JSON	|두 개의 Project의 BOM의 OSS Name, OSS Version, License를 비교합니다.|
+|/api/v1/prj_bom_export	|File	|Project의 BOM에서 Export한 결과 파일을 다운로드 받습니다.|
+|/api/v1/prj_bom_export_json|JSON |Project의 BOM에서 Export한 결과를 json 포맷으로 return합니다.|
 |/api/v1/prj_search	| JSON |보기 권한이 있는 Project에 대하여 하기 정보를 조회합니다. |
 
 4\. Vulnerability 정보 조회
