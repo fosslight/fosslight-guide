@@ -70,6 +70,21 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 | ------------- | ------------- | ------------- |
 |/api/v1/code_search|	JSON	|Project, 3rd Party 조회, Project 생성시 사용할 하기 Parameter의 값 List를 조회합니다. |
 
+7\. Error code
+| Return Code  | Description | Error Message |
+| ------------- | ------------- | ------------- |
+|200|TOKEN이 존재하지 않습니다.|User does not exist.|
+|210|사용자의 TOKEN이 정상적이지 않습니다.|There is an error in the TOKEN value.|
+|310|Parameter가 잘못되었습니다.|The parameter is invalid.|
+|320|Project, self-check의 create건수가 초과되었습니다.(API를 활용한 생성은 일일 최대 3건)|The number of projects and self-checks that can be created has been exceeded. (Up to 3 per day)|
+|330|OSS Report등 파일을 등록할 경우 작성된 data에 대하여 validation check시 오류가 발생하였습니다.|There is an error in the data written in the file.|
+|400|업로드할 파일(ex-OSS Report, NOTICE, result.txt, Packaging 파일)을 누락하여 호출을 한 경우|The file to upload is missing.|
+|410|OSS Report, Packaging file의 size가 초과된 경우입니다.(최대 Size: OSS Report -5MB, Packaging file- 4GB)|File size exceeded. (Max size: 5MB for oss report, 4GB for packaging file)|
+|420|등록한 file들이 지원하지 않은 확장자입니다.|The registered files are extensions that are not supported.|
+|430|업로드할 Tab이 활성화되지 않았습니다.Distribution Type 및 업로드할 Tab을 확인하세요. |The tab you are trying to upload is not active.|
+|500|호출된 대상에 권한이 없습니다. (ex : public 이 아닌 Project를 Watcher 또는 Creator가 아닌 user가 조회할 경우) |You do not have permission.|
+|999|알수 없는 Error. |Unknown error.|
+
 ## REST API 활용 Sample
 prj_search 를 이용하여 user과 admin 계정의 Project 정보를 조회하는 예제
 ```python
