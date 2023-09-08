@@ -71,6 +71,7 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |/api/v1/code_search|	JSON	|Project, 3rd Party 조회, Project 생성시 사용할 하기 Parameter의 값 List를 조회합니다. |
 
 7\. Error code
+
 | Return Code  | Description | Error Message |
 | ------------- | ------------- | ------------- |
 |200|TOKEN이 존재하지 않습니다.|User does not exist.|
