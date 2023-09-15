@@ -83,6 +83,8 @@ REST API를 호출하기 위해서 TOKEN을 발행해야 합니다.
 |410|OSS Report, Packaging file의 size가 초과된 경우입니다.(최대 Size: OSS Report -5MB, Packaging file- 4GB)|File size exceeded. (Max size: 5MB for oss report, 4GB for packaging file)|
 |420|등록한 file들이 지원하지 않은 확장자입니다.|The registered files are extensions that are not supported.|
 |430|업로드할 Tab이 활성화되지 않았습니다.Distribution Type 및 업로드할 Tab을 확인하세요. |The tab you are trying to upload is not active.|
+|440|Load 할 Sheet 명이 없는 경우|The [Sheet_name] sheet name cannot be found|
+|440|업로드한 파일에 load할 row가 없는 경우|There is no data to load.|
 |500|호출된 대상에 권한이 없습니다. (ex : public 이 아닌 Project를 Watcher 또는 Creator가 아닌 user가 조회할 경우) |You do not have permission.|
 |999|알수 없는 Error. |Unknown error.|
 
