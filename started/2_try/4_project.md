@@ -78,7 +78,23 @@ Project List에서 Project Name을 더블 클릭합니다.
 1. 3rd Party Search : 3rd Party List 메뉴에서 Status: confirm인 3rd Party Software를 검색하고 load합니다.
 2. Project Search : 다른 Project의 3rd Party 탭을 load합니다.
 
-#### 2-2. SRC Tab
+#### 2-2. DEP Tab
+![prj](../images/4_project_dep.png)
+*DEP 탭 작성 Process*
+- Package manager를 통해 OSS가 포함된 경우: 각 dependency의 OSS 정보를 작성 -> Save
+- Package manager를 통해 OSS가 포함되지 않은 경우 : Not Applicable 체크 → Save
+
+*각 dependency의 OSS 정보 작성 방법* 
+- OSS Table에 수기로 작성
+    - OSS Table의 좌측 상단 + 버튼을 클릭하여 OSS 정보를 기입합니다.
+- OSS 정보 일괄 Load 하는 방법
+    1. Upload Analysis Result 란에 OSS List를 작성한 FOSSLight Report를 업로드합니다. 
+        - Load 가능한 FOSSLight Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
+    2. Project Search : 다른 Project의 DEP 탭을 Load합니다.
+- Scanner를 통해 자동 작성 방법
+    - FOSSLight Dependency Scanner를 통해 자동으로 OSS 정보 기입된 보고서 생성 가능합니다.
+
+#### 2-3. SRC Tab
 ![prj](../images/4_project_src.png)
 *SRC 탭 작성 Process*
 - Source code별 OSS가 포함된 경우: Source code별 OSS 정보를 작성 -> Save
@@ -92,7 +108,7 @@ Project List에서 Project Name을 더블 클릭합니다.
         - Load 가능한 FOSSLight Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
     2. Project Search : 다른 Project의 SRC 탭을 Load합니다.
 
-#### 2-3. BIN Tab
+#### 2-4. BIN Tab
 ![prj](../images/4_project_bin.png)
 *BIN 탭 작성 Process*
 - Binary가 포함된 경우 : Binary별 OSS 정보를 작성 -> Save
@@ -106,7 +122,7 @@ Project List에서 Project Name을 더블 클릭합니다.
         - Load 가능한 FOSSLight Report 양식은 우측 상단 "Export"버튼을 클릭하면 다운로드 가능합니다. 
     2. Project Search : 다른 Project의 BIN 탭을 Load합니다.
 
-#### 2-1. BOM Tab
+#### 2-5. BOM Tab
 3rd Party, SRC, BIN 탭에 작성된 OSS 목록을 취합하고 리뷰 요청을 합니다.
 ![prj](../images/4_project_bom.png)
 
