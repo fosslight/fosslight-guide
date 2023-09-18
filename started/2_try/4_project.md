@@ -128,7 +128,7 @@ Project List에서 Project Name을 더블 클릭합니다.
 
 ##### Review 요청 방법
 1. Merge And Save 버튼을 클릭합니다.
-    - 3rd Party, SRC, BIN 탭에 작성한 OSS List를 취합합니다.
+    - 3rd Party, DEP, SRC, BIN 탭에 작성한 OSS List를 취합합니다.
 2. [Warning message별 검토 사항](#warning) 검토 사항을 확인합니다.
 3. Request Review 버튼을 클릭하여 리뷰 요청을 합니다.
     - 단, 빨간색 Warning Message가 있을 경우 리뷰 요청이 불가합니다.
