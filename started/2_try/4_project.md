@@ -123,7 +123,7 @@ Project List에서 Project Name을 더블 클릭합니다.
     2. Project Search : 다른 Project의 BIN 탭을 Load합니다.
 
 #### 2-5. BOM Tab
-3rd Party, SRC, BIN 탭에 작성된 OSS 목록을 취합하고 리뷰 요청을 합니다.
+3rd Party, DEP, SRC, BIN 탭에 작성된 OSS 목록을 취합하고 리뷰 요청을 합니다.
 ![prj](../images/4_project_bom.png)
 
 ##### Review 요청 방법
