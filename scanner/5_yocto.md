@@ -23,13 +23,13 @@ published: true
 
 
 ## 📋 필요 조건
-[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Python 3.7+ 기반에서 동작합니다.  
+[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Python 3.8+ 기반에서 동작합니다.  
 OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.    
 
 
 ## 🎉 설치 방법    
 0. (windows의 경우) https://visualstudio.microsoft.com/ko/vs/older-downloads/ > 재배포 가능 패키지 및 빌드 도구에서 Microsoft Build Tools 설치
-1. [python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
+1. [python 3.8 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
 2. Python package인 fosslight_yocto 설치
     ```
     $ pip3 install fosslight_yocto
