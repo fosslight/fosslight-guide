@@ -24,7 +24,7 @@ brew install postgresql
 - Python 설치 방법은 [설치 가이드][install] 링크를 참조하세요.
 - 사용하는 python 버전에 맞게 python-dev, python-distutils를 설치합니다.
   ```
-  $ sudo apt-get install python3.7 python3-pip python3.7-dev python3.7-distutils
+  $ sudo apt-get install python3.8 python3-pip python3.8-dev python3.8-distutils
   ```
 
 [install]: https://realpython.com/installing-python
@@ -33,12 +33,12 @@ brew install postgresql
 
 ```
 $ pip3 install virtualenv
-$ virtualenv -p /usr/bin/python3.7 venv
+$ virtualenv -p /usr/bin/python3.8 venv
 $ source venv/bin/activate
 ```
 자세한 virtualenv 설명: [Python virtaulenv page][venv]
 
-[venv]: https://docs.python.org/3.7/library/venv.html
+[venv]: https://docs.python.org/3.8/library/venv.html
 
 ## ⌨️ <a name="command"></a>virtualenv 명령어
 
