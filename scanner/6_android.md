@@ -19,11 +19,11 @@ published: true
 
 
 ## 📋 필요 조건
-[**FOSSLight Android Scanner**](https://github.com/fosslight/fosslight_android_scanner)는 Python 3.7+ 기반에서 동작합니다.  
+[**FOSSLight Android Scanner**](https://github.com/fosslight/fosslight_android_scanner)는 Python 3.8+ 기반에서 동작합니다.  
 OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.    
 
 ## 🎉 설치 방법
-1. [python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
+1. [python 3.8 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
 2. Python package인 fosslight_android 설치
     ```
     $ pip3 install fosslight_android
