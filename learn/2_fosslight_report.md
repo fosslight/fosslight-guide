@@ -6,7 +6,7 @@ FOSSLight Hub와 FOSSLight Scanner에서 사용하는 Template으로 Project별 
 
 ## 양식
 
-1.0 버전 : [fosslight_report.xlsx](https://github.com/fosslight/fosslight/raw/main/src/main/resources/template/ProjectReport.xlsx)
+2.0 버전 : [fosslight_report.xlsx](https://github.com/fosslight/fosslight/blob/main/src/main/resources/template/ProjectReport.xlsx)
 
 ## Sheet 별 설명
 
@@ -27,6 +27,10 @@ FOSSLight Hub와 FOSSLight Scanner에서 사용하는 Template으로 Project별 
 FOSSLight Report를 Identification > BOM 탭에서 Export하면 3rd Party 탭에 등록된 사항이 "3rd party" sheet에 채워집니다. 따라서, "3rd party" sheet는 임의로 작성하지 않습니다.    
 
 ![info](./images/3rd_party.png)
+
+### DEP Sheet
+Dependency 분석 결과를 업로드합니다.
+- [FOSSLight Dependency Scanner](https://github.com/fosslight/fosslight_dependency_scanner)를 이용하면 자동으로 Dependency 분석 결과를 생성할 수 있습니다.
 
 ### SRC Sheet
 Source Code 별 포함되는 Open Source 정보를 작성합니다.   
