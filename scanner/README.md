@@ -7,12 +7,11 @@ title: 🚩FOSSLight Scanner
 
 <a href="https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/fosslight_scanner" alt="FOSSLight Scanner is released under the Apache-2.0." /></a> <a href="https://pypi.org/project/fosslight-scanner/"><img src="https://img.shields.io/pypi/v/fosslight_scanner" alt="Current python package version." /></a> <img src="https://img.shields.io/pypi/pyversions/fosslight_scanner" />
 
-FOSSLight Scanner는 로컬 소스코드 또는 입력받은 링크를 통해 소스를 다운로드 받은 후 소스코드, 바이너리 및 디펜던시에 대한 오픈 소스 분석을 수행할 뿐만 아니라 저작권/License 표기 규칙 준수 여부 또한 체크할 수 있습니다.  
+FOSSLight Scanner는 로컬 소스코드 또는 입력받은 링크를 통해 소스를 다운로드 받은 후 소스코드, 바이너리 및 디펜던시에 대한 오픈 소스 분석을 수행할 수 있습니다.  
 <br />
-이때 오픈 소스 분석과 저작권/License 표기 규칙 확인을 위해 사용하는 툴은 다음과 같습니다.
+이때 오픈 소스 분석을 위해 사용하는 툴은 다음과 같습니다.
 
-1. [FOSSLight Prechecker](1_prechecker.md) : 소스 코드 내 저작권 및 License 표기 Rule을 준수하는지 체크합니다. 
-2. [FOSSLight Source Scanner](2_source.md) : 소스 코드를 분석하여 오픈 소스 분석 결과를 생성합니다. 
+1. [FOSSLight Source Scanner](2_source.md) : 소스 코드를 분석하여 오픈 소스 분석 결과를 생성합니다. 
 3. [FOSSLight Dependency Scanner](3_dependency.md) : Package manager 또는 빌드 시스템을 통해 사용되는 dependency의 오픈 소스 분석 결과를 생성합니다. 
 4. [FOSSLight Binary Scanner](4_binary.md) : Binary를 분석하여 오픈 소스 분석 결과를 생성합니다. 
 5. [FOSSLight Yocto Scanner](5_yocto.md) : Yocto Project에 대한 오픈 소스 분석 결과를 생성합니다. (별도 실행 필요)
@@ -55,7 +54,6 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
             source                  Run FOSSLight Source Scanner
             dependency              Run FOSSLight Dependency Scanner
             binary                  Run FOSSLight Binary Scanner
-            prechecker              Run FOSSLight Prechecker
             compare                 Compare two FOSSLight reports
 
         Options:
@@ -105,14 +103,12 @@ test_result/
 ├── fosslight_binary_220214_1824.txt
 ├── fosslight_log
 │   └── fosslight_log_220214_1824.txt
-├── fosslight_lint_220214_1824.yaml
 ├── fosslight_report_220214_1824.xlsx
 └── fosslight_raw_data
     ├── fosslight_src_220214_1824.xlsx
     ├── fosslight_bin_220214_1824.xlsx
     └── fosslight_dep_220214_1824.xlsx
 ```
-- fosslight_lint_(datetime).yaml : FOSSLight Prechecker의 lint 모드 실행 결과 생성되는 yaml 파일
 - fosslight_binary_(datetime).txt : FOSSLight Binary결과 binary 별 checksum, tlsh 값이 추출된 파일
 - fosslight_report_(datetime).xlsx : Source code 분석, Binary 분석, Dependency 분석 결과가 작성된 FOSSLight Report 형식의 파일
 - fosslight_raw_data directory: 분석 결과 Raw Data 파일이 생성되는 폴더 (-r option 있는 경우)
