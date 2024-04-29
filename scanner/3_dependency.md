@@ -436,7 +436,7 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
   <tr>
     <td>Python</td>
     <td>Pypi</td>
-    <td>requirements.txt, setup.py</td>
+    <td>requirements.txt, setup.py, pyproject.toml</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
