@@ -110,10 +110,14 @@ $ gradlew generateLicenseTxt
 <summary markdown="span">**Prerequisite for Pypi**</summary>
 ```tip
 - 시스템 내 전역으로 설치된 파이썬 dependency로부터 분석하고자 하는 프로젝트 dependency를 분리하기 위해 가상환경을 설정하여 이용하기를 권장합니다.
-- 만약 input path내 requirements.txt가 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행 가능하므로, prerequisite단계는 skip합니다.
+- 만약 input path내 requirements.txt가 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행 가능하므로, 2번 단계부터는 skip합니다.
 ```
 
-1. 가상환경을 생성하고 활성화합니다.
+1. python3-venv를 설치합니다.
+```
+$ sudo apt-get install python3-venv
+```
+2. 가상환경을 생성하고 활성화합니다.
 ```
 // virtualenv example
 $ virtualenv -p /usr/bin/python3.7 venv
@@ -122,8 +126,8 @@ $ source venv/bin/activate
 $ conda create --name {venv name}
 $ conda activate {venv name}
 ```
-2. 가상환경 내 분석하고자 하는 프로젝트에서 사용된 패키지를 설치합니다.
-3. FOSSLight Dependency Scanner 실행 시, '-a', '-d' 옵션을 이용하여 해당 가상환경 activate, deactivate 명령어를 추가합니다.
+3. 가상환경 내 분석하고자 하는 프로젝트에서 사용된 패키지를 설치합니다.
+4. FOSSLight Dependency Scanner 실행 시, '-a', '-d' 옵션을 이용하여 해당 가상환경 activate, deactivate 명령어를 추가합니다.
 </details>
 
 <details>
