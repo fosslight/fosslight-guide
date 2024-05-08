@@ -22,6 +22,7 @@ title: FOSSLight Dependency Scanner
 - [Go](https://pkg.go.dev/) (Go)
 - [Nuget](https://www.nuget.org/) (.NET)
 - [Helm](https://helm.sh/) (Kubernetes)
+- [Unity](https://unity.com/) (Unity)
 </details>
 {::options parse_block_html="false" /}
 
@@ -234,6 +235,13 @@ FOSSLight Dependency Scanner 내부에서 packages.config 파일 또는 PackageR
 FOSSLight Dependency Scanner 내부에서 Chart.yaml 파일과 helm dependency build 명령어를 통해 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
 ```
 </details>
+
+<details>
+<summary markdown="span">**Prerequisite for Unity**</summary>
+```tip
+FOSSLight Dependency Scanner 내부에서 Library/PackageManager/ProjectCache 파일과 Library/PackageCache 디렉토리 내 각 패키지 디렉토리에서 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 해당 파일들이 존재하는 환경에서 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
+```
+</details>
 {::options parse_block_html="false" /}
 
 ## 🎉 설치 방법
@@ -259,7 +267,7 @@ $ fosslight_dependency [option] <arg>
             -h                              Print help message.
             -v                              Print the version of the script.
             -m <package_manager>            Enter the package manager.
-                                                (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm)
+                                                (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm, unity)
             -p <input_path>                 Enter the path where the script will be run.
             -o <output_path>                Output path
                                                 (If you want to generate the specific file name, add the output path with file name.)
@@ -289,7 +297,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
 각 패키지 매니저별 manifest 파일은 다음과 같습니다.
 ```
   - Npm : package.json
-  - Pypi : requirements.txt / setup.py
+  - Pypi : requirements.txt / setup.py / pyproject.toml
   - Maven : pom.xml
   - Gradle (Android) : build.gradle
   - Pub : pubspec.yaml
@@ -299,11 +307,14 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - Go : go.mod
   - Nuget : packages.config / {project name}.csproj
   - Helm : Chart.yaml
+  - Unity : Library/PackageManager/ProjectCache
 ```
 
 - Swift package manager
   - 예외적으로 Swift package manager는 {프로젝트명}.xcodeproj 파일이 위치한 path에서 "fosslight_dependency -m swift -t {token}" 명령어를 실행하실 수 있습니다.
   - 이 경우에는 {프로젝트명}.xcodeproj/project.xcworkspace/xcshareddata/swiftpm path에서 'Package.resolved' 파일을 자동으로 찾고 프로그램이 실행됩니다.
+- Unity
+  - Library 폴더 존재하는 directory에서 "fosslight_dependency -m unity" 명령어를 실행하시면 됩니다.
 
 ## 📁 결과
 ```
@@ -316,6 +327,7 @@ $ tree
 - fosslight_report_dep_[datetime].xlsx : FOSSLight Report 형태의 Dependency 분석 결과
 - fosslight_log_dep_[datetime].txt: 실행 로그가 저장된 파일
 - fosslight_opossum_dep_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과 (-f opossum 결과)
+- third_party_notice.txt : Unity로 실행한 경우에만 생성되는 파일로써, 각 패키지의 third party notice를 모아서 출력함
 
 ### 결과 파일 내용
 FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모든 분석된 dependency들의 manifest 파일을 기반으로 OSS 정보가 기록됩니다.
@@ -323,16 +335,17 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 
 | Package manager                | OSS Name                 | Download Location                                                                                  | Homepage                                            |
 | ------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Npm                            | npm:(oss name)           | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)/v/(oss version) | npmjs.com/package/(oss name)                        |
-| Pypi                            | pypi:(oss name)          | pypi.org/project/(oss name)/(version)                                                              | homepage in (pip show) information                  |
+| Npm                            | npm:(oss name)           | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)/v/(oss version)   | npmjs.com/package/(oss name)                        |
+| Pypi                           | pypi:(oss name)          | pypi.org/project/(oss name)/(version)                                                              | homepage in (pip show) information                  |
 | Maven<br>& Gradle<br>& Android | (group_id):(artifact_id) | mvnrepository.com/artifact/(group id)/(artifact id)/(version)                                      | mvnrepository.com/artifact/(group id)/(artifact id) |
 | Pub                            | pub:(oss name)           | pub.dev/packages/(oss name)/versions/(version)                                                     | homepage in (pub information)                       |
-| Cocoapods                      | cocoapods:(oss name)     | source in (pod spec information)                                                                   | cocoapods.org/pods/(oss name)                            |
-| Swift                      | swift:(oss name)     | repositoryURL in Package.resolved                                                                   | repositoryURL in Package.resolved                            |
-| Carthage                      | carthage:(oss name)     | github repository in Cartfile.resolved                                                                   | github repository in Cartfile.resolved                            |
-| Go                      | go:(oss name)     | pkg.go.dev/(oss name)@(oss version)                                                                   | repository in pkg.go.dev/(oss name)@(oss version)                        |
-| Nuget                      | nuget:(oss name)     | 우선순위1. repository in nuget.org/packages/(oss name)/(oss version) <br> 우선순위2. projectUrl in nuget.org/packages/(oss name)/(oss version) <br> 우선순위3. nuget.org/packages/(oss name)/(oss version)  | nuget.org/packages/(oss name) |
-| Helm                        | helm:(oss name)     | first url of sources in (Chart.yaml)                                                                   | home in (Chart.yaml)                           |
+| Cocoapods                      | cocoapods:(oss name)     | source in (pod spec information)                                                                   | cocoapods.org/pods/(oss name)                       |
+| Swift                          | swift:(oss name)         | repositoryURL in Package.resolved                                                                  | repositoryURL in Package.resolved                   |
+| Carthage                       | carthage:(oss name)      | github repository in Cartfile.resolved                                                             | github repository in Cartfile.resolved              |
+| Go                             | go:(oss name)            | pkg.go.dev/(oss name)@(oss version)                                                                | repository in pkg.go.dev/(oss name)@(oss version)   |
+| Nuget                          | nuget:(oss name)         | 우선순위1. repository in nuget.org/packages/(oss name)/(oss version) <br> 우선순위2. projectUrl in nuget.org/packages/(oss name)/(oss version) <br> 우선순위3. nuget.org/packages/(oss name)/(oss version)  | nuget.org/packages/(oss name) |
+| Helm                           | helm:(oss name)          | first url of sources in (Chart.yaml)                                                               | home in (Chart.yaml)                                |
+| Unity                          | (oss name)               | url in repository in ProjectCache                                                                  | url in repository in ProjectCache                   |
 
 ```warning
 - Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
@@ -459,6 +472,14 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
     <td>Chart.yaml</td>
     <td>O</td>
     <td>X</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td>Unity</td>
+    <td>Unity</td>
+    <td>Library/PackageManager/ProjectCache</td>
+    <td>O</td>
+    <td>O</td>
     <td>X</td>
   </tr>
 </tbody>
