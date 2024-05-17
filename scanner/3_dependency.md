@@ -96,7 +96,7 @@ buildscript {
 }
 ```
 
-2. 플러그인이 적용되는 app 디렉토리 내에 위치한 build.gradle 파일 내에 다음과 같이 추가합니다. 
+2. 플러그인이 적용되는 app 디렉토리 내에 위치한 build.gradle 파일 내에 다음과 같이 추가합니다. 이때 plugins 블록 (또는 apply plugin:'com.android.application') 하위 라인에 추가되어야 에러가 발생하지 않습니다.
 ```
 apply plugin: 'org.fosslight'
 ```
