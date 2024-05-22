@@ -84,6 +84,9 @@ $ gradlew downloadLicenses
 
 <details>
 <summary markdown="span">**Prerequisite for Android (gradle)**</summary>
+```tip
+Android (gradle)의 경우, input directory에 gradlew 실행 파일 및 build.gradle 파일이 존재하는 경우, plugin 추가 및 실행을 FOSSLight Dependency Scanner 내부에서 자동으로 수행하므로 다음은 skip하셔도 됩니다.
+```
 1. 'build.gradle' 파일에 android-dependency-scanning Plugin을 추가합니다.
 ```
 buildscript {
@@ -310,6 +313,8 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - Unity : Library/PackageManager/ProjectCache
 ```
 
+- Android (gradle)
+  - module name이 default인 app이 아닌 경우, module name을 '-n' 옵션으로 지정하여 실행하셔야 합니다. (fosslight_dependency -n {module_name})
 - Swift package manager
   - 예외적으로 Swift package manager는 {프로젝트명}.xcodeproj 파일이 위치한 path에서 "fosslight_dependency -m swift -t {token}" 명령어를 실행하실 수 있습니다.
   - 이 경우에는 {프로젝트명}.xcodeproj/project.xcworkspace/xcshareddata/swiftpm path에서 'Package.resolved' 파일을 자동으로 찾고 프로그램이 실행됩니다.
