@@ -100,8 +100,8 @@ fosslight_android 명령어를 실행합니다.
 | License          | 1. Binary DB 2. Source Path의 "MODULE_LICENSE_xxxxxx" 3.{MODULE_NAME}.meta_lic에서 찾은 정보를 출력합니다. |
 | Need Check       | 'O'인 경우, 검토가 필요합니다.                                                                           |
 | Comment          | 검토가 필요한 사항을 출력합니다.                                                                            |
-| TLSH             | Binary의 TLSH 값을 출력합니다.                                                            |
-| SHA1             | Binary의 Checksum 값을 출력합니다.                                                            |
+| (TLSH)           | Binary의 TLSH 값을 출력합니다.                                                            |
+| (SHA1)           | Binary의 Checksum 값을 출력합니다.                                                            |
 
 ## 🚗 추가 기능
 ---
