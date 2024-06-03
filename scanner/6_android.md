@@ -84,8 +84,8 @@ fosslight_android 명령어를 실행합니다.
 
 ## 📁 결과
 - fosslight_report_[datetime].xlsx : FOSSLight Android 분석 결과 (FOSSLight Report 형태)    
-   - jar 파일 분석 시, Vulnerability Link Column이 FOSSLight-Report_[datetime].xlsx에 추가 됨.    
-- fosslight_binary_android_[datetime].txt : Binary별 checksum, tlsh 값이 출력된 결과
+   - jar 파일 분석 시, Vulnerability Link Column이 FOSSLight-Report_[datetime].xlsx에 추가 됨.
+   - Binary별 checksum, tlsh 값은 report에 기본적으로 숨김 처리 되어 있음.    
 - fosslight_log_[datetime].txt : 실행 log    
 - REMOVED_BIN_BY_DUPLICATION_[datetime].txt : output path내 binary name과 checksum이 동일한 파일이 2개 이상 존재하여 FOSSLight Report에서 중복 제거된 목록입니다.
 더불어 -r 옵션으로 추가로 제거된 목록도 출력됩니다.
@@ -100,6 +100,8 @@ fosslight_android 명령어를 실행합니다.
 | License          | 1. Binary DB 2. Source Path의 "MODULE_LICENSE_xxxxxx" 3.{MODULE_NAME}.meta_lic에서 찾은 정보를 출력합니다. |
 | Need Check       | 'O'인 경우, 검토가 필요합니다.                                                                           |
 | Comment          | 검토가 필요한 사항을 출력합니다.                                                                            |
+| TLSH             | Binary의 TLSH 값을 출력합니다.                                                            |
+| SHA1             | Binary의 Checksum 값을 출력합니다.                                                            |
 
 ## 🚗 추가 기능
 ---
