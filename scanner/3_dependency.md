@@ -182,7 +182,6 @@ $ mvnw license:aggregate-download-licenses
 ```
 $ flutter pub add dev:flutter_oss_licenses:'^2.0.1'
 $ flutter pub get
-$ flutter pub deps --no-dev > tmp_no_deps_result.txt
 $ flutter pub deps --json > tmp_deps.json
 $ flutter pub deps --no-dev -s compact > tmp_no_dev_deps.txt
 $ flutter pub run flutter_oss_licenses:generate.dart -o tmp_flutter_oss_licenses.json --json
