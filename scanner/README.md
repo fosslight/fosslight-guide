@@ -94,6 +94,15 @@ fosslight all -o test_result_wget -w "https://github.com/LGE-OSS/example.git"
 fosslight compare -p FOSSLight_before_proj.yaml FOSSLight_after_proj.yaml -o test_result
 ```
 
+### 실행 Parameter를 json으로 저장하여 호출하는 방법
+1. [setting.json](https://github.com/fosslight/fosslight_scanner/blob/main/tests/setting.json) 포맷으로 실행 parameter별 값을 json 파일로 작성하여 저장
+2. 실행시, -s 로 생성한 setting.json을 호출합니다.
+```
+fosslight -s setting.json
+```
+🛈 json 파일에 작성한 parameter보다 실행시 호출한 값을 우선합니다.      
+ex. '-f yaml -s setting.json'로 호출시, yaml 포맷의 output을 출력합니다.
+
 ## 📁 결과
 ### 오픈소스 분석 모드 결과 (all, source, dependency, binary)
 ```
