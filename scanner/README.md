@@ -122,6 +122,14 @@ test_result/
   - fosslight_src_(datetime).xlsx : Source code 분석 결과 파일
   - fosslight_dep_(datetime).xlsx : Dependency 분석 결과 파일
   - fosslight_bin_(datetime).xlsx : Binary 분석 결과 파일
+ 
+#### fosslight_report_(datetime).xlsx
+1. Exclude : 체크된 Row
+   test(s), doc(s), 숨김 파일 or 폴더는 Exclude 체크됩니다.
+2. sbom-info.yaml을 load한 경우, load한 데이터를 append하고 중복된 파일에 대한 분석 결과는 Exclude됩니다.
+3. Comment란 :
+   Add/Loaded by ** : ** 으로 부터 load한 Row
+   Excluded by ** : ** 으로 인해 Exclude된 Row
 
 ### compare 모드 결과
 ```
