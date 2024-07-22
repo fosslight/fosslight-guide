@@ -82,16 +82,22 @@ $ tree
 - fosslight_opossum_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
 ## 🧐 동작 방식
-1. 하기 사항을 제외하고 Binary를 추출합니다.    
-    1-0. symbolic link, FIFO 파일    
-    1-1. 파일 extension : ['png', 'gif', 'jpg', 'bmp', 'jpeg', 'qm', 'xlsx', 'pdf', 'ico', 'pptx', 'jfif', 'docx',
-                         'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist']            
-    1-2. 파일 Type : ['data','timezone data', 'apple binary property list']    
-    1-3. 경로 : ['.git']    
-2. 하기 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.     
-     - Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우           
-     - 경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우
-     - directory가 숨긴 폴더인 경우 (폴더명이 .로 시작하는 경우)            
-3. Binary별 checksum과 tlsh를 출력합니다.     
-4. OSS 정보를 Binary DB로 부터 불러옵니다.       
-5. Output 파일을 생성합니다.    
+1. 아래 항목들은 Binary 분석 과정에서 제외됩니다.    
+   |제외 항목|설명|
+   |----|----|
+   |symbolic link, FIFO 파일| file open으로 읽을 수 없음.   이로 인해 file type이나 binary인지 체크할 때, FOSSLight Binary Scanner가 멈춤.|
+   |Binary가 아닌 확장자|'qm', 'xlsx', 'pdf', 'pptx', 'jfif', 'docx', 'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist', 'dat', 'json', 'js' 등|
+   |특정 파일 Type| 'data','timezone data', 'apple binary property list'로 시작하는 파일들|
+   |특정 경로| '.git'의 경로|
+2. 아래 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.
+   |Exclude 항목|설명|
+   |----|----|
+   |Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우|-|
+   |경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우| 배포에 포함되는 소스 코드 / 바이너리의 결과만 출력 |
+   |directory가 숨긴 폴더인 경우 (폴더명이 .로 시작하는 경우) |-|
+   |특정 확장자인 경우| .class 파일로 외부 library를 import하는 것은 매우 드문 case|
+   |intermediate폴더 | 중간 필드 산출물의 폴더로 분석 결과 불필요|
+   
+4. Binary별 checksum과 tlsh를 출력합니다.     
+5. OSS 정보를 Binary DB로 부터 불러옵니다.       
+6. Output 파일을 생성합니다.    
