@@ -99,4 +99,4 @@ $ tree
    
 4. Binary별 checksum과 tlsh를 출력합니다.     
 5. OSS 정보를 Binary DB로 부터 불러옵니다.       
-6. Output 파일을 생성합니다.    
+6. 결과 Report 파일을 생성합니다.    
