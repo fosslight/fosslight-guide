@@ -83,14 +83,14 @@ $ tree
 
 ## 🧐 동작 방식
 1. 아래 항목들은 Binary 분석 과정에서 제외됩니다.    
-   |제외 항목|설명|
+   |:제외 항목:|:설명:|
    |----|----|
    |symbolic link, FIFO 파일| file open으로 읽을 수 없음.   이로 인해 file type이나 binary인지 체크할 때, FOSSLight Binary Scanner가 멈춤.|
    |Binary가 아닌 확장자|'qm', 'xlsx', 'pdf', 'pptx', 'jfif', 'docx', 'doc', 'whl', 'xls', 'xlsm', 'ppt', 'mp4', 'pyc', 'plist', 'dat', 'json', 'js' 등|
    |특정 파일 Type| 'data','timezone data', 'apple binary property list'로 시작하는 파일들|
    |특정 경로| '.git'의 경로|
 2. 아래 사항에 대하여 FOSSLight Report에 "Exclude"를 체크합니다.
-   |Exclude 항목|설명|
+   |:Exclude 항목:|:설명:|
    |----|----|
    |Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우|-|
    |경로가 ["test", "tests", "doc", "docs"]에 포함되는 경우| 배포에 포함되는 소스 코드 / 바이너리의 결과만 출력 |
