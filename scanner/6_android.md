@@ -79,7 +79,6 @@ fosslight_android 명령어를 실행합니다.
             -t                             Collect NOTICE for binaries that are not added to NOTICE.html.
             -d                             Divide needtoadd-notice.html by binary.
             -i                             Disable the function to automatically convert OSS names based on AOSP.
-            -r <result.txt>                result.txt file with a list of binaries to remove.
     ``` 
 
 ## 📁 결과
@@ -198,23 +197,6 @@ Source Code Path를 찾지 못하는 Binary별 Find command 실행 결과는 'FI
 ### -i: OSS Name 자동 완성 기능 끄기
 FOSSLight Android는 Binary DB에서 OSS 정보를 찾을 수 없는 경우이거나 OSS Name이 "Android Open Source Project"인 경우, Source Code Path를 기준으로 [Android Native](https://android.googlesource.com/platform)에 있는 저장소라면 OSS Name을 자동으로 출력해줍니다.      
 OSS Name 자동 완성 기능을 끄고자 할 경우 선택합니다.      
-
-### -r: 특정 binary를 FOSSLight Report에서 중복 제거
-하나의 Model에 탑재하는 Android native와 vendor가 분리된 output으로 생성되는 경우에 한하여 활용합니다.        
-- vendor에 대한 FOSSLight Android 실행시 -r 옵션을 이용하여 Android native에도 포함되는 binary를 중복 제거합니다.
-- 중복 제거 조건 : Binary name이 같고 checksum이 같거나, Binary name이 같고 TLSH 값 차이가 120이하인 경우
-- 중복 제거된 binary는 REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
-
-1. -r 옵션을 추가하여 실행합니다. 
-    ```commandline
-    (venv)$ fosslight_android -s [vendor_source_path] -a [android_build_log_file] -r [android_native_result.txt]
-     
-    ex
-    (venv)$ fosslight_android -s [vendor_source_path] -a android.log -r android_native_result.txt
-    ```
-
-2. 결과 확인         
-android_native_result.txt와 중복된 binary는 FOSSLight-Report.xlsx에서 제거되고, REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
 
 
 ### -m: 소스 코드 분석하여 License 출력
