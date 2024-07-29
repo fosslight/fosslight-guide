@@ -36,7 +36,7 @@ $ pip3 install virtualenv
 $ virtualenv -p /usr/bin/python3.8 venv
 $ source venv/bin/activate
 ```
-자세한 virtualenv 설명: [Python virtaulenv page][venv]
+자세한 virtualenv 설명: [Python virtualenv page][venv]
 
 [venv]: https://docs.python.org/3.8/library/venv.html
 
