@@ -1,3 +1,13 @@
+# FOSSLight
+
+[FOSSLight Hub](#fosslight-hub)FOSSLight 프로젝트는 오픈 소스에 관한 모든 것을 관리할 수 있는 통합 시스템인 FOSSLight Hub와 [FOSSLight Scanner](#fosslight-scanner)오픈 소스를 분석할 수 있는 FOSSLight Scanner로 구성되어있습니다. 
+
+## FOSSLight Hub
+
+[FOSSLight Hub](https://github.com/fosslight/fosslight)FOSSLight Hub는 오픈 소스와 라이선스를 관리하고 오픈 소스 준수 절차를 순차적으로 처리하는 통합 시스템일 뿐만 아니라, 보안 취약점 관리, 공급망 관리, 소프트웨어 BOM(Bill of Materials) 및 오픈 소스와 관련된 모든 것을 관리할 수 있는 올인원 시스템입니다.
+
+이 가이드 페이지에서는 FOSSLight Hub의 기본 사용법과 튜토리얼, 개발 환경 설정 방법 및 유지 관리 팁과 같은 고급 기능을 설명합니다. FOSSLight Hub 내용 페이지를 참조할 수 있습니다.
+
 # FOSSLight Scanner
 
 [FOSSLight Scanner](scanner)는 Prechecker, Dependency Scanner, Source Scanner, Binary Scanner 4가지의 스캐너로 구성되어 있으며, FOSSLight Scanner를 통해 4개 스캐너의 통합 결과를 생성하도록 수행할 수 있습니다.
