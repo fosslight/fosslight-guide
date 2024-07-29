@@ -91,7 +91,7 @@ $ tree
    |특정 파일 Type           | 'data','timezone data', 'apple binary property list'로 시작하는 파일들                                                         |    
    |특정 경로                | '.git'의 경로                                                                                                                 |
    
-3. 아래 사항에 대하여 FOSSLight Report에 **"Exclude"**를 체크합니다.
+3. 아래 사항에 대하여 FOSSLight Report에 "**Exclude**"를 체크합니다.
 
    |Exclude 항목                                                          |설명                                                 |
    |----------------------------------------------------------------------|-----------------------------------------------------|
