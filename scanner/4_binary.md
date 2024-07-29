@@ -98,7 +98,7 @@ $ tree
    |Binary가 ['fosslight_bin', 'fosslight_bin.exe']에 포함되는 경우         | -                                                  |
    |경로가 ["test", "tests", "doc", "docs", "intermediates"]에 포함되는 경우| 실제 배포에 포함되는 소스 코드 / 바이너리의 결과만 출력 |
    |directory가 숨긴 폴더인 경우 (폴더명이 .로 시작하는 경우)                | -                                                   |               
-   |특정 확장자인 경우                                                      | .class 파일로 외부 library를 import하는 것은 매우 드문 case|
+   |특정 확장자인 경우                                                     | 최종 빌드 산출물이 아님(ex, .class                    |
    
 5. Binary별 checksum과 tlsh를 출력합니다.     
 6. OSS 정보를 Binary DB로 부터 불러옵니다.       
