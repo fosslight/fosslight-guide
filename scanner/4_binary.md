@@ -91,7 +91,7 @@ $ tree
    |특정 파일 Type           | 'data','timezone data', 'apple binary property list'로 시작하는 파일들                                                         |    
    |특정 경로                | '.git'의 경로                                                                                                                 |
    
-3. 아래 사항에 대하여 FOSSLight Report에 "**Exclude**"를 체크합니다.
+2. 아래 사항에 대하여 FOSSLight Report에 "**Exclude**"를 체크합니다.
 
    |Exclude 항목                                                          |설명                                                 |
    |----------------------------------------------------------------------|-----------------------------------------------------|
@@ -100,6 +100,6 @@ $ tree
    |directory가 숨긴 폴더인 경우 (폴더명이 .로 시작하는 경우)                | -                                                   |               
    |특정 확장자인 경우                                                     | 최종 빌드 산출물이 아님(ex, .class)                   |
    
-5. Binary별 checksum과 tlsh를 출력합니다.     
-6. OSS 정보를 Binary DB로 부터 불러옵니다.       
-7. 결과 Report 파일을 생성합니다.    
+3. Binary별 checksum과 tlsh를 출력합니다.     
+4. OSS 정보를 Binary DB로 부터 불러옵니다.       
+5. 결과 Report 파일을 생성합니다.    
