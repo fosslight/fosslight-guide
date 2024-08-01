@@ -77,8 +77,8 @@ $ tree
 ```
 - fosslight_log_[datetime].txt : 실행 log
 - fosslight_report_[datetime].xlsx : FOSSLight binary의 결과 (FOSSLight Report 형태)    
-   - jar 파일 분석 시, Vulnerability Link Column이 FOSSLight-Report_[datetime].xlsx에 추가 됨.
-   - Binary별 checksum, tlsh 값은 report에 기본적으로 숨김 처리 되어 있음.  
+   - jar 파일 분석 시, Vulnerability Link Column에 보안취약점 정보가 추가됨.
+   - Binary별 checksum, tlsh Column은 기본적으로 숨김 처리 되어 있음.  
 - fosslight_opossum_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과     
 
 ## 🧐 동작 방식
