@@ -335,12 +335,13 @@ $ tree
 
 ### Graph Network 생성 결과
 ``` bash
-# $ fosslight_dependency -p /project/path --graph-path ~/temp/graph.pdf
+# $ fosslight_dependency -p /project/path --graph-path ~/temp/graph.png --graph-size 1000 1000
 $ cd ~/temp
 $ tree
 .
-└── graph.pdf
+└── graph.png
 ```
+![graph network result image](images/fosslight_depenency_graph.png)
 - fosslight_report_dep_[datetime].xlsx 파일의 결과 중 Depends On 부분을 이용하여 각 Dependency 간의 의존 관계 그래프 이미지 저장
 
 ### 결과 파일 내용
