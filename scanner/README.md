@@ -107,28 +107,26 @@ ex. '-f yaml -s setting.json'로 호출시, yaml 포맷의 output을 출력합�
 ### 오픈소스 분석 모드 결과 (all, source, dependency, binary)
 ```
 test_result/
-├── fosslight_binary_220214_1824.txt
 ├── fosslight_log
 │   └── fosslight_log_220214_1824.txt
-├── fosslight_report_220214_1824.xlsx
-└── fosslight_raw_data
+├── fosslight_report_all_220214_1824.xlsx
+└── fosslight_raw_data (-r option 있는 경우)
     ├── fosslight_src_220214_1824.xlsx
     ├── fosslight_bin_220214_1824.xlsx
     └── fosslight_dep_220214_1824.xlsx
 ```
-- fosslight_binary_(datetime).txt : FOSSLight Binary결과 binary 별 checksum, tlsh 값이 추출된 파일
-- fosslight_report_(datetime).xlsx : Source code 분석, Binary 분석, Dependency 분석 결과가 작성된 FOSSLight Report 형식의 파일
+- fosslight_report_(datetime).xlsx : Source 분석, Binary 분석, Dependency 분석 결과가 작성된 FOSSLight Report 형식의 파일
 - fosslight_raw_data directory: 분석 결과 Raw Data 파일이 생성되는 폴더 (-r option 있는 경우)
-  - fosslight_src_(datetime).xlsx : Source code 분석 결과 파일
+  - fosslight_src_(datetime).xlsx : Source 분석 결과 파일
   - fosslight_dep_(datetime).xlsx : Dependency 분석 결과 파일
   - fosslight_bin_(datetime).xlsx : Binary 분석 결과 파일
  
 #### fosslight_report_(datetime).xlsx
 1. Exclude : 체크된 Row
    test(s), doc(s), 숨김 파일 or 폴더는 Exclude 체크됩니다.
-2. sbom-info.yaml을 load한 경우, load한 데이터를 append하고 중복된 파일에 대한 분석 결과는 Exclude됩니다.
+2. sbom-info.yaml을 load한 경우, load한 데이터를 append하고 중복된 파일에 대한 분석 결과는 Exclude 체크됩니다.
 3. Comment란 :     
-   Add/Loaded by ** : ** 으로 부터 load한 Row      
+   Add/Loaded by ** : ** 으로부터 load한 Row     
    Excluded by ** : ** 으로 인해 Exclude된 Row       
 
 ### compare 모드 결과
