@@ -270,6 +270,10 @@ $ fosslight_dependency [option] <arg>
             -o <output_path>                Output path
                                                 (If you want to generate the specific file name, add the output path with file name.)
             -f <format>                     Output file format (excel, csv, opossum, yaml, spdx-tag, spdx-yaml, spdx-json, spdx-xml)
+            --graph-path <save_path>        Enter the path where the graph image will be saved
+                                                (ex. /your/directory/path/filename.{pdf, jpg, png}) (recommend pdf extension)
+            --graph-size <width> <height>   Enter the size of the graph image (The size unit is pixels)
+                                                --graph-path option is required
             --direct                        Print the direct/transitive dependency type in comment.
                                                 Choice 'True' or 'False'. (default:True)
             --notice                        Print the open source license notice text.
@@ -328,6 +332,17 @@ $ tree
 - fosslight_log_dep_[datetime].txt: 실행 로그가 저장된 파일
 - fosslight_opossum_dep_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Dependency 분석 결과 (-f opossum 결과)
 - third_party_notice.txt : Unity로 실행한 경우에만 생성되는 파일로써, 각 패키지의 third party notice를 모아서 출력함
+
+### Graph Network 생성 결과
+``` bash
+# $ fosslight_dependency -p /project/path --graph-path ~/temp/graph.png --graph-size 1000 1000
+$ cd ~/temp
+$ tree
+.
+└── graph.png
+```
+![graph network result image](images/fosslight_depenency_graph.png)
+- fosslight_report_dep_[datetime].xlsx 파일의 결과 중 Depends On 부분을 이용하여 각 Dependency 간의 의존 관계 그래프 이미지 저장
 
 ### 결과 파일 내용
 FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모든 분석된 dependency들의 manifest 파일을 기반으로 OSS 정보가 기록됩니다.
