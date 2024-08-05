@@ -341,7 +341,8 @@ $ tree
 .
 └── graph.png
 ```
-![graph network result image](images/fosslight_depenency_graph.png)
+
+<img src="images/fosslight_depenency_graph.png" width="600">
 - fosslight_report_dep_[datetime].xlsx 파일의 결과 중 Depends On 부분을 이용하여 각 Dependency 간의 의존 관계 그래프 이미지 저장
 
 ### 결과 파일 내용
