@@ -11,7 +11,7 @@ FOSSLight Hub는 오픈 소스와 라이선스를 관리하고 오픈 소스 준
 
 [FOSSLight Scanner](scanner)는 Prechecker, Dependency Scanner, Source Scanner, Binary Scanner 4가지의 스캐너로 구성되어 있으며, FOSSLight Scanner를 통해 4개 스캐너의 통합 결과를 생성하도록 수행할 수 있습니다.
 <br/><br/>
-![](about/images/fosslight_scanner_overview.png){: width="80%" .center}
+![](scanner/images/fosslight_scanner_overview.png){: width="80%" .center}
 <br/>
 
 각 Scanner에 대한 설치 및 사용 방법에 대한 가이드는 FOSSLight Scanner 하위 가이드 페이지에서 확인하실 수 있습니다.
