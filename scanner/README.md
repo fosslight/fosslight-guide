@@ -47,7 +47,7 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
 ```
 ```
      Parameters:
-        Mode
+        Mode: Multiple modes can be entered by separating them with , (ex. source,binary)
             all                     Run all scanners(Default)
             source                  Run FOSSLight Source Scanner
             dependency              Run FOSSLight Dependency Scanner
@@ -62,6 +62,7 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
             -w <link>               Link to be analyzed can be downloaded by wget or git clone
             -f <format>             FOSSLight Report file format (excel, yaml)
                                      * Compare mode result file: supports excel, json, yaml, html
+            -e <path>               Path to exclude from analysis (ex, -e {dir} {file})
             -o <output>             Output directory or file
             -c <number>             Number of processes to analyze source
             -r                      Keep raw data
@@ -69,16 +70,18 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
             -v                      Print FOSSLight Scanner version
             -s <path>               Path to apply setting from file (check format with 'setting.json' in this repository)
                                      * Direct cli flags have higher priority than setting file
-                                    (ex, '-f yaml -s setting.json' - result file extension is .yaml)
+                                       (ex, '-f yaml -s setting.json' - result file extension is .yaml)
             --no_correction         Enter if you don't want to correct OSS information with sbom-info.yaml
                                      * Correction mode only supported xlsx format.
             --correct_fpath <path>  Path to the sbom-info.yaml file
+            --ui                          Generate UI mode result file
 
         Options for only 'all' or 'bin' mode
             -u <db_url>             DB Connection(format :'postgresql://username:password@host:port/database_name')
 
         Options for only 'all' or 'dependency' mode
             -d <dependency_argument>        Additional arguments for running dependency analysis
+
 ```
 - -d 옵션은 FOSSLight Dependency 실행시 argument 입력이 필요한 경우만 입력합니다.[참고](3_dependency.md)
 
