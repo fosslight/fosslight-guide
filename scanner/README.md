@@ -148,6 +148,7 @@ test_result/
 FOSSLight Scanner는 Docker를 이용하여 쉽게 실행할 수 있습니다. 현재 Windows 환경에서 실행 파일(.exe)을 통해 Docker 이미지를 사용할 수 있습니다.
 ### FOSSLight Scanner 실행 파일 다운로드:
 - FOSSLight Scanner 릴리즈 페이지에서 Windows용 실행 파일(fosslight_wrapper.exe)을 다운로드합니다.
+  - FOSSLight Scanner Release Page: https://github.com/fosslight/fosslight_scanner/releases
 
 ### 간편 실행 방법:
 1. 분석하고자 하는 디렉토리에 fosslight_wrapper.exe 파일을 복사합니다.
