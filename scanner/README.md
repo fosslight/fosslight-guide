@@ -146,23 +146,23 @@ test_result/
 
 ## 🐳 Docker를 이용하여 설치 및 실행 방법
 FOSSLight Scanner는 Docker를 이용하여 쉽게 실행할 수 있습니다. 현재 Windows 환경에서 실행 파일(.exe)을 통해 Docker 이미지를 사용할 수 있습니다.
-1. FOSSLight Scanner 실행 파일 다운로드:
+### FOSSLight Scanner 실행 파일 다운로드:
 - FOSSLight Scanner 릴리즈 페이지에서 Windows용 실행 파일(fosslight_wrapper.exe)을 다운로드합니다.
 
-2. 간편 실행 방법:
-- 분석하고자 하는 디렉토리에 fosslight_wrapper.exe 파일을 복사합니다.
-- fosslight_wrapper.exe를 더블클릭하여 실행합니다.
-- 자동으로 Docker Hub에서 FOSSLight Scanner 이미지를 pull하고, 현재 디렉토리의 파일들을 분석합니다.
-- 분석이 완료되면 결과 파일이 같은 디렉토리에 생성됩니다.
+### 간편 실행 방법:
+1. 분석하고자 하는 디렉토리에 fosslight_wrapper.exe 파일을 복사합니다.
+2. fosslight_wrapper.exe를 더블클릭하여 실행합니다.
+3. 자동으로 Docker Hub에서 FOSSLight Scanner 이미지를 pull하고, 현재 디렉토리의 파일들을 분석합니다.
+4. 분석이 완료되면 결과 파일이 같은 디렉토리에 생성됩니다.
 
-3. 수동 실행 방법:
-- 명령 프롬프트(CMD)를 열고, fosslight_wrapper.exe가 있는 디렉토리로 이동합니다.
-- 다음 명령어를 실행합니다:
+### 수동 실행 방법:
+1. 명령 프롬프트(CMD)를 열고, fosslight_wrapper.exe가 있는 디렉토리로 이동합니다.
+2. 다음 명령어를 실행합니다:
 ```
 Copyfosslight_wrapper.exe --manual
 ```
-- 이 명령은 로컬 Docker 환경에 FOSSLight 이미지를 빌드합니다.
-- 프롬프트에 따라 분석할 경로(Git 저장소 URL 또는 로컬 절대 경로)와 결과 파일을 저장할 경로를 입력합니다.
+  - 해당 명령은 로컬 Docker 환경에 FOSSLight 이미지를 빌드합니다.
+4. 프롬프트에 따라 분석할 경로(Git 저장소 URL 또는 로컬 절대 경로)와 결과 파일을 저장할 경로를 입력합니다.
 
 ### 주의사항:
 - Docker Desktop이 설치 및 실행이 되고 있는 상태이어야 합니다.
