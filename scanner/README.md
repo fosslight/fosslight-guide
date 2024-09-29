@@ -162,8 +162,8 @@ FOSSLight Scanner는 Docker를 이용하여 쉽게 실행할 수 있습니다. �
 ```
 Copyfosslight_wrapper.exe --manual
 ```
-  - 해당 명령은 로컬 Docker 환경에 FOSSLight 이미지를 빌드합니다.
-4. 프롬프트에 따라 분석할 경로(Git 저장소 URL 또는 로컬 절대 경로)와 결과 파일을 저장할 경로를 입력합니다.
+  - 해당 명령은 로컬 Docker 환경에 있는 FOSSLight 이미지 실행 및 임의 경로 설정을 원할 시 사용합니다.
+3. 프롬프트에 따라 실행하고 싶은 FOSSLight 로컬 이미지, 분석할 경로(Git 저장소 URL 또는 로컬 절대 경로)와 결과 파일을 저장할 경로를 입력합니다.
 
 ### 주의사항:
 - Docker Desktop이 설치 및 실행이 되고 있는 상태이어야 합니다.
