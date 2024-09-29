@@ -169,4 +169,5 @@ Copyfosslight_wrapper.exe --manual
 - Docker Desktop이 설치 및 실행이 되고 있는 상태이어야 합니다.
 - 인터넷 연결이 필요합니다 (Docker image pull).
 - 첫 실행 시 Docker 이미지 다운로드로 인해 시간이 소요될 수 있습니다.
+- 인터넷 환경이 쾌적한 곳에서 실행하여야 합니다.
 
