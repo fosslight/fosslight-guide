@@ -56,6 +56,7 @@ Options:
     -h                    설명 메시지 출력
     -v                    FOSSLight Prechecker 버전 출력
     -p <path>             체크할 소스 경로
+    -e <path>             뷴석시 제외할 경로('lint' mode에서만 동작)
     -f <format>           결과 파일 포맷 (yaml, xml, html)
     -o <file_name>        결과 파일 이름 지정
     -n                    venv, node_modules, ./ 에 대하여 분석 제외하지 않으려면 추가
