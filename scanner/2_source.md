@@ -76,6 +76,7 @@ $ fosslight_convert [option] <arg>
             -h                     Print help message
             -v                     Print FOSSLight Source Scanner version
             -m                     Print additional information for scan result on separate sheets
+            -e <path>              Path to exclude from analysis (file and directory)
             -o <output_path>       Output path (Path or file name)
             -f <format>            Output file format (excel, csv, opossum, yaml)
         Options only for FOSSLight Source Scanner
