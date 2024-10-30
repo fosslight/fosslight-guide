@@ -22,7 +22,8 @@ title: FOSSLight Dependency Scanner
 - [Go](https://pkg.go.dev/) (Go)
 - [Nuget](https://www.nuget.org/) (.NET)
 - [Helm](https://helm.sh/) (Kubernetes)
-- [Unity](https://unity.com/) (Unity)
+- [Unity](https://unity.com/) (Unity
+- [Cargo](https://crates.io/) (Rust)
 </details>
 {::options parse_block_html="false" /}
 
@@ -239,6 +240,13 @@ FOSSLight Dependency Scanner 내부에서 Chart.yaml 파일과 helm dependency b
 ```tip
 FOSSLight Dependency Scanner 내부에서 Library/PackageManager/ProjectCache 파일과 Library/PackageCache 디렉토리 내 각 패키지 디렉토리에서 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 해당 파일들이 존재하는 환경에서 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
 ```
+</details
+
+<details>
+<summary markdown="span">**Prerequisite for Cargo**</summary>
+```tip
+FOSSLight Dependency Scanner 내부에서 Cargo.toml 파일과 'cargo metadata' 명령어를 통해 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
+```
 </details>
 {::options parse_block_html="false" /}
 
@@ -265,7 +273,7 @@ $ fosslight_dependency [option] <arg>
             -h                              Print help message.
             -v                              Print the version of the script.
             -m <package_manager>            Enter the package manager.
-                                                (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm, unity)
+                                                (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm, unity, cargo)
             -p <input_path>                 Enter the path where the script will be run.
             -o <output_path>                Output path
                                                 (If you want to generate the specific file name, add the output path with file name.)
@@ -310,6 +318,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
   - Nuget : packages.config / {project name}.csproj
   - Helm : Chart.yaml
   - Unity : Library/PackageManager/ProjectCache
+  - Cargo : Cargo.toml
 ```
 
 - Android (gradle)
@@ -362,6 +371,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Nuget                          | nuget:(oss name)         | 우선순위1. repository in nuget.org/packages/(oss name)/(oss version) <br> 우선순위2. projectUrl in nuget.org/packages/(oss name)/(oss version) <br> 우선순위3. nuget.org/packages/(oss name)/(oss version)  | nuget.org/packages/(oss name) |
 | Helm                           | helm:(oss name)          | first url of sources in (Chart.yaml)                                                               | home in (Chart.yaml)                                |
 | Unity                          | (oss name)               | url in repository in ProjectCache                                                                  | url in repository in ProjectCache                   |
+ Cargo                          | cargo:(oss name)         | repository of the package in the result file for 'cargo metadata'                                  | crates.io/crates/(oss name)                         |   
 
 ```warning
 - Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
@@ -497,6 +507,14 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
     <td>O</td>
     <td>O</td>
     <td>X</td>
+  </tr>
+  <tr>
+    <td>Rust</td>
+    <td>Cargo</td>
+    <td>Cargo.toml</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
   </tr>
 </tbody>
 </table>
