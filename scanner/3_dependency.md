@@ -240,7 +240,7 @@ FOSSLight Dependency Scanner 내부에서 Chart.yaml 파일과 helm dependency b
 ```tip
 FOSSLight Dependency Scanner 내부에서 Library/PackageManager/ProjectCache 파일과 Library/PackageCache 디렉토리 내 각 패키지 디렉토리에서 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 해당 파일들이 존재하는 환경에서 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
 ```
-</details
+</details>
 
 <details>
 <summary markdown="span">**Prerequisite for Cargo**</summary>
