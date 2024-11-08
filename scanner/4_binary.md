@@ -59,7 +59,8 @@ $ fosslight_binary [option] <arg>
         -e <path>                           Path to exclude from analysis (files and directories)
         -o <output_path>                    Output path
                                             (If you want to generate the specific file name, add the output path with file name.)
-        -f <format>                         Output file format (excel, csv, opossum, yaml)
+        -f <format> [<format> ...]          Output file formats (excel, csv, opossum, yaml)
+                                            Multiple formats can be specified separated by space.
         -d <db_url>                         DB Connection(format :'postgresql://username:password@host:port/database_name')
         --notice                            Print the open source license notice text.
         --no_correction                     Enter if you don't want to correct OSS information with sbom-info.yaml
