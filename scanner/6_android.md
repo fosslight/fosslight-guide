@@ -74,6 +74,7 @@ fosslight_android 명령어를 실행합니다.
         Optional
             -h                             Print help message
             -m                             Analyze the source code for the path where the license could not be found.
+            -e <path1> <path2..>           Path to exclude from source analysis.
             -p                             Check files that should not be included in the Packaging file.
             -f                             Print result of Find Command for binary that can not find Source Code Path.
             -t                             Collect NOTICE for binaries that are not added to NOTICE.html.
