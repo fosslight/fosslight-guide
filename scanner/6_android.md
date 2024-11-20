@@ -80,6 +80,7 @@ fosslight_android 명령어를 실행합니다.
             -t                             Collect NOTICE for binaries that are not added to NOTICE.html.
             -d                             Divide needtoadd-notice.html by binary.
             -i                             Disable the function to automatically convert OSS names based on AOSP.
+            -r <result.txt>                result.txt file with a list of binaries to remove.
     ``` 
 
 ## 📁 결과
