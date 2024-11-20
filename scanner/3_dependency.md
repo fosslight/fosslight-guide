@@ -275,9 +275,11 @@ $ fosslight_dependency [option] <arg>
             -m <package_manager>            Enter the package manager.
                                                 (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm, unity, cargo)
             -p <input_path>                 Enter the path where the script will be run.
+            -e <exclude_path>               Enter the path where the analysis will not be performed.
             -o <output_path>                Output path
                                                 (If you want to generate the specific file name, add the output path with file name.)
-            -f <format>                     Output file format (excel, csv, opossum, yaml, spdx-tag, spdx-yaml, spdx-json, spdx-xml)
+            -f <format> [<format> ...]      Output formats (excel, csv, opossum, yaml, spdx-tag, spdx-yaml, spdx-json, spdx-xml)
+                                            Multiple formats can be specified separated by space.
             --graph-path <save_path>        Enter the path where the graph image will be saved
                                                 (ex. /your/directory/path/filename.{pdf, jpg, png}) (recommend pdf extension)
             --graph-size <width> <height>   Enter the size of the graph image (The size unit is pixels)
