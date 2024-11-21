@@ -67,7 +67,7 @@ Options for only 'add' mode
     -c <copyright>        추가할 저작권 (ex, <year> <copyright holder>)
     -u <dl_location>	  추가할 Download Location(ex, https://www.testurl.com)
 ```
-- 📃 [Pattern 매칭](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
+- 📃 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
 
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
