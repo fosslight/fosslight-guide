@@ -74,7 +74,7 @@ fosslight_android 명령어를 실행합니다.
         Optional
             -h                             Print help message
             -m                             Analyze the source code for the path where the license could not be found.
-            -e <path1> <path2..>           Path to exclude from source analysis.
+            -e <path1> <path2..>           Path to exclude from source analysis.(Pattern matching is available)
             -p                             Check files that should not be included in the Packaging file.
             -f                             Print result of Find Command for binary that can not find Source Code Path.
             -t                             Collect NOTICE for binaries that are not added to NOTICE.html.
@@ -82,6 +82,7 @@ fosslight_android 명령어를 실행합니다.
             -i                             Disable the function to automatically convert OSS names based on AOSP.
             -r <result.txt>                result.txt file with a list of binaries to remove.
     ``` 
+    - 📃 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
 
 ## 📁 결과
 - fosslight_report_[datetime].xlsx : FOSSLight Android 분석 결과 (FOSSLight Report 형태)    
