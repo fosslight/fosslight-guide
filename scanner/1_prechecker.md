@@ -56,7 +56,7 @@ Options:
     -h                    설명 메시지 출력
     -v                    FOSSLight Prechecker 버전 출력
     -p <path>             체크할 소스 경로
-    -e <path>             분석시 제외할 경로('lint' mode에서만 동작, [pattern 매칭 가능](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching))
+    -e <path>             분석시 제외할 경로('lint' mode에서만 동작, Pattern 매칭 가능)
     -f <format>           결과 파일 포맷 (yaml, xml, html)
     -o <file_name>        결과 파일 이름 지정
     -n                    venv, node_modules, ./ 에 대하여 분석 제외하지 않으려면 추가
@@ -67,6 +67,8 @@ Options for only 'add' mode
     -c <copyright>        추가할 저작권 (ex, <year> <copyright holder>)
     -u <dl_location>	  추가할 Download Location(ex, https://www.testurl.com)
 ```
+Pattern 매칭 설명 : https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching
+
 
 **(Windows인 경우)** 실행 파일을 이용한 방법  
 1. [FOSSLight Prechecker - Release](https://github.com/fosslight/fosslight_prechecker/releases) 에서 fosslight_prechecker_windows.exe를 다운로드  
