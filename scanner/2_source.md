@@ -68,34 +68,6 @@ Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode, SCANOSS 결�
 $ fosslight_source -p /home/source_path -j
 ```
 
-### 2. fosslight_convert     
-json형태인 ScanCode 결과를 FOSSLight Report 형식으로 변환합니다.
-````
-$ fosslight_convert [option] <arg>
-```` 
-#### Options
-```
-  Optional
-      -p <source_path>       Path to analyze source (Default: current directory)
-      -h                     Print help message
-      -v                     Print FOSSLight Source Scanner version
-      -m                     Print additional information for scan result on separate sheets
-      -o <output_path>       Output path (Path or file name)
-      -f <format>            Output file format (excel, csv, opossum, yaml)
-  Options only for FOSSLight Source Scanner
-      -s <scanner>           Select which scanner to be run (scancode, scanoss, all)
-      -j                     Generate raw result of scanners in json format
-      -t <float>             Stop scancode scanning if scanning takes longer than a timeout in seconds.
-      -c <core>              Select the number of cores to be scanned with ScanCode.
-      --no_correction        Enter if you don't want to correct OSS information with sbom-info.yaml
-      --correct_fpath <path> Path to the sbom-info.yaml file
-```
-#### Example
-json 형태의 ScanCode 결과를 FOSSLight Report 형식으로 변환
-```
-$ fosslight_convert -p /home/jsonfile_dir
-```
-
 ## 📁 결과
 
 ```
