@@ -19,8 +19,6 @@ Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일은 제
   - [필요 조건](#-필요-조건)
   - [설치 방법](#-설치-방법)
   - [실행 방법](#-실행-방법)
-    - [1. fosslight_source](#1-fosslight_source)
-    - [2. fosslight_convert](#2-fosslight_convert)
   - [결과](#-결과)
 
 ## 📋 필요 조건
@@ -36,7 +34,6 @@ $ pip3 install fosslight_source
 ```
 
 ## 🚀 실행 방법
-### 1. fosslight_source     
 Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니다.
 ````
 $ fosslight_source [option] <arg>
