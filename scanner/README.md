@@ -146,12 +146,22 @@ test_result/
 - fosslight_compare_(datetime).xlsx : 두 개의 BOM 비교 결과가 (add/delete/change) 테이블 양식으로 작성된 파일
 
 ## 🐳 Docker를 이용하여 설치 및 실행 방법
-1. Dockerfile을 이용하여 이미지 빌드
+> [!NOTE]  
+> Docker로 실행시, FOSSLight Source/Binary Scanner만 동작합니다. FOSSLight Dependency Scanner는 동작하지 않습니다. 
+
+1. FOSSLight Scanner Docker 이미지 다운로드
+   
+    선택 1. Dockerfile을 이용하여 이미지 빌드
+    ```
+    $ docker build -t fosslight_scanner .
+    ```
+    선택 2. Dockerhub에서 fosslight_scanner 다운로드 
+    ```
+    $ docker pull fosslight/fosslight_scanner
+    ```
+
+3. 빌드한 이미지로 실행합니다.     
+ex. Output 경로 : /Users/git/temp/output, 분석 경로 : /Users/git/temp/dir_to_analyze
 ```
-$docker build -t fosslight .
-```
-2. 빌드한 이미지로 실행합니다.     
-ex. Output 경로 : /Users/fosslight_scanner/test_output, 분석 경로 : tests/test_files
-```
-$docker run -it -v /Users/fosslight_scanner/test_output:/app/output fosslight -p tests/test_files -o output
+$ docker run -it -v /Users/git/temp/dir_to_analyze:/app/dir_to_analyze -v /Users/git/temp/output:/app/output fosslight_scanner -p dir_to_analyze -o output
 ```
