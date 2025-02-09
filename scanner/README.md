@@ -151,15 +151,15 @@ test_result/
 
 1. FOSSLight Scanner Docker 이미지 다운로드
    
-    선택 1. Dockerfile을 이용하여 이미지 빌드
-    ```
-    $ docker build -t fosslight_scanner .
-    ```
-    선택 2. Dockerhub에서 fosslight_scanner 다운로드 
+    선택 1. Dockerhub에서 fosslight_scanner 다운로드 
     ```
     $ docker pull fosslight/fosslight_scanner
     ```
-
+    선택 2. [Dockerfile](https://github.com/fosslight/fosslight_scanner/blob/main/Dockerfile)을 이용하여 이미지 빌드 (선택 1에서 지원하지 않는 OS인 경우)
+    ```
+    $ docker build -t fosslight_scanner .
+    ```
+    
 3. 빌드한 이미지로 실행합니다.     
 ex. Output 경로 : /Users/git/temp/output, 분석 경로 : /Users/git/temp/dir_to_analyze
 ```
