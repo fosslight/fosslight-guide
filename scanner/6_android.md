@@ -116,6 +116,8 @@ fosslight_android 명령어를 실행합니다.
 | (TLSH)           | Binary의 TLSH 값을 출력합니다.                                                            |
 | (SHA1)           | Binary의 Checksum 값을 출력합니다.                                                            |
 
+
+
 ## 🚗 추가 기능
 ---
 하기 옵션을 통해 부가 기능을 활용할 수 있습니다.
@@ -128,14 +130,15 @@ fosslight_android 명령어를 실행합니다.
 - Option: -r : 특정 binary가 FOSSLight Report에서 중복되는것을 제거합니다. Android native와 vendor가 분리되어 build되는 구조에서 사용하는 옵션으로 중복으로 포함되는 Binary를 제거합니다. vendor에 대한 FOSSLight Android 실행시 -r 옵션으로 android native 결과 생성되는 result_*.txt 파일을 parameter로 추가합니다.
 - Option: -m : License가 빈칸인 부분에 대해 자동으로 Source path 내 Source code 분석(소스 파일 내 License text 기반 License 검출)을 실행하여 License 값을 채워줍니다. (그러나 분석에 시간이 오래 걸립니다. Android native에서 44개 Path기준 약 35분 소요)
 ---
+
 ### -b, -n, -c: NOTICE.html에 Binary 이름 포함 여부 확인
-(1) OSS가 사용 된 경우 ( NOTICE.html이 ok 또는 ok(NA)인 경우)
+#### (1) OSS가 사용 된 경우 ( NOTICE.html이 ok 또는 ok(NA)인 경우)
 
 OSS 보고서 BIN(Android) sheet내 NOTICE.html column의 값이 ok 또는 ok(NA)라면, 그 Binary 이름은 NOTICE.html에 포함되어 있어야 합니다.
 
-**실행 방법**
-Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음과 같습니다.
+#### 실행방법
 
+Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음과 같습니다.
 1. NOTICE.html 의 값을 ok, ok(NA)만 조회합니다.
 2. 이제 Binary Name column에서 모든 항목을 선택하여 Copy합니다.
 3. Linux 환경에서 binary.txt 라는 파일을 vi editor를 이용하여 생성합니다.
@@ -148,6 +151,7 @@ Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음
 (venv)$ ls
 binary.txt  NOTICE.html
 ```
+
 6. "-c" option을 사용하여 결과를 추출합니다. 이때, -c option parameter로 ok 항목에 대한 체크사항이므로 ok라고 입력합니다.
 ```
 (command)
@@ -156,6 +160,7 @@ binary.txt  NOTICE.html
 (ex)
 (venv)$ fosslight_android -b binary.txt -n NOTICE.html -c ok
 ```
+
 NOTICE 파일이 여러개일 경우 ,로 구분하여 작성합니다.
    - ex) NOTICE파일이 NOTICE.xml,NOTICE_VENDOR.xml,NOTICE_PRODUCT.xml,NOTICE_PRODUCT_SERVICES.xml 인 경우:
    ```
@@ -170,7 +175,7 @@ NOTICE 파일이 여러개일 경우 ,로 구분하여 작성합니다.
   
 
 
-(2) OSS 사용되지 않은 경우 ( NOTICE.html이 nok 또는 nok(NA)인 경우 )
+### (2) OSS 사용되지 않은 경우 ( NOTICE.html이 nok 또는 nok(NA)인 경우 )
 
 OSS가 사용되지 않았다고 명시한 binary의 경우, 그 이름이 NOTICE.html에 포함되서는 안됩니다.
 Binary 이름이 NOTICE.html에 포함되지 않았는지 확인 방법은 다음과 같습니다.
@@ -184,6 +189,7 @@ Binary 이름이 NOTICE.html에 포함되지 않았는지 확인 방법은 다�
    (ex)
    (venv)$ fosslight_android -b binary.txt -n NOTICE.html -c nok
    ```
+
 3. 추출한 결과에서 어떤 binary가 NOTICE.html에 포함되어 있는지 확인합니다.
    result.txt 파일을 열면, OSS 보고서에 OSS가 사용되지 않은 것으로 명시되었음에도 NOTICE.html에 포함된 binary를 확인할 수 있습니다.
    (warning) NOTICE.html이 nok 또는 nok(NA)인 경우, NOTICE.html에 포함되면 안 되므로, 위 result.txt 에 ok로 출력되는 binary가 있어서는 안 됩니다
@@ -229,7 +235,7 @@ Example : pkgConfig.json
   
 
 
-**실행 방법**
+#### 실행방법
 1. Packaging Config File을 pkgConfig.json 파일명(json 형식)으로 준비합니다.
 2. -p 옵션을 추가하여 실행합니다. (-p : 공개할 소스 코드를 취합한 Path 혹은 압축 파일)
     ```
@@ -269,7 +275,7 @@ Example : pkgConfig.json
 ### -f: Source Code Path를 찾지 못하는 binary에 대하여 Find Command 실행 결과 출력
 Source Code Path를 찾지 못하는 Binary에 대하여 Android의 Source Path내 폴더 (out directory, .으로 시작하는 숨김 directory 제외)별로 Find Command 실행 결과를 출력합니다.     
 
-**실행 방법**
+#### 실행방법
 1. -f 옵션을 추가하여 실행합니다.
     ```commandline
     (venv)$ fosslight_android  -s [android source path] -a [build log file name] -f
@@ -286,7 +292,7 @@ Source Code Path를 찾지 못하는 Binary에 대하여 Android의 Source Path�
 ### -t: NOTICE.html에 추가되지 않는 binary에 대하여 NOTICE를 취합
 Source Code Path에 NOTICE가 있음에도 최종 제품에 탑재되는 NOTICE(NOTICE.html)에 포함되지 않는 Binary에 대하여 NOTICE를 취합한 파일을 생성합니다.
 
-**실행 방법**
+#### 실행방법
 1. -t 옵션을 추가하여 실행합니다.
     ```commandline
     (venv)$ fosslight_android -s [android source path] -a [build log file name] -t
@@ -317,7 +323,7 @@ Binary name: system/core/local_bin.jar 인 경우,
 FOSSLight Android는 Binary DB에서 OSS 정보를 찾을 수 없는 경우이거나 OSS Name이 "Android Open Source Project"인 경우, Source Code Path를 기준으로 [Android Native](https://android.googlesource.com/platform)에 있는 저장소라면 OSS Name을 자동으로 출력해줍니다.      
 OSS Name 자동 완성 기능을 끄고자 할 경우 선택합니다.      
 
-**실행 방법**
+#### 실행방법
 1. -i 옵션을 추가하여 실행합니다.
     ```commandline
     (venv)$ fosslight_android -s [android source path] -a [build log file name] -i
@@ -338,7 +344,7 @@ OSS Name 자동 완성 기능을 끄고자 할 경우 선택합니다.
 - 중복 제거 조건 : Binary name이 같고 checksum이 같거나, Binary name이 같고 TLSH 값 차이가 120이하인 경우
 - 중복 제거된 binary는 REMOVED_BIN_BY_DUPLICATION.txt에 출력됩니다.
 
-**실행 방법**
+#### 실행방법
 1. FOSSLight Android 분석 실행시 -r 옵션을 추가합니다.
     ```commandline
     (venv)$ fosslight_android -s [vendor_source_path] -a [android_build_log_file] -r [android_native_result.txt]
