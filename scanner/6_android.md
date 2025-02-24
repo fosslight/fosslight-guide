@@ -175,7 +175,7 @@ NOTICE 파일이 여러개일 경우 ,로 구분하여 작성합니다.
   
 
 
-### (2) OSS 사용되지 않은 경우 ( NOTICE.html이 nok 또는 nok(NA)인 경우 )
+#### (2) OSS 사용되지 않은 경우 ( NOTICE.html이 nok 또는 nok(NA)인 경우 )
 
 OSS가 사용되지 않았다고 명시한 binary의 경우, 그 이름이 NOTICE.html에 포함되서는 안됩니다.
 Binary 이름이 NOTICE.html에 포함되지 않았는지 확인 방법은 다음과 같습니다.
