@@ -129,7 +129,7 @@ fosslight_android 명령어를 실행합니다.
 ### -b, -n, -c: NOTICE.html에 Binary 이름 포함 여부 확인
 #### (1) OSS가 사용 된 경우 ( NOTICE.html이 ok 또는 ok(NA)인 경우)
 
-OSS 보고서 BIN(Android) sheet내 NOTICE.html column의 값이 ok 또는 ok(NA)라면, 그 Binary 이름은 NOTICE.html에 포함되어 있어야 합니다.
+OSS 보고서 BIN(Android) sheet내 Notice column의 값이 ok 또는 ok(NA)라면, 그 Binary 이름은 NOTICE.html에 포함되어 있어야 합니다.
 
 #### 실행방법
 
@@ -166,7 +166,7 @@ Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음
 8. 어떤 binary가 NOTICE.html내 포함되어 있지 않은지 확인합니다.
  
    - result.txt 파일을 열면, nok 항목인 binary 목록이 출력됩니다.
-   - 해당 binary는 OSS 보고서 내 NOTICE.html column에는 ok 또는 ok(NA)로 되어 있음에도 NOTICE.html에 포함되어 있지 않은 것을 확인할 수 있습니다.
+   - 해당 binary는 OSS 보고서 내 Notice column에는 ok 또는 ok(NA)로 되어 있음에도 NOTICE.html에 포함되어 있지 않은 것을 확인할 수 있습니다.
    - (warning) NOTICE.html이 ok 또는 ok(NA)인 binary의 경우, 모두 NOTICE.html에 표시되어야 하므로 위 result.txt 파일 내 nok로 표기되는 binary가 없어야 합니다.  
 <br>  
 
@@ -175,7 +175,7 @@ Binary 이름이 NOTICE.html에 포함되었는지 확인하는 방법은 다음
 OSS가 사용되지 않았다고 명시한 binary의 경우, 그 이름이 NOTICE.html에 포함되서는 안됩니다.
 Binary 이름이 NOTICE.html에 포함되지 않았는지 확인 방법은 다음과 같습니다.
 
-1. NOTICE.html column에서 nok, nok(NA)만 조회 합니다.
+1. Notice column에서 nok, nok(NA)만 조회 합니다.
 2. 위의 (1)번 내 2부터 5까지를 참고하여 실행합니다. 이때, -c option parameter로 nok 항목에 대한 체크사항이므로 nok라고 입력합니다.
    ```
    (command)
