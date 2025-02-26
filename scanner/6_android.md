@@ -74,7 +74,7 @@ fosslight_android 명령어를 실행합니다.
         Optional
             -h                             Print help message
             -m                             Analyze the source code for the path where the license could not be found.
-            -e <path1> <path2..>           Path to exclude from source analysis.(Pattern matching is available)
+            -e <path1> <path2..>           Path to exclude from source analysis.
             -p                             Check files that should not be included in the Packaging file.
             -f                             Print result of Find Command for binary that can not find Source Code Path.
             -t                             Collect NOTICE for binaries that are not added to NOTICE.html.
@@ -82,7 +82,7 @@ fosslight_android 명령어를 실행합니다.
             -i                             Disable the function to automatically convert OSS names based on AOSP.
             -r <result.txt>                result.txt file with a list of binaries to remove.
     ``` 
-    - 📃 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
+    
 
 ## 📁 결과
 - fosslight_report_[datetime].xlsx : FOSSLight Android 분석 결과 (FOSSLight Report 형태)    
@@ -100,24 +100,12 @@ fosslight_android 명령어를 실행합니다.
 |:-----------------|:----------------------------------------------------------------------------------------------|
 | Binary Name      | out directory 내 존재하는 Binary 목록 (binary, library, APK, font 등 )                                |  
 | Source Code Path | Binary를 구성하는 Source Code의 Path 정보 (LOCAL_PATH)                                                |  
-| NOTICE.html      | NOTICE 파일에 Binary 정보가 표시되었는지 여부를 표시합니다. Open Source가 사용된 Binary라면, ok여야 합니다.         |         
-|                  |   - ok : Source Path에 NOTICE 파일이 있고, 최종 output NOTICE (ex. NOTICE.html)에 Binary 포함                        |            
-|                  |   - ok(NA) :  Source Path에 NOTICE 파일이 없으나, 최종 output NOTICE (ex. NOTICE.html)에 Binary 포함                 |          
-|                  |   - nok :  Source Path에 NOTICE 파일이 없고, 최종 output NOTICE (ex. NOTICE.html)에 Binary가 포함되어 있지 않음                    |
-|                  |   - nok(NA) :  Source Path에 NOTICE 파일이 있음에도, 최종 output NOTICE (ex. NOTICE.html)에 Binary가 포함되어 있지 않음            |
-|                  |   - CANNOT_FIND_NOTICE_HTML : NOTICE.html 파일을 찾을 수 없음. (이 경우, Script 실행 시, -n [NOTICE.html_path]를 주어 NOTICE.html 파일 위치를 Parameter로 줘야 함)     |
+| Notice           | NOTICE 파일에 Binary 정보가 표시되었는지 여부를 표시합니다. Open Source가 사용된 Binary라면, ok여야 합니다.<br>&ensp;&ensp;- ok : Source Path에 NOTICE 파일이 있고, 최종 output NOTICE (ex. NOTICE.html)에 Binary 포함<br>&ensp;&ensp;- ok(NA) :  Source Path에 NOTICE 파일이 없으나, 최종 output NOTICE (ex. NOTICE.html)에 Binary 포함<br>&ensp;&ensp;- nok :  Source Path에 NOTICE 파일이 없고, 최종 output NOTICE (ex. NOTICE.html)에 Binary가 포함되어 있지 않음<br>&ensp;&ensp;- nok(NA) :  Source Path에 NOTICE 파일이 있음에도, 최종 output NOTICE (ex. NOTICE.html)에 Binary가 포함되어 있지 않음<br>&ensp;&ensp;- CANNOT_FIND_NOTICE_HTML : NOTICE.html 파일을 찾을 수 없음. (이 경우, Script 실행 시, -n [NOTICE.html_path]를 주어 NOTICE.html 파일 위치를 Parameter로 줘야 함)     |
 | OSS Name         | LGE Binary DB에서 매칭하는 Binary의 정보를 가져와서 보여줍니다.     |
 | OSS Version      | LGE Binary DB에서 매칭하는 Binary의 정보를 가져와서 보여줍니다.                               |
-| License          | 하기 정보로 부터 추출한 Open Source License 를 보여줍니다.   |
-|                  |   - LGE Binary DB에서 매칭되는 Binary의 정보   |
-|                  |   - Source Code Path 내 "MODULE_LICENSE_xxxxxx"와 같이 License를 명시한 file을 읽어서 표시  |
-|                  |   - output의 {MODULE_NAME}.meta_lic에서 찾은 정보    |
+| License          | 하기 정보로 부터 추출한 Open Source License 를 보여줍니다.<br>&ensp;&ensp;- LGE Binary DB에서 매칭되는 Binary의 정보<br>&ensp;&ensp;- Source Code Path 내 "MODULE_LICENSE_xxxxxx"와 같이 License를 명시한 file을 읽어서 표시<br>&ensp;&ensp;- output의 {MODULE_NAME}.meta_lic에서 찾은 정보    |
 | Need Check       | 'O'인 경우, 검토가 필요합니다.                                                                           |
-| Comment          | 검토가 필요한 사항을 출력합니다.                                                                            |
-|                  |   - Fill in [Column명] : 기입이 필요한 Column을 표시.   |
-|                  |     ex) Fill in OSS Name : 'OSS Name' Column에 사용한 OSS의 이름을 기입해야 함.   |
-|                  |   - Add NOTICE to path : Source Code Path에 NOTICE 파일이 없으므로, NOTICE 파일을 해당 binary의 Source Code Path에 추가해야함.|
-|                  |     단, NOTICE 파일을 Source code path에 추가하기 어렵거나 NOTICE파일을 추가해도 최종 target에 탑재되는 NOTICE에 포함되지 않는 경우 FOSSLight Hub를 통해 Project를 리뷰 받은 후 Supplement NOTICE.html 기능을 통해 추가되어야하는 NOTICE를 다운로드 받은 후 Android 모델 OSS 고지문 > '별도 생성한 NOTICE를 OSS 고지문에 추가' 방법을 통해 보완이 필요합니다.|
+| Comment          | 검토가 필요한 사항을 출력합니다.<br>&ensp;&ensp;- Fill in [Column명] : 기입이 필요한 Column을 표시.<br>&ensp;&ensp;ex) Fill in OSS Name : 'OSS Name' Column에 사용한 OSS의 이름을 기입해야 함.<br>&ensp;&ensp;- Add NOTICE to path : Source Code Path에 NOTICE 파일이 없으므로, NOTICE 파일을 해당 binary의 Source Code Path에 추가해야함.<br>&ensp;&ensp;단, NOTICE 파일을 Source code path에 추가하기 어렵거나 NOTICE파일을 추가해도 최종 target에 탑재되는 NOTICE에 포함되지 않는 경우 FOSSLight Hub를 통해 Project를 리뷰 받은 후 Supplement NOTICE.html 기능을 통해 추가되어야하는 NOTICE를 다운로드 받은 후 Android 모델 OSS 고지문 > '별도 생성한 NOTICE를 OSS 고지문에 추가' 방법을 통해 보완이 필요합니다.|
 | (TLSH)           | Binary의 TLSH 값을 출력합니다.                                                            |
 | (SHA1)           | Binary의 Checksum 값을 출력합니다.                                                            |
 
