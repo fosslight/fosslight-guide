@@ -37,6 +37,7 @@ FOSSLight Prechecker 다음 세가지 모드를 가지고 있습니다.
 2. `convert` --- [sbom-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml)을 [fosslight_report.xlsx](https://github.com/fosslight/fosslight-guide/blob/master/learn/2_fosslight_report.md)로 변환합니다.
      - yaml 파일을 fosslight_report.xlsx의 SRC Sheet로 변환
 3. `add` --- Copyright와 License가 없는 파일에 Copyright, License, 그리고 Download Location을 추가합니다.
+4. `download` --- sbom-info.yaml 파일에 작성된 License의 원문을 각각의 파일로 다운로드 합니다.
 
 ``` 
 $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
@@ -51,7 +52,7 @@ Mode
     lint                  (Default) 저작권 및 License 표기 규칙 준수 확인
     convert               sbom-info.yaml or oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
     add                   소스 코드에 Copyright와 License 추가
-    download		  License Text를 파일로 다운로드
+    download		  sbom-info.yaml or oss-pkg-info.yaml 파일에 작성된 License의 원문을 파일로 다운로드
  
 Options:
     -h                    설명 메시지 출력
