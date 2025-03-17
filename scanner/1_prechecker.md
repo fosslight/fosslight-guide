@@ -313,7 +313,7 @@ $ fosslight_prechecker convert -p tests/
 
 **2) sbom-info.yaml 내 기입된 라이선스를 Text 파일로 Download + 대표 라이선스 파일 생성 예시**
 ```
-(venv)$ fosslight_prechecker download -p tests/add -ㅣ "Apache-2.0"
+(venv)$ fosslight_prechecker download -p tests/add -l "Apache-2.0"
 ```
 
 
