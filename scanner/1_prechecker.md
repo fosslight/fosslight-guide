@@ -51,6 +51,7 @@ Mode
     lint                  (Default) 저작권 및 License 표기 규칙 준수 확인
     convert               sbom-info.yaml or oss-pkg-info.yaml -> fosslight_report.xlsx로 변환
     add                   소스 코드에 Copyright와 License 추가
+    download		  License Text를 파일로 다운로드
  
 Options:
     -h                    설명 메시지 출력
@@ -66,6 +67,9 @@ Options for only 'add' mode
     -l <license>          추가할 라이선스 (SPDX License Identifer)
     -c <copyright>        추가할 저작권 (ex, <year> <copyright holder>)
     -u <dl_location>	  추가할 Download Location(ex, https://www.testurl.com)
+
+Option for 'download' mode
+    -l <license>	  대표 라이선스 파일로 생성할 라이선스 (SPDX License Identifer)
 ```
 - 📃 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
 
@@ -301,6 +305,17 @@ $ fosslight_prechecker convert -p tests/
     <img src="images/add.gif" alt="demo video for add mode">
 </details>
 
+### 🔖 download mode
+**1) sbom-info.yaml 내 기입된 라이선스를 Text 파일로 Download 예시**
+```
+(venv)$ fosslight_prechecker download -p tests/add
+```
+
+**2) sbom-info.yaml 내 기입된 라이선스를 Text 파일로 Download + 대표 라이선스 파일 생성 예시**
+```
+(venv)$ fosslight_prechecker download -p tests/add -ㅣ "Apache-2.0"
+```
+
 
 ## 🔍 동작 방식 
 ### 🔖 lint mode
@@ -362,3 +377,11 @@ $ fosslight_prechecker convert -p tests/
     - 저작권과 라이선스가 모두 존재하는 파일 리스트 출력(Add 대상에서 제외)
     - -c와 -l 옵션을 이용하여 저작권 또는 라이선스가 없는 파일의 상단에 저작권과 라이선스를 추가
     - -u 옵션을 이용하여 Download Location을 파일의 상단에 추가
+
+
+### 🔖 download mode
+1. 옵션없이 실행시 실행 path 내 sbom-info.yaml을 찾아 yaml 파일 내 작성된 라이선스를 Text 파일로 Download
+2. -l 옵션 사용시, 대표 라이선스로 Download
+    -  	이미 대표 라이선스 파일(LICENSE, LICENSE.txt 등) 존재할 경우, 대표 라이선스 파일을 생성하지 안흥ㅁ
+    -  	대표 라이선스 파일 존재하지 않을 경우, 해당 라이선스 Text 파일 LICENSE 파일로 생성
+   
