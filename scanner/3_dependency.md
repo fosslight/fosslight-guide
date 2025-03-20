@@ -14,6 +14,7 @@ title: FOSSLight Dependency Scanner
 - [Gradle](https://gradle.org/) (Java/Android)
 - [Maven](http://maven.apache.org/) (Java)
 - [NPM](https://www.npmjs.com/) (Node.js)
+- [PNPM](https://pnpm.io/) (Node.js)
 - [PyPi](https://pip.pypa.io/) (Python)
 - [Pub](https://pub.dev/) (Dart with flutter)
 - [Cocoapods](https://cocoapods.org/) (Swift/Obj-C)
@@ -62,6 +63,13 @@ $ npm install
  > 아래 케이스 중 해당하는 경우, 이 단계는 skip 가능합니다.
  > - package.json 파일이 input directory에 존재하는 경우 : FOSSLight Dependency Scanner에서 자동으로 패키지 설치하여 실행 가능합니다.
  > - 이미 dependency들이 설치된 node_modules 디렉토리가 존재하는 경우 : node_modules폴더가 존재하는 path를 input directory로 설정하여 실행 가능합니다.
+</details>
+
+<details>
+<summary markdown="span">**Prerequisite for Pnpm**</summary>
+```tip
+FOSSLight Dependency Scanner 내부에서 'pnpm install' 및 'pnpm ls' 명령어를 통해 패키지 목록 및 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
+```
 </details>
 
 <details>
@@ -273,7 +281,7 @@ $ fosslight_dependency [option] <arg>
             -h                              Print help message.
             -v                              Print the version of the script.
             -m <package_manager>            Enter the package manager.
-                                                (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm, unity, cargo)
+                                                (npm, maven, gradle, pypi, pub, cocoapods, android, swift, carthage, go, nuget, helm, unity, cargo, pnpm)
             -p <input_path>                 Enter the path where the script will be run.
             -e <exclude_path>               Enter the path where the analysis will not be performed.(Pattern matching is available)
             -o <output_path>                Output path
@@ -310,6 +318,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
 각 패키지 매니저별 manifest 파일은 다음과 같습니다.
 ```
   - Npm : package.json
+  - Pnpm : pnpm-lock.yaml
   - Pypi : requirements.txt / setup.py / pyproject.toml
   - Maven : pom.xml
   - Gradle (Android) : build.gradle
@@ -363,7 +372,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 
 | Package manager                | OSS Name                 | Download Location                                                                                  | Homepage                                            |
 | ------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Npm                            | npm:(oss name)           | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)/v/(oss version)   | npmjs.com/package/(oss name)                        |
+| Npm, Pnpm                      | npm:(oss name)           | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)/v/(oss version)   | npmjs.com/package/(oss name)                       |
 | Pypi                           | pypi:(oss name)          | pypi.org/project/(oss name)/(version)                                                              | homepage in (pip show) information                  |
 | Maven<br>& Gradle<br>& Android | (group_id):(artifact_id) | mvnrepository.com/artifact/(group id)/(artifact id)/(version)                                      | mvnrepository.com/artifact/(group id)/(artifact id) |
 | Pub                            | pub:(oss name)           | pub.dev/packages/(oss name)/versions/(version)                                                     | homepage in (pub information)                       |
@@ -374,7 +383,8 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 | Nuget                          | nuget:(oss name)         | 우선순위1. repository in nuget.org/packages/(oss name)/(oss version) <br> 우선순위2. projectUrl in nuget.org/packages/(oss name)/(oss version) <br> 우선순위3. nuget.org/packages/(oss name)/(oss version)  | nuget.org/packages/(oss name) |
 | Helm                           | helm:(oss name)          | first url of sources in (Chart.yaml)                                                               | home in (Chart.yaml)                                |
 | Unity                          | (oss name)               | url in repository in ProjectCache                                                                  | url in repository in ProjectCache                   |
- Cargo                          | cargo:(oss name)         | repository of the package in the result file for 'cargo metadata'                                  | crates.io/crates/(oss name)                         |   
+| Cargo                          | cargo:(oss name)         | repository of the package in the result file for 'cargo metadata'                                  | crates.io/crates/(oss name)                        |
+
 
 ```warning
 - Npm, Maven, gradle의 결과 파일 내용 중, Local path나 local repository를 통해 설치된(npmjs.com / mvnrepository에 배포되지 않은) 패키지의 경우, download location이 실제와 다를 수 있습니다.
@@ -410,9 +420,16 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
 </thead>
 <tbody>
   <tr>
-    <td>Javascript</td>
+    <td rowspan="2">Javascript</td>
     <td>Npm</td>
     <td>package.json</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Pnpm</td>
+    <td>pnpm-lock.yaml</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
