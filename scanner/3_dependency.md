@@ -45,7 +45,7 @@ title: FOSSLight Dependency Scanner
 
 {::options parse_block_html="true" /}
 <details>
-<summary markdown="span">**Prerequisite for NPM**</summary>
+<summary markdown="span">**Prerequisite for Npm**</summary>
 1. Npm dependency 분석을 수행하기 위해 NPM License Checker를 설치합니다.
 ```
 $ npm install -g license-checker
