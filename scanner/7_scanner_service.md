@@ -24,7 +24,7 @@ published: true
 
 ### 로그인
 {: .specific-title}
-- [http://fs.lge.com](http://fs.lge.com)에서 AD 게정 ID와 비밀번호를 입력하여 접속합니다. 
+- [http://fs.lge.com](http://fs.lge.com)에서 AD 게정 ID와 비밀번호를 입력하여 접속합니다.<br>
 ![log-in](images/7_fl_ss_login.png){: .styled-image width="30%"}  
 
 ### Create a Project 
