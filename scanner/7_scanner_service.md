@@ -25,15 +25,15 @@ published: true
 ### 로그인
 {: .specific-title}
 - [http://fs.lge.com](http://fs.lge.com)에서 AD 계정 ID와 비밀번호를 입력하여 접속합니다.<br>
-![log-in](images/7_fl_ss_login.png){: .styled-image width="30%"}  
+![log-in](images/7_fl_ss_login.png){: .styled-image}  
 
 ### Create a Project 
 {: .specific-title} 
-1. 우측 상단의 "New Project" 버튼을 클릭하여 Project를 생성합니다. 
-![New Project](images/7_fl_ss_newproject.png){: .styled-image width="80%"}  
+1. 우측 상단의 "New Project" 버튼을 클릭하여 Project를 생성합니다.  
+![New Project](images/7_fl_ss_newproject.png){: .styled-image}  
 
 2. "Create a Porject"에 내용을 입력합니다.  
-![Creat a Project](images/7_fl_ss_create_project.png){: .styled-image width="80%"}
+![Creat a Project](images/7_fl_ss_create_project.png){: .styled-image}
     - **Name** : Project 이름을 입력합니다.
     - **Inputs** : 분석할 소스를 선택합니다.
         - **Upload files** : 분석할 파일을 압축하여 업로드합니다. (1개만 업로드)
@@ -58,8 +58,8 @@ published: true
 ### 분석 결과
 {: .specific-title} 
 ![analysis_result](images/7_fl_ss_analysis_result.png){: .styled-image}
-1. **Download results** : 분석 결과 파일을 다운로드 받을 수 있습니다.
+1. **Download results** : 분석 결과 파일을 다운로드 받을 수 있습니다.  
     - FOSSLight Scanner Result : FOSSLight Hub의 [Identification](https://fosslight.org/hub-guide/tutorial/1_project/2_Identification/) 과정에서 업로드 할 수 있는 리포트입니다. 
 2. **Files** : 분석한 파일별 검출 결과를 File Tree 포맷으로 확인할 수 있습니다. (FOSSLight Dependency 결과는 미포함)
 3. **Detected Open Source** : 분석 결과를 list로 확인할 수 있습니다.  (FOSSLight Dependency 결과는 미포함)  
-![detected_opensource](images/7_fl_ss_detected_opensource.png){: .styled-image width="80%"}  
+![detected_opensource](images/7_fl_ss_detected_opensource.png){: .styled-image}  
