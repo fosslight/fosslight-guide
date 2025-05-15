@@ -32,7 +32,7 @@ published: true
 1. 우측 상단의 "New Project" 버튼을 클릭하여 Project를 생성합니다.  
 ![New Project](images/7_fl_ss_newproject.png){: .styled-image}  
 
-2. "Create a Porject"에 내용을 입력합니다.  
+2. "Create a Project"에 내용을 입력합니다.  
 ![Creat a Project](images/7_fl_ss_create_project.png){: .styled-image}
     - **Name** : Project 이름을 입력합니다.
     - **Inputs** : 분석할 소스를 선택합니다.
