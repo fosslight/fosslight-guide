@@ -27,8 +27,8 @@ FOSSLight Hub는 오픈 소스와 라이선스를 관리하고 오픈 소스 준
 #### FOSSLight Binary Scanner
 [FOSSLight Binary Scanner](scanner/4_binary.md)는 바이너리 형태의 파일을 찾아서 바이너리 파일 목록을 추출한 후, 연계된 데이터베이스에 검출한 바이너리의 오픈소스 정보가 있다면 자동으로 오픈소스 정보를 출력해주는 도구입니다. 이는 바이너리 자체를 분석하는 방법이 아니기 때문에, 데이터베이스 정보가 많아야 바이너리 분석이 잘 수행될 수 있으니 참고하시기 바랍니다.
 
-#### FOSSLight Android Scanner
+#### FOSSLight Android Scanner
 [FOSSLight Android Scanner](scanner/6_android.md)는 Android 모델에 탑재되는 Binary를 모두 나열하여 각 Binary 별로 Open Source가 사용되었는지 확인하고, 고지해야 할 사항이 OSS 고지문(ex. NOTICE.html)에 적절하게 포함되었는지 확인하기 위해 수행합니다.
 
-#### FOSSLight Yocto Scanner
+#### FOSSLight Yocto Scanner
 [FOSSLight Yocto Scanner](scanner/5_yocto.md)는 Yocto Project에 기반하여 build 시, rootfs 이미지에 포함되는 Package에 대한 OSS 정보를 FOSS Report 형식으로 출력해주는 Python Script입니다.
