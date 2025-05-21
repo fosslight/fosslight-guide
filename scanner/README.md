@@ -40,7 +40,7 @@ FOSSLight Scanner는 pip3를 이용하여 설치할 수 있습니다.
 $ pip3 install fosslight_scanner
 ```
 
-## ⚠️ 설치 에러 발생 시
+### ⚠️ 설치 에러 발생 시
 'Cargo, the Rust package manager, is not installed or is not on PATH.' 에러 발생 시, cargo, rust를 아래와 같이 설치한 이후, 다시 FOSSLight Scanner를 설치합니다.
 ```
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
