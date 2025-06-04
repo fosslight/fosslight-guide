@@ -1,3 +1,8 @@
+```note
+이 페이지는 Deprecated 되었습니다. FOSSLight Guide는 https://github.com/fosslight/hub-guide/을 참고해 주시기 바랍니다.
+```
+
+
 # FOSSLight
 
 FOSSLight 프로젝트는 오픈 소스에 관한 모든 것을 관리할 수 있는 통합 시스템인 [FOSSLight Hub](https://fosslight.org/ko/fosslight)와 오픈 소스를 분석할 수 있는 [FOSSLight Scanner](https://fosslight.org/ko/scanner/) 로 구성되어있습니다. 
