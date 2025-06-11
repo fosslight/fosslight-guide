@@ -12,7 +12,7 @@ published: true
     - [FOSSLight Source Scanner](https://fosslight.org/fosslight-guide/scanner/2_source.html)
     - [FOSSLight Binary Scanner](https://fosslight.org/fosslight-guide/scanner/4_binary.html)
     - [FOSSLight Dependency Scanner](https://fosslight.org/fosslight-guide/scanner/3_dependency.html)
-        - 지원하는 package manager : npm, pypi, maven, pub, go, nuget, cargo.  
+        - 지원하는 package manager : npm, pypi, maven, pub, go, nuget, cargo, swift, carthage.  
           (그 외 package manager은 검증 진행 중)  
 - 미지원 항목
     - [FOSSLight Android Scanner](https://fosslight.org/fosslight-guide/scanner/6_android.html)
