@@ -372,7 +372,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 
 | Package manager                | OSS Name                 | Download Location                                                                                  | Homepage                                            |
 | ------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Npm, Pnpm                      | npm:(oss name)           | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)/v/(oss version)   | npmjs.com/package/(oss name)                       |
+| Npm, Pnpm                      | npm:(oss name)           | npmjs.com/package/(oss name)   | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)/v/(oss version)                      |
 | Pypi                           | pypi:(oss name)          | pypi.org/project/(oss name)/(version)                                                              | homepage in (pip show) information                  |
 | Maven<br>& Gradle<br>& Android | (group_id):(artifact_id) | mvnrepository.com/artifact/(group id)/(artifact id)/(version)                                      | mvnrepository.com/artifact/(group id)/(artifact id) |
 | Pub                            | pub:(oss name)           | pub.dev/packages/(oss name)/versions/(version)                                                     | homepage in (pub information)                       |
