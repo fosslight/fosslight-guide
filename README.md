@@ -1,7 +1,3 @@
-```note
-이 페이지는 Deprecated 되었습니다.   
-FOSSLight Guide는 https://github.com/fosslight/hub-guide/을 참고해 주시기 바랍니다.
-```
 
 
 # FOSSLight
