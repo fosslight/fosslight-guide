@@ -49,7 +49,8 @@ published: true
     - **Pipeline**
         - scan_all : source, binary, dependency 분석
         - source : source code만 분석 
-        - binary : binary만 분석   
+        - binary : binary만 분석
+        - dependency : dependency만 분석
     - **권한 설정**
         - Private : 생성자만 조회 가능
         - Public : 링크를 통해 해당 Project를 다른 사람이 볼 수 있고 분석 결과를 다운로드할 수 있음 
