@@ -43,7 +43,7 @@ published: true
                     - wget : github.com/LGE-OSS/example/archive/refs/tags/v1.0.0.zip
                     - git clone : github.com/LGE-OSS/example
             - **Private Git** : Private git 인 경우
-                - **http://** 또는 **https://** : user name과 PAT 값을 입력합니다. (PAT 값에는 /가 포함되면 안 됨)
+                - **http://** 또는 **https://** : user name과 PAT 값을 입력합니다. 
                 - **ssh://** : 제공되는 ssh key 값을 복사하여 private git repository에 등록합니다. ⚠️ github 는 ssh 대신 PAT 를 이용합니다.  
                 ![ssh](images/7_fl_ss_ssh.png){: .styled-image}  
     - **Pipeline**
