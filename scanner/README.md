@@ -42,11 +42,14 @@ $ pip3 install fosslight_scanner
 
 ### ⚠️ 설치 에러 발생 시
 'Cargo, the Rust package manager, is not installed or is not on PATH.' 에러 발생 시, cargo, rust를 아래와 같이 설치한 이후, 다시 FOSSLight Scanner를 설치합니다.
+#### Linux, MacOS
 ```
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 $ export PATH="$HOME/.cargo/bin:$PATH"
 ```
-
+#### Windows
+[https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)에서 rust-init.exe 파일 다운로드 후 설치
+ 
 
 ## 🚀 실행 방법
 ### Mode별 실행 방법 및 Parameters
