@@ -261,7 +261,7 @@ FOSSLight Dependency Scanner 내부에서 Cargo.toml 파일과 'cargo metadata' 
 ## 🎉 설치 방법
 
 FOSSLight Dependency Scanner는 pip3를 이용하여 설치할 수 있습니다.     
-[python 3.7 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
+[python 3.10 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
 ```
 $ pip3 install fosslight_dependency
