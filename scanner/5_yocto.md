@@ -29,7 +29,7 @@ OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 �
 
 ## 🎉 설치 방법    
 0. (windows의 경우) https://visualstudio.microsoft.com/ko/vs/older-downloads/ > 재배포 가능 패키지 및 빌드 도구에서 Microsoft Build Tools 설치
-1. [python 3.8 + virtualenv](etc/guide_virtualenv.md) 환경 세팅
+1. [python virtualenv](etc/guide_virtualenv.md) 환경 세팅
 2. Python package인 fosslight_yocto 설치
     ```
     $ pip3 install fosslight_yocto
