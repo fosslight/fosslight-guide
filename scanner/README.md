@@ -28,13 +28,13 @@ FOSSLight Scanner는 로컬 소스코드 또는 입력받은 링크를 통해 �
 - [🐳 Docker를 이용하여 설치 및 실행 방법](#-docker를-이용하여-설치-및-실행-방법)
   
 ## 📋 필요 조건
-1. [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner)는 Python 3.8+ 기반에서 동작합니다.   
+1. [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner)는 Python 3.10+ 기반에서 동작합니다.   
 2. Jar 파일에 대한 분석을 위해서는 [**Java**](https://openjdk.java.net)를 설치해야 합니다.(Open Source JDK를 설치)
 3. (windows의 경우) Microsoft Build Tools (Microsoft Visual C++ 14.0+) from https://visualstudio.microsoft.com/ko/visual-cpp-build-tools/ 를 설치해야 합니다.
 
 ## 🎉 설치 방법   
 FOSSLight Scanner는 pip3를 이용하여 설치할 수 있습니다.     
-[python 3.8 + virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
+[python3 virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.
 
 ```
 $ pip3 install fosslight_scanner
