@@ -133,7 +133,7 @@ $ sudo apt-get install python3-venv
 2. 가상환경을 생성하고 활성화합니다.
 ```
 // virtualenv example
-$ virtualenv -p /usr/bin/python3.7 venv
+$ virtualenv -p /usr/bin/python3.10 venv
 $ source venv/bin/activate
 // conda example
 $ conda create --name {venv name}
