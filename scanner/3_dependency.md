@@ -398,7 +398,6 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
 각 패키지 매니저별 사용하는 소프트웨어는 다음과 같습니다:
 
 - NPM : [NPM License Checker](https://github.com/davglass/license-checker)
-- Pypi : [pip-licenses](https://github.com/raimon49/pip-licenses)
 - Gradle : [License Gradle Plugin](https://github.com/hierynomus/license-gradle-plugin)
 - Maven : [license-maven-plugin](https://github.com/mojohaus/license-maven-plugin)
 - Pub : [flutter_oss_licenses](https://github.com/espresso3389/flutter_oss_licenses)
