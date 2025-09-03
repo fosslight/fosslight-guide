@@ -63,12 +63,12 @@ published: true
     - Dependencies 아래 표시된 숫자는 Dependency 분석 결과 개수를 의미하며, 해당 숫자를 클릭하면 Dependency 분석 결과 검출된 패키지 별 오픈 소스 목록을 확인할 수 있습니다.
     ![dependencies](images/7_fl_ss_dependencies.png){: .styled-image} 
 2. **Detected Open Source**
-    - Detected Open Source 아래 표시된 숫자는 Source 및 Binary 분석 결과 개수를 의미하며며, 해당 숫자를 클릭하면 Source 및 Binary 분석을 통해 검출된 오픈 소스 목록을 확인할 수 있습니다.
+    - Detected Open Source 아래 표시된 숫자는 Source 및 Binary 분석 결과 개수를 의미하며, 해당 숫자를 클릭하면 Source 및 Binary 분석을 통해 검출된 오픈 소스 목록을 확인할 수 있습니다.
     ![detected_opensource](images/7_fl_ss_detected_opensource.png){: .styled-image}  
         - 이때 Path 컬럼에 표시되는 파일명 클릭 시, 해당 파일 내용을 확인할 수 있습니다.
         ![file_viewer](images/7_fl_ss_file_viewer.png){: .styled-image}
 3. **Download results**
-    - 분석 결과 파일을 다운로드 받을 수 있습니다.  
+    - 분석 결과 파일을 다운로드받을 수 있습니다.  
         - FOSSLight Scanner Result : FOSSLight Hub의 [Identification](https://fosslight.org/hub-guide/tutorial/1_project/2_Identification/) 과정에서 업로드 할 수 있는 리포트입니다. 
 4. **Files**
-    - 분석한 파일별 검출 결과를 File Tree 포맷으로 확인할 수 있습니다. (파일별 검출 결과이므로, FOSSLight Dependency 결과는 미포함)
+    - 분석한 파일별 검출 결과를 File Tree 포맷으로 확인할 수 있습니다. (파일별 검출 결과이므로, FOSSLight Dependency 결과는 포함되지 않음)
