@@ -23,7 +23,7 @@ title: FOSSLight Dependency Scanner
 - [Go](https://pkg.go.dev/) (Go)
 - [Nuget](https://www.nuget.org/) (.NET)
 - [Helm](https://helm.sh/) (Kubernetes)
-- [Unity](https://unity.com/) (Unity
+- [Unity](https://unity.com/) (Unity)
 - [Cargo](https://crates.io/) (Rust)
 </details>
 {::options parse_block_html="false" /}
@@ -89,6 +89,7 @@ downloadLicenses {
 ```
 $ gradlew downloadLicenses
 ```
+
 </details>
 
 <details>
@@ -96,6 +97,7 @@ $ gradlew downloadLicenses
 ```tip
 Android (gradle)의 경우, input directory에 gradlew 실행 파일 및 build.gradle 파일이 존재하는 경우, plugin 추가 및 실행을 FOSSLight Dependency Scanner 내부에서 자동으로 수행하므로 다음은 skip하셔도 됩니다.
 ```
+##### java/groovy project
 1. 'build.gradle' 파일에 android-dependency-scanning Plugin을 추가합니다.
 ```
 buildscript {
@@ -116,6 +118,32 @@ apply plugin: 'org.fosslight'
 3. 'generateLicenseTxt' task를 실행합니다.
 ```
 $ gradlew generateLicenseTxt
+```
+
+##### kotlin project
+1. 'build.gradle.kts' 파일에 android-dependency-scanning plugin을 추가합니다.
+```
+buildscript {
+    dependencies {
+        classpath("org.fosslight:android-dependency-scanning:1.0.0")
+    }
+}
+```
+
+2. settings.gradle.kts 파일에 pluginManagement > repositories 내 mavenCentral을 추가합니다.
+```
+pluginManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+```
+
+3. 플러그인이 적용되는 app 디렉토리 내에 위치한 build.gradle.kts 파일 내에 아래와 같이 추가합니다.
+```
+plugins {
+    id("org.fosslight")
+}
 ```
 </details>
 
