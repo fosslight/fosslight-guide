@@ -145,6 +145,11 @@ plugins {
     id("org.fosslight")
 }
 ```
+
+4. 'generateLicenseTxt' task를 실행합니다.
+```
+$ gradlew generateLicenseTxt
+```
 </details>
 
 <details>
