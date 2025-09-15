@@ -37,6 +37,7 @@ published: true
     - **Name** : Project 이름을 입력합니다.
     - **Inputs** : 분석할 소스를 선택합니다.
         - **Upload files** : 분석할 파일을 압축하여 업로드합니다. (1개만 업로드)
+              ⚠️ 최대 3GB까지 업로드 가능
         - **Download URLs** : 분석할 소스 링크 (wget 또는 git clone 하여 받을 수 있는 링크)를 입력합니다.
             - **Public** : 공개된 Repository인 경우 
                 - 입력값 예시
