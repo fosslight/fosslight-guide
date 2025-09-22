@@ -15,6 +15,7 @@ title: FOSSLight Dependency Scanner
 - [Maven](http://maven.apache.org/) (Java)
 - [NPM](https://www.npmjs.com/) (Node.js)
 - [PNPM](https://pnpm.io/) (Node.js)
+- [Yarn](https://yarnpkg.com/) (Node.js)
 - [PyPi](https://pip.pypa.io/) (Python)
 - [Pub](https://pub.dev/) (Dart with flutter)
 - [Cocoapods](https://cocoapods.org/) (Swift/Obj-C)
@@ -45,8 +46,8 @@ title: FOSSLight Dependency Scanner
 
 {::options parse_block_html="true" /}
 <details>
-<summary markdown="span">**Prerequisite for Npm**</summary>
-1. Npm dependency 분석을 수행하기 위해 NPM License Checker를 설치합니다.
+<summary markdown="span">**Prerequisite for Npm or Yarn**</summary>
+1. Dependency 분석을 수행하기 위해 NPM License Checker를 설치합니다.
 ```
 $ npm install -g license-checker
 ```
@@ -352,6 +353,7 @@ FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency �
 ```
   - Npm : package.json
   - Pnpm : pnpm-lock.yaml
+  - Yarn : package.json
   - Pypi : requirements.txt / setup.py / pyproject.toml
   - Maven : pom.xml
   - Gradle (Android) : build.gradle
@@ -405,7 +407,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 
 | Package manager                | OSS Name                 | Download Location                                                                                  | Homepage                                            |
 | ------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Npm, Pnpm                      | npm:(oss name)           | npmjs.com/package/(oss name)/v/(oss version)                                                       | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)  |
+| Npm, Pnpm, Yarn                      | npm:(oss name)           | npmjs.com/package/(oss name)/v/(oss version)                                                       | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)  |
 | Pypi                           | pypi:(oss name)          | pypi.org/project/(oss name)/(version)                                                              | homepage in (pip show) information                  |
 | Maven<br>& Gradle<br>& Android | (group_id):(artifact_id) | mvnrepository.com/artifact/(group id)/(artifact id)/(version)                                      | mvnrepository.com/artifact/(group id)/(artifact id) |
 | Pub                            | pub:(oss name)           | pub.dev/packages/(oss name)/versions/(version)                                                     | homepage in (pub information)                       |
@@ -452,7 +454,7 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
 </thead>
 <tbody>
   <tr>
-    <td rowspan="2">Javascript</td>
+    <td rowspan="3">Javascript</td>
     <td>Npm</td>
     <td>package.json</td>
     <td>O</td>
@@ -462,6 +464,13 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
   <tr>
     <td>Pnpm</td>
     <td>pnpm-lock.yaml</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+  </tr>
+  <tr>
+    <td>Yarn</td>
+    <td>package.json</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
