@@ -328,6 +328,7 @@ $ fosslight_dependency [option] <arg>
                                                 --graph-path option is required
             --direct                        Print the direct/transitive dependency type in comment.
                                                 Choice 'True' or 'False'. (default:True)
+            -r                              Recursive mode. Scan all subdirectories for manifest files.
             --notice                        Print the open source license notice text.
 
         Required only for swift, carthage
@@ -348,7 +349,8 @@ $ fosslight_dependency [option] <arg>
 - 📃 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
 
 ### Tips to run
-FOSSLight Dependency Scanner 실행 시, input path('-p' 옵션)는 dependency 분석을 수행하고자 하는 패키지 매니저의 manifest 파일이 존재하는 프로젝트의 top directory로 지정해 주어야 합니다.
+FOSSLight Dependency Scanner 실행 시, 기본적으로 input path('-p' 옵션)부터 순차적으로 패키지 매니저의 manifest 파일을 감지하고, 만약 manifest 파일이 감지된다면 더 이상 하위 path에 대해 manifest 파일 감지를 중지하고, dependency 분석을 수행합니다.
+(만약 전체 input path에 대해 존재하는 manifest 파일에 대해 dependency 분석 수행을 원하시는 경우, '-r' 옵션을 추가하여 실행하시기 바랍니다.)
 각 패키지 매니저별 manifest 파일은 다음과 같습니다.
 ```
   - Npm : package.json
@@ -407,7 +409,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
 
 | Package manager                | OSS Name                 | Download Location                                                                                  | Homepage                                            |
 | ------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Npm, Pnpm, Yarn                      | npm:(oss name)           | npmjs.com/package/(oss name)/v/(oss version)                                                       | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)  |
+| Npm, Pnpm, Yarn                | npm:(oss name)           | npmjs.com/package/(oss name)/v/(oss version)                                                       | 우선순위1. repository in package.json <br> 우선순위2. npmjs.com/package/(oss name)  |
 | Pypi                           | pypi:(oss name)          | pypi.org/project/(oss name)/(version)                                                              | homepage in (pip show) information                  |
 | Maven<br>& Gradle<br>& Android | (group_id):(artifact_id) | mvnrepository.com/artifact/(group id)/(artifact id)/(version)                                      | mvnrepository.com/artifact/(group id)/(artifact id) |
 | Pub                            | pub:(oss name)           | pub.dev/packages/(oss name)/versions/(version)                                                     | homepage in (pub information)                       |
