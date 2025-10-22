@@ -98,9 +98,9 @@ FOSSLight Binary Scanner 실행 시, 아래 환경 변수를 설정하여 동작
    - 코드에서 자동 설정:
       python os.environ['DEPENDENCY_CHECK_VERSION'] = '12.1.7'
    - 외부 스크립트에서 참조:
-      - Linux/macOS:
+      - Linux/macOS:    
          bash echo $DEPENDENCY_CHECK_VERSION
-      - Windows (cmd):
+      - Windows (cmd):    
          cmd echo %DEPENDENCY_CHECK_VERSION%
   ```
 
