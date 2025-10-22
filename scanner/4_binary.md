@@ -76,29 +76,35 @@ FOSSLight Binary Scanner 실행 시, 아래 환경 변수를 설정하여 동작
 - 실행 환경(특히 배포된 실행 파일)에서 dependency-check의 자동 다운로드/설치를 비활성화합니다.
 - '1' 또는 'true'일 경우 자동 다운로드/설치가 비활성화됩니다.
 - 사용 방법:
+   ```
    - Linux/macOS:
       bash export FOSSLIGHT_SKIP_AUTO_INSTALL=1
    - Windows (cmd):
       cmd set FOSSLIGHT_SKIP_AUTO_INSTALL=1
    - Windows (PowerShell):
       powershell $env:FOSSLIGHT_SKIP_AUTO_INSTALL='1'
+   ```
 
+   
 ### 2. DEPENDENCY_CHECK_HOME
 - dependency-check의 설치 경로입니다. (이미 존재하면 그대로 사용)
-- 기존 설치: dependency-check 디렉토리 자체 (.../dependency-check)
+- 기존 설치된 경우: dependency-check 디렉토리 자체 (.../dependency-check)
 - 신규 설치시: base + 'dependency-check'를 결정 후 저장
   
 ### 3. DEPENDENCY_CHECK_VERSION
 현재 설치된 dependency-check 버전 정보입니다.
 - 쓰는 시점: dependency-check 확인 성공 또는 설치 완료 후
-- 코드에서 자동 설정:
-   python os.environ['DEPENDENCY_CHECK_VERSION'] = '12.1.7'
-- 외부 스크립트에서 참조:
-   - Linux/macOS:
-      bash echo $DEPENDENCY_CHECK_VERSION
-   - Windows (cmd):
-      cmd echo %DEPENDENCY_CHECK_VERSION%
-  
+   ```
+   - 코드에서 자동 설정:
+      python os.environ['DEPENDENCY_CHECK_VERSION'] = '12.1.7'
+   - 외부 스크립트에서 참조:
+      - Linux/macOS:
+         bash echo $DEPENDENCY_CHECK_VERSION
+      - Windows (cmd):
+         cmd echo %DEPENDENCY_CHECK_VERSION%
+  ```
+
+   
 ## 📁 결과
 
 ```
