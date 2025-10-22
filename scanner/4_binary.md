@@ -95,8 +95,9 @@ FOSSLight Binary Scanner 실행 시, 아래 환경 변수를 설정하여 동작
 현재 설치된 dependency-check 버전 정보입니다.
 - 쓰는 시점: dependency-check 확인 성공 또는 설치 완료 후
    ```
-   - 코드에서 자동 설정:
+   - 코드에서 자동 설정(e.g. 12.1.7 버전일 경우):
       python os.environ['DEPENDENCY_CHECK_VERSION'] = '12.1.7'
+   
    - 외부 스크립트에서 참조:
       - Linux/macOS:    
          bash echo $DEPENDENCY_CHECK_VERSION
