@@ -148,26 +148,31 @@ test_result/
 4. Analyzed path : 분석된 path가 표시됩니다. ('-p' 옵션을 통해 입력된 분석 path 또는 default로 스캐너가 실행된 path)
 5. Excluded path : 분석시 제외된 path가 표시됩니다. ('-e' 옵션을 통해 입력된 path)
 6. Comment : 스캐너별 분석 결과가 표시됩니다.
-   - fosslight_source : 전체 분석된 파일 수 (Total number of files) 및 분석 제외된 path에 속해 분석 결과에서 제거된 파일 수 (Removed files) 표시
-   - fosslight_binary : 전체 분석된 바이너리 수 (Total number of binaries) 및 전체 분석된 파일 수 (Total number of files) 표시
+   - fosslight_source
+      - 전체 분석된 파일 수 (Total number of files) 및 분석 제외된 path에 속해 분석 결과에서 제거된 파일 수 (Removed files) 표시
+      - 분석 path에 파일 검출되지 않는 경우 : (No file detected.) 추가 표시
+      - 분석 path에 파일은 존재하나, 오픈소스 분석 결과가 검출되지 않은 경우 : (No OSS detected.) 추가 표시
+   - fosslight_binary
+      - 전체 분석된 바이너리 수 (Total number of binaries) 및 전체 분석된 파일 수 (Total number of files) 표시
+      - 분석 path에 바이너리 검출되지 않은 경우: (No binary detected.) 추가 표시
    - fosslight_dependency
       - 패키지 매니저 manifest 파일 존재하지 않는 경우 : No Package manager detected.
       - 패키지 매니저 분석 성공한 경우 : Success to anlalyze: -{package manager}: {path of manifest file}: {manifest file}
           - Ex)
              ```
              [fosslight_dependency v4.1.23] Success to analyze:
-             - npm:
+               - npm:
                 /home/worker/local/codebase: package.json
-             - nuget:
+               - nuget:
                 /home/worker/local/codebase: packages.config
              ```
       - 패키지 매니저 분석 실패한 경우 : Fail to analyze: -{package manager}: {path of manifest file}: {manifest file} / Check {prerequisite 가이드 url}
           - Ex)
             ```
             [fosslight_dependency v4.1.23] Fail to analyze:
-              \- gradle:
+              - gradle:
                 /home/worker/local/codebase: build.gradle
-              \- android:
+              - android:
                 /home/worker/local/codebase: build.gradle / Check log file(fosslight_log*.txt) and https://fosslight.org/fosslight-guide-en/scanner/3_dependency.html#-prerequisite.
             ```
 
