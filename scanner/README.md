@@ -140,6 +140,24 @@ test_result/
   - fosslight_bin_(datetime).xlsx : Binary 분석 결과 파일
  
 #### fosslight_report_(datetime).xlsx
+##### Scanner Info sheet
+실행된 스캐너 및 실행 환경 정보를 출력하는 sheet입니다.
+1. Tool information : 실행된 스캐너명 및 버전이 표시됩니다.
+2. Start time : 스캐너 실행 시작 시간이 표시됩니다.
+3. Python version : 스캐너가 실행된 Python 버전이 표시됩니다.
+4. Analyzed path : 분석된 path가 표시됩니다. ('-p' 옵션을 통해 입력된 분석 path 또는 default로 스캐너가 실행된 path)
+5. Excluded path : 분석시 제외된 path가 표시됩니다. ('-e' 옵션을 통해 입력된 path)
+6. Comment : 스캐너별 분석 결과가 표시됩니다.
+   - fosslight_source : 전체 분석된 파일 수 (Total number of files) 및 분석 제외된 path에 속해 분석 결과에서 제거된 파일 수 (Removed files) 표시
+   - fosslight_binary : 전체 분석된 바이너리 수 (Total number of binaries) 및 전체 분석된 파일 수 (Total number of files) 표시
+   - fosslight_dependency
+      - 패키지 매니저 manifest 파일 존재하지 않는 경우 : No Package manager detected.
+      - 패키지 매니저 분석 성공한 경우 : Analyzed Package manager:  {package manager} (manifest file)
+          - Ex) Analyzed Package manager: pypi (requirements.txt)
+      - 패키지 매니저 분석 실패한 경우 : Analysis failed Package manager: {package manager} (manifest file) (Check {prerequisite 가이드 url})
+          - Ex) Analysis failed Package manager: npm (package.json) (Check https://fosslight.org/fosslight-guide-en/scanner/3_dependency.html#-prerequisite.) 
+##### {SRC/BIN/DEP}\_FL\_{Source/Binary/Dependency} sheet
+sheet명에서 실행된 스캐너를 확인하고 해당 sheet에서 스캐너별 실행된 결과를 확인할 수 있습니다.
 1. Exclude : 체크된 Row
    test(s), doc(s), 숨김 파일 or 폴더는 Exclude 체크됩니다.
 2. sbom-info.yaml을 load한 경우, load한 데이터를 append하고 중복된 파일에 대한 분석 결과는 Exclude 체크됩니다.
