@@ -156,6 +156,7 @@ test_result/
           - Ex) Analyzed Package manager: pypi (requirements.txt)
       - 패키지 매니저 분석 실패한 경우 : Analysis failed Package manager: {package manager} (manifest file) (Check {prerequisite 가이드 url})
           - Ex) Analysis failed Package manager: npm (package.json) (Check https://fosslight.org/fosslight-guide-en/scanner/3_dependency.html#-prerequisite.) 
+
 ##### {SRC/BIN/DEP}\_FL\_{Source/Binary/Dependency} sheet
 sheet명에서 실행된 스캐너를 확인하고 해당 sheet에서 스캐너별 실행된 결과를 확인할 수 있습니다.
 1. Exclude : 체크된 Row
