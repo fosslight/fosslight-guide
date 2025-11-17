@@ -161,18 +161,18 @@ test_result/
           - Ex)
              ```
              [fosslight_dependency v4.1.23] Success to analyze:
-               - npm:
+               -npm:
                 /home/worker/local/codebase: package.json
-               - nuget:
+               -nuget:
                 /home/worker/local/codebase: packages.config
              ```
       - 패키지 매니저 분석 실패한 경우 : Fail to analyze: -{package manager}: {path of manifest file}: {manifest file} / Check {prerequisite 가이드 url}
           - Ex)
             ```
             [fosslight_dependency v4.1.23] Fail to analyze:
-              - gradle:
+              -gradle:
                 /home/worker/local/codebase: build.gradle
-              - android:
+              -android:
                 /home/worker/local/codebase: build.gradle / Check log file(fosslight_log*.txt) and https://fosslight.org/fosslight-guide-en/scanner/3_dependency.html#-prerequisite.
             ```
 
