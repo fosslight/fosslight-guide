@@ -57,7 +57,10 @@ $ fosslight_source [option] <arg>
       --correct_fpath <path> Path to the sbom-info.yaml file
 ```
 - -s 옵션이 추가되지 않을 경우 모든 Scanner (ScanCode, SCANOSS)가 동작한 결과가 취합됩니다.
-- 📃 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
+- -e 옵션 관련 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
+   - ⚠️ 사용 시 반드시 쌍 따옴표("")를 이용하여 입력하시기 바랍니다.
+       - 예시) fosslight_binary -e "*.png" "tests/"
+   - ⚠️ 입력 시 파일명과 확장자는 대소문자를 정확히 구분해야 합니다.
 
 #### Example
 Source Code 분석 후 FOSSLight Report와 json 형태의 ScanCode, SCANOSS 결과 출력
