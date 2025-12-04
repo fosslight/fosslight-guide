@@ -72,7 +72,7 @@ Options for only 'add' mode
 Option for 'download' mode
     -l <license>	  대표 라이선스 파일로 생성할 라이선스 (SPDX License Identifer)
 ```
-- 📃 -e 옵션 관련 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
+- -e 옵션 관련 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
    - ⚠️ 사용 시 반드시 쌍 따옴표("")를 이용하여 입력하시기 바랍니다.
        - 예시) fosslight_binary -e "*.png" "tests/"
    - ⚠️ 입력 시 파일명과 확장자는 대소문자를 정확히 구분해야 합니다.
