@@ -605,20 +605,4 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
 
 ```tip
 **인터넷 접근 필요 기준**: 로컬 manifest/lock/캐시/플러그인 출력만으로 라이선스·홈페이지 등 OSS 정보를 해석할 수 없으면 인터넷 접근이 필요합니다.
-
-**조건별 안내**:
-- **Go, Nuget**
-  - 기본적으로 원격에서 라이선스/메타데이터를 조회하므로 인터넷 필요.
-- **Swift, Carthage**
-  - 의존성 목록은 오프라인 파싱 가능. 라이선스 정보를 GitHub 등 원격에서 보강해야 하는 경우 인터넷 필요.
-- **Gradle, Maven, Android**
-  - 플러그인(Gradle: [License Gradle Plugin](https://github.com/hierynomus/license-gradle-plugin), Maven: [license-maven-plugin](https://github.com/mojohaus/license-maven-plugin), Android: [android-dependency-scanning](https://github.com/fosslight/android-dependency-scanning)) 최초 다운로드/설치 시 인터넷 필요.
-- **Pypi**
-   - 분석에 사용하는 [pipdeptree](https://pypi.org/project/pipdeptree/)가 미설치인 환경에서는 최초 설치할 때 인터넷 필요.
-- **Npm/Pnpm/Yarn**
-  - 분석 도구로 사용하는 [license-checker](https://www.npmjs.com/package/license-checker)를 최초 설치할 때 인터넷 필요. 설치되어 있고 node_modules/lock 파일이 준비돼 있으면 오프라인 분석 가능.
-- **Pub**
-  - 분석에 사용하는 [flutter_oss_licenses](https://pub.dev/packages/flutter_oss_licenses) 최초 설치할 때 인터넷 필요.
-- **Cocoapods/Helm/Unity/Cargo**
-  - 의존성이 이미 다운로드되어 있고 필수 파일들이 존재하면 오프라인 분석 가능.
 ```
