@@ -604,8 +604,7 @@ FOSSLight Dependency Scanner는 패키지 매니저에 따른 dependency를 분�
 </table>
 
 ```tip
-인터넷 접근 필요 기준:
-- 로컬 manifest/lock/캐시/플러그인 출력만으로 라이선스·홈페이지 등 OSS 정보를 해석할 수 없으면 인터넷 접근이 필요합니다.
+인터넷 접근 필요 기준: 로컬 manifest/lock/캐시/플러그인 출력만으로 라이선스·홈페이지 등 OSS 정보를 해석할 수 없으면 인터넷 접근이 필요합니다.
 
 조건별 안내:
 - **Go, Nuget**
