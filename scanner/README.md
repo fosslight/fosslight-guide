@@ -74,7 +74,9 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
             -f <formats> [<format> ...]     FOSSLight Report file format (excel, csv, opossum, yaml, spdx-yaml, spdx-json, spdx-xml, spdx-tag, cyclonedx-json, cyclonedx-xml)
                                      * Compare mode result file: supports excel, json, yaml, html
                                      * Multiple formats can be specified separated by space.
-            -e <path>               Path to exclude from analysis (ex, -e {dir} {file})
+            -e <path>               Path to exclude from analysis (files and directories, pattern matching is available)
+                                     * IMPORTANT: Always wrap patterns in quotes("") to avoid shell expansion.
+                                       Example) fosslight -e "test/abc.py" "*.jar" "test/"
             -o <output>             Output directory or file
             -c <number>             Number of processes to analyze source
             -r                      Keep raw data
@@ -97,6 +99,10 @@ $ fosslight [Mode] [option1] <arg1> [option2] <arg2>...
 
 ```
 - -d 옵션은 FOSSLight Dependency 실행시 argument 입력이 필요한 경우만 입력합니다.[참고](3_dependency.md)
+- -e 옵션 관련 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
+   - ⚠️ 사용 시 반드시 쌍 따옴표("")를 이용하여 입력하시기 바랍니다.
+       - 예시) fosslight -e "*.png" "tests/"
+   - ⚠️ 입력 시 파일명과 확장자는 대소문자를 정확히 구분해야 합니다.
 
 #### Ex.1 Local의 Path를 분석하는 방법
 ```
