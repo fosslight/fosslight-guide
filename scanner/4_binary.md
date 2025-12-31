@@ -58,7 +58,7 @@ $ fosslight_binary [option] <arg>
         -s                                  Extract only the binary list in simple mode
         -e <path>                           Path to exclude from analysis (files and directories, pattern matching is available)
                                             * IMPORTANT: Always wrap patterns in quotes("") to avoid shell expansion.
-                  				                Example) fosslight_bin -e "test/abc.py" "*.jar" "test/"
+                                              Example) fosslight_bin -e "test/abc.py" "*.jar" "test/"
         -o <output_path>                    Output path
                                             (If you want to generate the specific file name, add the output path with file name.)
         -f <format> [<format> ...]          Output file formats
