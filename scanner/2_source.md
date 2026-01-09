@@ -5,8 +5,9 @@ published: true
 
 <img src="https://img.shields.io/pypi/l/fosslight_source" alt="FOSSLight Source is released under the Apache-2.0 License." /> <img src="https://img.shields.io/pypi/v/fosslight_source" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_source" /> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_source_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_source_scanner)
 
-[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 소스 코드 스캐너인 [ScanCode][sc], [SCANOSS][scanoss]를 이용합니다. [ScanCode][sc]를 이용하면 파일 안에 포함된 Copyright과 License 문구를 검출하고, [SCANOSS][scanoss]를 이용하면 OSS Name, OSS Version, Download Location, Copyright, License 정보를 [OSSKB][osskb]에서 검색합니다. 
-Build Script, Binary, Directory, 특정 Directory (ex-test) 안의 파일은 제외되고, 그리고 License 이름에서 "-only", "-old-style"와 같은 문구는 제거됩니다. 결과는 spreadsheet, csv 형태로 출력됩니다.
+[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 소스 코드 스캐너인 [ScanCode][sc], [SCANOSS][scanoss], KB를 이용합니다. [ScanCode][sc]를 이용하면 파일 안에 포함된 Copyright과 License 문구를 검출하고, [SCANOSS][scanoss]를 이용하면 OSS Name, OSS Version, Download Location, Copyright, License 정보를 [OSSKB][osskb]에서 검색합니다. 
+KB 서버로 부터 file md5 값으로 해당 파일의 출처를 조회하여 Download location으로 출력합니다.
+Build Script, Binary, Directory, 특정 Directory (ex-test), 숨김 폴더 안의 파일은 제외됩니다.
 
 [sc]: https://github.com/nexB/scancode-toolkit
 [scanoss]: https://github.com/scanoss/scanoss.py
@@ -53,14 +54,14 @@ $ fosslight_source [option] <arg>
                              (excel, csv, opossum, yaml, spdx-yaml, spdx-json, spdx-xml, spdx-tag, cyclonedx-json, cyclonedx-xml)
                              Multiple formats can be specified separated by space.
   Options only for FOSSLight Source Scanner
-      -s <scanner>           Select which scanner to be run (scancode, scanoss, all)
+      -s <scanner>           Select which scanner to be run (scancode, scanoss, kb, all)
       -j                     Generate raw result of scanners in json format
       -t <float>             Stop scancode scanning if scanning takes longer than a timeout in seconds.
       -c <core>              Select the number of cores to be scanned with ScanCode.
       --no_correction        Enter if you don't want to correct OSS information with sbom-info.yaml
       --correct_fpath <path> Path to the sbom-info.yaml file
 ```
-- -s 옵션이 추가되지 않을 경우 모든 Scanner (ScanCode, SCANOSS)가 동작한 결과가 취합됩니다.
+- -s 옵션이 추가되지 않을 경우 all 모드로 모든 Scanner (ScanCode, SCANOSS, KB)가 동작한 결과가 취합됩니다.
 - -e 옵션 관련 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/cli-reference/scan-options-pre.html?highlight=ignore#glob-pattern-matching)
    - ⚠️ 사용 시 반드시 쌍 따옴표("")를 이용하여 입력하시기 바랍니다.
        - 예시) fosslight_source -e "dev/" "tests/"
