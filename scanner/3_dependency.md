@@ -267,8 +267,7 @@ Go의 경우, go module에 한해 dependency 분석을 지원합니다. FOSSLigh
 <summary markdown="span">**Prerequisite for Nuget**</summary>
 ```tip
 FOSSLight Dependency Scanner 내부에서 packages.config 파일 또는 PackageReference형태로 이용하는 경우 obj/project.assets.json 파일을 통해 패키지 목록을 확인하고, nuget api를 통해 license, repository와 같은 오픈소스 정보를 취합하고 있습니다. 이에 별도의 prerequisite단계없이, 바로 fosslight_dependency 명령어 실행하여 이용하실 수 있습니다.
-    - Nuget
-  - CPM 프로젝트인 경우, Directory.Packages.props가 존재하는 path에서 실행하셔야 dependency 분석 가능합니다. 이때 obj/project.assets.json 파일이 존재하지 않는 경우, 실행 path 하위 내 .csproj 또는 .sln이 존재하는 path에서 자동으로 'dotnet restore' 명령어 수행하여 obj/project.assets.json 파일 생성한 뒤 Dependency 분석 수행합니다.
+CPM 프로젝트인 경우, Directory.Packages.props가 존재하는 path에서 실행하셔야 dependency 분석 가능합니다. 이때 obj/project.assets.json 파일이 존재하지 않는 경우, 실행 path 하위 내 .csproj 또는 .sln이 존재하는 path에서 자동으로 'dotnet restore' 명령어 수행하여 obj/project.assets.json 파일 생성한 뒤 Dependency 분석 수행합니다.
 ```
 </details>
 
