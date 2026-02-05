@@ -3,47 +3,146 @@ published: true
 ---
 # Virtualenv 세팅 가이드
 
-Python package를 설치 및 실행하기 위한 virtualenv 환경 세팅하는 가이드입니다.
+python 패키지를 설치하고 실행하기 위한 virtualenv 환경 설정 가이드입니다.<br><br>  
+## About Virtualenv  
+{: .left-bar-title}  
+- python을 새로 설치해서 내가 원하는 모듈만 운용하는 바구니와 같습니다.  
+- Virtualenv는 시스템에 설치된 Python 환경에 영향을 주지 않도록 독립적인 가상 환경을 생성하는 도구입니다. 이 환경에서는 별도의 python 실행 파일과 라이브러리 경로가 제공되며, 패키지를 설치해도 시스템 전체의 python 설정에는 영향을 미치지 않습니다. 또한 여러 버전의 python을 설치해 두고, 그중 원하는 버전을 선택해 가상 환경을 구성할 수 있습니다. 
+<br><br> 
 
-## Contents
-- [추가 Package 설치](#pre)
-- [Python, python-dev 설치](#python)
-- [virtualenv 세팅하는 법](#virtualenv)
-- [virtualenv 명령어](#command)
+## 필요 조건
+{: .left-bar-title}  
+### 1.Unix 계열 (Ubuntu, macOS)
+{: .specific-title}
+#### 1-1.Ubuntu
+- 예) python 3.10 설치(권장 Python 버전 : 3.10 ~3.12)
+  ```
+  $ sudo apt-get update
+  $ sudo apt-get install python3.10 python3-pip python3.10-dev python3.10-distutils
+  ```
+- 기본 python 버전 설정 방법 (참고)
+  - update-alternatives를 사용하여 여러 python 버전을 등록할 때는, 우선순위(priority) 값이 클수록 기본 Python 버전으로 선택됩니다.  
+  - 새로 등록한 python 버전의 우선순위가 기존보다 높으면, auto mode에서 자동으로 기본 python 버전으로 설정됩니다.  
+  - 예) python 2.7을 기본 python 버전으로 세팅하는 방법  
+    ```
+    $ which python
+    /usr/bin/python
+    $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
+    $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+    $ sudo update-alternatives --config python
+    ```
 
-## 📋 <a name="pre"></a>Prerequisite
-macOS의 경우, 하기 package를 추가로 설치합니다.
+#### 1-2.macOS
 ```
 brew install openssl
 brew install libmagic
 brew install postgresql
 ```
-
-## 💻 <a name="python"></a>Python, python-dev 설치
-
-- Python 설치 방법은 [설치 가이드][install] 링크를 참조하세요.
-- 사용하는 python 버전에 맞게 python-dev, python-distutils를 설치합니다.
+- 기본 python3 버전 변경 방법 (참고)
   ```
-  $ sudo apt-get install python3.10 python3-pip python3.10-dev python3.10-distutils
+  $ which python3
+  $ which python3.10
+  /usr/local/bin/python3.10
+  $ ln -s -f /usr/local/bin/python3.10 /usr/local/bin/python3
   ```
 
-[install]: https://realpython.com/installing-python
+### 2.Windows  
+{: .specific-title}  
 
-## 📋 <a name="virtualenv"></a>virtualenv 생성하고 활성화하는 법
+<details>
+  <summary markdown="span">python 설치(권장 버전: 3.10 ~ 3.12)</summary>
+    https://www.python.org/downloads/windows/에서 installer 선택하여 다운로드 및 실행합니다.<br> 
+    1. Add Python.exe to PATH 체크 후 Install Now 실행합니다.<br>
+    <img src="../images/fl_scanner_win_python_1.png" alt="python1"><br><br>
+    2. Disable path length limit을 클릭합니다.<br>
+    <img src="../images/fl_scanner_win_python_2.png" alt="python2"><br>
+</details>  
 
+
+<details>
+  <summary markdown="span">OpenJDK 설치 (권장 버전: 11)</summary>
+    https://learn.microsoft.com/ko-kr/java/openjdk/download에서 환경에 맞는 .msi 파일을 다운로드 및 실행합니다.<br>  
+    1. .msi 파일 다운로드 및 실행합니다.<br>
+    <img src="../images/fl_scanner_win_jdk_1.png" alt="jdk1"><br><br>
+    2. 'Set or overide Jave_HOME...'을 선택합니다.<br>
+    <img src="../images/fl_scanner_win_jdk_2.png" alt="jdk2"><br>
+</details>   
+
+
+
+<details>
+  <summary markdown="span">Microsoft Visual C++ 설치 (권장 버전: 14.0 이상)</summary>
+    https://visualstudio.microsoft.com/visual-cpp-build-tools/에서 build tool 다운로드 및 실행합니다.<br>
+    1. C++를 사용한 데스크톱 개발 체크 후 설치합니다.<br>
+    <img src="../images/fl_scanner_vs_2.png" alt="jdk1"><br><br>
+</details>   
+
+<details>
+  <summary markdown="span"> Git 설치</summary>
+    https://git-scm.com/download/win에서 환경에 맞는 Git 설치 파일(Installer)을 다운로드 합니다.<br> 
+</details> 
+
+<br><br>
+
+
+## virtualenv 생성하고 활성화하는 법  
+{: .left-bar-title} 
+- 자세한 virtualenv 설명은 [Python virtualenv page](https://docs.python.org/3.10/library/venv.html)를 참고하시기 바랍니다.    
+
+### 1.Ubuntu
+{: .specific-title}
+- virtualenv 설치 및 실행  
+  ```
+  $ pip3 install virtualenv
+  $ virtualenv -p /usr/bin/python3.10 venv
+  $ source venv/bin/activate
+  ```
+     
+- virtualenv 명령어  
+
+    | **Command Description** | **Command** |  
+    |-------------------------|-------------|  
+    | 가상환경 생성 | virtualenv -p [python_version] [env_name] |  
+    | 가상환경 활성화 | source [env_name]/bin/activate |  
+    | 가상환경 비활성화 | deactivate |    
+    
+
+### 2.MacOS
+{: .specific-title}
+- virtualenv 설치 및 실행  
 ```
-$ pip3 install virtualenv
+# pip 존재하지 않는 경우
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ python3 get-pip.py
+$ pip 'install' virtualenv
 $ virtualenv -p /usr/bin/python3.10 venv
 $ source venv/bin/activate
+```     
+
+### 2.Windows
+{: .specific-title}  
+- virtualenvwrapper 설치   
 ```
-자세한 virtualenv 설명: [Python virtualenv page][venv]
+$ pip install virtualenv
+$ pip install virtualenvwrapper-win
+$ mkvirtualenv venv
+$ workon venv
+``` 
+  <details>
+      <summary markdown="span">설치 시 발생할 수 있는 error</summary>
+      <pre>  
+        1.Building wheel for py-tlsh (setup.py) error 발생 <br>
+          - Microsoft Visual C++ 14.0 이상 버전 다운로드 및 설치합니다.<br> 
+        2.'LINK : fatal error LNK1158: 'rc.exe'을(를) 실행할 수 없습니다.' 라는 error 발생 <br>
+        - C:\Program Files (x86)\Windows Kits\10\bin\10.xxx\x86 의 'rc.exe'와 'rcdll.dll' 파일을 C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools 로 Copy합니다.<br>
+      </pre>
+  </details>    
 
-[venv]: https://docs.python.org/3.10/library/venv.html
 
-## ⌨️ <a name="command"></a>virtualenv 명령어
+- virtualenvwrapper-win 명령어    
 
-| Command description  | command |
-| ------------- | ------------- |
-| 가상환경 생성 | virtualenv -p [python_version] [env_name] |
-| 가상환경 활성화 | source [env_name]/bin/activate |
-| 가상환경 비활성화 | deactivate |
+    | **Command Description** | **Command** |  
+    |-------------------------|-------------|  
+    | 환경 비활성화 | deactivate |  
+    | 가상 환경 생성 | mkvirtualenv [가상환경_이름] |  
+    | 환경 활성화 | workon [가상환경_이름] |    

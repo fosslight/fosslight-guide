@@ -1,22 +1,24 @@
 ---
+sort: 2
 published: true
+title: 🚩FOSSLight Scanner Service 
 ---
 
 # (Enterprise Only) FOSSLight Scanner Service 
 
-## 개요
+## 개요s
 {: .left-bar-title}
 웹서비스로 [FOSSLight Scanner](https://fosslight.org/fosslight-guide/scanner/)를 이용하여 Source, Binary, Dependency 분석을 수행합니다. 분석 결과는 [FOSSLight Report](https://fosslight.org/hub-guide/learn/2_fosslight_report.html)형태로 생성됩니다.    
 - URL : [http://fs.lge.com](http://fs.lge.com)
 - 분석 항목 
     - [FOSSLight Source Scanner](https://fosslight.org/fosslight-guide/scanner/2_source.html)
-    - [FOSSLight Binary Scanner](https://fosslight.org/fosslight-guide/scanner/4_binary.html)
-    - [FOSSLight Dependency Scanner](https://fosslight.org/fosslight-guide/scanner/3_dependency.html)
+    - [FOSSLight Binary Scanner](https://fosslight.org/fosslight-guide/scanner/3_binary.html)
+    - [FOSSLight Dependency Scanner](https://fosslight.org/fosslight-guide/scanner/1_dependency.html)
         - 지원하는 package manager : npm, pypi, maven, pub, go, nuget, cargo, swift, carthage.  
           (그 외 package manager은 검증 진행 중)  
 - 미지원 항목
-    - [FOSSLight Android Scanner](https://fosslight.org/fosslight-guide/scanner/6_android.html)
-    - [FOSSLight Yocto Scanner](https://fosslight.org/fosslight-guide/scanner/5_yocto.html)
+    - [FOSSLight Android Scanner](https://fosslight.org/fosslight-guide/android/)
+    - [FOSSLight Yocto Scanner](https://fosslight.org/fosslight-guide/yocto/)
 
 
 ## 사용 방법

@@ -1,6 +1,6 @@
 ---
 published: true
-title: FOSSLight Dependency Scanner
+title: "  ㄴ FOSSLight Dependency Scanner"
 ---
 # FOSSLight Dependency Scanner
 

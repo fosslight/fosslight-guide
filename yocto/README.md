@@ -1,5 +1,8 @@
 ---
+sort: 4
 published: true
+title: 🚩FOSSLight Yocto Scanner
+
 ---
 # FOSSLight Yocto Scanner
 

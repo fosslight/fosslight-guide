@@ -1,5 +1,6 @@
 ---
 published: true
+title: "  ㄴ FOSSLight Binary Scanner"
 ---
 # FOSSLight Binary Scanner
 
