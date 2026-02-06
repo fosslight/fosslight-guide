@@ -1,13 +1,13 @@
 ---
 sort: 1
 published: true
-title: 🚩FOSSLight Scanner
+title: 📦FOSSLight Scanner (All-in-One)
 ---
 # FOSSLight Scanner
 
 <a href="https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/fosslight_scanner" alt="FOSSLight Scanner is released under the Apache-2.0." /></a> <a href="https://pypi.org/project/fosslight-scanner/"><img src="https://img.shields.io/pypi/v/fosslight_scanner" alt="Current python package version." /></a> <img src="https://img.shields.io/pypi/pyversions/fosslight_scanner" />
 
-FOSSLight Scanner는 의존성(Dependency), 소스코드, 바이너리에 포함된 오픈소스 정보를 자동으로 분석하기 위한 통합 스캐닝 도구입니다. Git 또는 wget으로 다운로드 가능한 소스뿐 아니라 로컬 소스 경로를 입력하여 분석을 수행할 수 있으며, 그 결과는 FOSSLight Report(SBOM 포함) 형태로 생성됩니다.  
+FOSSLight Scanner는 의존성(Dependency), 소스코드, 바이너리에 포함된 오픈소스 정보를 자동으로 분석하기 위한 통합 스캐닝 도구입니다. Git 또는 wget으로 다운로드 가능한 소스뿐 아니라 로컬 소스 경로를 입력하여 분석을 수행할 수 있으며, 그 결과는 SBOM 형식인 FOSSLight Report 형태로 생성됩니다.  
 <br />
 FOSSLight Scanner는 다음 3가지 스캐너로 구성되어 있으며, 각각 다른 분석 영역을 담당합니다.  
 
@@ -157,19 +157,17 @@ $ pip3 install fosslight_scanner
     fosslight binary -p /path/to/binary -u "postgresql://user:pass@localhost:5432/sample"
 
 ```
-  🛈 -d 옵션은 FOSSLight Dependency 실행시 argument 입력이 필요한 경우만 입력합니다.[참고](1_dependency.md)
-
 - Ex.1 Local의 Path를 분석하는 방법  
 ```
-fosslight all -p /home/source_path
+fosslight -p /home/source_path
 ```
 
 - Ex.2 링크를 다운로드 받고 분석하는 방법    
 ```
-fosslight all -o test_result_wget -w "https://github.com/LGE-OSS/example.git"
+fosslight -o test_result_wget -w "https://github.com/LGE-OSS/example.git"
 ```
 
-- Ex.3 FOSSLight Report BOM 결과 비교하여 변경/추가/삭제 내역 확인하는 방법  
+- Ex.3 FOSSLight Report SBOM 결과 비교하여 변경/추가/삭제 내역 확인하는 방법  
 ```
 fosslight compare -p FOSSLight_before_proj.yaml FOSSLight_after_proj.yaml -o test_result
 ```
@@ -244,7 +242,7 @@ test_result/
       - **fosslight_source**  
           - Scanned files : 전체 분석된 파일 수  
           - Detected source : 오픈 소스가 검출된 파일 수입니다.  
-            - 오픈 소스가 검출되지 않으면 (No OSS detected)로 표시됩니다.   
+            - 오픈 소스가 검출되지 않으면 'Detected source : 0'으로 표시됩니다.   
           - KB Enable/KB Unreachable : KB DB의 활성화 여부입니다.    
           - Mode : Source 분석에 사용된 모드입니다.    
           

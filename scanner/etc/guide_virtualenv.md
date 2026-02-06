@@ -15,36 +15,19 @@ python 패키지를 설치하고 실행하기 위한 virtualenv 환경 설정 �
 ### 1.Unix 계열 (Ubuntu, macOS)
 {: .specific-title}
 #### 1-1.Ubuntu
-- 예) python 3.10 설치(권장 Python 버전 : 3.10 ~3.12)
+예) python 3.10 설치(권장 Python 버전 : 3.10 ~3.12)
   ```
   $ sudo apt-get update
   $ sudo apt-get install python3.10 python3-pip python3.10-dev python3.10-distutils
-  ```
-- 기본 python 버전 설정 방법 (참고)
-  - update-alternatives를 사용하여 여러 python 버전을 등록할 때는, 우선순위(priority) 값이 클수록 기본 Python 버전으로 선택됩니다.  
-  - 새로 등록한 python 버전의 우선순위가 기존보다 높으면, auto mode에서 자동으로 기본 python 버전으로 설정됩니다.  
-  - 예) python 2.7을 기본 python 버전으로 세팅하는 방법  
-    ```
-    $ which python
-    /usr/bin/python
-    $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
-    $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
-    $ sudo update-alternatives --config python
-    ```
+  ```  
 
 #### 1-2.macOS
 ```
 brew install openssl
 brew install libmagic
 brew install postgresql
-```
-- 기본 python3 버전 변경 방법 (참고)
-  ```
-  $ which python3
-  $ which python3.10
-  /usr/local/bin/python3.10
-  $ ln -s -f /usr/local/bin/python3.10 /usr/local/bin/python3
-  ```
+brew install python3  
+```    
 
 ### 2.Windows  
 {: .specific-title}  
