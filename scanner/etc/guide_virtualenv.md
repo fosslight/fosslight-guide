@@ -12,16 +12,16 @@ python 패키지를 설치하고 실행하기 위한 virtualenv 환경 설정 �
 
 ## 필요 조건
 {: .left-bar-title}  
-### 1.Unix 계열 (Ubuntu, macOS)
+### 1. Ubuntu
 {: .specific-title}
-#### 1-1.Ubuntu
 예) python 3.10 설치(권장 Python 버전 : 3.10 ~3.12)
   ```
   $ sudo apt-get update
   $ sudo apt-get install python3.10 python3-pip python3.10-dev python3.10-distutils
   ```  
 
-#### 1-2.macOS
+### 2. macOS  
+{: .specific-title}  
 ```
 brew install openssl
 brew install libmagic
@@ -29,7 +29,7 @@ brew install postgresql
 brew install python3  
 ```    
 
-### 2.Windows  
+### 3. Windows  
 {: .specific-title}  
 
 <details>
@@ -72,7 +72,7 @@ brew install python3
 {: .left-bar-title} 
 - 자세한 virtualenv 설명은 [Python virtualenv page](https://docs.python.org/3.10/library/venv.html)를 참고하시기 바랍니다.    
 
-### 1.Ubuntu
+### 1. Ubuntu
 {: .specific-title}
 - virtualenv 설치 및 실행  
   ```
@@ -90,8 +90,8 @@ brew install python3
     | 가상환경 비활성화 | deactivate |    
     
 
-### 2.MacOS
-{: .specific-title}
+### 2. macOS
+{: .specific-title}  
 - virtualenv 설치 및 실행  
 ```
 # pip 존재하지 않는 경우
@@ -102,7 +102,7 @@ $ virtualenv -p /usr/bin/python3.10 venv
 $ source venv/bin/activate
 ```     
 
-### 2.Windows
+### 3. Windows
 {: .specific-title}  
 - virtualenvwrapper 설치   
 ```
