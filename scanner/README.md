@@ -5,7 +5,7 @@ title: 📦FOSSLight Scanner (All-in-One)
 ---
 # FOSSLight Scanner
 
-<a href="https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/fosslight_scanner" alt="FOSSLight Scanner is released under the Apache-2.0." /></a> <a href="https://pypi.org/project/fosslight-scanner/"><img src="https://img.shields.io/pypi/v/fosslight_scanner" alt="Current python package version." /></a> <img src="https://img.shields.io/pypi/pyversions/fosslight_scanner" />
+<a href="https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/fosslight_scanner" alt="FOSSLight Scanner is released under the Apache-2.0." /></a> <a href="https://pypi.org/project/fosslight-scanner/"><img src="https://img.shields.io/pypi/v/fosslight_scanner" alt="Current python package version." /></a> <img src="https://img.shields.io/pypi/pyversions/fosslight_scanner" /> <a href="https://github.com/fosslight/fosslight_scanner"><img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a>
 
 FOSSLight Scanner는 의존성(Dependency), 소스코드, 바이너리에 포함된 오픈소스 정보를 자동으로 분석하기 위한 통합 스캐닝 도구입니다. Git 또는 wget으로 다운로드 가능한 소스뿐 아니라 로컬 소스 경로를 입력하여 분석을 수행할 수 있으며, 그 결과는 SBOM 형식인 FOSSLight Report 형태로 생성됩니다.  
 <br />
@@ -20,8 +20,6 @@ FOSSLight Scanner는 다음 3가지 스캐너로 구성되어 있으며, 각각 
     Binary 파일을 대상으로 오픈소스 분석을 수행합니다.   
     바이너리 자체를 리버스 엔지니어링하는 방식이 아니라, 바이너리 목록을 수집한 뒤 내부 DB에 존재하는 OSS 정보와 매칭하여 해당 바이너리에 포함된 오픈소스를 식별합니다.  
 
-**Github Repository** : [https://github.com/fosslight/fosslight_scanner](https://github.com/fosslight/fosslight_scanner)  
-**License** : [Apache-2.0](https://github.com/fosslight/fosslight_scanner/blob/main/LICENSE)
 <br><br>
 
 ## 목차
