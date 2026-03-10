@@ -25,8 +25,8 @@
     
 다음은 pull 요청이 수락 될 가능성을 높이기 위해 수행 할 수있는 몇 가지 작업입니다.    
 
-- 가능한 한 집중적으로 변경하십시오. 서로 의존하지 않는 변경 사항이 여러 개있는 경우 별도의 풀 요청으로 제출하는 것이 좋습니다.
-- [Conventional Commits](https://www.conventionalcommits.org/ko/)를 작성합니다.
+- 가능한 한 집중적으로 변경하십시오. 서로 의존하지 않는 변경 사항이 여러 개 있는 경우 별도의 풀 요청으로 제출하는 것이 좋습니다.
+- [Conventional Commits](https://www.conventionalcommits.org/ko/) 포맷으로 Commit message를 작성합니다.
 
 Work in Progress pull request는 초기에 피드백을 받거나 차단된 것이 있는 경우 환영합니다.
 
