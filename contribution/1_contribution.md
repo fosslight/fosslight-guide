@@ -26,7 +26,7 @@
 다음은 pull 요청이 수락 될 가능성을 높이기 위해 수행 할 수있는 몇 가지 작업입니다.    
 
 - 가능한 한 집중적으로 변경하십시오. 서로 의존하지 않는 변경 사항이 여러 개있는 경우 별도의 풀 요청으로 제출하는 것이 좋습니다.
-- [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)를 작성합니다.
+- [good commit message](https://www.conventionalcommits.org/ko/)를 작성합니다.
 
 Work in Progress pull request는 초기에 피드백을 받거나 차단된 것이 있는 경우 환영합니다.
 
@@ -47,7 +47,7 @@ Signed-off-by: Your name <your-id@your-email-domain.com>
 git commit에 -s 또는 --signoff 플래그를 사용하여 sign-off를 커밋에 자동으로 추가 할 수 있습니다. 이름과 연락 가능한 이메일 주소를 사용해야합니다.
 
 ```
-git commit -s -m "Write the commit message"
+git commit -s -m "ci(github action): Write the commit message"
 ```
 
 ### Resources
