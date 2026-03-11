@@ -23,6 +23,7 @@ FOSSLight Scanner는 다음 3가지 스캐너로 구성되어 있으며, 각각 
 <br><br>
 
 ## 목차
+{: .left-bar-title} 
   - [필요 조건](#필요-조건)
   - [설치 방법](#설치-방법)
   - [실행 방법](#실행-방법)
@@ -33,7 +34,7 @@ FOSSLight Scanner는 다음 3가지 스캐너로 구성되어 있으며, 각각 
 
 
 ## 필요 조건
-
+{: .left-bar-title} 
 1. [**FOSSLight Scanner**](https://github.com/fosslight/fosslight_scanner)는 Python 3.10 이상(공식 지원 버전: 3.10~3.12) 환경에서 동작하며, pip3 명령을 통해 설치할 수 있습니다.    
 2. Jar 파일을 분석하려면 [**Open Source JDK(Java)**](https://openjdk.java.net)를 설치해야 합니다.  
 3. (windows의 경우) [Microsoft Build Tools (Microsoft Visual C++ 14.0+)](https://visualstudio.microsoft.com/ko/visual-cpp-build-tools/)를 설치해야 합니다.  
