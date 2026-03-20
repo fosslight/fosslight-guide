@@ -489,9 +489,15 @@ Go는 v1.14 이상에서 사용 가능하며, 별도의 전제 조건 없이 바
 </details>
 {::options parse_block_html="false" /}
 
-<span class="specific-title">실행 결과</span>
-실행 path내 'fosslight_report_dep_[datetime].xlsx' 결과 파일이 생성됩니다. (-o 옵션을 이용해서 output path 변경할 수 있습니다.)
+
+
+### 실행 결과  
+{: .specific-title}   
+
+실행 path내 'fosslight_report_dep_[datetime].xlsx' 결과 파일이 생성됩니다. 
+이때 -o 옵션을 이용해서 output path 변경할 수 있습니다.
 <img src="./images/fl_dep_npm_1.png" alt="npm2">
+
 
 ### Options
 {: .specific-title}
