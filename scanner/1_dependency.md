@@ -49,7 +49,8 @@ $ pip3 install fosslight_dependency
 ## 실행 방법 및 결과 
 {: .left-bar-title} 
 - 프로젝트에서 사용하는 Package manager에 따라 전제 조건 및 실행 방법을 따라하시기 바랍니다.  
-- Dependency 분석은 실제 개발 시 사용한 package manager와 동일한 빌드 환경이 설정되어 있어야 정상적으로 수행됩니다. (ex, npm dependency 분석 수행을 위해 npm 빌드 도구 서버 내 설치 필요)  
+- Dependency 분석은 실제 개발 시 사용한 package manager와 동일한 빌드 환경이 설정되어 있어야 정상적으로 수행됩니다. (ex, npm dependency 분석 수행을 위해 npm 빌드 도구 서버 내 설치 필요)
+- Windows의 경우, [release assets](https://github.com/fosslight/fosslight_dependency_scanner/releases)에서 exe 실행파일을 다운로드 받아서 사용하실 수 있습니다.
 
 {::options parse_block_html="true" /}
 <details>
@@ -177,13 +178,10 @@ $ pip3 install fosslight_dependency
   ```  
 
 <span class="specific-title">실행 방법</span>   
-1. Linux
-  - build.gradle (gradle의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
+1. build.gradle (gradle의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
     ```
     $ fosslight_dependency
     ``` 
-2. Windows  
-  - build.gradle (gradle의 manifest file)이 존재하는 디렉토리에 fosslight_dependency.exe를 위치시킨 후, 더블 클릭하여 실행합니다.  
 
 </div>
 </details>
@@ -201,20 +199,13 @@ $ pip3 install fosslight_dependency
 
 <span class="specific-title">실행 방법</span>   
 
-1. Linux
-  - build.gradle (gradle의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
+1. build.gradle (gradle의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
     ```
     $ fosslight_dependency
     ``` 
     - 애플리케이션 폴더 이름이 'app'이 아닌 경우, -n 옵션으로 애플리케이션 폴더 이름을 지정해야 합니다.  
     ```
     $ fosslight_dependency -n {application_name}
-    ```
-2. Windows  
-  - build.gradle (gradle의 manifest file)이 존재하는 디렉토리에 fosslight_dependency.exe를 위치시킨 후, 더블 클릭하여 실행합니다.  
-  - 애플리케이션 폴더 이름이 'app'이 아닌 경우, 명령 프롬프트에서 -n 옵션을 사용하여 실행합니다.  
-    ```
-    $ fosslight_dependency.exe -n {application_name}
     ```
 
 </div>
@@ -240,14 +231,9 @@ $ pip3 install fosslight_dependency
 1. 프로젝트 최상위 디렉토리(예: requirements.txt가 위치한 경로)에서 다음 명령어를 실행합니다.  
 이때, 개발 과정에서 사용된 디버깅용 패키지나 전역(global) 설치 패키지가 분석 결과에 포함되지 않도록,
 requirements.txt에는 배포 시 필요한 패키지만 작성되어 있어야 합니다.  
-  - Linux  
     ```
     $ fosslight_dependency
     ``` 
-  -  Windows 
-    ```
-    $ fosslight_dependency.exe
-    ```
  
 </div>
 </details>
@@ -266,13 +252,10 @@ requirements.txt에는 배포 시 필요한 패키지만 작성되어 있어야 
 
 <span class="specific-title">실행 방법</span>   
 
-1. Linux
-  - pom.xml (Maven의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
+1. pom.xml (Maven의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
     ```
     $ fosslight_dependency
     ``` 
-2. Windows  
-  - pom.xml (Maven의 manifest file)이 존재하는 디렉토리에 fosslight_dependency.exe를 위치시킨 후, 더블 클릭하여 실행합니다.   
    
 > **참고**: build output directory를 별도로 설정해서 사용하는 경우
 >   - 설정한 {buildDir}/generated-resources 아래에 licenses.xml 파일이 생성됩니다. 이 경우, fosslight_dependency 실행 시 -o 옵션으로 해당 build output directory 를 지정해야 합니다.  
@@ -293,13 +276,11 @@ requirements.txt에는 배포 시 필요한 패키지만 작성되어 있어야 
 1. 프로젝트 빌드 가능한 flutter가 설치되어 있어야 합니다.
 
 <span class="specific-title">실행 방법</span>   
-1. Linux/MacOS
+1. pubspec.yaml이 존재하는 디렉토리에서 다음 명령어를 실행합니다.
   ```
   $ fosslight_dependency
   ```
-2. Windows
-  - 프로젝트 top 디렉토리에서 fosslight_dependency.exe를 더블 클릭하여 실행합니다.  
- 
+
 </div>
 
 </details>
@@ -408,14 +389,10 @@ Go는 v1.14 이상에서 사용 가능하며, 별도의 전제 조건 없이 바
 <span class="specific-title">실행 방법</span>  
 전제 조건 없이 바로 실행할 수 있습니다. 
 
-1. Linux/MacOS
+1. 프로젝트 top 디렉토리에서 다음 명령어를 실행합니다.
   ```
   $ fosslight_dependency  
   ```  
-2. Windows  
-  ```
-  $ fosslight_dependency.exe 
-  ``` 
 
 > **실행 Tip**  
 > 1. CPM 프로젝트 (Central Package Management)
