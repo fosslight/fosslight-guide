@@ -60,7 +60,7 @@ $ fosslight_binary [option] <arguments>
 ````
    📖 Usage
     ────────────────────────────────────────────────────────────────────
-    fosslight_bin [options] <arguments>
+    fosslight_binary [options] <arguments>
 
     📝 Description
     ────────────────────────────────────────────────────────────────────
@@ -78,7 +78,7 @@ $ fosslight_binary [option] <arguments>
                            (multiple formats can be specified, separated by space)
     -e <pattern>           Exclude paths from analysis (files and directories)
                            ⚠️  IMPORTANT: Always wrap in quotes to avoid shell expansion
-                           Example: fosslight_bin -e "test/" "*.jar"
+                           Example: fosslight_binary -e "test/" "*.jar"
     -h                     Show this help message
     -v                     Show version information
 
@@ -92,16 +92,16 @@ $ fosslight_binary [option] <arguments>
     💡 Examples
     ────────────────────────────────────────────────────────────────────
     # Scan current directory
-    fosslight_bin
+    fosslight_binary
 
     # Scan specific path with exclusions
-    fosslight_bin -p /path/to/binaries -e "test/" "*.so"
+    fosslight_binary -p /path/to/binaries -e "test/" "*.so"
 
     # Generate output in specific format
-    fosslight_bin -f excel -o results/
+    fosslight_binary -f excel -o results/
 
     # Connect to Binary DB for OSS information
-    fosslight_bin -d "postgresql://user:pass@localhost:5432/exampledb"
+    fosslight_binary -d "postgresql://user:pass@localhost:5432/exampledb"
 ```` 
 - -e 옵션 관련 [Pattern 매칭 가이드](https://scancode-toolkit.readthedocs.io/en/stable/reference/scancode-cli/cli-pre-scan-options.html#glob-pattern-matching)
    - ⚠️ 사용 시 반드시 쌍 따옴표("")를 이용하여 입력하시기 바랍니다.
