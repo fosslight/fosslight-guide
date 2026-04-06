@@ -38,7 +38,7 @@ $ pip3 install fosslight_source
 
 Source Code 분석을 실행한 후 FOSSLight Report 형식으로 출력합니다.
 ````
-$ fosslight_source [option] <arg>
+$ fosslight_source [option] <arguments>
 ````  
 ### Options
 {: .specific-title}
