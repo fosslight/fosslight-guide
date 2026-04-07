@@ -53,7 +53,7 @@ $ pip3 install fosslight_binary
 ### 방법 2. 그 외, command로 실행하는 경우(Python Package로 설치한 경우)  
 {: .specific-title} 
 ````
-$ fosslight_binary [option] <arguments>  
+$ fosslight_binary [options] <arguments>  
 ````    
 
 ### Options
