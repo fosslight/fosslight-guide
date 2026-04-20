@@ -18,11 +18,6 @@ title: "  ㄴ FOSSLight Source Scanner"
 [osskb]: https://osskb.org/
 
 
-## 필요 조건
-{: .left-bar-title} 
-[**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 Python 3.10+ 기반에서 동작합니다.     
- <br><br> 
-
 ## 설치 방법
 {: .left-bar-title} 
 FOSSLight Source Scanner는 pip3를 이용하여 설치할 수 있습니다.     
