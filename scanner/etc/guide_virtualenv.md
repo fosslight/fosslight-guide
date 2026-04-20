@@ -34,7 +34,7 @@ brew install python3
 {: .specific-title}  
 
 <details>
-  <summary markdown="span">python 설치(권장 버전: 3.10 ~ 3.12)</summary>
+  <summary markdown="span">python 설치(권장 버전: 3.10 ~ 3.14)</summary>
     https://www.python.org/downloads/windows/에서 installer 선택하여 다운로드 및 실행합니다.<br> 
     1. Add Python.exe to PATH 체크 후 Install Now 실행합니다.<br>
     <img src="../images/fl_scanner_win_python_1.png" alt="python1"><br><br>
