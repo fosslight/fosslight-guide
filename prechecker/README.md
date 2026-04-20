@@ -22,8 +22,6 @@ title: 🚩FOSSLight Prechecker
   - [결과](#-결과)
   - [동작 방식](#-동작-방식)
 
-## 📋 필요 조건
-[**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 Python 3.10+ 기반에서 동작합니다.
 
 ## 🎉 설치 방법
 FOSSLight Prechecker는 pip3를 이용하여 설치할 수 있습니다.
