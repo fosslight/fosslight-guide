@@ -26,7 +26,6 @@ title: 🚩FOSSLight Yocto Scanner
 
 
 ## 📋 필요 조건
-[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Python 3.10+ 기반에서 동작합니다.  
 OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요.    
 
 
