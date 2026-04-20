@@ -11,8 +11,7 @@ title: 🚩FOSSLight Android Scanner
 
 
 ## 필요 조건
-{: .left-bar-title} 
-- [**FOSSLight Android Scanner**](https://github.com/fosslight/fosslight_android_scanner)는 Python 3.10+ 기반에서 동작합니다.    
+{: .left-bar-title}   
 - OSS 정보(OSS Name, OSS Version, License)를 Binary DB로부터 추출하는 기능을 사용하려면 [DB 세팅 가이드](etc/binary_db.md)를 참고하세요. 
 - Android 모델을 build clean 상태에서 build하여 산출물(/out directory) 및 build log(android.log)를 확보합니다.  
     ```
