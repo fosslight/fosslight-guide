@@ -51,7 +51,7 @@ rsync: # 동일한 패키지의 여러 버전을 사용하는 경우
   download location: "https://download.samba.org/pub/rsync/src"
   homepage: "http://rsync.samba.org"
 - version: "3.1.2"
-  source name or path: "test/tool"
+  source name or path: "test/tool_new"
   license: "GPL-3.0"
   download location: "https://download.samba.org/pub/rsync/src"
   homepage: "http://rsync.samba.org"
