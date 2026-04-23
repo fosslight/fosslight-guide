@@ -8,7 +8,7 @@ title: 🚩FOSSLight Yocto Scanner
 
 <img src="https://img.shields.io/pypi/l/fosslight_yocto" alt="FOSSLight Yocto is released under the Apache-2.0." /> <img src="https://img.shields.io/pypi/v/fosslight_yocto" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_yocto" /> <a href="https://github.com/fosslight/fosslight_yocto_scanner"><img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_yocto_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_yocto_scanner)
 
-[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Yocto Project 기반 빌드 과정에서 [bom.bbclass](https://github.com/fosslight/fosslight_yocto_scanner/blob/main/files_for_preparation/bom.bbclass)를 통해 추출된 결과를 활용하여, rootfs 이미지에 포함된 Package의 OSS 정보를 FOSS Report형식으로 출력해주는 Python Script입니다.  
+[**FOSSLight Yocto Scanner**](https://github.com/fosslight/fosslight_yocto_scanner)는 Yocto Project 기반 빌드 과정에서 [bom.bbclass](https://github.com/fosslight/fosslight_yocto_scanner/blob/main/files_for_preparation/bom.bbclass)를 통해 추출된 결과를 활용하여, rootfs 이미지에 포함된 Package의 OSS 정보를 FOSSLight Report형식으로 출력해주는 Python Script입니다.  
 
 - **출력 내용** 
     - SRC Sheet : Installed package 목록을 추출하고 OSS 정보를 출력합니다.  
@@ -18,7 +18,7 @@ title: 🚩FOSSLight Yocto Scanner
     - Package별 OSS 정보는 Recipe에 정의된 메타데이터를 기반으로 OSS Name(Recipe name), OSS Version, LICENSE, Download Location을 출력합니다.  
 
 - **⚠️주의 사항**
-    - rootfs 이미지 외 target에 탑재되는 이미지 (ex- 커널, 부트로더)에 대해서는 Script가 OSS 정보를 출력해주지 않습니다. 이에 대해서는 사용자가 직접 OSS Report에 OSS 정보를 추가해야 합니다.    
+    - rootfs 이미지 외 target에 탑재되는 이미지 (ex- 커널, 부트로더)에 대해서는 Script가 OSS 정보를 출력해주지 않습니다. 이에 대해서는 사용자가 직접 FOSSLight Report에 OSS 정보를 추가해야 합니다.    
    
 <br><br>
 
@@ -141,15 +141,12 @@ $ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistor
 $ tree
 .
 ├── fosslight_log_yocto_260413_1443.txt
-├── fosslight_report_yocto_260413_1443.xlsx
-└── fosslight_opossum_yocto_260413_1443.json
+└── fosslight_report_yocto_260413_1443.xlsx  
 
 ```
-- fosslight_log_yocto_[datetime].txt : 실행 log
-- fosslight_report_yocto_[datetime].xlsx : FOSSLight Yocto의 결과 (FOSSLight Report 형태)    
-   - Binary별 checksum, tlsh 값은 report에 기본적으로 숨김 처리 되어 있음.
-- fosslight_opossum_yocto_[datetime].json : [OpossumUI](https://github.com/opossum-tool/OpossumUI)에서 활용 가능한 Binary 분석 결과  
-
+- fosslight_log_yocto_[datetime].txt : 실행 log  
+- fosslight_report_yocto_[datetime].xlsx : FOSSLight Yocto의 결과 (FOSSLight Report 형태)      
+   - Binary별 checksum, tlsh 값은 report에 기본적으로 숨김 처리 되어 있음.  
 <br><br>
 
 ## 추가 기능
@@ -157,13 +154,13 @@ $ tree
 
 ### -y 옵션 : SBOM 정보 파일 기반 Recipe/Package별 OSS 정보 로딩 기능 
 {: .specific-title}
-- Script를 -y 옵션으로 실행하는 경우, Recipe에 정의된 OSS 정보는 사용하지 않으며, SBOM 파일에 포함된 OSS 정보를 기준으로 OSS Report를 생성합니다.  
-  단, SBOM 파일에 Recipe/Package 정보가 존재하더라도, 실제로  Install 되지 않는 Recipe/Package인 경우 , OSS Report에 포함되지 않습니다.  
+- Script를 -y 옵션으로 실행하는 경우, Recipe에 정의된 OSS 정보는 사용하지 않으며, SBOM 파일에 포함된 OSS 정보를 기준으로 FOSSLight Report를 생성합니다.  
+  단, SBOM 파일에 Recipe/Package 정보가 존재하더라도, 실제로  Install 되지 않는 Recipe/Package인 경우, FOSSLight Report에 포함되지 않습니다.  
 
     | OSS Information                     | Exclude                         | Comment                         |
     |------------------------------------|----------------------------------|---------------------------------|
-    | Recipe로부터 추출한 정보           | O                                | Excluded by oss-pkg-info.yaml   |
-    | oss-pkg-info.yaml로부터 추가된 정보 | oss-pkg-info.yaml에 쓰여진 값   | Info loaded from oss-pkg-info.yaml |
+    | Recipe로부터 추출한 정보           | O                                | Excluded by sbom-info.yaml   |
+    | sbom-info.yaml로부터 추가된 정보 | sbom-info.yaml에 쓰여진 값   | Info loaded from osbom-info.yaml |
 
 #### SBOM 정보 파일 작성  
 {: .under-bar-title}
