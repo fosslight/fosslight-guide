@@ -28,8 +28,7 @@ $ pip3 install fosslight_prechecker
 
 FOSSLight Prechecker는 다음의 네 가지 모드를 제공하며, 각 모드는 소스 코드의 저작권 및 라이선스 관리를 위한 서로 다른 기능을 수행합니다.  
 1. `lint` --- [Source Code 내 저작권 및 License 표기 규칙][rule]을 준수하고 있는지 점검합니다.     
-2. `convert` --- [sbom-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 또는 [oss-pkg-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/oss-pkg-info.yaml)을 [Fosslight_Report.xlsx](https://fosslight.org/hub-guide/learn/2_fosslight_report.html) 형식으로 변환합니다.
-     - yaml 파일의 내용을 Fosslight_Report.xlsx의 SRC Sheet로 변환됩니다.  
+2. `convert` --- [sbom-info.yaml](https://github.com/fosslight/fosslight_prechecker/blob/main/tests/convert/sbom-info.yaml) 파일의 내용을 [Fosslight_Report.xlsx](https://fosslight.org/hub-guide/learn/2_fosslight_report.html) 형식으로 변환하여 SRC 시트에 반영합니다.   
 3. `add` --- Copyright 및 License 정보가 없는 파일에 Copyright, License, 그리고 Download Location 정보를 추가합니다.  
 4. `download` --- sbom-info.yaml 파일에 명시된 각 License의 원문을 개별 파일로 다운로드 합니다.  
 
@@ -53,7 +52,7 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
     rules in source code. It can lint, add, convert, and
     download license information.
 
-    📚 Guide: https://fosslight.org/fosslight-guide/scanner/1_prechecker.html
+    📚 Guide:  https://fosslight.org/fosslight-guide/prechecker
 
     🔧 Modes
     ────────────────────────────────────────────────────────────────────
@@ -151,10 +150,7 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
           Summary:
             Open Source Package File:
             - convert/sbom-info.yaml
-            - add/oss-pkg-info.yaml
-            - convert/oss-pkg-info.yaml
             - lint/sub1/sbom-info.yaml
-            - lint/sub2/oss-pkg-info.yaml
             Detected Licenses:
             - Apache-2.0
             - GPL-3.0-only
@@ -267,7 +263,7 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
            <li>git repo 기준 untracked 파일</li>
            <li>사용자 지정 제외 경로 (-e 옵션)</li>
            <li>
-             sbom-info.yaml 또는 oss-pkg-info.yaml 내에
+             sbom-info.yaml 내에
              exclude가 True인 path
            </li>
          </ul>
@@ -307,10 +303,10 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
   * Copyright: SPDX-FileCopyrightText: Copyright (c) 2011 LG Electronics Inc.
 
   # Missing license File(s)
-    * oss-pkg-info.yaml
+    * sbom-info.yaml 
     * test_no_license.py
     * Your input license : GPL-3.0-only
-  Successfully changed header of tests/add/oss-pkg-info.yaml
+  Successfully changed header of tests/add/sbom-info.yaml 
   Successfully changed header of tests/add/test_no_license.py
 
   # Missing Copyright File(s) 
@@ -323,7 +319,6 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
   Successfully changed header of tests/add/test_both_have_1.py
   Successfully changed header of tests/add/test_both_have_2.py
   Successfully changed header of tests/add/test_no_copyright.py
-  Successfully changed header of tests/add/oss-pkg-info.yaml
   Successfully changed header of tests/add/test_no_license.py
   OS: Linux 5.15.0-138-generic
   Path to analyze: tests/add
@@ -375,7 +370,7 @@ $ fosslight_prechecker [Mode] [option1] <arg1> [option2] <arg2>...
 
 ### YAML 형식 OSS 정보를 Fosslight Report로 변환  
 {: .specific-title}  
-- 지정된 경로(Path)에 존재하는 sbom-info.yaml 또는 oss-pkg-info.yaml 파일을 분석하여 Fosslight_Report.xlsx 형식의 Excel 보고서로 변환합니다.  
+- 지정된 경로(Path)에 존재하는 sbom-info.yaml 파일을 분석하여 Fosslight_Report.xlsx 형식의 Excel 보고서로 변환합니다.  
 - YAML 파일이 여러 개일 경우, 각 파일은 별도의 개별 시트로 변환됩니다.  
 ```
 $ fosslight_prechecker convert -p tests/
@@ -385,45 +380,45 @@ $ fosslight_prechecker convert -p tests/
 <ul>
 <li>
 <details markdown="1">
-<summary markdown="span">oss-pkg-info.yaml 파일</summary>
+<summary markdown="span">sbom-info.yaml 파일</summary>
 
 yaml 파일 내 경로 작성 시, 특수 문자({, }, [, ], &, *, #, ?, |, -, <, >, =, !, %, @)로 시작하는 경우 쌍따옴표("")를 사용하여 작성해주시기 바랍니다.
 
 ```yaml
-glibc:
-- version: '2.3'
+libidn:
+- version: "1.5"
   source name or path:
-  - tests/b.c
-  - tests/a.c
+  - a.c
+  - b.c
   license:
-  - GPL-3.0
-  - LGPL-2.1
-  download location: https://github.com/fsfe/glibc
-dbus:
-- version: '1.3'
-  source name or path:
-  - tests/src/*
-  license:
-  - GPL-2.0
-  download location: https://github.com/fsfe/dbus
-  copyright text: 'Copyright (c) 2020 Test Copyright (c) 2020 Sample'
-reuse-tool:
-- version: ''
-  source name or path:
-  - tests/
-  license:
-  - MIT
-  download location: https://github.com/fsfe/reuse
-  homepage: http://google.com
-  copyright text: Copyright (c) 2020 Test
-build-tool:
-- version: ''
-  source name or path:
-  - tests/
-  license:
-  - Apache-2.0
-  download location: http://gihub.com/bazel
-  exclude: true
+  - "GPL-3.0"
+  - "LGPL-2.1"
+  download location: "http://ftp.gnu.org/gnu/libidn"
+  homepage: "https://www.gnu.org/software/libidn"
+  copyright text: "Copyright (c) 2002-2007, Simon Josefsson"
+node-backoff:
+- version: "2.5.0"
+  source name or path: "src/*"
+  license: "MIT"
+  download location: "https://github.com/MathieuTurcotte/node-backoff"
+  homepage: "https://www.npmjs.com/package/backoff"
+  copyright text: "Copyright (c) 2012 Mathieu Turcotte"
+  exclude: True
+rsync:
+- version: "2.6.9"
+  source name or path: "test/tool"
+  license: "GPL-2.0"
+  download location: "https://download.samba.org/pub/rsync/src"
+  homepage: "http://rsync.samba.org"
+- version: "3.1.2"
+  source name or path: "test/tool"
+  license: "GPL-3.0"
+  download location: "https://download.samba.org/pub/rsync/src"
+  homepage: "http://rsync.samba.org"
+  copyright text:
+  - "Copyright (c) 1996 Andrew Tridgell"
+  - "Copyright (c) 1996 Paul Mackerras"
+  - "Copyright (c) 2003-2015 Wayne Davison"
 ```
 
 </details>
