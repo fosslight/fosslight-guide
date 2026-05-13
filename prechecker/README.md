@@ -319,7 +319,7 @@ $ fosslight_prechecker convert -p tests/
 <details markdown="1">
 <summary markdown="span">sbom-info.yaml 파일</summary>
 
-yaml 파일 내 경로 작성 시, 특수 문자({, }, [, ], &, *, #, ?, |, -, <, >, =, !, %, @)로 시작하는 경우 쌍따옴표("")를 사용하여 작성해주시기 바랍니다.
+<p>yaml 파일 내 경로 작성 시, 특수 문자({, }, [, ], &, *, #, ?, |, -, <, >, =, !, %, @)로 시작하는 경우 쌍따옴표("")를 사용하여 작성해주시기 바랍니다.</p>
 
 ```yaml
 libidn:
