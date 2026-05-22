@@ -6,14 +6,13 @@ title: "  ㄴ FOSSLight Binary Scanner"
 
 <img src="https://img.shields.io/pypi/l/fosslight_binary" alt="FOSSLight Binary is released under the Apache-2.0." /> <img src="https://img.shields.io/pypi/v/fosslight_binary" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_binary" /><a href="https://github.com/fosslight/fosslight_binary_scanner"> <img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_binary_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_binary_scanner)
 
-[**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Binary를 식별하여 출력하고, Binary DB에 동일하거나 유사한 Binary가 존재하는 경우 해당 OSS 정보(OSS Name, OSS Version, License)를 제공합니다. 또한 jar 파일 분석 후에 보안취약점 정보도 제공합니다.       
+[**FOSSLight Binary Scanner**](https://github.com/fosslight/fosslight_binary_scanner)는 Binary를 식별(.jar파일 포함)하여 출력하고, Binary DB에 동일하거나 유사한 Binary가 존재하는 경우 해당 OSS 정보(OSS Name, OSS Version, License)를 제공합니다.       
    
 
 ## 필요 조건
 {: .left-bar-title} 
-- Binary DB가 구성된 환경에서는 해당 DB로부터 OSS 정보(OSS Name, OSS Version, License)를 추출할 수 있습니다. Binary DB가 사전 구성되어 있지 않은 경우에는 [Binary DB 세팅 가이드](etc/binary_db.md)를 참고하여 환경을 설정해야 합니다.   
-- Jar 파일 분석을 위해서는 Open Source JDK 기반의 [**Java 11+**](https://openjdk.java.net)를 설치해야 합니다.    
-
+- Binary DB가 구성된 환경에서는 해당 DB로부터 OSS 정보(OSS Name, OSS Version, License)를 추출할 수 있습니다. Binary DB가 사전 구성되어 있지 않은 경우에는 [Binary DB 세팅 가이드](etc/binary_db.md)를 참고하여 환경을 설정해야 합니다.
+  
 <br><br> 
 
 ## 설치 방법
@@ -121,5 +120,4 @@ $ tree
 ```
 - fosslight_log_bin_[datetime].txt : 실행 log
 - fosslight_report_bin_[datetime].xlsx : FOSSLight Report 형태의 binary 분석 결과        
-   - jar 파일 분석 시, Vulnerability Link Column에 보안취약점 정보가 추가됨  
    - Binary별 checksum, tlsh Column은 기본적으로 숨김 처리 되어 있음     
