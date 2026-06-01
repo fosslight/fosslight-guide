@@ -6,9 +6,9 @@ title: 🚩FOSSLight Scanner Service
 
 # (Enterprise Only) FOSSLight Scanner Service 
 
-## 개요s
+## 개요
 {: .left-bar-title}
-웹서비스로 [FOSSLight Scanner](https://fosslight.org/fosslight-guide/scanner/)를 이용하여 Source, Binary, Dependency 분석을 수행합니다. 분석 결과는 [FOSSLight Report](https://fosslight.org/hub-guide/learn/2_fosslight_report.html)형태로 생성됩니다.    
+웹서비스로 [FOSSLight Scanner](https://fosslight.org/fosslight-guide/scanner/)를 이용하여 Source, Binary, Dependency 분석을 수행합니다. 분석 결과는 [FOSSLight Report](https://fosslight.org/hub-guide/learn/2_fosslight_report.html) 형태로 생성됩니다.    
 - URL : [http://fs.lge.com](http://fs.lge.com)
 - 분석 항목 
     - [FOSSLight Source Scanner](https://fosslight.org/fosslight-guide/scanner/2_source.html)
