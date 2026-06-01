@@ -4,7 +4,7 @@ published: true
 title: 🚩FOSSLight Scanner Service 
 ---
 
-# (Enterprise Only) FOSSLight Scanner Service 
+# (LGE Only) FOSSLight Scanner Service 
 
 ## 개요
 {: .left-bar-title}
