@@ -47,13 +47,16 @@ title: 🚩FOSSLight Scanner Service
                     - git clone : github.com/LGE-OSS/example
             - **Private Git** : Private git 인 경우
                 - **http://** 또는 **https://** : user name과 PAT 값을 입력합니다. 
-                - **ssh://** : 제공되는 ssh key 값을 복사하여 private git repository에 등록합니다. ⚠️ github 는 ssh 대신 PAT 를 이용합니다.  
+                - **ssh://** : 제공되는 ssh key 값을 복사하여 private git repository에 등록합니다. ⚠️ github, bitbucket은 ssh 대신 PAT 를 이용해야 합니다.  
                 ![ssh](images/7_fl_ss_ssh.png){: .styled-image}  
     - **Pipeline**
         - scan_all : source, binary, dependency 분석
         - source : source code만 분석 
         - binary : binary만 분석
         - dependency : dependency만 분석
+    - **Pipeline options (Optional)**
+        - Analyze dependencies recursively : 프로젝트 최상위 디렉토리뿐만 아니라 전체 하위 디렉토리의 manifest 파일을 감지하여 재귀적으로 dependency를 분석하려면, 'Enable recursive analysis' 체크박스를 선택합니다.
+        - Package Manager Environment : Dependency 분석 시 특정 버전의 패키지 매니저를 사용하려면, 언어 또는 패키지 매니저를 선택한 후 버전 목록에서 원하는 버전을 선택할 수 있습니다.
     - **권한 설정**
         - Private : 생성자만 조회 가능
         - Public : 링크를 통해 해당 Project를 다른 사람이 볼 수 있고 분석 결과를 다운로드할 수 있음 
