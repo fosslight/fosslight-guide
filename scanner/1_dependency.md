@@ -57,22 +57,6 @@ $ pip3 install fosslight_dependency
 <summary markdown="span">**[NodeJS] Npm or Yarn**</summary>
 <div style="border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0;">  
 
-<span class="specific-title">전제 조건</span>
-
-1. license-checker를 설치합니다.  
-   ```
-   $ npm install -g license-checker
-   ```
-   > ▲ [주의] license-checker를 전역 패키지로 설치하기 위해서는, 반드시 '-g' option을 추가해 주어야 합니다.  
-   > license-checker 모듈 및 그 dependency가 결과에 포함되고, target software와 함께 배포되는 것을 방지하기 위함입니다.  
-   
-   ✓ sudo 권한이 없는 경우  
-   전역 모듈이 설치되는 기본 path를 변경하여 이용할 수 있습니다.  
-   ```
-   $ npm set prefix ~/.npm
-   $ PATH=~/.npm/bin:$PATH
-   ```
-
 <span class="specific-title">실행 방법</span>
 1. package.json이 존재하는 디렉토리에서 다음 명령어를 실행합니다.  
    ```
