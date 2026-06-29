@@ -5,7 +5,7 @@ title: 🚩FOSSLight Prechecker
 ---
 # FOSSLight Prechecker
 
-<img src="https://img.shields.io/pypi/l/fosslight-prechecker" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_prechecker" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_prechecker" /><a href="https://github.com/fosslight/fosslight_prechecker"><img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_prechecker)](https://api.reuse.software/info/github.com/fosslight/fosslight_prechecker)
+<img src="https://img.shields.io/pypi/l/fosslight-prechecker" alt="License" /> <img src="https://img.shields.io/pypi/v/fosslight_prechecker" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_prechecker" /> <a href="https://github.com/fosslight/fosslight_prechecker"><img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_prechecker)](https://api.reuse.software/info/github.com/fosslight/fosslight_prechecker)
 
 [**FOSSLight Prechecker**](https://github.com/fosslight/fosslight_prechecker)는 [소스 코드의 저작권 및 License 표기 규칙][rule]에 맞게 적용되었는지 확인하고, 필요한 경우 이를 보완하기 위해 사용하는 도구입니다.  
 
