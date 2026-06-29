@@ -4,7 +4,7 @@ title: "  ㄴ FOSSLight Source Scanner"
 ---
 # FOSSLight Source Scanner
 
-<img src="https://img.shields.io/pypi/l/fosslight_source" alt="FOSSLight Source is released under the Apache-2.0 License." /> <img src="https://img.shields.io/pypi/v/fosslight_source" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_source" /><a href="https://github.com/fosslight/fosslight_source_scanner"><img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_source_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_source_scanner)
+<img src="https://img.shields.io/pypi/l/fosslight_source" alt="FOSSLight Source is released under the Apache-2.0 License." /> <img src="https://img.shields.io/pypi/v/fosslight_source" alt="Current python package version." /> <img src="https://img.shields.io/pypi/pyversions/fosslight_source" /> <a href="https://github.com/fosslight/fosslight_source_scanner"><img src="https://img.shields.io/badge/GitHub-Repository-purple?logo=github" alt="GitHub Repository" /></a> [![REUSE status](https://api.reuse.software/badge/github.com/fosslight/fosslight_source_scanner)](https://api.reuse.software/info/github.com/fosslight/fosslight_source_scanner)
 
 [**FOSSLight Source Scanner**](https://github.com/fosslight/fosslight_source_scanner)는 [ScanCode][sc], [SCANOSS][scanoss]와 KB(LGE Only) mode로 동작합니다.  
   - [ScanCode][sc] : 파일 안에 포함된 Copyright과 License 문구를 검출합니다.  
