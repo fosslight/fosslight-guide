@@ -50,7 +50,7 @@ FOSSLight Scanner는 다음 3가지 스캐너로 구성되어 있으며, 각각 
 ### 일반적인 설치 방법
 {: .specific-title}   
 FOSSLight Scanner는 pip3를 이용하여 설치할 수 있습니다.      
-[python3 virtualenv](etc/guide_virtualenv.md) 환경에서 설치할 것을 권장합니다.  
+[python3 virtualenv](etc/guide_virtualenv.md) 에 따라 사전 설치 사항 세팅 후 설치합니다.
 
 ```
 $ pip3 install fosslight_scanner
