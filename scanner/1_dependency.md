@@ -169,7 +169,7 @@ requirements.txt에는 배포 시 필요한 패키지만 작성되어 있어야 
 <span class="specific-title">전제 조건</span>   
 
 1. Maven 버전 3.5.4 이상이 필요합니다.
-2. JAVA 환경이 설치되어 있어야 합니다. ([Open Source JDK 11 이상](https://openjdk.java.net) 필요)   
+2. JAVA 환경이 설치되어 있어야 합니다. ([OpenJDK 11 이상](https://openjdk.java.net) 필요)   
 
 <span class="specific-title">실행 방법</span>   
 
