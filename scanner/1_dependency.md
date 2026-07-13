@@ -140,7 +140,7 @@ $ pip3 install fosslight_dependency
 
 ```tip
 - 시스템 내 전역으로 설치된 파이썬 dependency로부터 분석하고자 하는 프로젝트 dependency를 분리하기 위해 가상환경을 설정하여 이용하기를 권장합니다.
-- 만약 input path내 requirements.txt가 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행 가능하므로, 2번 단계부터는 skip합니다.
+- 만약 input path내 'requirements.txt', 'setup.py' 또는 'pyproject.toml' 파일이 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행합니다.
 ```  
 
 <span class="specific-title">전제 조건</span>  
