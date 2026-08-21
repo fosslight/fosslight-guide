@@ -2,11 +2,22 @@
 published: true
 ---
 
-# FOSSLight Database 연동 가이드
-FOSSLight Scanner와 FOSSLight Source Scanner에서 FOSSLight Database에 접속하는 방법을 안내합니다.
+# FOSSLight Scanner Database 연동 가이드
+`fosslight` 또는 `fosslight_source` 명령어 실행 시 `--kb_url`, `--kb_token` 옵션을 지정하면 FOSSLight Scanner Database의 OSS Information(OSS Name, OSS Version, Download location)을 추가로 조회할 수 있습니다.
 
-## Scanner Database 연결
-OSS Information (OSS Name, OSS Version, License)를 DB로부터 출력하려면 DB 접속 정보가 필요합니다.
+예시 (fosslight, 현재 directory 분석하는 경우):
+````
+fosslight --kb_url "https://kb.example.org/" --kb_token "example-token-1234567890abcdef" -p .
+````
+
+예시 (fosslight_source, 현재 directory 분석하는 경우):
+````
+fosslight_source --kb_url "https://kb.example.org/" --kb_token "example-token-1234567890abcdef" -p .
+````
+
+
+## Scanner Database 접속 정보 저장
+아래와 같이 FOSSLight Database 접속 정보를 저장하면, 명령어 실행 시 `--kb_url`, `--kb_token`을 매번 입력하지 않아도 저장된 값이 자동으로 적용됩니다.
 
 ### Linux / macOS
 현재 터미널 세션에만 적용:
