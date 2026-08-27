@@ -103,6 +103,9 @@ $ pip3 install fosslight_scanner
     -p <path>              Path to analyze
                            • Compare mode: path to two FOSSLight reports (excel/yaml)
     -w <url>               URL to download and analyze (git clone or wget)
+    --git_token <token>    Git HTTP personal access token for private URL (-w)
+    --id <user>            Git HTTP credential username (with --git_token)
+                           Default: oauth2 when only --git_token is given
     -f <format>            Output format (excel, csv, opossum, yaml, spdx-yaml, spdx-json, spdx-xml, spdx-tag, cyclonedx-json, cyclonedx-xml)
                            • Compare mode: excel, json, yaml, html
                            • Multiple formats: ex) -f excel yaml json (separated by space)
@@ -124,16 +127,13 @@ $ pip3 install fosslight_scanner
 
     🔍 Mode-Specific Options
     ────────────────────────────────────────────────────────────────────
-    For 'all' or 'binary' mode:
-      -u <db_url>          Database connection string
-                           Format: postgresql://username:password@host:port/database
-
     For 'all' or 'dependency' mode:
       -d <args>            Additional arguments for dependency analysis
 
     For 'all' or 'source' mode:
       --kb_url <url>       KB API URL for source analysis
       --kb_token <token>   KB API bearer token for source analysis
+      --no_merge           Keep source paths file-based without folder merge
 
     💡 Examples
     ────────────────────────────────────────────────────────────────────
@@ -152,11 +152,11 @@ $ pip3 install fosslight_scanner
     # Download and analyze from git repository
     fosslight -w https://github.com/user/repo.git -o result_dir
 
+    # Download and analyze a private repository with PAT
+    fosslight -w https://github.com/org/private-repo.git --git_token ghp_xxxx -o result_dir
+
     # Compare two FOSSLight reports
     fosslight compare -p report_v1.xlsx report_v2.xlsx -f excel
-
-    # Run with database connection for binary analysis
-    fosslight binary -p /path/to/binary -u "postgresql://user:pass@localhost:5432/sample"
 
 ```
 - Ex.1 Local의 Path를 분석하는 방법  
@@ -169,7 +169,12 @@ fosslight -p /home/source_path
 fosslight -o test_result_wget -w "https://github.com/LGE-OSS/example.git"
 ```
 
-- Ex.3 FOSSLight Report SBOM 결과 비교하여 변경/추가/삭제 내역 확인하는 방법  
+- Ex.3 Private Git 저장소를 PAT로 다운로드하고 분석하는 방법  
+```
+fosslight -o test_result_wget -w "https://github.com/org/private-repo.git" --git_token ghp_xxxx
+```
+
+- Ex.4 FOSSLight Report SBOM 결과 비교하여 변경/추가/삭제 내역 확인하는 방법  
 ```
 fosslight compare -p FOSSLight_before_proj.yaml FOSSLight_after_proj.yaml -o test_result
 ```
