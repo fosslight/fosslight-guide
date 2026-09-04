@@ -111,8 +111,6 @@ $ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistor
     -y <file>              sbom-info.yaml or oss-pkg-info.yaml file path
     -a <path>              Path to analyze the binaries
     -n                     Print result in BIN(Yocto) format
-    -s                     Analyze source code for New Open Source
-    -c                     Analyze all the source code
     -e <path>              Top build output path with bom.json to compress
                            all the source code
     -pr                    Print all data of bom.json
@@ -128,10 +126,10 @@ $ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistor
                     -i installed-package-names.txt -ip installed-packages.txt \
                     -y sbom-info.yaml -o results/
 
-    # Scan with binary analysis and source code analysis
+    # Scan with binary analysis
     fosslight_yocto -p buildhistory/packages -b bom.json \
                     -i installed-package-names.txt -ip installed-packages.txt \
-                    -a /path/to/binaries -s
+                    -a /path/to/binaries
     ``` 
 <br><br>
 
@@ -180,28 +178,6 @@ SBOM 정보 파일 작성을 위해 YAML 파일을 준비하며, 두 가지 포�
     ```
     (.venv)$  fosslight_yocto  -i [installed-package-names.txt] -b [bom.json] -p [buildhistory/packages] -a [path_to_binary_analysis] -y [oss-pkg-info.yaml,sbom-info.yaml]
     ```
-<br>
-
-### -s, -c 옵션 : Source Code 분석  
-{: .specific-title}
-Source Code 분석을 실행합니다.  
-
-#### 실행 방법   
-{: .under-bar-title}  
-- <span style="color:red">(권장)</span> Parameter -s : FOSSLight Hub에 저장되지 않은 OSS인 Recipe에 대해서만 분석합니다.  
-    ```
-    (.venv)$ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistory/packages] -s
-    ```
-- Parameter -c : Install되는 모든 Recipe에 대하여 Source Code 분석합니다.  
-    ```
-    (.venv)$ fosslight_yocto -i [installed-package-names.txt] -b [bom.json] -p [buildhistory/packages] -c  
-    ```
-
-#### 결과 파일     
-{: .under-bar-title}  
-- source_analysis_report.xlsx : Source Code 분석 결과 파일  
-- scancode_result 폴더 : Recipe 별 결과 파일  
-
 <br>
 
 ### -e 옵션 : Recipe별 Source Code를 복사 및 압축 기능
