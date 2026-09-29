@@ -140,7 +140,8 @@ $ pip3 install fosslight_dependency
 
 ```tip
 - 시스템 내 전역으로 설치된 파이썬 dependency로부터 분석하고자 하는 프로젝트 dependency를 분리하기 위해 가상환경을 설정하여 이용하기를 권장합니다.
-- 만약 input path내 'requirements.txt', 'setup.py' 또는 'pyproject.toml' 파일이 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행합니다.
+- 만약 input path내 아래 파일이 존재한다면, FOSSLight Dependency Scanner가 자동으로 dependency 설치하여 분석 실행합니다.
+  'requirements.txt', 'setup.py', 'pyproject.toml', 'uv.lock'
 ```  
 
 <span class="specific-title">전제 조건</span>  
@@ -500,7 +501,7 @@ Go는 v1.14 이상에서 사용 가능하며, 별도의 전제 조건 없이 바
     - Npm : package.json
     - Pnpm : pnpm-lock.yaml
     - Yarn : package.json
-    - Pypi : requirements.txt / setup.py / pyproject.toml
+    - Pypi : requirements.txt / setup.py / pyproject.toml / uv.lock
     - Maven : pom.xml
     - Gradle (Android) : build.gradle
     - Pub : pubspec.yaml
@@ -674,7 +675,7 @@ FOSSLight Report 결과 파일에는 transitive dependency들을 포함한 모�
   <tr>
     <td>Python</td>
     <td>Pypi</td>
-    <td>requirements.txt,<br>setup.py,<br>pyproject.toml</td>
+    <td>requirements.txt,<br>setup.py,<br>pyproject.toml,<br>uv.lock</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
