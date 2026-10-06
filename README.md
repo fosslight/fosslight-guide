@@ -32,3 +32,6 @@ FOSSLight 프로젝트는 오픈 소스에 관한 모든 것을 관리할 수 �
 
 #### FOSSLight Yocto Scanner
 [FOSSLight Yocto Scanner](yocto/README.md)는 Yocto Project에 기반하여 build 시, rootfs 이미지에 포함되는 Package에 대한 OSS 정보를 FOSS Report 형식으로 출력해주는 Python Script입니다.
+
+#### FOSSLight Scanner GUI
+[FOSSLight Scanner GUI](scanner_gui/README.md)는 Windows용 데스크톱 앱입니다. 별도의 Python 설치 없이 [FOSSLight Scanner](scanner)의 Source, Dependency, Binary 분석을 실행하고, 결과를 화면에서 확인할 수 있습니다.
