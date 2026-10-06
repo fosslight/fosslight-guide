@@ -23,11 +23,7 @@ title: 🚩FOSSLight Scanner GUI
     - 로컬 폴더
     - 압축 파일 (zip, tar, tar.gz, tgz, tar.bz2, tar.xz, bz2, jar, whl, rpm, src.rpm)
     - URL (git 저장소 clone, 또는 압축 파일 다운로드 주소)
-- 이 앱에서 제공하지 않는 항목
-    - [FOSSLight Android Scanner](../android/README.md)
-    - [FOSSLight Yocto Scanner](../yocto/README.md)
-    - [FOSSLight Prechecker](../prechecker/README.md)
-    - CLI의 compare 모드
+
 
 ## 지원 환경
 {: .left-bar-title}
@@ -66,6 +62,8 @@ title: 🚩FOSSLight Scanner GUI
 
 ## 스캔 실행
 {: .left-bar-title}
+
+![New Scan](images/1_gui_new_scan.png){: .styled-image}
 
 **New Scan**에서 아래 항목을 입력한 뒤 **스캔 시작**을 누릅니다.
 
@@ -115,7 +113,7 @@ Source Code를 선택한 경우에만 표시됩니다. 둘 다 선택 사항입�
 ### 진행과 취소
 {: .specific-title}
 
-스캔이 시작되면 단계가 **다운로드 → 도구 설치 → 준비 → 분석 → 결과 정리** 순서로 표시됩니다. 다운로드와 도구 설치는 필요할 때만 진행됩니다. 화면의 로그는 저장 위치의 `fosslight_gui_<시각>.log`에도 같은 내용으로 기록됩니다.
+스캔이 시작되면 단계가 **다운로드 → 도구 설치 → 준비 → 분석 → 결과 정리** 순서로 표시됩니다. 다운로드와 도구 설치는 필요할 때만 진행됩니다. 화면의 로그는 저장 위치의 `fosslight_gui_<timestamp>.log`에도 같은 내용으로 기록됩니다.
 
 대상 크기에 따라 수 분에서 수십 분이 걸릴 수 있습니다. **취소**를 누르면 확인 후 진행 중인 작업이 중단되고, **스캔이 취소되었습니다.**가 표시됩니다.
 
@@ -128,6 +126,8 @@ Source Code를 선택한 경우에만 표시됩니다. 둘 다 선택 사항입�
 ### Overview
 {: .specific-title}
 
+![Overview](images/2_gui_overview.png){: .styled-image}
+
 - **Open Source 검출** : Source, Dependency, Binary 건수입니다. 카드를 누르면 해당 결과 화면으로 이동합니다.
 - **License 정보** : 고유 라이선스 수, 위험도 분포, 항목 수가 많은 라이선스입니다. Strong Copyleft 또는 Restricted 라이선스가 있으면 경고가 표시되고, 누르면 License 화면으로 이동합니다.
 - **Result file** : 이번 스캔의 리포트 저장 폴더를 탐색기에서 엽니다.
@@ -137,6 +137,8 @@ Exclude로 표시된 항목은 Overview 통계에서 빠집니다.
 
 ### Source / Dependency / Binary
 {: .specific-title}
+
+![Scan result](images/3_gui_scan_result.png){: .styled-image}
 
 검출 항목을 표로 보여 줍니다. 경로, OSS 이름, 라이선스로 검색할 수 있고, 열 제목을 눌러 정렬할 수 있습니다. 한 페이지에 50건씩 표시됩니다.
 
@@ -149,12 +151,14 @@ Exclude로 표시된 항목은 Overview 통계에서 빠집니다.
 ### License
 {: .specific-title}
 
+![License Risk](images/4_gui_license_risk.png){: .styled-image}
+
 검출된 라이선스를 위험도가 높은 순으로 모읍니다. 분류와 화면의 위험도 표시는 아래와 같습니다.
 
 | 분류 | 위험도 |
 |:-----|:-------|
 | Restricted | 높음 |
-| Strong Copyleft | 높음 |
+| Copyleft | 높음 |
 | Weak Copyleft | 중간 |
 | Permissive | 낮음 |
 | 미분류 | 확인 필요 |
@@ -170,7 +174,7 @@ Exclude로 표시된 항목은 Overview 통계에서 빠집니다.
 |:-----|:-----|
 | `fosslight_report_*.xlsx` | Source, Dependency, Binary 결과가 담긴 FOSSLight Report입니다. FOSSLight Hub에 업로드할 수 있습니다. |
 | `fosslight_report_*.yaml` | 같은 분석 결과의 YAML 파일입니다. |
-| `fosslight_gui_<시각>.log` | 스캔 화면에 표시된 로그입니다. |
+| `fosslight_gui_<timestamp>.log` | 스캔 화면에 표시된 로그입니다. |
 | `gui_result.json` | 앱이 결과를 다시 열 때 읽는 파일입니다. |
 
 앱을 다시 실행했을 때 마지막 결과를 여는 데 쓰는 목록은 `%APPDATA%\fosslight-scanner-gui\`에 있습니다.
