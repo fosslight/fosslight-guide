@@ -120,14 +120,36 @@ $ pip3 install fosslight_dependency
 
 <span class="specific-title">실행 방법</span>   
 
-1. build.gradle (gradle의 manifest file)이 존재하는 path에서 다음 명령어를 실행합니다.  
-    ```
-    $ fosslight_dependency
-    ``` 
-    - 애플리케이션 폴더 이름이 'app'이 아닌 경우, -n 옵션으로 애플리케이션 폴더 이름을 지정해야 합니다.  
-    ```
-    $ fosslight_dependency -n {application_name}
-    ```
+1. Gradle 9 이상을 사용하는 Android 프로젝트에서는 프로젝트 구성에 따라 <code>releaseRuntimeClasspath</code>가 존재하지 않을 수 있습니다. 이 경우 <code>--runtime-config</code> 옵션으로 프로젝트에 존재하는 Runtime Configuration을 지정해야 합니다.
+예를 들어, 사용할 Runtime Configuration이 <code>normalReleaseRuntimeClasspath</code>인 경우 다음과 같이 실행합니다.
+ 
+```
+$ fosslight_dependency --runtime-config normalReleaseRuntimeClasspath
+```
+ 
+2. 별도의 Runtime Configuration을 지정하지 않으면 기본값인 <code>releaseRuntimeClasspath</code>를 사용하여 Dependency를 분석합니다. <code>build.gradle</code> 파일이 존재하는 경로에서 다음 명령어를 실행합니다.
+ 
+```
+$ fosslight_dependency
+```
+ 
+3. 애플리케이션 모듈의 디렉토리 이름이 'app'이 아닌 경우, <code>-n</code> 옵션으로 해당 디렉토리 이름을 지정합니다.
+ 
+```
+$ fosslight_dependency -n {application_name}
+```
+ 
+4. 애플리케이션 모듈의 디렉토리 이름과 Runtime Configuration을 모두 지정해야 하는 경우 다음과 같이 실행합니다.
+ 
+```
+$ fosslight_dependency -n {application_name} --runtime-config {runtime_configuration}
+```
+ 
+예를 들어, 애플리케이션 모듈의 디렉토리 이름이 <code>mobile</code>이고 Runtime Configuration이 <code>normalReleaseRuntimeClasspath</code>인 경우 다음과 같이 실행합니다.
+ 
+```
+$ fosslight_dependency -n mobile --runtime-config normalReleaseRuntimeClasspath
+```
 
 </div>
 
@@ -463,6 +485,10 @@ Go는 v1.14 이상에서 사용 가능하며, 별도의 전제 조건 없이 바
 
     Android:
       -n <name>            Application directory name (default: app)
+      -runtime-config      Runtime Configuration to analyze 
+                           Default: releaseRuntimeClasspath For Gradle 9 or later, 
+                           if releaseRuntimeClasspath does not exist, specify a Runtime Configuration available in the project 
+                           Example: --runtime normalReleaseRuntimeClasspath
 
     💡 Examples
     ────────────────────────────────────────────────────────────────────
