@@ -130,9 +130,9 @@ $ pip3 install fosslight_dependency
     ```
     $ fosslight_dependency -n {application_name}
     ```
-3. **Gradle 9 이상**을 사용하는 Android 프로젝트에서 `releaseRuntimeClasspath`를 사용할 수 없는 경우, 전제 조건에서 확인한 Runtime Configuration을 `--runtime-config` 옵션으로 지정합니다. 예를 들어, Runtime Configuration이 `normalReleaseRuntimeClasspath`인 경우 다음과 같이 실행합니다.
+3. **Gradle 9 이상**을 사용하는 Android 프로젝트에서 `releaseRuntimeClasspath`를 사용할 수 없는 경우, 전제 조건에서 확인한 Runtime Configuration을 `--runtime-config` 옵션으로 지정합니다. 
     ```
-    $ fosslight_dependency --runtime-config normalReleaseRuntimeClasspath
+    $ fosslight_dependency --runtime-config {runtime_configuration}
     ```
 4. 애플리케이션 모듈의 디렉토리 이름과 Runtime Configuration을 모두 지정해야 하는 경우, `-n` 옵션과 `--runtime-config` 옵션을 함께 사용합니다.
     ```
