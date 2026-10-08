@@ -474,7 +474,8 @@ Go는 v1.14 이상에서 사용 가능하며, 별도의 전제 조건 없이 바
     Android:
       -n <name>                  Application directory name (default: app)
       --runtime-config <config>  Gradle 9 or later, specify the Runtime Configuration to analyze (default: releaseRuntimeClasspath)
-                                 If releaseRuntimeClasspath is unavailable, specify a Runtime Configuration available in the project.
+                                 If releaseRuntimeClasspath is unavailable,
+                                 specify another Runtime Configuration available in the project.
 
 
     💡 Examples
