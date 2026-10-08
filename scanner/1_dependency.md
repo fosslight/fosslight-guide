@@ -113,43 +113,31 @@ $ pip3 install fosslight_dependency
 <div style="border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0;">
 
 <span class="specific-title">전제 조건</span>   
-
 1. Android (gradle)의 경우, input directory에 gradlew 실행 파일 및 build.gradle 파일이 존재하는 경우, plugin 추가 및 실행을 FOSSLight Dependency Scanner 내부에서 자동으로 수행하므로 바로 실행 방법으로 진행하실 수 있습니다.   
 2. Android 애플리케이션 프로젝트에 'app' (또는 module name) 디렉토리가 없는 경우, <a href="#prerequisite-for-gradle">Java/Kotlin Gradle 가이드</a>를 참고하여 Dependency 분석을 수행하시기 바랍니다.
-
+3. **Gradle 9 이상**을 사용하는 경우, 프로젝트에서 releaseRuntimeClasspath를 사용할 수 있는지 확인합니다. 사용할 수 없는 경우, 다음 명령어를 실행하여 Dependency 분석에 사용할 Runtime Configuration을 확인합니다.
+    ```
+    $ ./gradlew :app:resolvableConfigurations
+    $ ./gradlew :{application_name}:resolvableConfigurations  (애플리케이션 모듈의 디렉토리 이름이 app이 아닌 경우)
+    ```
 
 <span class="specific-title">실행 방법</span>   
-
-1. Gradle 9 이상을 사용하는 Android 프로젝트에서는 프로젝트 구성에 따라 <code>releaseRuntimeClasspath</code>가 존재하지 않을 수 있습니다. 이 경우 <code>--runtime-config</code> 옵션으로 프로젝트에 존재하는 Runtime Configuration을 지정해야 합니다.
-예를 들어, 사용할 Runtime Configuration이 <code>normalReleaseRuntimeClasspath</code>인 경우 다음과 같이 실행합니다.
- 
-```
-$ fosslight_dependency --runtime-config normalReleaseRuntimeClasspath
-```
- 
-2. 별도의 Runtime Configuration을 지정하지 않으면 기본값인 <code>releaseRuntimeClasspath</code>를 사용하여 Dependency를 분석합니다. <code>build.gradle</code> 파일이 존재하는 경로에서 다음 명령어를 실행합니다.
- 
-```
-$ fosslight_dependency
-```
- 
-3. 애플리케이션 모듈의 디렉토리 이름이 'app'이 아닌 경우, <code>-n</code> 옵션으로 해당 디렉토리 이름을 지정합니다.
- 
-```
-$ fosslight_dependency -n {application_name}
-```
- 
-4. 애플리케이션 모듈의 디렉토리 이름과 Runtime Configuration을 모두 지정해야 하는 경우 다음과 같이 실행합니다.
- 
-```
-$ fosslight_dependency -n {application_name} --runtime-config {runtime_configuration}
-```
- 
-예를 들어, 애플리케이션 모듈의 디렉토리 이름이 <code>mobile</code>이고 Runtime Configuration이 <code>normalReleaseRuntimeClasspath</code>인 경우 다음과 같이 실행합니다.
- 
-```
-$ fosslight_dependency -n mobile --runtime-config normalReleaseRuntimeClasspath
-```
+1. `build.gradle` 파일이 존재하는 경로에서 다음 명령어를 실행합니다.
+    ```
+    $ fosslight_dependency
+    ```
+2. 애플리케이션 모듈의 디렉토리 이름이 `app`이 아닌 경우, `-n` 옵션으로 해당 디렉토리 이름을 지정합니다.
+    ```
+    $ fosslight_dependency -n {application_name}
+    ```
+3. **Gradle 9 이상**을 사용하는 Android 프로젝트에서 `releaseRuntimeClasspath`를 사용할 수 없는 경우, 전제 조건에서 확인한 Runtime Configuration을 `--runtime-config` 옵션으로 지정합니다. 예를 들어, Runtime Configuration이 `normalReleaseRuntimeClasspath`인 경우 다음과 같이 실행합니다.
+    ```
+    $ fosslight_dependency --runtime-config normalReleaseRuntimeClasspath
+    ```
+4. 애플리케이션 모듈의 디렉토리 이름과 Runtime Configuration을 모두 지정해야 하는 경우, `-n` 옵션과 `--runtime-config` 옵션을 함께 사용합니다.
+    ```
+    $ fosslight_dependency -n {application_name} --runtime-config {runtime_configuration}
+    ```
 
 </div>
 
@@ -445,50 +433,49 @@ Go는 v1.14 이상에서 사용 가능하며, 별도의 전제 조건 없이 바
 
     ⚙️  General Options
     ────────────────────────────────────────────────────────────────────
-    -p <path>              Path to analyze (default: current directory)
-    -o <path>              Output file path or directory
-    -f <format>            Output formats: excel, csv, opossum, yaml, spdx-yaml, spdx-json, spdx-xml, spdx-tag, cyclonedx-json, cyclonedx-xml
-    -e <pattern>           Exclude paths from analysis (files and directories)
-                           ⚠️  IMPORTANT: Always wrap in quotes to avoid shell expansion
-                           Example: fosslight_dependency -e "test/" "node_modules/"
-    -h                     Show this help message
-    -v                     Show version information
+    -p <path>                    Path to analyze (default: current directory)
+    -o <path>                    Output file path or directory
+    -f <format>                  Output formats: excel, csv, opossum, yaml, spdx-yaml, spdx-json, spdx-xml, spdx-tag, cyclonedx-json, cyclonedx-xml
+    -e <pattern>                 Exclude paths from analysis (files and directories)
+                                 ⚠️  IMPORTANT: Always wrap in quotes to avoid shell expansion
+                                 Example: fosslight_dependency -e "test/" "node_modules/"
+    -h                           Show this help message
+    -v                           Show version information
 
     🔍 Scanner-Specific Options
     ────────────────────────────────────────────────────────────────────
-    -m <manager>           Specify package manager (npm, maven, gradle, pypi, pub,
-                           cocoapods, android, swift, carthage, go, nuget, helm,
-                           unity, cargo, pnpm, yarn)
-    -r                     Recursive mode: scan all subdirectories for manifest files
-    --graph-path <path>    Save dependency graph image (pdf, jpg, png) (recommend pdf extension)
-                           Example: fosslight_dependency --graph-path /your/path/filename.[pdf, jpg, png]
-    --graph-format <format> Set graph image format (default: pdf)
-    --graph-size <w> <h>   Set graph image size in pixels (requires --graph-path)
-    --direct <True|False>  Print direct/transitive dependency type
-                           Choose True or False (default: True)
-    --notice               Print the open source license notice text
+    -m <manager>                 Specify package manager (npm, maven, gradle, pypi, pub,
+                                 cocoapods, android, swift, carthage, go, nuget, helm,
+                                 unity, cargo, pnpm, yarn)
+    -r                           Recursive mode: scan all subdirectories for manifest files
+    --graph-path <path>          Save dependency graph image (pdf, jpg, png) (recommend pdf extension)
+                                 Example: fosslight_dependency --graph-path /your/path/filename.[pdf, jpg, png]
+    --graph-format <format>      Set graph image format (default: pdf)
+    --graph-size <w> <h>         Set graph image size in pixels (requires --graph-path)
+    --direct <True|False>        Print direct/transitive dependency type
+                                 Choose True or False (default: True)
+    --notice                     Print the open source license notice text
 
     🔧 Package Manager Specific Options
     ────────────────────────────────────────────────────────────────────
     Swift, Carthage:
-      -t <token>           GitHub personal access token
+      -t <token>                 GitHub personal access token
 
     Pypi:
-      -a <cmd>             Virtual environment activate command
-                           (ex: 'conda activate myenv')
-      -d <cmd>             Virtual environment deactivate command
-                           (ex: 'conda deactivate')
+      -a <cmd>                   Virtual environment activate command
+                                 (ex: 'conda activate myenv')
+      -d <cmd>                   Virtual environment deactivate command
+                                 (ex: 'conda deactivate')
 
     Gradle, Maven:
-      -c <dir>             Customized build output directory
-                           (default: 'build' for gradle, 'target' for maven)
+      -c <dir>                   Customized build output directory
+                                 (default: 'build' for gradle, 'target' for maven)
 
     Android:
-      -n <name>            Application directory name (default: app)
-      -runtime-config      Runtime Configuration to analyze 
-                           Default: releaseRuntimeClasspath For Gradle 9 or later, 
-                           if releaseRuntimeClasspath does not exist, specify a Runtime Configuration available in the project 
-                           Example: --runtime normalReleaseRuntimeClasspath
+      -n <name>                  Application directory name (default: app)
+      --runtime-config <config>  Gradle 9 or later, specify the Runtime Configuration to analyze (default: releaseRuntimeClasspath)
+                                 If releaseRuntimeClasspath is unavailable, specify a Runtime Configuration available in the project.
+
 
     💡 Examples
     ────────────────────────────────────────────────────────────────────
