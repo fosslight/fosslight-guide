@@ -177,14 +177,6 @@ Dependency OSS 표입니다. Comment 열은 없고, 패키지를 선택하면 �
 
     ![edit_oss](images/7_fl_ss_v2_edit.png){: .styled-image}
 
-    1. **OSS Name**
-    2. **OSS Version**
-    3. **License**
-    4. **Download Location**
-    5. **Comment**
-    6. **Exclude**
-    7. **Change**
-
     바꿀 항목만 체크합니다. 체크한 항목이 선택된 모든 행에 바로 저장되고, 체크하지 않은 항목은 그대로 둡니다. 값을 지우려면 그 항목을 체크하고 빈 칸으로 7번 **Change**를 누릅니다.
 3. License의 **...** 에서 목록을 거르고, 하나 이상을 선택한 뒤 **Apply**를 누릅니다.
 
