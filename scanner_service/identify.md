@@ -15,6 +15,7 @@ Identified 정보가 하나라도 적용 중이면 [FOSSLight Report](https://fo
 Identified 작업이 끝났다면 이 report를 [FOSSLight Hub Identification](https://fosslight.org/hub-guide/tutorial/1_project/2_Identification/)에 업로드합니다.
 
 ## 누가 Identify 기능을 사용할 수 있나요?
+{: .left-bar-title}
 
 프로젝트 생성자, Settings에서 추가한 editor가 사용할 수 있습니다. Editor를 추가하고 빼는 일은 생성자와 관리자가 Settings에서 합니다.
 
@@ -23,6 +24,7 @@ Identified 작업이 끝났다면 이 report를 [FOSSLight Hub Identification](h
 - 프로젝트가 archived된 경우
 
 ## Identify 기능 이용 방법
+{: .left-bar-title}
 
 프로젝트 화면의 Dependency, Source, Binary 개수를 누르면 아래와 같은 결과 화면이 열립니다.     
 
@@ -53,8 +55,9 @@ Column header 아래 검색은 내용의 일부만 맞아도 되고 대소문자
 여러 열을 함께 쓰면 모든 검색에 맞는 행만 남습니다.
 
 ## 상태를 읽는 법
+{: .left-bar-title}
 
-한 행의 상태는 지금 화면에 나온 값이 스캐너 값과 같은지로 정해집니다.
+한 행의 상태는 지금 화면에 나온 값이 분석 결과(Scanned)와 같은지로 정해집니다.
 
 - **Scanned** : 화면에 나온 값이 이번 분석 결과 값과 같습니다. 파일 트리의 점은 파란색입니다.
 - **Identified** : Identified 된 항목으로 파일 트리의 점은 노란색입니다. 파일 카드에는 Identified 또는 Scanned 태그가 붙습니다.
@@ -67,6 +70,7 @@ Path 또는 Purl 옆 정보 아이콘은 그 경로나 패키지에 저장한 Id
 ![oss_table](images/7_fl_ss_v2_oss_table.png){: .styled-image}
 
 ## Identify 이용 시 작성할 정보
+{: .left-bar-title}
 
 | 칸 | 저장 |
 | --- | --- |
@@ -86,7 +90,11 @@ Identified된 값을 이전의 Scanned 값으로 다시 저장하면 Identified 
 
 선택한 행이 없거나 바뀐 칸이 없는데 버튼을 누르면 알림이 나옵니다. 알림 문구는 `Select at least one row to edit.` 또는 `There are no changes to save.`입니다.
 
-## 1개의 패키지/File를 Identify 하는 방법
+## Identify 하는 방법
+{: .left-bar-title}
+
+### 1개의 패키지/File를 Identify 하는 방법
+{: .specific-title}
 
 1. 1개의 Dependency 또는 File를 클릭합니다.
 2. 표의 칸에 직접 입력합니다. License는 칸에 적거나 오른쪽 **...** 로 목록에서 고릅니다.
@@ -112,7 +120,8 @@ Identified된 값을 이전의 Scanned 값으로 다시 저장하면 Identified 
 
 패키지를 선택하면 같은 OSS 칸과 함께 **Depends on**, **Required by**가 나와 의존 관계를 따라갑니다.
 
-## 여러 개의 패키지/경로를 한 번에 Identify 하는 법(Bulk Edit)
+### 여러 개의 패키지/경로를 한 번에 Identify 하는 법(Bulk Edit)
+{: .specific-title}
 
 1. 한번에 수정할 행 앞의 체크박스를 선택합니다. Table Hedaer의 체크박스는 지금 페이지의 행을 모두 선택합니다. 다른 페이지의 행은 포함되지 않습니다.
 2. **Edit**를 누릅니다.
@@ -122,7 +131,8 @@ Identified된 값을 이전의 Scanned 값으로 다시 저장하면 Identified 
 
 ![edit_oss](images/7_fl_ss_v2_edit.png){: .styled-image}
 
-## 라이선스 목록에서 고르기
+### 라이선스 목록에서 고르기
+{: .specific-title}
 
 Bulk Edit의 경우, License 칸의 **...** 는 그 칸의 라이선스 체크를 켠 뒤에 열립니다.     
 OSS Table과 file 카드에서는 **...** 를 바로 누릅니다.
@@ -136,6 +146,7 @@ OSS Table과 file 카드에서는 **...** 를 바로 누릅니다.
 목록에 없는 라이선스는 License 칸에 직접 적습니다.
 
 ## 폴더 규칙(Folder Rule)
+{: .left-bar-title}
 
 폴더 행을 수정하여 Identified하면 그 폴더의 규칙이 됩니다. By folder에서 폴더를 선택하면 그 폴더 행이 표에 나옵니다. 규칙을 저장한 폴더 행에는 **folder rule**이 붙습니다.
 
@@ -155,6 +166,7 @@ Identified 이후, 이전의 Scanned 값을 다시 저장하면 Folder Rule 적�
 Folder Rule은 다시 분석해도 유지됩니다. 한 파일의 스캐너 값이 바뀌어도 Folder Rule 자체는 경고 대상이 되지 않습니다. 파일 행에 직접 저장한 값만 아래의 재분석 확인을 받습니다.
 
 ## Dependency에서 다른 점
+{: .left-bar-title}
 
 ![dependency_table](images/7_fl_ss_v2_dependency_table.png){: .styled-image}
 
@@ -166,6 +178,7 @@ Folder Rule은 다시 분석해도 유지됩니다. 한 파일의 스캐너 값�
 By dep.은 Direct 아래 패키지의 종속 관계를 보여 줍니다. All dep.은 Direct, Transitive, Root package 그룹으로 패키지를 나열하고, 중복되더라도 같은 패키지는 한 번만 보여 줍니다. 어느 쪽으로 보든 저장되는 purl은 같습니다.
 
 ## FOSSLight Report
+{: .left-bar-title}
 
 프로젝트 화면의 **FOSSLight Report**는 Hub Identification에 올리는 파일입니다.
 
@@ -177,6 +190,7 @@ By dep.은 Direct 아래 패키지의 종속 관계를 보여 줍니다. All dep
 Identified 값을 이전의 Scanned 값과 같게 되돌려 저장 기록이 모두 사라지면, 이후 다운로드는 다시 스캐너 결과 리포트입니다.
 
 ## 재분석 이후
+{: .left-bar-title}
 
 파일이나 패키지에 Identified한 값은 이번 스캔 결과의 이름, 버전, 라이선스, Download location, Comment, Exclude 값이 같을 때만 자동으로 다시 보여집니다.    
 만약, 이 값 중 하나라도 달라지면 identified된 정보로 보이지 않습니다.    
