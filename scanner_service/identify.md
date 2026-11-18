@@ -1,6 +1,6 @@
 ---
 published: true
-title: "  ㄴ Identify"
+title: "  ㄴ Identify 기능"
 ---
 
 # Identify 기능이란?
