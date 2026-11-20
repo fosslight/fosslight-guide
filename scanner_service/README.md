@@ -65,20 +65,22 @@ title: 🚩FOSSLight Scanner Service
 ### 분석 결과
 {: .specific-title}
 
-3.0.0부터 분석이 끝나면 프로젝트 화면의 개수를 눌러 결과를 열고, 왼쪽 트리와 오른쪽 OSS 표에서 검출 내용을 확인한 뒤 Identify 할 수 있습니다.  
-Identify는 스캐너가 찾은 값 위에, 사용자가 확인한 OSS 이름·버전·라이선스·Download location·Comment·Exclude를 덮어 저장하는 기능입니다. 저장한 값은 분석 결과가 다시 만들어져도 같은 경로(Dependency는 같은 purl)에 다시 붙고, [FOSSLight Hub Identification](https://fosslight.org/hub-guide/tutorial/1_project/2_Identification/)에 올리는 FOSSLight Report에 반영됩니다.
+3.0.0부터 분석이 끝나면 프로젝트 화면의 개수를 눌러 결과를 열고 왼쪽 트리와 오른쪽 OSS 표에서 검출 내용을 확인한 뒤 Identify 할 수 있습니다.  
+Identify는 스캐너가 찾은 값 위에, 사용자가 확인한 OSS 이름·버전·라이선스·Download location·Comment·Exclude를 덮어 저장하는 기능입니다.     
+저장한 값은 분석 결과가 다시 만들어져도 같은 경로(Dependency는 같은 purl)에 다시 붙고 [FOSSLight Hub Identification](https://fosslight.org/hub-guide/tutorial/1_project/2_Identification/)에 올리는 FOSSLight Report에 반영됩니다.
 
-프로젝트 생성자, Settings에서 추가한 editor, 관리자만 Identify 할 수 있습니다. 그 밖에는 값을 보기만 합니다. 분석이 실행 중이거나 프로젝트가 archived이면 수정도 닫힙니다.
+Creator와 Editor만 Identify 권한이 부여됩니다.    
+분석이 실행 중이거나 프로젝트가 archived이면 수정도 닫힙니다.
 
 ![analysis_result](images/7_fl_ss_v2_summary.png){: .styled-image}
 
 1. **Dependency** : 검출된 패키지 수입니다. 숫자를 누르면 Dependency 트리가 열립니다.
 2. **Source** : OSS가 검출된 소스 파일 수입니다. 숫자를 누르면 Source 파일 트리가 열립니다.
 3. **Binary** : 바이너리 파일 수입니다. 숫자를 누르면 Binary 파일 트리가 열립니다. 개수가 0이면 해당 화면으로 들어가지 않습니다.
-4. **FOSSLight Report** : Hub Identification에 업로드하는 리포트입니다. Identify를 저장한 적이 있으면 확인한 값이 반영된 리포트를 받고, 아직 Identify 전이면 스캐너 결과 리포트를 받습니다.
+4. **FOSSLight Report** : Hub Identification에 업로드하는 리포트입니다. Identify를 저장한 적이 있으면 확인한 값이 반영된 리포트를 받고 아직 Identify 전이면 스캐너 결과 리포트를 받습니다.
 5. **AI** : 분석 결과의 요약, 위험도, 대응 방안을 확인합니다.
 6. **Log** : Pipelines에서 실행 건 옆 아이콘입니다. 그 실행의 로그를 받습니다. 프로젝트 목록의 Download에서도 Log와 리포트를 받을 수 있습니다.
-7. **Files** : 업로드한 파일과 폴더 목록입니다. 항목을 누르면 파일 트리가 열립니다. Dependency로 검출된 패키지는 이 목록에 나오지 않고, 1번 개수에서 확인합니다.
+7. **Files** : 업로드한 파일과 폴더 목록입니다. 항목을 누르면 파일 트리가 열립니다. Dependency로 검출된 패키지는 이 목록에 나오지 않고 1번 개수에서 확인합니다.
 
 #### 결과 화면
 {: .specific-title}
@@ -94,7 +96,7 @@ Identify는 스캐너가 찾은 값 위에, 사용자가 확인한 OSS 이름·�
 5. **상태 점** : 이름 옆 점입니다. 파란색은 Scanned, 노란색은 Identified입니다. 노란색이 반만 채워지면 Partly identified입니다. 점에 마우스를 올리면 그 상태가 글로 표시됩니다.
 6. **폴더 숫자** : 그 아래에 OSS가 있는 파일 수입니다.
 7. **Licenses** : 선택한 폴더 아래에 검출된 라이선스를 유형 막대와 칩으로 보여 줍니다. 유형은 Copyleft, Proprietary, Unclassified, Weak Copyleft, Permissive, Proprietary Free 순입니다.
-8. **라이선스 칩** : 이름을 누르면 그 라이선스가 있는 경로만 남고, 숫자를 누르면 그 라이선스가 있는 파일을 목록으로 엽니다. 긴 목록은 **+ more** 로 펼칩니다. 선택한 라이선스는 트리 위의 칩에서 지웁니다.
+8. **라이선스 칩** : 이름을 누르면 그 라이선스가 있는 경로만 남고 숫자를 누르면 그 라이선스가 있는 파일을 목록으로 엽니다. 긴 목록은 **+ more** 로 펼칩니다. 선택한 라이선스는 트리 위의 칩에서 지웁니다.
 9. **Edit** : 체크한 행을 한 번에 수정하는 창을 엽니다.
 10. **Save** : 칸에 직접 입력한 값을 저장합니다.
 11. **By folder / All files** : By folder는 선택한 폴더 바로 아래의 폴더와 파일, All files는 그 아래 모든 깊이의 파일입니다.
@@ -105,12 +107,12 @@ Identify는 스캐너가 찾은 값 위에, 사용자가 확인한 OSS 이름·�
 ![oss_table](images/7_fl_ss_v2_oss_table.png){: .styled-image}
 
 1. **행 선택** : 체크박스는 지금 페이지의 행을 모두 선택합니다.
-2. **Path**
-3. **OSS Name**
-4. **OSS Version**
+2. **Path** : File이 위치하는 경로입니다.
+3. **OSS Name** : Open Source Software Name입니다.
+4. **OSS Version** : Open Source Software Version입니다.
 5. **License** : **...** 버튼은 FOSSLight 라이선스 목록입니다. 여러 개를 고르면 쉼표로 이어서 저장됩니다.
-6. **Download location**
-7. **Copyright** : 길면 줄여 보여 줍니다. 스캐너가 찾은 값이라 Identify로 고치지 않습니다. 칸에 마우스를 올리면 모든 Copyright를 확인할 수 있고, 3줄 이상일 경우 클릭하여 복사할 수 있습니다.  
+6. **Download location** : OSS의 소스 코드를 다운받을 수 있는 URL입니다.
+7. **Copyright** : 길면 줄여 보여 줍니다. 스캐너가 찾은 값이라 Identify로 고치지 않습니다. 칸에 마우스를 올리면 모든 Copyright를 확인할 수 있고 3줄 이상일 경우 클릭하여 복사할 수 있습니다.  
 8. **Exclude** : 체크하면 그 행은 FOSSLight Report에서 빠집니다.
 9. **Comment**
 10. **folder rule** : 폴더 행을 수정해 저장하면, 그 폴더 아래에서 이미 OSS가 검출된 경로가 같은 값을 물려받습니다. 파일에 직접 저장한 값이 우선합니다. 물려받은 행에는 **inherited**가 붙습니다. OSS가 없는 파일에는 적용되지 않습니다.
@@ -122,7 +124,7 @@ Copyright 탭입니다.
 
 1. **Copyright** : Copyright 확인할 수 있는 메뉴입니다.
 2. **Copy** : 보이는 Copyright를 모두 복사합니다.
-3. **검색**
+3. **검색** : 입력한 text로 필터링된 항목만 보입니다.
 4. **COUNT** : 그 문장이 나온 파일 수입니다. Dependency에서는 패키지 수입니다. 문장을 누르면 그 문장이 있는 항목만 목록에 남습니다.
 5. **페이지당 개수** : 한 페이지에 보여줄 Copyright 수입니다.
 
@@ -136,7 +138,7 @@ Dependency 트리입니다.
 4. **Licenses** : 선택한 그룹의 라이선스 탭입니다. 파일 트리의 7번과 같습니다.
 5. **라이선스 칩** : 파일 트리의 8번과 같습니다.
 
-Dependency OSS 표입니다. Comment 열은 없고, 패키지를 선택하면 카드에서 Comment를 확인합니다.
+Dependency OSS 표입니다. Comment 열은 없고 패키지를 선택하면 카드에서 Comment를 확인합니다.
 
 ![dependency_table](images/7_fl_ss_v2_dependency_table.png){: .styled-image}
 
@@ -158,7 +160,7 @@ Dependency OSS 표입니다. Comment 열은 없고, 패키지를 선택하면 �
 
 1. **Full viewer** : 파일 세부 내용을 확인하는 메뉴입니다.
 2. **다운로드**
-3. **Identified / Scanned** : Identified는 스캐너 값과 다르게 저장한 상태이고, Scanned는 스캐너 값 그대로인 상태입니다.
+3. **Identified / Scanned** : Identified는 스캐너 값과 다르게 저장한 상태이고 Scanned는 스캐너 값 그대로인 상태입니다.
 4. **OSS name**
 5. **Version**
 6. **License** : 오른쪽 **...** 로 라이선스 목록을 열어 사용한 라이선스를 선택합니다.
